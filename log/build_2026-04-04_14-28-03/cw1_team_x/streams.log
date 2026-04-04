@@ -1,0 +1,326 @@
+[0.048s] Invoking command in '/home/czg22/comp0250_s26_labs/build/cw1_team_x': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/czg22/comp0250_s26_labs/src/courseworks/cw1_team_x -DCMAKE_INSTALL_PREFIX=/home/czg22/comp0250_s26_labs/install/cw1_team_x
+[0.141s] -- The C compiler identification is GNU 11.4.0
+[0.315s] -- The CXX compiler identification is GNU 11.4.0
+[0.431s] -- Detecting C compiler ABI info
+[0.547s] -- Detecting C compiler ABI info - done
+[0.552s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.552s] -- Detecting C compile features
+[0.553s] -- Detecting C compile features - done
+[0.555s] -- Detecting CXX compiler ABI info
+[0.688s] -- Detecting CXX compiler ABI info - done
+[0.692s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.693s] -- Detecting CXX compile features
+[0.693s] -- Detecting CXX compile features - done
+[0.701s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.843s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.999s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.012s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.036s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.188s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.260s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[1.371s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.379s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.077s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.526s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.567s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.592s] -- Looking for pthread.h
+[3.713s] -- Looking for pthread.h - found
+[3.713s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.839s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.840s] -- Found Threads: TRUE  
+[3.907s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.922s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.938s] -- Found moveit_core: 2.5.9 (/home/czg22/ws_moveit2/install/moveit_core/share/moveit_core/cmake)
+[4.035s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[4.511s] -- Found parameter_traits: 0.6.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[4.542s] -- Found rclcpp_lifecycle: 16.0.18 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[4.576s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[5.252s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[5.329s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[5.329s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[6.209s] -- Found moveit_ros_planning_interface: 2.5.9 (/home/czg22/ws_moveit2/install/moveit_ros_planning_interface/share/moveit_ros_planning_interface/cmake)
+[6.213s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[6.225s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[6.251s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[6.276s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[6.309s] -- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)
+[6.359s] -- Checking for module 'eigen3'
+[6.384s] --   Found eigen3, version 3.4.0
+[6.444s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[6.444s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[6.977s] -- Checking for module 'flann'
+[7.003s] --   Found flann, version 1.9.1
+[7.165s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[7.165s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[9.790s] -- Checking for module 'libusb-1.0'
+[9.816s] --   Found libusb-1.0, version 1.0.25
+[9.912s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[9.912s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[10.073s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[10.860s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[10.868s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[10.876s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[11.668s] -- Found Qhull version 8.0.2
+[12.617s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[13.556s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[13.557s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[13.558s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[13.558s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[13.559s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[13.559s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[13.560s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[13.560s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[13.560s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[13.561s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[13.562s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[13.562s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[13.563s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[13.563s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[13.564s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[13.564s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[13.565s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[13.566s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[13.566s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[13.567s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[13.567s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[13.567s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[13.568s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[13.568s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[13.569s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[13.587s] -- Found cw1_world_spawner: 0.1.0 (/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake)
+[13.887s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[14.215s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[14.656s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[14.730s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[14.739s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[14.925s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[14.925s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[14.925s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[14.925s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[14.946s] -- Found PythonExtra: .so  
+[15.126s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[15.195s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[15.196s] -- Configured cppcheck include dirs: /home/czg22/comp0250_s26_labs/src/courseworks/cw1_team_x/include
+[15.196s] -- Configured cppcheck exclude dirs and/or files: 
+[15.197s] -- Added test 'flake8' to check Python code syntax and style conventions
+[15.199s] -- Added test 'lint_cmake' to check CMake code style
+[15.201s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[15.203s] -- Added test 'uncrustify' to check C / C++ code style
+[15.203s] -- Configured uncrustify additional arguments: 
+[15.205s] -- Added test 'xmllint' to check XML markup files
+[15.210s] -- Configuring done
+[15.411s] -- Generating done
+[15.444s] -- Build files have been written to: /home/czg22/comp0250_s26_labs/build/cw1_team_x
+[15.471s] Invoked command in '/home/czg22/comp0250_s26_labs/build/cw1_team_x' returned '0': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/czg22/comp0250_s26_labs/src/courseworks/cw1_team_x -DCMAKE_INSTALL_PREFIX=/home/czg22/comp0250_s26_labs/install/cw1_team_x
+[15.473s] Invoking command in '/home/czg22/comp0250_s26_labs/build/cw1_team_x': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/czg22/comp0250_s26_labs/build/cw1_team_x -- -j32 -l32
+[15.552s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[15.573s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[15.594s] [  5%] Built target ament_cmake_python_copy_cw1_team_x
+[15.815s] [  8%] [32mBuilding C object CMakeFiles/cw1_team_x__rosidl_generator_c.dir/rosidl_generator_c/cw1_team_x/srv/detail/example__functions.c.o[0m
+[15.818s] running egg_info
+[15.819s] creating cw1_team_x.egg-info
+[15.819s] writing cw1_team_x.egg-info/PKG-INFO
+[15.820s] writing dependency_links to cw1_team_x.egg-info/dependency_links.txt
+[15.820s] writing top-level names to cw1_team_x.egg-info/top_level.txt
+[15.820s] writing manifest file 'cw1_team_x.egg-info/SOURCES.txt'
+[15.821s] reading manifest file 'cw1_team_x.egg-info/SOURCES.txt'
+[15.822s] writing manifest file 'cw1_team_x.egg-info/SOURCES.txt'
+[15.824s] [  8%] Built target cw1_team_x__cpp
+[15.844s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[15.844s] [ 14%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[15.844s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[15.854s] [ 17%] Built target ament_cmake_python_build_cw1_team_x_egg
+[15.890s] [ 20%] [32m[1mLinking C shared library libcw1_team_x__rosidl_generator_c.so[0m
+[15.985s] [ 20%] Built target cw1_team_x__rosidl_generator_c
+[16.006s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[16.006s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[16.012s] [ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[16.055s] [ 31%] [32mBuilding CXX object CMakeFiles/cw1_team_x__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cw1_team_x/srv/example__type_support.cpp.o[0m
+[16.081s] [ 34%] [32mBuilding CXX object CMakeFiles/cw1_team_x__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cw1_team_x/srv/detail/example__type_support.cpp.o[0m
+[16.085s] [ 37%] [32mBuilding CXX object CMakeFiles/cw1_team_x__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw1_team_x/srv/detail/dds_fastrtps/example__type_support.cpp.o[0m
+[16.212s] [ 40%] [32mBuilding CXX object CMakeFiles/cw1_team_x__rosidl_typesupport_c.dir/rosidl_typesupport_c/cw1_team_x/srv/example__type_support.cpp.o[0m
+[16.254s] [ 42%] [32mBuilding C object CMakeFiles/cw1_team_x__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cw1_team_x/srv/detail/example__type_support.c.o[0m
+[16.261s] [ 45%] [32m[1mLinking CXX shared library libcw1_team_x__rosidl_typesupport_c.so[0m
+[16.301s] [ 48%] [32m[1mLinking CXX shared library libcw1_team_x__rosidl_typesupport_cpp.so[0m
+[16.312s] [ 51%] [32m[1mLinking C shared library libcw1_team_x__rosidl_typesupport_introspection_c.so[0m
+[16.314s] [ 54%] [32mBuilding CXX object CMakeFiles/cw1_team_x__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cw1_team_x/srv/detail/example__type_support_c.cpp.o[0m
+[16.360s] [ 54%] Built target cw1_team_x__rosidl_typesupport_c
+[16.400s] [ 54%] Built target cw1_team_x__rosidl_typesupport_introspection_c
+[16.401s] [ 54%] Built target cw1_team_x__rosidl_typesupport_cpp
+[16.446s] [ 57%] [32mBuilding CXX object CMakeFiles/cw1_team_x_cw1_class_lib.dir/src/cw1_class.cpp.o[0m
+[16.470s] [ 60%] [32m[1mLinking CXX shared library libcw1_team_x__rosidl_typesupport_introspection_cpp.so[0m
+[16.503s] [ 62%] [32m[1mLinking CXX shared library libcw1_team_x__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.606s] [ 62%] Built target cw1_team_x__rosidl_typesupport_introspection_cpp
+[16.614s] [ 65%] [32m[1mLinking CXX shared library libcw1_team_x__rosidl_typesupport_fastrtps_c.so[0m
+[16.631s] [ 65%] Built target cw1_team_x__rosidl_typesupport_fastrtps_cpp
+[16.740s] [ 65%] Built target cw1_team_x__rosidl_typesupport_fastrtps_c
+[16.780s] [ 65%] Built target cw1_team_x
+[16.835s] [ 68%] [34m[1mGenerating Python code for ROS interfaces[0m
+[17.120s] [ 68%] Built target cw1_team_x__py
+[17.164s] [ 71%] [32mBuilding C object CMakeFiles/cw1_team_x__rosidl_generator_py.dir/rosidl_generator_py/cw1_team_x/srv/_example_s.c.o[0m
+[17.279s] [ 74%] [32m[1mLinking C shared library rosidl_generator_py/cw1_team_x/libcw1_team_x__rosidl_generator_py.so[0m
+[17.378s] [ 74%] Built target cw1_team_x__rosidl_generator_py
+[17.422s] [ 80%] [32mBuilding C object CMakeFiles/cw1_team_x__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cw1_team_x/_cw1_team_x_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[17.423s] [ 80%] [32mBuilding C object CMakeFiles/cw1_team_x__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cw1_team_x/_cw1_team_x_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[17.423s] [ 82%] [32mBuilding C object CMakeFiles/cw1_team_x__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cw1_team_x/_cw1_team_x_s.ep.rosidl_typesupport_c.c.o[0m
+[17.531s] [ 85%] [32m[1mLinking C shared library rosidl_generator_py/cw1_team_x/cw1_team_x_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[17.532s] [ 88%] [32m[1mLinking C shared library rosidl_generator_py/cw1_team_x/cw1_team_x_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[17.540s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/cw1_team_x/cw1_team_x_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[17.614s] [ 91%] Built target cw1_team_x__rosidl_typesupport_introspection_c__pyext
+[17.614s] [ 91%] Built target cw1_team_x__rosidl_typesupport_fastrtps_c__pyext
+[17.631s] [ 91%] Built target cw1_team_x__rosidl_typesupport_c__pyext
+[26.947s] [ 94%] [32m[1mLinking CXX shared library libcw1_team_x_cw1_class_lib.so[0m
+[28.355s] [ 94%] Built target cw1_team_x_cw1_class_lib
+[28.384s] gmake[2]: Warning: File 'libcw1_team_x_cw1_class_lib.so' has modification time 1.4 s in the future
+[28.399s] [ 97%] [32mBuilding CXX object CMakeFiles/cw1_solution_node.dir/src/cw1_node.cpp.o[0m
+[31.198s] [100%] [32m[1mLinking CXX executable cw1_solution_node[0m
+[31.974s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.989s] [100%] Built target cw1_solution_node
+[32.008s] Invoked command in '/home/czg22/comp0250_s26_labs/build/cw1_team_x' returned '0': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/czg22/comp0250_s26_labs/build/cw1_team_x -- -j32 -l32
+[32.012s] Invoking command in '/home/czg22/comp0250_s26_labs/build/cw1_team_x': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/czg22/comp0250_s26_labs/build/cw1_team_x
+[32.024s] -- Install configuration: ""
+[32.026s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/ament_index/resource_index/rosidl_interfaces/cw1_team_x
+[32.027s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x
+[32.027s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv
+[32.027s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/example.h
+[32.028s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail
+[32.028s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__functions.h
+[32.029s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__type_support.h
+[32.029s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__struct.h
+[32.029s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__functions.c
+[32.029s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg
+[32.029s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg/rosidl_generator_c__visibility_control.h
+[32.030s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/library_path.sh
+[32.030s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/library_path.dsv
+[32.031s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_generator_c.so
+[32.031s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_generator_c.so" to ""
+[32.031s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x
+[32.031s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv
+[32.032s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail
+[32.032s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__rosidl_typesupport_fastrtps_c.h
+[32.032s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg
+[32.032s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[32.032s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_fastrtps_c.so
+[32.032s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_fastrtps_c.so" to ""
+[32.032s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x
+[32.033s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv
+[32.033s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail
+[32.033s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__type_support.c
+[32.034s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__rosidl_typesupport_introspection_c.h
+[32.034s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg
+[32.034s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[32.034s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_introspection_c.so
+[32.034s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_introspection_c.so" to ""
+[32.034s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_c.so
+[32.035s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_c.so" to ""
+[32.035s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x
+[32.035s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv
+[32.035s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/example.hpp
+[32.035s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail
+[32.035s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__traits.hpp
+[32.035s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__builder.hpp
+[32.036s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__struct.hpp
+[32.036s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__type_support.hpp
+[32.036s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg
+[32.036s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg/rosidl_generator_cpp__visibility_control.hpp
+[32.037s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x
+[32.037s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv
+[32.037s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail
+[32.037s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/dds_fastrtps
+[32.037s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__rosidl_typesupport_fastrtps_cpp.hpp
+[32.037s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg
+[32.037s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[32.037s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_fastrtps_cpp.so
+[32.038s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_fastrtps_cpp.so" to ""
+[32.039s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x
+[32.039s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv
+[32.039s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail
+[32.039s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__type_support.cpp
+[32.039s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/include/cw1_team_x/cw1_team_x/srv/detail/example__rosidl_typesupport_introspection_cpp.hpp
+[32.039s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_introspection_cpp.so
+[32.039s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_introspection_cpp.so" to ""
+[32.039s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_cpp.so
+[32.039s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_typesupport_cpp.so" to ""
+[32.040s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/pythonpath.sh
+[32.040s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/pythonpath.dsv
+[32.040s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x-0.1.0-py3.10.egg-info
+[32.042s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x-0.1.0-py3.10.egg-info/SOURCES.txt
+[32.042s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x-0.1.0-py3.10.egg-info/top_level.txt
+[32.042s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x-0.1.0-py3.10.egg-info/PKG-INFO
+[32.042s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x-0.1.0-py3.10.egg-info/dependency_links.txt
+[32.042s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x
+[32.043s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/_cw1_team_x_s.ep.rosidl_typesupport_fastrtps_c.c
+[32.043s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv
+[32.043s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv/__init__.py
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv/_example.py
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv/_example_s.c
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/_cw1_team_x_s.ep.rosidl_typesupport_c.c
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/__init__.py
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/_cw1_team_x_s.ep.rosidl_typesupport_introspection_c.c
+[32.044s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/libcw1_team_x__rosidl_generator_py.so
+[32.045s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[32.045s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[32.076s] Listing '/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x'...
+[32.076s] Compiling '/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/__init__.py'...
+[32.076s] Listing '/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv'...
+[32.076s] Compiling '/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv/__init__.py'...
+[32.077s] Compiling '/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/srv/_example.py'...
+[32.081s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[32.082s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[32.082s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[32.083s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[32.085s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[32.085s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/local/lib/python3.10/dist-packages/cw1_team_x/cw1_team_x_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[32.085s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_generator_py.so
+[32.086s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x__rosidl_generator_py.so" to ""
+[32.086s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/srv/Example.idl
+[32.087s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/srv/Example.srv
+[32.087s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/srv/Example_Request.msg
+[32.087s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/srv/Example_Response.msg
+[32.087s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x_cw1_class_lib.so
+[32.099s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/libcw1_team_x_cw1_class_lib.so" to ""
+[32.100s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/cw1_team_x/cw1_solution_node
+[32.100s] -- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw1_team_x/lib/cw1_team_x/cw1_solution_node" to ""
+[32.101s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/launch
+[32.101s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/launch/run_solution.launch.py
+[32.101s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/ament_index/resource_index/package_run_dependencies/cw1_team_x
+[32.102s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/ament_index/resource_index/parent_prefix_path/cw1_team_x
+[32.102s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/ament_prefix_path.sh
+[32.102s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/ament_prefix_path.dsv
+[32.103s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/path.sh
+[32.103s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/environment/path.dsv
+[32.103s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/local_setup.bash
+[32.103s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/local_setup.sh
+[32.103s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/local_setup.zsh
+[32.104s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/local_setup.dsv
+[32.104s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/package.dsv
+[32.104s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/ament_index/resource_index/packages/cw1_team_x
+[32.104s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_generator_cExport.cmake
+[32.105s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_generator_cExport-noconfig.cmake
+[32.105s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_typesupport_fastrtps_cExport.cmake
+[32.105s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[32.105s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_introspection_cExport.cmake
+[32.106s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[32.106s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_cExport.cmake
+[32.106s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_cExport-noconfig.cmake
+[32.106s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_generator_cppExport.cmake
+[32.106s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_typesupport_fastrtps_cppExport.cmake
+[32.106s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[32.107s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_introspection_cppExport.cmake
+[32.107s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[32.107s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_cppExport.cmake
+[32.107s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_x__rosidl_typesupport_cppExport-noconfig.cmake
+[32.107s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_generator_pyExport.cmake
+[32.108s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/export_cw1_team_x__rosidl_generator_pyExport-noconfig.cmake
+[32.108s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/rosidl_cmake-extras.cmake
+[32.108s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/ament_cmake_export_dependencies-extras.cmake
+[32.108s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/ament_cmake_export_include_directories-extras.cmake
+[32.108s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/ament_cmake_export_libraries-extras.cmake
+[32.108s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/ament_cmake_export_targets-extras.cmake
+[32.109s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[32.109s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[32.109s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_xConfig.cmake
+[32.109s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/cmake/cw1_team_xConfig-version.cmake
+[32.109s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_team_x/share/cw1_team_x/package.xml
+[32.113s] Invoked command in '/home/czg22/comp0250_s26_labs/build/cw1_team_x' returned '0': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/czg22/comp0250_s26_labs/build/cw1_team_x

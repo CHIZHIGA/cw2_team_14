@@ -1,0 +1,7 @@
+setup.py
+cw2_world_spawner_lib/__init__.py
+cw2_world_spawner_lib/coursework_world_spawner.py
+cw2_world_spawner_lib.egg-info/PKG-INFO
+cw2_world_spawner_lib.egg-info/SOURCES.txt
+cw2_world_spawner_lib.egg-info/dependency_links.txt
+cw2_world_spawner_lib.egg-info/top_level.txt

@@ -1,0 +1,326 @@
+[0.134s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'cw2_team_14']
+[0.134s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['cw2_team_14'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73dd93ff6b30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73dd93ff6560>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73dd93ff6560>>, mixin_verb=('build',))
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.256s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/czg22/comp0250_s26_labs'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[-1.654s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[-1.654s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[-1.654s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[-1.654s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[-1.654s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extensions ['ignore', 'ignore_ament_install']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'ignore'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'ignore_ament_install'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extensions ['colcon_pkg']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'colcon_pkg'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extensions ['colcon_meta']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'colcon_meta'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extensions ['ros']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'ros'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extensions ['cmake', 'python']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'cmake'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'python'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extensions ['python_setup_py']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks) by extension 'python_setup_py'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/build) by extensions ['ignore', 'ignore_ament_install']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/build) by extension 'ignore'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/build) ignored
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extensions ['ignore', 'ignore_ament_install']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extension 'ignore'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extension 'ignore_ament_install'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extensions ['colcon_pkg']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extension 'colcon_pkg'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extensions ['colcon_meta']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extension 'colcon_meta'
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extensions ['ros']
+[-1.653s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/cw1_team_14) by extension 'ros'
+[-1.650s] DEBUG:colcon.colcon_core.package_identification:Package 'courseworks/cw1_team_14' with type 'ros.ament_cmake' and name 'cw1_team_14'
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/install) by extensions ['ignore', 'ignore_ament_install']
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/install) by extension 'ignore'
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/install) ignored
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/log) by extensions ['ignore', 'ignore_ament_install']
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/log) by extension 'ignore'
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(courseworks/log) ignored
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[-1.650s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[-1.649s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['ignore', 'ignore_ament_install']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ignore'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ignore_ament_install'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['colcon_pkg']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'colcon_pkg'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['colcon_meta']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'colcon_meta'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['ros']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ros'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['cmake', 'python']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'cmake'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'python'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['python_setup_py']
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'python_setup_py'
+[-1.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extensions ['ignore', 'ignore_ament_install']
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extension 'ignore'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extension 'ignore_ament_install'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extensions ['colcon_pkg']
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extension 'colcon_pkg'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extensions ['colcon_meta']
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extension 'colcon_meta'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extensions ['ros']
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw1_world_spawner) by extension 'ros'
+[-1.647s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw1_world_spawner' with type 'ros.ament_cmake' and name 'cw1_world_spawner'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['ignore', 'ignore_ament_install']
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ignore'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ignore_ament_install'
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['colcon_pkg']
+[-1.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'colcon_pkg'
+[-1.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['colcon_meta']
+[-1.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'colcon_meta'
+[-1.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['ros']
+[-1.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ros'
+[-1.645s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw2_team_14' with type 'ros.ament_cmake' and name 'cw2_team_14'
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['ignore', 'ignore_ament_install']
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ignore'
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ignore_ament_install'
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['colcon_pkg']
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'colcon_pkg'
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['colcon_meta']
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'colcon_meta'
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['ros']
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ros'
+[-1.645s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw2_world_spawner' with type 'ros.ament_cmake' and name 'cw2_world_spawner'
+[-1.645s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['ignore', 'ignore_ament_install']
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ignore'
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ignore_ament_install'
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['colcon_pkg']
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'colcon_pkg'
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['colcon_meta']
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'colcon_meta'
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['ros']
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ros'
+[-1.644s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/panda_description' with type 'ros.ament_cmake' and name 'panda_description'
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ignore'
+[-1.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ignore_ament_install'
+[-1.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['colcon_pkg']
+[-1.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'colcon_pkg'
+[-1.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['colcon_meta']
+[-1.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'colcon_meta'
+[-1.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['ros']
+[-1.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ros'
+[-1.643s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/panda_moveit_config' with type 'ros.ament_cmake' and name 'panda_moveit_config'
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['ignore', 'ignore_ament_install']
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ignore'
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ignore_ament_install'
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['colcon_pkg']
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'colcon_pkg'
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['colcon_meta']
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'colcon_meta'
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['ros']
+[-1.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ros'
+[-1.641s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/realsense_gazebo_plugin' with type 'ros.ament_cmake' and name 'realsense_gazebo_plugin'
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['ignore', 'ignore_ament_install']
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ignore'
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ignore_ament_install'
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['colcon_pkg']
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'colcon_pkg'
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['colcon_meta']
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'colcon_meta'
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['ros']
+[-1.641s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ros'
+[-1.641s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/rpl_panda_with_rs' with type 'ros.ament_cmake' and name 'rpl_panda_with_rs'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extensions ['ignore', 'ignore_ament_install']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'ignore'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'ignore_ament_install'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extensions ['colcon_pkg']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'colcon_pkg'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extensions ['colcon_meta']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'colcon_meta'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extensions ['ros']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'ros'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extensions ['cmake', 'python']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'cmake'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'python'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extensions ['python_setup_py']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs) by extension 'python_setup_py'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extensions ['ignore', 'ignore_ament_install']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extension 'ignore'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extension 'ignore_ament_install'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extensions ['colcon_pkg']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extension 'colcon_pkg'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extensions ['colcon_meta']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extension 'colcon_meta'
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extensions ['ros']
+[-1.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_demo) by extension 'ros'
+[-1.639s] DEBUG:colcon.colcon_core.package_identification:Package 'src/labs/pcl_demo' with type 'ros.ament_cmake' and name 'pcl_demo'
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extensions ['ignore', 'ignore_ament_install']
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extension 'ignore'
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extension 'ignore_ament_install'
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extensions ['colcon_pkg']
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extension 'colcon_pkg'
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extensions ['colcon_meta']
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extension 'colcon_meta'
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extensions ['ros']
+[-1.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/pcl_tutorial) by extension 'ros'
+[-1.638s] DEBUG:colcon.colcon_core.package_identification:Package 'src/labs/pcl_tutorial' with type 'ros.ament_cmake' and name 'pcl_tutorial'
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extensions ['ignore', 'ignore_ament_install']
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extension 'ignore'
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extension 'ignore_ament_install'
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extensions ['colcon_pkg']
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extension 'colcon_pkg'
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extensions ['colcon_meta']
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extension 'colcon_meta'
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extensions ['ros']
+[-1.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/labs/perception_pipeline_humble_demo) by extension 'ros'
+[-1.638s] DEBUG:colcon.colcon_core.package_identification:Package 'src/labs/perception_pipeline_humble_demo' with type 'ros.ament_cmake' and name 'perception_pipeline_humble_demo'
+[-1.637s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[-1.637s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[-1.637s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[-1.637s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[-1.637s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cw1_world_spawner' in 'src/courseworks/cw1_world_spawner'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cw2_world_spawner' in 'src/courseworks/cw2_world_spawner'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_description' in 'src/courseworks/panda_description'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_moveit_config' in 'src/courseworks/panda_moveit_config'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'pcl_demo' in 'src/labs/pcl_demo'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'pcl_tutorial' in 'src/labs/pcl_tutorial'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'perception_pipeline_humble_demo' in 'src/labs/perception_pipeline_humble_demo'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense_gazebo_plugin' in 'src/courseworks/realsense_gazebo_plugin'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cw1_team_14' in 'courseworks/cw1_team_14'
+[-1.613s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rpl_panda_with_rs' in 'src/courseworks/rpl_panda_with_rs'
+[-1.613s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[-1.613s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[-1.608s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 57 installed packages in /home/czg22/ws_moveit2/install
+[-1.607s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 385 installed packages in /opt/ros/humble
+[-1.604s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_args' from command line to 'None'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_target' from command line to 'None'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_clean_cache' from command line to 'False'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_clean_first' from command line to 'False'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_force_configure' from command line to 'False'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'ament_cmake_args' from command line to 'None'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'catkin_cmake_args' from command line to 'None'
+[-1.569s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'catkin_skip_building_tests' from command line to 'False'
+[-1.569s] DEBUG:colcon.colcon_core.verb:Building package 'cw2_team_14' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/czg22/comp0250_s26_labs/build/cw2_team_14', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/czg22/comp0250_s26_labs/install/cw2_team_14', 'merge_install': False, 'path': '/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14', 'symlink_install': False, 'test_result_base': None}
+[-1.569s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[-1.568s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[-1.567s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14' with build type 'ament_cmake'
+[-1.566s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14'
+[-1.565s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[-1.564s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[-1.564s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[28.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/czg22/comp0250_s26_labs/build/cw2_team_14': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/czg22/comp0250_s26_labs/build/cw2_team_14 -- -j32 -l32
+[56.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/czg22/comp0250_s26_labs/build/cw2_team_14' returned '0': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/czg22/comp0250_s26_labs/build/cw2_team_14 -- -j32 -l32
+[56.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/czg22/comp0250_s26_labs/build/cw2_team_14': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/czg22/comp0250_s26_labs/build/cw2_team_14
+[84.812s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_team_14)
+[84.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/czg22/comp0250_s26_labs/build/cw2_team_14' returned '0': AMENT_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble LD_LIBRARY_PATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/czg22/comp0250_s26_labs/build/cw2_team_14
+[84.817s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14' for CMake module files
+[84.817s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14' for CMake config files
+[84.818s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'cmake_prefix_path')
+[84.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.ps1'
+[84.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.dsv'
+[84.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.sh'
+[84.821s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib'
+[84.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'ld_library_path_lib')
+[84.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.ps1'
+[84.822s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.dsv'
+[84.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.sh'
+[84.822s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/bin'
+[84.822s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/pkgconfig/cw2_team_14.pc'
+[84.823s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/python3.10/site-packages'
+[84.824s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/bin'
+[84.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.ps1'
+[84.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.dsv'
+[84.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.sh'
+[84.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.bash'
+[84.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.zsh'
+[84.827s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/colcon-core/packages/cw2_team_14)
+[84.828s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_team_14)
+[84.829s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14' for CMake module files
+[84.829s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14' for CMake config files
+[84.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'cmake_prefix_path')
+[84.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.ps1'
+[84.830s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.dsv'
+[84.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.sh'
+[84.831s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib'
+[84.831s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'ld_library_path_lib')
+[84.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.ps1'
+[84.831s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.dsv'
+[84.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.sh'
+[84.832s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/bin'
+[84.832s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/pkgconfig/cw2_team_14.pc'
+[84.832s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/python3.10/site-packages'
+[84.832s] Level 1:colcon.colcon_core.environment:checking '/home/czg22/comp0250_s26_labs/install/cw2_team_14/bin'
+[84.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.ps1'
+[84.833s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.dsv'
+[84.833s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.sh'
+[84.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.bash'
+[84.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.zsh'
+[84.835s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/czg22/comp0250_s26_labs/install/cw2_team_14/share/colcon-core/packages/cw2_team_14)
+[84.835s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[84.836s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[84.836s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[84.836s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[84.863s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[84.863s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[84.863s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[84.863s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[84.863s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[84.863s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[84.864s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/czg22/comp0250_s26_labs/install/local_setup.ps1'
+[84.865s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/czg22/comp0250_s26_labs/install/_local_setup_util_ps1.py'
+[84.866s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/czg22/comp0250_s26_labs/install/setup.ps1'
+[84.869s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/czg22/comp0250_s26_labs/install/local_setup.sh'
+[84.870s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/czg22/comp0250_s26_labs/install/_local_setup_util_sh.py'
+[84.870s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/czg22/comp0250_s26_labs/install/setup.sh'
+[84.873s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/czg22/comp0250_s26_labs/install/local_setup.bash'
+[84.873s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/czg22/comp0250_s26_labs/install/setup.bash'
+[84.876s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/czg22/comp0250_s26_labs/install/local_setup.zsh'
+[84.876s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/czg22/comp0250_s26_labs/install/setup.zsh'

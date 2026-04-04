@@ -1,0 +1,2 @@
+source;share/perception_pipeline_humble_demo/environment/ament_prefix_path.sh
+source;share/perception_pipeline_humble_demo/environment/path.sh

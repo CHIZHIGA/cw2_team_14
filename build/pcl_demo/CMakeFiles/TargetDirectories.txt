@@ -1,0 +1,10 @@
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/uninstall.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/pcl_demo_uninstall.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/pcl_demo_node.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/test.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/edit_cache.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/rebuild_cache.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/list_install_components.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/install.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/install/local.dir
+/home/czg22/comp0250_s26_labs/build/pcl_demo/CMakeFiles/install/strip.dir

@@ -1,0 +1,7 @@
+/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/src/cw2_class.cpp: In member function ‘bool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)’:
+/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/src/cw2_class.cpp:229:73: error: ‘class rclcpp::Duration’ has no member named ‘to_builtin_msg’
+  229 |     trajectory.joint_trajectory.points[i].time_from_start = accumulated.to_builtin_msg();
+      |                                                                         ^~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make:76: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:595: CMakeFiles/cw2_team_14_cw2_class_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

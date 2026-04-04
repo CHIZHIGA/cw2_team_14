@@ -1,0 +1,17 @@
+/home/czg22/comp0250_s26_labs/install/pcl_demo/lib/pcl_demo/pcl_demo_node
+/home/czg22/comp0250_s26_labs/install/pcl_demo/include//pcl_demo/pcl_demo.hpp
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/ament_index/resource_index/package_run_dependencies/pcl_demo
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/ament_index/resource_index/parent_prefix_path/pcl_demo
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/environment/ament_prefix_path.sh
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/environment/ament_prefix_path.dsv
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/environment/path.sh
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/environment/path.dsv
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/local_setup.bash
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/local_setup.sh
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/local_setup.zsh
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/local_setup.dsv
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/package.dsv
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/ament_index/resource_index/packages/pcl_demo
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/cmake/pcl_demoConfig.cmake
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/cmake/pcl_demoConfig-version.cmake
+/home/czg22/comp0250_s26_labs/install/pcl_demo/share/pcl_demo/package.xml

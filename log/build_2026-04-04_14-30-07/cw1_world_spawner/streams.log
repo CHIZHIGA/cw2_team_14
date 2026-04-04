@@ -1,0 +1,286 @@
+[0.057s] Invoking command in '/home/czg22/comp0250_s26_labs/build/cw1_world_spawner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/czg22/comp0250_s26_labs/build/cw1_world_spawner -- -j32 -l32
+[0.121s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_generator_c[0m
+[0.136s] [  1%] Built target cw1_world_spawner__cpp
+[0.142s] [ 12%] Built target cw1_world_spawner__rosidl_generator_c
+[0.169s] [ 12%] Built target ament_cmake_python_copy_coursework_world_spawner_lib
+[0.170s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_cpp[0m
+[0.171s] [ 12%] Built target ament_cmake_python_copy_cw1_world_spawner
+[0.171s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_fastrtps_cpp[0m
+[0.177s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_introspection_cpp[0m
+[0.177s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_c[0m
+[0.178s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_introspection_c[0m
+[0.179s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_fastrtps_c[0m
+[0.184s] [ 23%] Built target cw1_world_spawner__rosidl_typesupport_fastrtps_cpp
+[0.184s] [ 34%] Built target cw1_world_spawner__rosidl_typesupport_cpp
+[0.186s] [ 45%] Built target cw1_world_spawner__rosidl_typesupport_c
+[0.188s] [ 56%] Built target cw1_world_spawner__rosidl_typesupport_introspection_cpp
+[0.190s] [ 67%] Built target cw1_world_spawner__rosidl_typesupport_introspection_c
+[0.192s] [ 78%] Built target cw1_world_spawner__rosidl_typesupport_fastrtps_c
+[0.232s] [ 78%] Built target cw1_world_spawner
+[0.270s] [ 80%] Built target cw1_world_spawner__py
+[0.291s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_generator_py[0m
+[0.313s] [ 89%] Built target cw1_world_spawner__rosidl_generator_py
+[0.332s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.333s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_c__pyext[0m
+[0.333s] [35m[1mConsolidate compiler generated dependencies of target cw1_world_spawner__rosidl_typesupport_introspection_c__pyext[0m
+[0.336s] running egg_info
+[0.336s] running egg_info
+[0.336s] writing coursework_world_spawner_lib.egg-info/PKG-INFO
+[0.336s] writing cw1_world_spawner.egg-info/PKG-INFO
+[0.337s] writing dependency_links to coursework_world_spawner_lib.egg-info/dependency_links.txt
+[0.337s] writing dependency_links to cw1_world_spawner.egg-info/dependency_links.txt
+[0.337s] writing top-level names to coursework_world_spawner_lib.egg-info/top_level.txt
+[0.337s] writing top-level names to cw1_world_spawner.egg-info/top_level.txt
+[0.338s] reading manifest file 'coursework_world_spawner_lib.egg-info/SOURCES.txt'
+[0.338s] reading manifest file 'cw1_world_spawner.egg-info/SOURCES.txt'
+[0.338s] writing manifest file 'coursework_world_spawner_lib.egg-info/SOURCES.txt'
+[0.338s] writing manifest file 'cw1_world_spawner.egg-info/SOURCES.txt'
+[0.355s] [ 98%] Built target cw1_world_spawner__rosidl_typesupport_c__pyext
+[0.355s] [100%] Built target cw1_world_spawner__rosidl_typesupport_introspection_c__pyext
+[0.355s] [100%] Built target cw1_world_spawner__rosidl_typesupport_fastrtps_c__pyext
+[0.368s] [100%] Built target ament_cmake_python_build_cw1_world_spawner_egg
+[0.369s] [100%] Built target ament_cmake_python_build_coursework_world_spawner_lib_egg
+[0.386s] Invoked command in '/home/czg22/comp0250_s26_labs/build/cw1_world_spawner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/czg22/comp0250_s26_labs/build/cw1_world_spawner -- -j32 -l32
+[0.388s] Invoking command in '/home/czg22/comp0250_s26_labs/build/cw1_world_spawner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/czg22/comp0250_s26_labs/build/cw1_world_spawner
+[0.401s] -- Install configuration: ""
+[0.401s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/ament_index/resource_index/rosidl_interfaces/cw1_world_spawner
+[0.401s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner
+[0.401s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv
+[0.402s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task2_service.h
+[0.402s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task3_service.h
+[0.402s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task_setup.h
+[0.402s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task1_service.h
+[0.402s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail
+[0.403s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__functions.c
+[0.403s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__functions.h
+[0.403s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__struct.h
+[0.403s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__functions.c
+[0.404s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__type_support.h
+[0.404s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__functions.h
+[0.404s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__struct.h
+[0.405s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__struct.h
+[0.405s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__functions.h
+[0.405s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__functions.c
+[0.405s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__functions.h
+[0.406s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__functions.c
+[0.406s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__type_support.h
+[0.406s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__struct.h
+[0.406s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__type_support.h
+[0.406s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__type_support.h
+[0.406s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg
+[0.407s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg/rosidl_generator_c__visibility_control.h
+[0.407s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/library_path.sh
+[0.407s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/library_path.dsv
+[0.407s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_generator_c.so
+[0.407s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner
+[0.408s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv
+[0.408s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail
+[0.409s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__rosidl_typesupport_fastrtps_c.h
+[0.409s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__rosidl_typesupport_fastrtps_c.h
+[0.409s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__rosidl_typesupport_fastrtps_c.h
+[0.409s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__rosidl_typesupport_fastrtps_c.h
+[0.410s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_typesupport_fastrtps_c.so
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__type_support.c
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__rosidl_typesupport_introspection_c.h
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__type_support.c
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__type_support.c
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__rosidl_typesupport_introspection_c.h
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__type_support.c
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__rosidl_typesupport_introspection_c.h
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__rosidl_typesupport_introspection_c.h
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg
+[0.411s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_typesupport_introspection_c.so
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_typesupport_c.so
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task2_service.hpp
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task3_service.hpp
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task1_service.hpp
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/task_setup.hpp
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail
+[0.412s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__struct.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__type_support.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__struct.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__traits.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__builder.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__type_support.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__builder.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__struct.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__struct.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__builder.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__traits.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__traits.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__builder.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__traits.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__type_support.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__type_support.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/dds_fastrtps
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__rosidl_typesupport_fastrtps_cpp.hpp
+[0.413s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__rosidl_typesupport_fastrtps_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__rosidl_typesupport_fastrtps_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__rosidl_typesupport_fastrtps_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_typesupport_fastrtps_cpp.so
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__rosidl_typesupport_introspection_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__rosidl_typesupport_introspection_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__rosidl_typesupport_introspection_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task3_service__type_support.cpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task_setup__type_support.cpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__rosidl_typesupport_introspection_cpp.hpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task1_service__type_support.cpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/include/cw1_world_spawner/cw1_world_spawner/srv/detail/task2_service__type_support.cpp
+[0.414s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_typesupport_introspection_cpp.so
+[0.415s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_typesupport_cpp.so
+[0.415s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/pythonpath.sh
+[0.415s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/pythonpath.dsv
+[0.415s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner-0.1.0-py3.10.egg-info
+[0.415s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner-0.1.0-py3.10.egg-info/SOURCES.txt
+[0.415s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner-0.1.0-py3.10.egg-info/top_level.txt
+[0.415s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner-0.1.0-py3.10.egg-info/PKG-INFO
+[0.415s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner-0.1.0-py3.10.egg-info/dependency_links.txt
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/libcw1_world_spawner__rosidl_generator_py.so
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/_cw1_world_spawner_s.ep.rosidl_typesupport_introspection_c.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task2_service.py
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task3_service.py
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task3_service_s.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/__init__.py
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task1_service_s.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task2_service_s.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task_setup_s.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task1_service.py
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv/_task_setup.py
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/__init__.py
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/cw1_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/_cw1_world_spawner_s.ep.rosidl_typesupport_c.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/_cw1_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/cw1_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.416s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/cw1_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.438s] Listing '/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner'...
+[0.438s] Listing '/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/srv'...
+[0.440s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/cw1_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.441s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/cw1_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.441s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/cw1_world_spawner/cw1_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.442s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/libcw1_world_spawner__rosidl_generator_py.so
+[0.442s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/TaskSetup.idl
+[0.443s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task1Service.idl
+[0.443s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task2Service.idl
+[0.444s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task3Service.idl
+[0.445s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/TaskSetup.srv
+[0.445s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/TaskSetup_Request.msg
+[0.445s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/TaskSetup_Response.msg
+[0.445s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task1Service.srv
+[0.445s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task1Service_Request.msg
+[0.446s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task1Service_Response.msg
+[0.446s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task2Service.srv
+[0.446s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task2Service_Request.msg
+[0.446s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task2Service_Response.msg
+[0.446s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task3Service.srv
+[0.447s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task3Service_Request.msg
+[0.447s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/srv/Task3Service_Response.msg
+[0.447s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib-0.1.0-py3.10.egg-info
+[0.449s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib-0.1.0-py3.10.egg-info/SOURCES.txt
+[0.449s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib-0.1.0-py3.10.egg-info/top_level.txt
+[0.449s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib-0.1.0-py3.10.egg-info/PKG-INFO
+[0.449s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib-0.1.0-py3.10.egg-info/dependency_links.txt
+[0.449s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib
+[0.449s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib/__init__.py
+[0.449s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib/coursework_world_spawner.py
+[0.468s] Listing '/home/czg22/comp0250_s26_labs/install/cw1_world_spawner/local/lib/python3.10/dist-packages/coursework_world_spawner_lib'...
+[0.472s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/cw1_world_spawner/world_spawner.py
+[0.472s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/lib/cw1_world_spawner/test_coursework.py
+[0.472s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/object-golf-tile
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/object-golf-tile/model.sdf
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/object-golf-tile/model.config
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_blue
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_blue/model.sdf
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_blue/model.sdf.xmacro
+[0.473s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_blue/model.config
+[0.474s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_red
+[0.474s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_red/model.sdf
+[0.474s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_red/model.sdf.xmacro
+[0.474s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_red/model.config
+[0.474s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/all_tiles
+[0.475s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/all_tiles/model.sdf
+[0.475s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/all_tiles/model.sdf.xmacro
+[0.475s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/all_tiles/model.config
+[0.475s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_purple
+[0.475s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_purple/model.sdf
+[0.476s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_purple/model.config
+[0.476s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_blue
+[0.476s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_blue/model.sdf
+[0.476s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_blue/model.config
+[0.477s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_red
+[0.477s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_red/model.sdf
+[0.478s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box_red/model.config
+[0.478s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_purple
+[0.478s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_purple/model.sdf
+[0.478s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_purple/model.sdf.xmacro
+[0.478s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket_purple/model.config
+[0.479s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box
+[0.479s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box/model.sdf
+[0.479s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/box/model.config
+[0.479s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket
+[0.480s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket/model.sdf
+[0.480s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket/model.sdf.xmacro
+[0.481s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/models/basket/model.config
+[0.481s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/launch
+[0.482s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/launch/world_spawner.launch.py
+[0.482s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/launch/test_coursework.launch.py
+[0.482s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/ament_index/resource_index/package_run_dependencies/cw1_world_spawner
+[0.482s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/ament_index/resource_index/parent_prefix_path/cw1_world_spawner
+[0.482s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/ament_prefix_path.sh
+[0.484s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/ament_prefix_path.dsv
+[0.484s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/path.sh
+[0.484s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/environment/path.dsv
+[0.484s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/local_setup.bash
+[0.484s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/local_setup.sh
+[0.484s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/local_setup.zsh
+[0.485s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/local_setup.dsv
+[0.485s] -- Installing: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/package.dsv
+[0.485s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/ament_index/resource_index/packages/cw1_world_spawner
+[0.485s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_generator_cExport.cmake
+[0.485s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_generator_cExport-noconfig.cmake
+[0.487s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake
+[0.487s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.489s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_introspection_cExport.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_cExport.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_cExport-noconfig.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_generator_cppExport.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_introspection_cppExport.cmake
+[0.490s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.491s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_cppExport.cmake
+[0.491s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawner__rosidl_typesupport_cppExport-noconfig.cmake
+[0.491s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_generator_pyExport.cmake
+[0.491s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/export_cw1_world_spawner__rosidl_generator_pyExport-noconfig.cmake
+[0.491s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/rosidl_cmake-extras.cmake
+[0.491s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.493s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.497s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/ament_cmake_export_libraries-extras.cmake
+[0.497s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/ament_cmake_export_targets-extras.cmake
+[0.497s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.497s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.497s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawnerConfig.cmake
+[0.498s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/cmake/cw1_world_spawnerConfig-version.cmake
+[0.498s] -- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw1_world_spawner/share/cw1_world_spawner/package.xml
+[0.508s] Invoked command in '/home/czg22/comp0250_s26_labs/build/cw1_world_spawner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/czg22/comp0250_s26_labs/build/cw1_world_spawner

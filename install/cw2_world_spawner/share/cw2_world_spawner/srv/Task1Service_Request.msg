@@ -1,0 +1,3 @@
+geometry_msgs/PointStamped object_point
+geometry_msgs/PointStamped goal_point
+string shape_type

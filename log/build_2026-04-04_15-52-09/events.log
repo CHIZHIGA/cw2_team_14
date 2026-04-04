@@ -1,0 +1,777 @@
+[0.000000] (-) TimerEvent: {}
+[0.000294] (-) JobUnselected: {'identifier': 'cw1_team_14'}
+[0.000334] (-) JobUnselected: {'identifier': 'cw1_world_spawner'}
+[0.000370] (-) JobUnselected: {'identifier': 'cw2_world_spawner'}
+[0.000409] (-) JobUnselected: {'identifier': 'panda_description'}
+[0.000466] (-) JobUnselected: {'identifier': 'panda_moveit_config'}
+[0.000514] (-) JobUnselected: {'identifier': 'pcl_demo'}
+[0.000550] (-) JobUnselected: {'identifier': 'pcl_tutorial'}
+[0.000585] (-) JobUnselected: {'identifier': 'perception_pipeline_humble_demo'}
+[0.000620] (-) JobUnselected: {'identifier': 'realsense_gazebo_plugin'}
+[0.000654] (-) JobUnselected: {'identifier': 'rpl_panda_with_rs'}
+[0.000692] (cw2_team_14) JobQueued: {'identifier': 'cw2_team_14', 'dependencies': OrderedDict([('cw2_world_spawner', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner')])}
+[0.000964] (cw2_team_14) JobStarted: {'identifier': 'cw2_team_14'}
+[0.053604] (cw2_team_14) JobProgress: {'identifier': 'cw2_team_14', 'progress': 'cmake'}
+[0.055032] (cw2_team_14) JobProgress: {'identifier': 'cw2_team_14', 'progress': 'build'}
+[0.055908] (cw2_team_14) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/czg22/comp0250_s26_labs/build/cw2_team_14', '--', '-j32', '-l32'], 'cwd': '/home/czg22/comp0250_s26_labs/build/cw2_team_14', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/11315/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('USER', 'czg22'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/czg22/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/out/nls.messages.json","locale":"en","availableLanguages":{}}'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/11315/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils/lib:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner/lib:/home/czg22/ws_moveit2/install/moveit_visual_tools/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_core/lib:/home/czg22/ws_moveit2/install/moveit_ros_control_interface/lib:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager/lib:/home/czg22/ws_moveit2/install/moveit_setup_assistant/lib:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins/lib:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins/lib:/home/czg22/ws_moveit2/install/moveit_setup_controllers/lib:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins/lib:/home/czg22/ws_moveit2/install/moveit_setup_framework/lib:/home/czg22/ws_moveit2/install/moveit_servo/lib:/home/czg22/ws_moveit2/install/moveit_ros_visualization/lib:/home/czg22/ws_moveit2/install/moveit_py/lib:/home/czg22/ws_moveit2/install/moveit_hybrid_planning/lib:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks/lib:/home/czg22/ws_moveit2/install/moveit_ros_warehouse/lib:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction/lib:/home/czg22/ws_moveit2/install/moveit_ros_perception/lib:/home/czg22/ws_moveit2/install/moveit_ros_move_group/lib:/home/czg22/ws_moveit2/install/moveit_planners_ompl/lib:/home/czg22/ws_moveit2/install/moveit_ros_planning/lib:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/czg22/ws_moveit2/install/moveit_planners_chomp/lib:/home/czg22/ws_moveit2/install/moveit_kinematics/lib:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter/lib:/home/czg22/ws_moveit2/install/chomp_motion_planner/lib:/home/czg22/ws_moveit2/install/moveit_core/lib:/home/czg22/ws_moveit2/install/srdfdom/lib:/home/czg22/ws_moveit2/install/rviz_marker_tools/lib:/home/czg22/ws_moveit2/install/rosparam_shortcuts/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/czg22'), ('VSCODE_RECONNECTION_GRACE_TIME', '10800000'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-755292c5-810e-41f5-a577-2946ab3ce44a.sock'), ('ROS_PYTHON_VERSION', '3'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', ''), ('COLCON_PREFIX_PATH', '/home/czg22/ws_moveit2/install'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'czg22'), ('NAME', 'Agang'), ('WSL_INTEROP', '/run/WSL/428_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('RUST_LOG', 'warn'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/czg22/.codex/tmp/arg0/codex-arg01SMmTy:/home/czg22/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/bin/remote-cli:/home/czg22/ws_moveit2/install/moveit_core/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/11315/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/d/MATLAB/R2025b/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/11315/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/11315/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/czg22/.vscode-server/extensions/openai.chatgpt-26.323.20928-linux-x64/bin/linux-x86_64'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('GH_PAGER', 'cat'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/home/czg22/ws_moveit2/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake'), ('CODEX_THREAD_ID', '019d58b2-c73e-7be3-8b96-05b7973c3738'), ('GIT_PAGER', 'cat'), ('PWD', '/home/czg22/comp0250_s26_labs/build/cw2_team_14'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_py/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages:/home/czg22/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.099951] (-) TimerEvent: {}
+[0.154029] (cw2_team_14) StdoutLine: {'line': b'[  2%] Built target cw2_team_14__cpp\n'}
+[0.154554] (cw2_team_14) StdoutLine: {'line': b'[ 11%] Built target cw2_team_14__rosidl_generator_c\n'}
+[0.170414] (cw2_team_14) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_copy_cw2_team_14\n'}
+[0.194062] (cw2_team_14) StdoutLine: {'line': b'[ 20%] Built target cw2_team_14__rosidl_typesupport_introspection_cpp\n'}
+[0.194527] (cw2_team_14) StdoutLine: {'line': b'[ 28%] Built target cw2_team_14__rosidl_typesupport_cpp\n'}
+[0.194823] (cw2_team_14) StdoutLine: {'line': b'[ 37%] Built target cw2_team_14__rosidl_typesupport_fastrtps_cpp\n'}
+[0.200379] (-) TimerEvent: {}
+[0.212560] (cw2_team_14) StdoutLine: {'line': b'[ 45%] Built target cw2_team_14__rosidl_typesupport_c\n'}
+[0.213285] (cw2_team_14) StdoutLine: {'line': b'[ 62%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c\n'}
+[0.213454] (cw2_team_14) StdoutLine: {'line': b'[ 62%] Built target cw2_team_14__rosidl_typesupport_introspection_c\n'}
+[0.237158] (cw2_team_14) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target cw2_team_14_cw2_class_lib\n'}
+[0.257353] (cw2_team_14) StdoutLine: {'line': b'[ 62%] Built target cw2_team_14\n'}
+[0.267611] (cw2_team_14) StdoutLine: {'line': b'[ 65%] Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o\n'}
+[0.299029] (cw2_team_14) StdoutLine: {'line': b'[ 68%] Built target cw2_team_14__py\n'}
+[0.300548] (-) TimerEvent: {}
+[0.343204] (cw2_team_14) StdoutLine: {'line': b'[ 74%] Built target cw2_team_14__rosidl_generator_py\n'}
+[0.356007] (cw2_team_14) StdoutLine: {'line': b'running egg_info\n'}
+[0.356377] (cw2_team_14) StdoutLine: {'line': b'writing cw2_team_14.egg-info/PKG-INFO\n'}
+[0.356544] (cw2_team_14) StdoutLine: {'line': b'writing dependency_links to cw2_team_14.egg-info/dependency_links.txt\n'}
+[0.356801] (cw2_team_14) StdoutLine: {'line': b'writing top-level names to cw2_team_14.egg-info/top_level.txt\n'}
+[0.358171] (cw2_team_14) StdoutLine: {'line': b"reading manifest file 'cw2_team_14.egg-info/SOURCES.txt'\n"}
+[0.358515] (cw2_team_14) StdoutLine: {'line': b"writing manifest file 'cw2_team_14.egg-info/SOURCES.txt'\n"}
+[0.386370] (cw2_team_14) StdoutLine: {'line': b'[ 91%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.386589] (cw2_team_14) StdoutLine: {'line': b'[ 91%] Built target cw2_team_14__rosidl_typesupport_c__pyext\n'}
+[0.386633] (cw2_team_14) StdoutLine: {'line': b'[ 91%] Built target cw2_team_14__rosidl_typesupport_introspection_c__pyext\n'}
+[0.388116] (cw2_team_14) StdoutLine: {'line': b'[ 91%] Built target ament_cmake_python_build_cw2_team_14_egg\n'}
+[0.400882] (-) TimerEvent: {}
+[0.501373] (-) TimerEvent: {}
+[0.601902] (-) TimerEvent: {}
+[0.702271] (-) TimerEvent: {}
+[0.802646] (-) TimerEvent: {}
+[0.903041] (-) TimerEvent: {}
+[1.003429] (-) TimerEvent: {}
+[1.103871] (-) TimerEvent: {}
+[1.205576] (-) TimerEvent: {}
+[1.306182] (-) TimerEvent: {}
+[1.406527] (-) TimerEvent: {}
+[1.506947] (-) TimerEvent: {}
+[1.607634] (-) TimerEvent: {}
+[1.708350] (-) TimerEvent: {}
+[1.809110] (-) TimerEvent: {}
+[1.909857] (-) TimerEvent: {}
+[2.010342] (-) TimerEvent: {}
+[2.111118] (-) TimerEvent: {}
+[2.211951] (-) TimerEvent: {}
+[2.312648] (-) TimerEvent: {}
+[2.413142] (-) TimerEvent: {}
+[2.514128] (-) TimerEvent: {}
+[2.614555] (-) TimerEvent: {}
+[2.715115] (-) TimerEvent: {}
+[2.815664] (-) TimerEvent: {}
+[2.916930] (-) TimerEvent: {}
+[3.018195] (-) TimerEvent: {}
+[3.118661] (-) TimerEvent: {}
+[3.218965] (-) TimerEvent: {}
+[3.319580] (-) TimerEvent: {}
+[3.420211] (-) TimerEvent: {}
+[3.520756] (-) TimerEvent: {}
+[3.621438] (-) TimerEvent: {}
+[3.722175] (-) TimerEvent: {}
+[3.822509] (-) TimerEvent: {}
+[3.923235] (-) TimerEvent: {}
+[4.027956] (-) TimerEvent: {}
+[4.129021] (-) TimerEvent: {}
+[4.230181] (-) TimerEvent: {}
+[4.330520] (-) TimerEvent: {}
+[4.433079] (-) TimerEvent: {}
+[4.533622] (-) TimerEvent: {}
+[4.633946] (-) TimerEvent: {}
+[4.734700] (-) TimerEvent: {}
+[4.835501] (-) TimerEvent: {}
+[4.936365] (-) TimerEvent: {}
+[5.037333] (-) TimerEvent: {}
+[5.138322] (-) TimerEvent: {}
+[5.238714] (-) TimerEvent: {}
+[5.339180] (-) TimerEvent: {}
+[5.439601] (-) TimerEvent: {}
+[5.539920] (-) TimerEvent: {}
+[5.640353] (-) TimerEvent: {}
+[5.740820] (-) TimerEvent: {}
+[5.841294] (-) TimerEvent: {}
+[5.941882] (-) TimerEvent: {}
+[6.042420] (-) TimerEvent: {}
+[6.142938] (-) TimerEvent: {}
+[6.243306] (-) TimerEvent: {}
+[6.343686] (-) TimerEvent: {}
+[6.444125] (-) TimerEvent: {}
+[6.544595] (-) TimerEvent: {}
+[6.645141] (-) TimerEvent: {}
+[6.745854] (-) TimerEvent: {}
+[6.846209] (-) TimerEvent: {}
+[6.946558] (-) TimerEvent: {}
+[7.046952] (-) TimerEvent: {}
+[7.147298] (-) TimerEvent: {}
+[7.247949] (-) TimerEvent: {}
+[7.348369] (-) TimerEvent: {}
+[7.449075] (-) TimerEvent: {}
+[7.549884] (-) TimerEvent: {}
+[7.650151] (-) TimerEvent: {}
+[7.750465] (-) TimerEvent: {}
+[7.850774] (-) TimerEvent: {}
+[7.951360] (-) TimerEvent: {}
+[8.052052] (-) TimerEvent: {}
+[8.153102] (-) TimerEvent: {}
+[8.253793] (-) TimerEvent: {}
+[8.354051] (-) TimerEvent: {}
+[8.454555] (-) TimerEvent: {}
+[8.555017] (-) TimerEvent: {}
+[8.655738] (-) TimerEvent: {}
+[8.760255] (-) TimerEvent: {}
+[8.861873] (-) TimerEvent: {}
+[8.962555] (-) TimerEvent: {}
+[9.062850] (-) TimerEvent: {}
+[9.167008] (-) TimerEvent: {}
+[9.267773] (-) TimerEvent: {}
+[9.371475] (-) TimerEvent: {}
+[9.471833] (-) TimerEvent: {}
+[9.574884] (-) TimerEvent: {}
+[9.678341] (-) TimerEvent: {}
+[9.782856] (-) TimerEvent: {}
+[9.887625] (-) TimerEvent: {}
+[9.988174] (-) TimerEvent: {}
+[10.089015] (-) TimerEvent: {}
+[10.192268] (-) TimerEvent: {}
+[10.292825] (-) TimerEvent: {}
+[10.397497] (-) TimerEvent: {}
+[10.497977] (-) TimerEvent: {}
+[10.600772] (-) TimerEvent: {}
+[10.701672] (-) TimerEvent: {}
+[10.803682] (-) TimerEvent: {}
+[10.908427] (-) TimerEvent: {}
+[11.009672] (-) TimerEvent: {}
+[11.114127] (-) TimerEvent: {}
+[11.218020] (-) TimerEvent: {}
+[11.318560] (-) TimerEvent: {}
+[11.419093] (-) TimerEvent: {}
+[11.521387] (-) TimerEvent: {}
+[11.621911] (-) TimerEvent: {}
+[11.722157] (-) TimerEvent: {}
+[11.822461] (-) TimerEvent: {}
+[11.922782] (-) TimerEvent: {}
+[12.023117] (-) TimerEvent: {}
+[12.123753] (-) TimerEvent: {}
+[12.224207] (-) TimerEvent: {}
+[12.324998] (-) TimerEvent: {}
+[12.425646] (-) TimerEvent: {}
+[12.525901] (-) TimerEvent: {}
+[12.627370] (-) TimerEvent: {}
+[12.728383] (-) TimerEvent: {}
+[12.831004] (-) TimerEvent: {}
+[12.931512] (-) TimerEvent: {}
+[13.032034] (-) TimerEvent: {}
+[13.132623] (-) TimerEvent: {}
+[13.233864] (-) TimerEvent: {}
+[13.336379] (-) TimerEvent: {}
+[13.437209] (-) TimerEvent: {}
+[13.537909] (-) TimerEvent: {}
+[13.638285] (-) TimerEvent: {}
+[13.738724] (-) TimerEvent: {}
+[13.839791] (-) TimerEvent: {}
+[13.940779] (-) TimerEvent: {}
+[14.041439] (-) TimerEvent: {}
+[14.141871] (-) TimerEvent: {}
+[14.242519] (-) TimerEvent: {}
+[14.343102] (-) TimerEvent: {}
+[14.443666] (-) TimerEvent: {}
+[14.544220] (-) TimerEvent: {}
+[14.644571] (-) TimerEvent: {}
+[14.745224] (-) TimerEvent: {}
+[14.845888] (-) TimerEvent: {}
+[14.946535] (-) TimerEvent: {}
+[15.047312] (-) TimerEvent: {}
+[15.148115] (-) TimerEvent: {}
+[15.248925] (-) TimerEvent: {}
+[15.349847] (-) TimerEvent: {}
+[15.450746] (-) TimerEvent: {}
+[15.551067] (-) TimerEvent: {}
+[15.651442] (-) TimerEvent: {}
+[15.752496] (-) TimerEvent: {}
+[15.853670] (-) TimerEvent: {}
+[15.954166] (-) TimerEvent: {}
+[16.054635] (-) TimerEvent: {}
+[16.155068] (-) TimerEvent: {}
+[16.255529] (-) TimerEvent: {}
+[16.357117] (-) TimerEvent: {}
+[16.457717] (-) TimerEvent: {}
+[16.516890] (cw2_team_14) StdoutLine: {'line': b'[ 94%] Linking CXX shared library libcw2_team_14_cw2_class_lib.so\n'}
+[16.557923] (-) TimerEvent: {}
+[16.658264] (-) TimerEvent: {}
+[16.758582] (-) TimerEvent: {}
+[16.858882] (-) TimerEvent: {}
+[16.959559] (-) TimerEvent: {}
+[17.061516] (-) TimerEvent: {}
+[17.163162] (-) TimerEvent: {}
+[17.264611] (-) TimerEvent: {}
+[17.365575] (-) TimerEvent: {}
+[17.466031] (-) TimerEvent: {}
+[17.566420] (-) TimerEvent: {}
+[17.666872] (-) TimerEvent: {}
+[17.767344] (-) TimerEvent: {}
+[17.838175] (cw2_team_14) StdoutLine: {'line': b'[ 94%] Built target cw2_team_14_cw2_class_lib\n'}
+[17.867579] (-) TimerEvent: {}
+[17.881427] (cw2_team_14) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target cw2_solution_node\n'}
+[17.912037] (cw2_team_14) StdoutLine: {'line': b'[ 97%] Linking CXX executable cw2_solution_node\n'}
+[17.967838] (-) TimerEvent: {}
+[18.068267] (-) TimerEvent: {}
+[18.168806] (-) TimerEvent: {}
+[18.269922] (-) TimerEvent: {}
+[18.370562] (-) TimerEvent: {}
+[18.471389] (-) TimerEvent: {}
+[18.572221] (-) TimerEvent: {}
+[18.673003] (-) TimerEvent: {}
+[18.773773] (-) TimerEvent: {}
+[18.874037] (-) TimerEvent: {}
+[18.885197] (cw2_team_14) StdoutLine: {'line': b'[100%] Built target cw2_solution_node\n'}
+[18.974209] (-) TimerEvent: {}
+[19.074567] (-) TimerEvent: {}
+[19.174905] (-) TimerEvent: {}
+[19.275268] (-) TimerEvent: {}
+[19.375895] (-) TimerEvent: {}
+[19.476760] (-) TimerEvent: {}
+[19.577375] (-) TimerEvent: {}
+[19.678262] (-) TimerEvent: {}
+[19.778867] (-) TimerEvent: {}
+[19.879584] (-) TimerEvent: {}
+[19.980053] (-) TimerEvent: {}
+[20.080480] (-) TimerEvent: {}
+[20.181029] (-) TimerEvent: {}
+[20.281559] (-) TimerEvent: {}
+[20.382152] (-) TimerEvent: {}
+[20.482721] (-) TimerEvent: {}
+[20.583334] (-) TimerEvent: {}
+[20.683785] (-) TimerEvent: {}
+[20.784068] (-) TimerEvent: {}
+[20.884550] (-) TimerEvent: {}
+[20.985005] (-) TimerEvent: {}
+[21.085287] (-) TimerEvent: {}
+[21.185715] (-) TimerEvent: {}
+[21.286479] (-) TimerEvent: {}
+[21.386901] (-) TimerEvent: {}
+[21.488266] (-) TimerEvent: {}
+[21.590642] (-) TimerEvent: {}
+[21.691033] (-) TimerEvent: {}
+[21.791305] (-) TimerEvent: {}
+[21.891789] (-) TimerEvent: {}
+[21.992164] (-) TimerEvent: {}
+[22.092629] (-) TimerEvent: {}
+[22.193198] (-) TimerEvent: {}
+[22.294145] (-) TimerEvent: {}
+[22.396539] (-) TimerEvent: {}
+[22.498268] (-) TimerEvent: {}
+[22.600217] (-) TimerEvent: {}
+[22.700956] (-) TimerEvent: {}
+[22.801663] (-) TimerEvent: {}
+[22.902235] (-) TimerEvent: {}
+[23.002745] (-) TimerEvent: {}
+[23.103117] (-) TimerEvent: {}
+[23.203556] (-) TimerEvent: {}
+[23.304072] (-) TimerEvent: {}
+[23.404354] (-) TimerEvent: {}
+[23.504929] (-) TimerEvent: {}
+[23.605460] (-) TimerEvent: {}
+[23.706023] (-) TimerEvent: {}
+[23.806453] (-) TimerEvent: {}
+[23.906830] (-) TimerEvent: {}
+[24.007390] (-) TimerEvent: {}
+[24.107743] (-) TimerEvent: {}
+[24.208306] (-) TimerEvent: {}
+[24.308932] (-) TimerEvent: {}
+[24.409605] (-) TimerEvent: {}
+[24.509980] (-) TimerEvent: {}
+[24.610325] (-) TimerEvent: {}
+[24.710713] (-) TimerEvent: {}
+[24.811276] (-) TimerEvent: {}
+[24.911631] (-) TimerEvent: {}
+[25.012373] (-) TimerEvent: {}
+[25.112808] (-) TimerEvent: {}
+[25.213488] (-) TimerEvent: {}
+[25.313898] (-) TimerEvent: {}
+[25.414207] (-) TimerEvent: {}
+[25.514522] (-) TimerEvent: {}
+[25.614827] (-) TimerEvent: {}
+[25.715075] (-) TimerEvent: {}
+[25.815451] (-) TimerEvent: {}
+[25.916004] (-) TimerEvent: {}
+[26.016427] (-) TimerEvent: {}
+[26.117065] (-) TimerEvent: {}
+[26.217732] (-) TimerEvent: {}
+[26.318065] (-) TimerEvent: {}
+[26.419148] (-) TimerEvent: {}
+[26.520054] (-) TimerEvent: {}
+[26.621140] (-) TimerEvent: {}
+[26.722681] (-) TimerEvent: {}
+[26.825926] (-) TimerEvent: {}
+[26.929975] (-) TimerEvent: {}
+[27.030726] (-) TimerEvent: {}
+[27.131328] (-) TimerEvent: {}
+[27.232094] (-) TimerEvent: {}
+[27.333558] (-) TimerEvent: {}
+[27.434407] (-) TimerEvent: {}
+[27.534773] (-) TimerEvent: {}
+[27.635359] (-) TimerEvent: {}
+[27.736053] (-) TimerEvent: {}
+[27.836775] (-) TimerEvent: {}
+[27.937479] (-) TimerEvent: {}
+[28.038017] (-) TimerEvent: {}
+[28.138717] (-) TimerEvent: {}
+[28.239452] (-) TimerEvent: {}
+[28.339840] (-) TimerEvent: {}
+[28.440273] (-) TimerEvent: {}
+[28.541724] (-) TimerEvent: {}
+[28.642631] (-) TimerEvent: {}
+[28.743494] (-) TimerEvent: {}
+[28.844425] (-) TimerEvent: {}
+[28.945087] (-) TimerEvent: {}
+[29.045669] (-) TimerEvent: {}
+[29.146408] (-) TimerEvent: {}
+[29.247084] (-) TimerEvent: {}
+[29.347610] (-) TimerEvent: {}
+[29.448032] (-) TimerEvent: {}
+[29.548511] (-) TimerEvent: {}
+[29.649003] (-) TimerEvent: {}
+[29.750138] (-) TimerEvent: {}
+[29.850986] (-) TimerEvent: {}
+[29.951540] (-) TimerEvent: {}
+[30.017920] (cw2_team_14) CommandEnded: {'returncode': 0}
+[30.019569] (cw2_team_14) JobProgress: {'identifier': 'cw2_team_14', 'progress': 'install'}
+[30.034304] (cw2_team_14) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/czg22/comp0250_s26_labs/build/cw2_team_14'], 'cwd': '/home/czg22/comp0250_s26_labs/build/cw2_team_14', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/mnt/c/Users/11315/AppData/Local/Programs/Microsoft VS Code'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('USER', 'czg22'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/czg22/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/out/nls.messages.json","locale":"en","availableLanguages":{}}'), ('VSCODE_WSL_EXT_LOCATION', '/mnt/c/Users/11315/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils/lib:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner/lib:/home/czg22/ws_moveit2/install/moveit_visual_tools/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_core/lib:/home/czg22/ws_moveit2/install/moveit_ros_control_interface/lib:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager/lib:/home/czg22/ws_moveit2/install/moveit_setup_assistant/lib:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins/lib:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins/lib:/home/czg22/ws_moveit2/install/moveit_setup_controllers/lib:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins/lib:/home/czg22/ws_moveit2/install/moveit_setup_framework/lib:/home/czg22/ws_moveit2/install/moveit_servo/lib:/home/czg22/ws_moveit2/install/moveit_ros_visualization/lib:/home/czg22/ws_moveit2/install/moveit_py/lib:/home/czg22/ws_moveit2/install/moveit_hybrid_planning/lib:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks/lib:/home/czg22/ws_moveit2/install/moveit_ros_warehouse/lib:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction/lib:/home/czg22/ws_moveit2/install/moveit_ros_perception/lib:/home/czg22/ws_moveit2/install/moveit_ros_move_group/lib:/home/czg22/ws_moveit2/install/moveit_planners_ompl/lib:/home/czg22/ws_moveit2/install/moveit_ros_planning/lib:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/czg22/ws_moveit2/install/moveit_planners_chomp/lib:/home/czg22/ws_moveit2/install/moveit_kinematics/lib:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter/lib:/home/czg22/ws_moveit2/install/chomp_motion_planner/lib:/home/czg22/ws_moveit2/install/moveit_core/lib:/home/czg22/ws_moveit2/install/srdfdom/lib:/home/czg22/ws_moveit2/install/rviz_marker_tools/lib:/home/czg22/ws_moveit2/install/rosparam_shortcuts/lib:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/czg22'), ('VSCODE_RECONNECTION_GRACE_TIME', '10800000'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-755292c5-810e-41f5-a577-2946ab3ce44a.sock'), ('ROS_PYTHON_VERSION', '3'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('VSCODE_L10N_BUNDLE_LOCATION', ''), ('COLCON_PREFIX_PATH', '/home/czg22/ws_moveit2/install'), ('APPLICATION_INSIGHTS_NO_STATSBEAT', 'true'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'czg22'), ('NAME', 'Agang'), ('WSL_INTEROP', '/run/WSL/428_interop'), ('VSCODE_HANDLES_SIGPIPE', 'true'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('RUST_LOG', 'warn'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/czg22/.codex/tmp/arg0/codex-arg01SMmTy:/home/czg22/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/bin/remote-cli:/home/czg22/ws_moveit2/install/moveit_core/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/11315/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/d/MATLAB/R2025b/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/11315/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/11315/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/czg22/.vscode-server/extensions/openai.chatgpt-26.323.20928-linux-x64/bin/linux-x86_64'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('GH_PAGER', 'cat'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('ELECTRON_RUN_AS_NODE', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CMAKE_MODULE_PATH', '/home/czg22/ws_moveit2/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake'), ('CODEX_THREAD_ID', '019d58b2-c73e-7be3-8b96-05b7973c3738'), ('GIT_PAGER', 'cat'), ('PWD', '/home/czg22/comp0250_s26_labs/build/cw2_team_14'), ('LC_ALL', 'C.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_task_constructor_core/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_py/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_configs_utils/lib/python3.10/site-packages:/home/czg22/ws_moveit2/install/srdfdom/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages:/home/czg22/ws_moveit2/install/launch_param_builder/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner_testutils:/home/czg22/ws_moveit2/install/moveit_runtime:/home/czg22/ws_moveit2/install/moveit2_tutorials:/home/czg22/ws_moveit2/install/moveit:/home/czg22/ws_moveit2/install/moveit_planners:/home/czg22/ws_moveit2/install/pilz_industrial_motion_planner:/home/czg22/ws_moveit2/install/mtc_tutorial:/home/czg22/ws_moveit2/install/moveit_visual_tools:/home/czg22/ws_moveit2/install/moveit_task_constructor_visualization:/home/czg22/ws_moveit2/install/moveit_task_constructor_demo:/home/czg22/ws_moveit2/install/moveit_task_constructor_capabilities:/home/czg22/ws_moveit2/install/moveit_task_constructor_core:/home/czg22/ws_moveit2/install/moveit_ros_control_interface:/home/czg22/ws_moveit2/install/moveit_plugins:/home/czg22/ws_moveit2/install/moveit_simple_controller_manager:/home/czg22/ws_moveit2/install/moveit_setup_assistant:/home/czg22/ws_moveit2/install/moveit_setup_srdf_plugins:/home/czg22/ws_moveit2/install/moveit_setup_core_plugins:/home/czg22/ws_moveit2/install/moveit_setup_controllers:/home/czg22/ws_moveit2/install/moveit_setup_app_plugins:/home/czg22/ws_moveit2/install/moveit_setup_framework:/home/czg22/ws_moveit2/install/moveit_servo:/home/czg22/ws_moveit2/install/moveit_ros:/home/czg22/ws_moveit2/install/moveit_ros_visualization:/home/czg22/ws_moveit2/install/moveit_py:/home/czg22/ws_moveit2/install/moveit_hybrid_planning:/home/czg22/ws_moveit2/install/moveit_ros_planning_interface:/home/czg22/ws_moveit2/install/moveit_ros_benchmarks:/home/czg22/ws_moveit2/install/moveit_ros_warehouse:/home/czg22/ws_moveit2/install/moveit_ros_robot_interaction:/home/czg22/ws_moveit2/install/moveit_ros_perception:/home/czg22/ws_moveit2/install/moveit_resources_prbt_pg70_support:/home/czg22/ws_moveit2/install/moveit_resources_prbt_moveit_config:/home/czg22/ws_moveit2/install/moveit_ros_move_group:/home/czg22/ws_moveit2/install/moveit_planners_ompl:/home/czg22/ws_moveit2/install/moveit_ros_planning:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/czg22/ws_moveit2/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/czg22/ws_moveit2/install/moveit_planners_chomp:/home/czg22/ws_moveit2/install/moveit_kinematics:/home/czg22/ws_moveit2/install/moveit_chomp_optimizer_adapter:/home/czg22/ws_moveit2/install/chomp_motion_planner:/home/czg22/ws_moveit2/install/moveit_core:/home/czg22/ws_moveit2/install/srdfdom:/home/czg22/ws_moveit2/install/rviz_marker_tools:/home/czg22/ws_moveit2/install/rosparam_shortcuts:/home/czg22/ws_moveit2/install/moveit_task_constructor_msgs:/home/czg22/ws_moveit2/install/moveit_resources_prbt_support:/home/czg22/ws_moveit2/install/moveit_resources:/home/czg22/ws_moveit2/install/moveit_resources_pr2_description:/home/czg22/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_panda_description:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/czg22/ws_moveit2/install/moveit_resources_fanuc_description:/home/czg22/ws_moveit2/install/moveit_common:/home/czg22/ws_moveit2/install/moveit_configs_utils:/home/czg22/ws_moveit2/install/launch_param_builder:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[30.049003] (cw2_team_14) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[30.049907] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/ament_index/resource_index/rosidl_interfaces/cw2_team_14\n'}
+[30.050320] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[30.050365] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[30.050418] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.h\n'}
+[30.050892] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[30.050946] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.h\n'}
+[30.051116] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.h\n'}
+[30.051282] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.h\n'}
+[30.051618] (-) TimerEvent: {}
+[30.051670] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.c\n'}
+[30.052087] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[30.052269] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_c__visibility_control.h\n'}
+[30.053340] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/library_path.sh\n'}
+[30.054508] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/library_path.dsv\n'}
+[30.054576] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_c.so\n'}
+[30.054615] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[30.054652] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[30.054684] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[30.054715] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_c.h\n'}
+[30.054746] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[30.054775] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[30.054805] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so\n'}
+[30.054851] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[30.054878] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[30.054905] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[30.054967] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.c\n'}
+[30.055009] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_c.h\n'}
+[30.055047] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[30.055075] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[30.055104] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so\n'}
+[30.055133] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_c.so\n'}
+[30.055159] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[30.055186] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[30.055212] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.hpp\n'}
+[30.055239] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[30.055266] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__traits.hpp\n'}
+[30.055296] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__builder.hpp\n'}
+[30.055323] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.hpp\n'}
+[30.055349] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.hpp\n'}
+[30.055376] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[30.055406] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[30.055433] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[30.055459] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[30.055486] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[30.055512] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/dds_fastrtps\n'}
+[30.055539] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[30.055566] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[30.055592] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[30.055619] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so\n'}
+[30.055645] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[30.055672] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[30.055698] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[30.055724] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.cpp\n'}
+[30.055750] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_cpp.hpp\n'}
+[30.055777] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so\n'}
+[30.055803] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_cpp.so\n'}
+[30.055837] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.sh\n'}
+[30.055863] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.dsv\n'}
+[30.055889] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info\n'}
+[30.055919] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[30.056033] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[30.056084] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[30.056118] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[30.056148] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14\n'}
+[30.056177] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[30.056208] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv\n'}
+[30.056237] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/__init__.py\n'}
+[30.056265] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example.py\n'}
+[30.056293] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example_s.c\n'}
+[30.056319] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/__init__.py\n'}
+[30.056346] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[30.056374] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/libcw2_team_14__rosidl_generator_py.so\n'}
+[30.056401] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_c.c\n'}
+[30.056427] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[30.056459] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[30.056486] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[30.080942] (cw2_team_14) StdoutLine: {'line': b"Listing '/home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14'...\n"}
+[30.081111] (cw2_team_14) StdoutLine: {'line': b"Listing '/home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv'...\n"}
+[30.084574] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[30.085329] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[30.085459] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[30.085685] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_py.so\n'}
+[30.086016] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/srv/Example.idl\n'}
+[30.086117] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/srv/Example.srv\n'}
+[30.086185] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/srv/Example_Request.msg\n'}
+[30.086246] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/srv/Example_Response.msg\n'}
+[30.086302] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so\n'}
+[30.103467] (cw2_team_14) StdoutLine: {'line': b'-- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so" to ""\n'}
+[30.103764] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node\n'}
+[30.104147] (cw2_team_14) StdoutLine: {'line': b'-- Set runtime path of "/home/czg22/comp0250_s26_labs/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node" to ""\n'}
+[30.104637] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/launch\n'}
+[30.105267] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/launch/run_solution.launch.py\n'}
+[30.105405] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/ament_index/resource_index/package_run_dependencies/cw2_team_14\n'}
+[30.105522] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/ament_index/resource_index/parent_prefix_path/cw2_team_14\n'}
+[30.105607] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.sh\n'}
+[30.105742] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.dsv\n'}
+[30.106524] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/path.sh\n'}
+[30.106587] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/environment/path.dsv\n'}
+[30.106624] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/local_setup.bash\n'}
+[30.106656] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/local_setup.sh\n'}
+[30.106686] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/local_setup.zsh\n'}
+[30.106715] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/local_setup.dsv\n'}
+[30.106782] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.dsv\n'}
+[30.106822] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/ament_index/resource_index/packages/cw2_team_14\n'}
+[30.106856] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake\n'}
+[30.106892] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-noconfig.cmake\n'}
+[30.106920] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[30.106948] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[30.106978] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake\n'}
+[30.107005] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[30.107032] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake\n'}
+[30.107060] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[30.107087] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake\n'}
+[30.107114] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[30.107141] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[30.107167] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[30.107199] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[30.107225] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake\n'}
+[30.107307] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[30.107394] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake\n'}
+[30.107432] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-noconfig.cmake\n'}
+[30.107464] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake-extras.cmake\n'}
+[30.107495] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[30.107528] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[30.107554] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[30.107581] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[30.107615] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[30.107643] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[30.107670] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config.cmake\n'}
+[30.107697] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config-version.cmake\n'}
+[30.107724] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/czg22/comp0250_s26_labs/install/cw2_team_14/share/cw2_team_14/package.xml\n'}
+[30.151971] (-) TimerEvent: {}
+[30.252485] (-) TimerEvent: {}
+[30.353098] (-) TimerEvent: {}
+[30.453686] (-) TimerEvent: {}
+[30.554191] (-) TimerEvent: {}
+[30.654788] (-) TimerEvent: {}
+[30.755364] (-) TimerEvent: {}
+[30.855860] (-) TimerEvent: {}
+[30.956233] (-) TimerEvent: {}
+[31.056876] (-) TimerEvent: {}
+[31.157629] (-) TimerEvent: {}
+[31.258360] (-) TimerEvent: {}
+[31.359146] (-) TimerEvent: {}
+[31.459973] (-) TimerEvent: {}
+[31.560262] (-) TimerEvent: {}
+[31.661139] (-) TimerEvent: {}
+[31.761996] (-) TimerEvent: {}
+[31.862281] (-) TimerEvent: {}
+[31.963161] (-) TimerEvent: {}
+[32.063878] (-) TimerEvent: {}
+[32.164937] (-) TimerEvent: {}
+[32.265496] (-) TimerEvent: {}
+[32.365749] (-) TimerEvent: {}
+[32.466225] (-) TimerEvent: {}
+[32.566738] (-) TimerEvent: {}
+[32.667274] (-) TimerEvent: {}
+[32.767862] (-) TimerEvent: {}
+[32.868503] (-) TimerEvent: {}
+[32.969116] (-) TimerEvent: {}
+[33.069815] (-) TimerEvent: {}
+[33.170541] (-) TimerEvent: {}
+[33.271321] (-) TimerEvent: {}
+[33.374153] (-) TimerEvent: {}
+[33.474464] (-) TimerEvent: {}
+[33.574827] (-) TimerEvent: {}
+[33.675528] (-) TimerEvent: {}
+[33.775957] (-) TimerEvent: {}
+[33.876391] (-) TimerEvent: {}
+[33.977392] (-) TimerEvent: {}
+[34.078131] (-) TimerEvent: {}
+[34.178729] (-) TimerEvent: {}
+[34.279138] (-) TimerEvent: {}
+[34.379552] (-) TimerEvent: {}
+[34.480226] (-) TimerEvent: {}
+[34.580891] (-) TimerEvent: {}
+[34.681476] (-) TimerEvent: {}
+[34.781988] (-) TimerEvent: {}
+[34.882795] (-) TimerEvent: {}
+[34.983566] (-) TimerEvent: {}
+[35.084350] (-) TimerEvent: {}
+[35.184850] (-) TimerEvent: {}
+[35.285363] (-) TimerEvent: {}
+[35.385974] (-) TimerEvent: {}
+[35.486635] (-) TimerEvent: {}
+[35.586991] (-) TimerEvent: {}
+[35.687385] (-) TimerEvent: {}
+[35.788294] (-) TimerEvent: {}
+[35.888769] (-) TimerEvent: {}
+[35.989233] (-) TimerEvent: {}
+[36.089865] (-) TimerEvent: {}
+[36.190248] (-) TimerEvent: {}
+[36.290616] (-) TimerEvent: {}
+[36.390947] (-) TimerEvent: {}
+[36.491325] (-) TimerEvent: {}
+[36.592371] (-) TimerEvent: {}
+[36.692938] (-) TimerEvent: {}
+[36.793394] (-) TimerEvent: {}
+[36.893999] (-) TimerEvent: {}
+[36.994320] (-) TimerEvent: {}
+[37.094956] (-) TimerEvent: {}
+[37.195649] (-) TimerEvent: {}
+[37.296348] (-) TimerEvent: {}
+[37.397090] (-) TimerEvent: {}
+[37.497669] (-) TimerEvent: {}
+[37.597980] (-) TimerEvent: {}
+[37.698269] (-) TimerEvent: {}
+[37.798724] (-) TimerEvent: {}
+[37.899230] (-) TimerEvent: {}
+[37.999557] (-) TimerEvent: {}
+[38.100501] (-) TimerEvent: {}
+[38.200975] (-) TimerEvent: {}
+[38.301503] (-) TimerEvent: {}
+[38.401981] (-) TimerEvent: {}
+[38.502396] (-) TimerEvent: {}
+[38.602803] (-) TimerEvent: {}
+[38.703386] (-) TimerEvent: {}
+[38.803874] (-) TimerEvent: {}
+[38.904409] (-) TimerEvent: {}
+[39.004877] (-) TimerEvent: {}
+[39.105522] (-) TimerEvent: {}
+[39.206378] (-) TimerEvent: {}
+[39.307280] (-) TimerEvent: {}
+[39.409283] (-) TimerEvent: {}
+[39.511228] (-) TimerEvent: {}
+[39.612124] (-) TimerEvent: {}
+[39.712971] (-) TimerEvent: {}
+[39.813496] (-) TimerEvent: {}
+[39.914016] (-) TimerEvent: {}
+[40.014603] (-) TimerEvent: {}
+[40.114983] (-) TimerEvent: {}
+[40.215467] (-) TimerEvent: {}
+[40.316030] (-) TimerEvent: {}
+[40.416611] (-) TimerEvent: {}
+[40.517164] (-) TimerEvent: {}
+[40.621129] (-) TimerEvent: {}
+[40.723591] (-) TimerEvent: {}
+[40.829715] (-) TimerEvent: {}
+[40.935860] (-) TimerEvent: {}
+[41.042030] (-) TimerEvent: {}
+[41.143455] (-) TimerEvent: {}
+[41.245071] (-) TimerEvent: {}
+[41.346780] (-) TimerEvent: {}
+[41.447282] (-) TimerEvent: {}
+[41.548505] (-) TimerEvent: {}
+[41.650206] (-) TimerEvent: {}
+[41.752043] (-) TimerEvent: {}
+[41.853935] (-) TimerEvent: {}
+[41.955699] (-) TimerEvent: {}
+[42.057489] (-) TimerEvent: {}
+[42.162090] (-) TimerEvent: {}
+[42.268198] (-) TimerEvent: {}
+[42.368655] (-) TimerEvent: {}
+[42.469408] (-) TimerEvent: {}
+[42.569875] (-) TimerEvent: {}
+[42.670348] (-) TimerEvent: {}
+[42.770972] (-) TimerEvent: {}
+[42.871367] (-) TimerEvent: {}
+[42.971946] (-) TimerEvent: {}
+[43.072905] (-) TimerEvent: {}
+[43.173569] (-) TimerEvent: {}
+[43.273945] (-) TimerEvent: {}
+[43.374627] (-) TimerEvent: {}
+[43.474974] (-) TimerEvent: {}
+[43.575629] (-) TimerEvent: {}
+[43.676417] (-) TimerEvent: {}
+[43.777234] (-) TimerEvent: {}
+[43.878131] (-) TimerEvent: {}
+[43.978861] (-) TimerEvent: {}
+[44.079258] (-) TimerEvent: {}
+[44.179957] (-) TimerEvent: {}
+[44.280368] (-) TimerEvent: {}
+[44.380929] (-) TimerEvent: {}
+[44.482427] (-) TimerEvent: {}
+[44.582785] (-) TimerEvent: {}
+[44.683843] (-) TimerEvent: {}
+[44.785882] (-) TimerEvent: {}
+[44.886175] (-) TimerEvent: {}
+[44.986867] (-) TimerEvent: {}
+[45.087599] (-) TimerEvent: {}
+[45.188447] (-) TimerEvent: {}
+[45.289333] (-) TimerEvent: {}
+[45.390068] (-) TimerEvent: {}
+[45.490829] (-) TimerEvent: {}
+[45.591542] (-) TimerEvent: {}
+[45.693406] (-) TimerEvent: {}
+[45.793856] (-) TimerEvent: {}
+[45.894191] (-) TimerEvent: {}
+[45.994669] (-) TimerEvent: {}
+[46.094971] (-) TimerEvent: {}
+[46.195310] (-) TimerEvent: {}
+[46.295684] (-) TimerEvent: {}
+[46.396144] (-) TimerEvent: {}
+[46.496972] (-) TimerEvent: {}
+[46.598407] (-) TimerEvent: {}
+[46.699641] (-) TimerEvent: {}
+[46.800789] (-) TimerEvent: {}
+[46.901204] (-) TimerEvent: {}
+[47.001921] (-) TimerEvent: {}
+[47.102608] (-) TimerEvent: {}
+[47.203074] (-) TimerEvent: {}
+[47.304106] (-) TimerEvent: {}
+[47.405654] (-) TimerEvent: {}
+[47.506085] (-) TimerEvent: {}
+[47.607714] (-) TimerEvent: {}
+[47.709998] (-) TimerEvent: {}
+[47.811406] (-) TimerEvent: {}
+[47.913268] (-) TimerEvent: {}
+[48.013758] (-) TimerEvent: {}
+[48.114135] (-) TimerEvent: {}
+[48.214491] (-) TimerEvent: {}
+[48.314817] (-) TimerEvent: {}
+[48.415632] (-) TimerEvent: {}
+[48.517701] (-) TimerEvent: {}
+[48.618336] (-) TimerEvent: {}
+[48.718924] (-) TimerEvent: {}
+[48.819574] (-) TimerEvent: {}
+[48.920266] (-) TimerEvent: {}
+[49.020793] (-) TimerEvent: {}
+[49.121508] (-) TimerEvent: {}
+[49.221882] (-) TimerEvent: {}
+[49.322552] (-) TimerEvent: {}
+[49.423289] (-) TimerEvent: {}
+[49.523803] (-) TimerEvent: {}
+[49.624310] (-) TimerEvent: {}
+[49.725040] (-) TimerEvent: {}
+[49.825531] (-) TimerEvent: {}
+[49.926684] (-) TimerEvent: {}
+[50.027173] (-) TimerEvent: {}
+[50.127508] (-) TimerEvent: {}
+[50.227938] (-) TimerEvent: {}
+[50.328381] (-) TimerEvent: {}
+[50.429411] (-) TimerEvent: {}
+[50.529888] (-) TimerEvent: {}
+[50.630345] (-) TimerEvent: {}
+[50.730846] (-) TimerEvent: {}
+[50.831329] (-) TimerEvent: {}
+[50.932072] (-) TimerEvent: {}
+[51.032539] (-) TimerEvent: {}
+[51.133170] (-) TimerEvent: {}
+[51.235080] (-) TimerEvent: {}
+[51.335701] (-) TimerEvent: {}
+[51.436488] (-) TimerEvent: {}
+[51.537312] (-) TimerEvent: {}
+[51.638229] (-) TimerEvent: {}
+[51.738954] (-) TimerEvent: {}
+[51.841562] (-) TimerEvent: {}
+[51.945607] (-) TimerEvent: {}
+[52.051002] (-) TimerEvent: {}
+[52.151443] (-) TimerEvent: {}
+[52.251945] (-) TimerEvent: {}
+[52.352403] (-) TimerEvent: {}
+[52.452907] (-) TimerEvent: {}
+[52.553415] (-) TimerEvent: {}
+[52.653937] (-) TimerEvent: {}
+[52.754511] (-) TimerEvent: {}
+[52.854996] (-) TimerEvent: {}
+[52.955625] (-) TimerEvent: {}
+[53.056030] (-) TimerEvent: {}
+[53.156686] (-) TimerEvent: {}
+[53.257373] (-) TimerEvent: {}
+[53.358051] (-) TimerEvent: {}
+[53.458453] (-) TimerEvent: {}
+[53.558890] (-) TimerEvent: {}
+[53.659231] (-) TimerEvent: {}
+[53.760115] (-) TimerEvent: {}
+[53.861061] (-) TimerEvent: {}
+[53.962001] (-) TimerEvent: {}
+[54.062306] (-) TimerEvent: {}
+[54.162738] (-) TimerEvent: {}
+[54.263266] (-) TimerEvent: {}
+[54.363587] (-) TimerEvent: {}
+[54.464019] (-) TimerEvent: {}
+[54.564512] (-) TimerEvent: {}
+[54.665570] (-) TimerEvent: {}
+[54.766172] (-) TimerEvent: {}
+[54.867373] (-) TimerEvent: {}
+[54.968029] (-) TimerEvent: {}
+[55.069217] (-) TimerEvent: {}
+[55.169802] (-) TimerEvent: {}
+[55.270135] (-) TimerEvent: {}
+[55.370883] (-) TimerEvent: {}
+[55.471682] (-) TimerEvent: {}
+[55.572090] (-) TimerEvent: {}
+[55.673452] (-) TimerEvent: {}
+[55.774261] (-) TimerEvent: {}
+[55.875274] (-) TimerEvent: {}
+[55.975762] (-) TimerEvent: {}
+[56.076234] (-) TimerEvent: {}
+[56.176762] (-) TimerEvent: {}
+[56.277228] (-) TimerEvent: {}
+[56.377777] (-) TimerEvent: {}
+[56.478340] (-) TimerEvent: {}
+[56.578940] (-) TimerEvent: {}
+[56.679555] (-) TimerEvent: {}
+[56.780224] (-) TimerEvent: {}
+[56.880872] (-) TimerEvent: {}
+[56.982477] (-) TimerEvent: {}
+[57.084500] (-) TimerEvent: {}
+[57.187341] (-) TimerEvent: {}
+[57.289084] (-) TimerEvent: {}
+[57.390939] (-) TimerEvent: {}
+[57.491531] (-) TimerEvent: {}
+[57.592170] (-) TimerEvent: {}
+[57.693567] (-) TimerEvent: {}
+[57.794516] (-) TimerEvent: {}
+[57.895038] (-) TimerEvent: {}
+[57.995473] (-) TimerEvent: {}
+[58.096001] (-) TimerEvent: {}
+[58.196820] (-) TimerEvent: {}
+[58.297762] (-) TimerEvent: {}
+[58.398050] (-) TimerEvent: {}
+[58.498458] (-) TimerEvent: {}
+[58.598915] (-) TimerEvent: {}
+[58.699335] (-) TimerEvent: {}
+[58.799946] (-) TimerEvent: {}
+[58.900353] (-) TimerEvent: {}
+[59.000836] (-) TimerEvent: {}
+[59.101357] (-) TimerEvent: {}
+[59.201891] (-) TimerEvent: {}
+[59.302163] (-) TimerEvent: {}
+[59.402764] (-) TimerEvent: {}
+[59.503363] (-) TimerEvent: {}
+[59.604004] (-) TimerEvent: {}
+[59.704619] (-) TimerEvent: {}
+[59.805314] (-) TimerEvent: {}
+[59.906035] (-) TimerEvent: {}
+[60.007851] (-) TimerEvent: {}
+[60.050176] (cw2_team_14) CommandEnded: {'returncode': 0}
+[60.067260] (cw2_team_14) JobEnded: {'identifier': 'cw2_team_14', 'rc': 0}
+[60.068228] (-) EventReactorShutdown: {}
