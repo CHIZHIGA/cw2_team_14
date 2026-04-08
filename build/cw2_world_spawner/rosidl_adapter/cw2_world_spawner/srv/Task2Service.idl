@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cw2_world_spawner/srv/Task2Service.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PointStamped.idl"
+
+module cw2_world_spawner {
+  module srv {
+    struct Task2Service_Request {
+      sequence<geometry_msgs::msg::PointStamped> ref_object_points;
+
+      geometry_msgs::msg::PointStamped mystery_object_point;
+    };
+    struct Task2Service_Response {
+      int64 mystery_object_num;
+    };
+  };
+};

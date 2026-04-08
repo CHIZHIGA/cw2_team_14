@@ -1,0 +1,375 @@
+[0.000000] (-) TimerEvent: {}
+[0.000380] (-) JobUnselected: {'identifier': 'cw2_world_spawner'}
+[0.000409] (-) JobUnselected: {'identifier': 'panda_description'}
+[0.000424] (-) JobUnselected: {'identifier': 'panda_moveit_config'}
+[0.000437] (-) JobUnselected: {'identifier': 'realsense_gazebo_plugin'}
+[0.000448] (-) JobUnselected: {'identifier': 'rpl_panda_with_rs'}
+[0.000461] (cw2_team_14) JobQueued: {'identifier': 'cw2_team_14', 'dependencies': OrderedDict([('cw2_world_spawner', '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner')])}
+[0.000478] (cw2_team_14) JobStarted: {'identifier': 'cw2_team_14'}
+[0.016399] (cw2_team_14) JobProgress: {'identifier': 'cw2_team_14', 'progress': 'cmake'}
+[0.018719] (cw2_team_14) JobProgress: {'identifier': 'cw2_team_14', 'progress': 'build'}
+[0.018782] (cw2_team_14) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14', '--', '-j2', '-l2'], 'cwd': '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'bizare'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bizare'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e287a8a240df12063591f30669d6445a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/bizare/Desktop/cw2_team_14/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bizare'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bizare'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', '0'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/bin:/usr/bin:/opt/ros/humble/bin:/home/bizare/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/bizare-virtual-machine:@/tmp/.ICE-unix/1204,unix/bizare-virtual-machine:/tmp/.ICE-unix/1204'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ed7db2a7_f3eb_44d0_9253_8b3047725306'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.50MSN3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.167'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e287a8a240df12063591f30669d6445a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble')]), 'shell': False}
+[0.099583] (-) TimerEvent: {}
+[0.107103] (cw2_team_14) StdoutLine: {'line': b'[  2%] Built target cw2_team_14__cpp\n'}
+[0.130733] (cw2_team_14) StdoutLine: {'line': b'[ 11%] Built target cw2_team_14__rosidl_generator_c\n'}
+[0.162288] (cw2_team_14) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_copy_cw2_team_14\n'}
+[0.187594] (cw2_team_14) StdoutLine: {'line': b'[ 20%] Built target cw2_team_14__rosidl_typesupport_cpp\n'}
+[0.199737] (-) TimerEvent: {}
+[0.212821] (cw2_team_14) StdoutLine: {'line': b'[ 28%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c\n'}
+[0.234507] (cw2_team_14) StdoutLine: {'line': b'[ 37%] Built target cw2_team_14__rosidl_typesupport_introspection_c\n'}
+[0.269921] (cw2_team_14) StdoutLine: {'line': b'[ 45%] Built target cw2_team_14__rosidl_typesupport_c\n'}
+[0.294446] (cw2_team_14) StdoutLine: {'line': b'[ 54%] Built target cw2_team_14__rosidl_typesupport_fastrtps_cpp\n'}
+[0.300257] (-) TimerEvent: {}
+[0.320362] (cw2_team_14) StdoutLine: {'line': b'[ 62%] Built target cw2_team_14__rosidl_typesupport_introspection_cpp\n'}
+[0.400396] (-) TimerEvent: {}
+[0.501151] (-) TimerEvent: {}
+[0.544850] (cw2_team_14) StdoutLine: {'line': b'running egg_info\n'}
+[0.545586] (cw2_team_14) StdoutLine: {'line': b'writing cw2_team_14.egg-info/PKG-INFO\n'}
+[0.545911] (cw2_team_14) StdoutLine: {'line': b'writing dependency_links to cw2_team_14.egg-info/dependency_links.txt\n'}
+[0.546255] (cw2_team_14) StdoutLine: {'line': b'writing top-level names to cw2_team_14.egg-info/top_level.txt\n'}
+[0.548631] (cw2_team_14) StdoutLine: {'line': b"reading manifest file 'cw2_team_14.egg-info/SOURCES.txt'\n"}
+[0.549240] (cw2_team_14) StdoutLine: {'line': b"writing manifest file 'cw2_team_14.egg-info/SOURCES.txt'\n"}
+[0.569723] (cw2_team_14) StdoutLine: {'line': b'[ 62%] Built target ament_cmake_python_build_cw2_team_14_egg\n'}
+[0.587200] (cw2_team_14) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cw2_team_14_cw2_class_lib\x1b[0m\n'}
+[0.601501] (-) TimerEvent: {}
+[0.637277] (cw2_team_14) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o\x1b[0m\n'}
+[0.702128] (-) TimerEvent: {}
+[0.802657] (-) TimerEvent: {}
+[0.904013] (-) TimerEvent: {}
+[1.004263] (-) TimerEvent: {}
+[1.104759] (-) TimerEvent: {}
+[1.205336] (-) TimerEvent: {}
+[1.306023] (-) TimerEvent: {}
+[1.406712] (-) TimerEvent: {}
+[1.507411] (-) TimerEvent: {}
+[1.608143] (-) TimerEvent: {}
+[1.708767] (-) TimerEvent: {}
+[1.809461] (-) TimerEvent: {}
+[1.910356] (-) TimerEvent: {}
+[2.010855] (-) TimerEvent: {}
+[2.111441] (-) TimerEvent: {}
+[2.211885] (-) TimerEvent: {}
+[2.312373] (-) TimerEvent: {}
+[2.412658] (-) TimerEvent: {}
+[2.513206] (-) TimerEvent: {}
+[2.613866] (-) TimerEvent: {}
+[2.714177] (-) TimerEvent: {}
+[2.814864] (-) TimerEvent: {}
+[2.915555] (-) TimerEvent: {}
+[3.016159] (-) TimerEvent: {}
+[3.116851] (-) TimerEvent: {}
+[3.217816] (-) TimerEvent: {}
+[3.318722] (-) TimerEvent: {}
+[3.419899] (-) TimerEvent: {}
+[3.521069] (-) TimerEvent: {}
+[3.621930] (-) TimerEvent: {}
+[3.722896] (-) TimerEvent: {}
+[3.823579] (-) TimerEvent: {}
+[3.924832] (-) TimerEvent: {}
+[4.025504] (-) TimerEvent: {}
+[4.126112] (-) TimerEvent: {}
+[4.226911] (-) TimerEvent: {}
+[4.327704] (-) TimerEvent: {}
+[4.428249] (-) TimerEvent: {}
+[4.529514] (-) TimerEvent: {}
+[4.630093] (-) TimerEvent: {}
+[4.731326] (-) TimerEvent: {}
+[4.831995] (-) TimerEvent: {}
+[4.932695] (-) TimerEvent: {}
+[5.033358] (-) TimerEvent: {}
+[5.134057] (-) TimerEvent: {}
+[5.234739] (-) TimerEvent: {}
+[5.335431] (-) TimerEvent: {}
+[5.436222] (-) TimerEvent: {}
+[5.536766] (-) TimerEvent: {}
+[5.637521] (-) TimerEvent: {}
+[5.738189] (-) TimerEvent: {}
+[5.838867] (-) TimerEvent: {}
+[5.939567] (-) TimerEvent: {}
+[6.040212] (-) TimerEvent: {}
+[6.141000] (-) TimerEvent: {}
+[6.241702] (-) TimerEvent: {}
+[6.342390] (-) TimerEvent: {}
+[6.443081] (-) TimerEvent: {}
+[6.543912] (-) TimerEvent: {}
+[6.644456] (-) TimerEvent: {}
+[6.745136] (-) TimerEvent: {}
+[6.845838] (-) TimerEvent: {}
+[6.946514] (-) TimerEvent: {}
+[7.047209] (-) TimerEvent: {}
+[7.147547] (-) TimerEvent: {}
+[7.248087] (-) TimerEvent: {}
+[7.348830] (-) TimerEvent: {}
+[7.449543] (-) TimerEvent: {}
+[7.550201] (-) TimerEvent: {}
+[7.651247] (-) TimerEvent: {}
+[7.751576] (-) TimerEvent: {}
+[7.852259] (-) TimerEvent: {}
+[7.952952] (-) TimerEvent: {}
+[8.053641] (-) TimerEvent: {}
+[8.154335] (-) TimerEvent: {}
+[8.255012] (-) TimerEvent: {}
+[8.355742] (-) TimerEvent: {}
+[8.456006] (-) TimerEvent: {}
+[8.556639] (-) TimerEvent: {}
+[8.657339] (-) TimerEvent: {}
+[8.757854] (-) TimerEvent: {}
+[8.858686] (-) TimerEvent: {}
+[8.959369] (-) TimerEvent: {}
+[9.060072] (-) TimerEvent: {}
+[9.160744] (-) TimerEvent: {}
+[9.261428] (-) TimerEvent: {}
+[9.362119] (-) TimerEvent: {}
+[9.462813] (-) TimerEvent: {}
+[9.563527] (-) TimerEvent: {}
+[9.664186] (-) TimerEvent: {}
+[9.764867] (-) TimerEvent: {}
+[9.865560] (-) TimerEvent: {}
+[9.966251] (-) TimerEvent: {}
+[10.066932] (-) TimerEvent: {}
+[10.167619] (-) TimerEvent: {}
+[10.268308] (-) TimerEvent: {}
+[10.368992] (-) TimerEvent: {}
+[10.469686] (-) TimerEvent: {}
+[10.570374] (-) TimerEvent: {}
+[10.671062] (-) TimerEvent: {}
+[10.771806] (-) TimerEvent: {}
+[10.872402] (-) TimerEvent: {}
+[10.973121] (-) TimerEvent: {}
+[11.073810] (-) TimerEvent: {}
+[11.174503] (-) TimerEvent: {}
+[11.275005] (-) TimerEvent: {}
+[11.375687] (-) TimerEvent: {}
+[11.476391] (-) TimerEvent: {}
+[11.577123] (-) TimerEvent: {}
+[11.677639] (-) TimerEvent: {}
+[11.778310] (-) TimerEvent: {}
+[11.878990] (-) TimerEvent: {}
+[11.979728] (-) TimerEvent: {}
+[12.080640] (-) TimerEvent: {}
+[12.181080] (-) TimerEvent: {}
+[12.281746] (-) TimerEvent: {}
+[12.383873] (-) TimerEvent: {}
+[12.484069] (-) TimerEvent: {}
+[12.584368] (-) TimerEvent: {}
+[12.685175] (-) TimerEvent: {}
+[12.785868] (-) TimerEvent: {}
+[12.886106] (-) TimerEvent: {}
+[12.986788] (-) TimerEvent: {}
+[13.087424] (-) TimerEvent: {}
+[13.188141] (-) TimerEvent: {}
+[13.288799] (-) TimerEvent: {}
+[13.389526] (-) TimerEvent: {}
+[13.490170] (-) TimerEvent: {}
+[13.590867] (-) TimerEvent: {}
+[13.691549] (-) TimerEvent: {}
+[13.792240] (-) TimerEvent: {}
+[13.892929] (-) TimerEvent: {}
+[13.993614] (-) TimerEvent: {}
+[14.094306] (-) TimerEvent: {}
+[14.194991] (-) TimerEvent: {}
+[14.295681] (-) TimerEvent: {}
+[14.396375] (-) TimerEvent: {}
+[14.497056] (-) TimerEvent: {}
+[14.597747] (-) TimerEvent: {}
+[14.698433] (-) TimerEvent: {}
+[14.799129] (-) TimerEvent: {}
+[14.899795] (-) TimerEvent: {}
+[15.000572] (-) TimerEvent: {}
+[15.101176] (-) TimerEvent: {}
+[15.201867] (-) TimerEvent: {}
+[15.302547] (-) TimerEvent: {}
+[15.403243] (-) TimerEvent: {}
+[15.503925] (-) TimerEvent: {}
+[15.604613] (-) TimerEvent: {}
+[15.705267] (-) TimerEvent: {}
+[15.805990] (-) TimerEvent: {}
+[15.906675] (-) TimerEvent: {}
+[16.007371] (-) TimerEvent: {}
+[16.108161] (-) TimerEvent: {}
+[16.208742] (-) TimerEvent: {}
+[16.309426] (-) TimerEvent: {}
+[16.410117] (-) TimerEvent: {}
+[16.510803] (-) TimerEvent: {}
+[16.612031] (-) TimerEvent: {}
+[16.712650] (-) TimerEvent: {}
+[16.814381] (-) TimerEvent: {}
+[16.915082] (-) TimerEvent: {}
+[17.015779] (-) TimerEvent: {}
+[17.116442] (-) TimerEvent: {}
+[17.217137] (-) TimerEvent: {}
+[17.317820] (-) TimerEvent: {}
+[17.351503] (cw2_team_14) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libcw2_team_14_cw2_class_lib.so\x1b[0m\n'}
+[17.418016] (-) TimerEvent: {}
+[17.518711] (-) TimerEvent: {}
+[17.619136] (-) TimerEvent: {}
+[17.720183] (-) TimerEvent: {}
+[17.820517] (-) TimerEvent: {}
+[17.920874] (-) TimerEvent: {}
+[18.021248] (-) TimerEvent: {}
+[18.122023] (-) TimerEvent: {}
+[18.222725] (-) TimerEvent: {}
+[18.323256] (-) TimerEvent: {}
+[18.423548] (-) TimerEvent: {}
+[18.524146] (-) TimerEvent: {}
+[18.624787] (-) TimerEvent: {}
+[18.725509] (-) TimerEvent: {}
+[18.826205] (-) TimerEvent: {}
+[18.927824] (-) TimerEvent: {}
+[18.959222] (cw2_team_14) StdoutLine: {'line': b'[ 68%] Built target cw2_team_14_cw2_class_lib\n'}
+[18.979290] (cw2_team_14) StdoutLine: {'line': b'[ 68%] Built target cw2_team_14\n'}
+[19.012915] (cw2_team_14) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX executable cw2_solution_node\x1b[0m\n'}
+[19.028205] (-) TimerEvent: {}
+[19.128855] (-) TimerEvent: {}
+[19.231031] (-) TimerEvent: {}
+[19.331713] (-) TimerEvent: {}
+[19.434379] (-) TimerEvent: {}
+[19.535117] (-) TimerEvent: {}
+[19.635770] (-) TimerEvent: {}
+[19.736503] (-) TimerEvent: {}
+[19.837218] (-) TimerEvent: {}
+[19.884711] (cw2_team_14) StdoutLine: {'line': b'[ 74%] Built target cw2_solution_node\n'}
+[19.905270] (cw2_team_14) StdoutLine: {'line': b'[ 77%] Built target cw2_team_14__py\n'}
+[19.927212] (cw2_team_14) StdoutLine: {'line': b'[ 82%] Built target cw2_team_14__rosidl_generator_py\n'}
+[19.937404] (-) TimerEvent: {}
+[19.949117] (cw2_team_14) StdoutLine: {'line': b'[ 88%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c__pyext\n'}
+[19.970747] (cw2_team_14) StdoutLine: {'line': b'[ 94%] Built target cw2_team_14__rosidl_typesupport_introspection_c__pyext\n'}
+[19.991888] (cw2_team_14) StdoutLine: {'line': b'[100%] Built target cw2_team_14__rosidl_typesupport_c__pyext\n'}
+[20.004675] (cw2_team_14) CommandEnded: {'returncode': 0}
+[20.006057] (cw2_team_14) JobProgress: {'identifier': 'cw2_team_14', 'progress': 'install'}
+[20.016815] (cw2_team_14) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14'], 'cwd': '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'bizare'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bizare'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e287a8a240df12063591f30669d6445a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/bizare/Desktop/cw2_team_14/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bizare'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bizare'), ('TERM', 'xterm-256color'), ('RMW_FASTRTPS_USE_SHM', '0'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/bin:/usr/bin:/opt/ros/humble/bin:/home/bizare/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/bizare-virtual-machine:@/tmp/.ICE-unix/1204,unix/bizare-virtual-machine:/tmp/.ICE-unix/1204'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ed7db2a7_f3eb_44d0_9253_8b3047725306'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.50MSN3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.167'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e287a8a240df12063591f30669d6445a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble')]), 'shell': False}
+[20.023209] (cw2_team_14) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.023637] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/rosidl_interfaces/cw2_team_14\n'}
+[20.024019] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[20.024086] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[20.024135] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_c__visibility_control.h\n'}
+[20.024181] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[20.024246] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[20.025322] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.c\n'}
+[20.025394] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.h\n'}
+[20.025442] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.h\n'}
+[20.025487] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.h\n'}
+[20.025531] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.h\n'}
+[20.025575] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/library_path.sh\n'}
+[20.026287] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/library_path.dsv\n'}
+[20.026341] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_c.so\n'}
+[20.026387] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[20.026431] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[20.027692] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[20.027864] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[20.027970] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[20.028067] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_c.h\n'}
+[20.029471] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so\n'}
+[20.029548] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[20.029598] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[20.029665] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[20.029740] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[20.030382] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[20.030451] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.c\n'}
+[20.030498] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_c.h\n'}
+[20.031123] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so\n'}
+[20.031250] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_c.so\n'}
+[20.031334] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[20.031416] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[20.031527] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[20.031628] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[20.031707] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.hpp\n'}
+[20.031788] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[20.031830] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__builder.hpp\n'}
+[20.031879] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.hpp\n'}
+[20.031921] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__traits.hpp\n'}
+[20.031963] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.hpp\n'}
+[20.032005] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[20.032055] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg\n'}
+[20.032098] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[20.035804] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[20.035865] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[20.035913] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/dds_fastrtps\n'}
+[20.035957] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[20.036001] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so\n'}
+[20.036044] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14\n'}
+[20.036164] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv\n'}
+[20.036214] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail\n'}
+[20.036257] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_cpp.hpp\n'}
+[20.036340] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.cpp\n'}
+[20.036443] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so\n'}
+[20.036512] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_cpp.so\n'}
+[20.036554] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.sh\n'}
+[20.036614] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.dsv\n'}
+[20.036664] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info\n'}
+[20.036706] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[20.036748] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[20.036790] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[20.036831] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[20.036873] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14\n'}
+[20.036914] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/libcw2_team_14__rosidl_generator_py.so\n'}
+[20.036961] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[20.037003] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/__init__.py\n'}
+[20.037044] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[20.041068] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_c.c\n'}
+[20.041139] (-) TimerEvent: {}
+[20.041210] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[20.041267] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[20.041314] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[20.041358] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv\n'}
+[20.041400] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example_s.c\n'}
+[20.041443] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example.py\n'}
+[20.041485] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/__init__.py\n'}
+[20.069815] (cw2_team_14) StdoutLine: {'line': b"Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14'...\n"}
+[20.070011] (cw2_team_14) StdoutLine: {'line': b"Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv'...\n"}
+[20.073348] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[20.073686] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[20.074056] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[20.074475] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_py.so\n'}
+[20.075066] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example.idl\n'}
+[20.075158] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example.srv\n'}
+[20.075210] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example_Request.msg\n'}
+[20.075263] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example_Response.msg\n'}
+[20.075331] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so\n'}
+[20.086342] (cw2_team_14) StdoutLine: {'line': b'-- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so" to ""\n'}
+[20.087506] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node\n'}
+[20.087630] (cw2_team_14) StdoutLine: {'line': b'-- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node" to ""\n'}
+[20.087803] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/launch\n'}
+[20.087855] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/launch/run_solution.launch.py\n'}
+[20.087900] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/package_run_dependencies/cw2_team_14\n'}
+[20.087943] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/parent_prefix_path/cw2_team_14\n'}
+[20.087986] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.sh\n'}
+[20.088029] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.dsv\n'}
+[20.088072] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/path.sh\n'}
+[20.088114] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/path.dsv\n'}
+[20.088155] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.bash\n'}
+[20.088217] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.sh\n'}
+[20.089722] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.zsh\n'}
+[20.089866] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.dsv\n'}
+[20.089917] (cw2_team_14) StdoutLine: {'line': b'-- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.dsv\n'}
+[20.089961] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/packages/cw2_team_14\n'}
+[20.090026] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake\n'}
+[20.090137] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-noconfig.cmake\n'}
+[20.090225] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[20.090271] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[20.091487] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake\n'}
+[20.091558] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[20.091605] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake\n'}
+[20.091684] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[20.091795] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake\n'}
+[20.091853] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[20.091903] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[20.091948] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[20.091998] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[20.092041] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake\n'}
+[20.092084] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[20.092127] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake\n'}
+[20.092569] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-noconfig.cmake\n'}
+[20.092621] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake-extras.cmake\n'}
+[20.092685] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[20.092730] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[20.092773] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.092815] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[20.092857] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[20.092898] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[20.092940] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config.cmake\n'}
+[20.092990] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config-version.cmake\n'}
+[20.093031] (cw2_team_14) StdoutLine: {'line': b'-- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.xml\n'}
+[20.097332] (cw2_team_14) CommandEnded: {'returncode': 0}
+[20.126469] (cw2_team_14) JobEnded: {'identifier': 'cw2_team_14', 'rc': 0}
+[20.127043] (-) EventReactorShutdown: {}

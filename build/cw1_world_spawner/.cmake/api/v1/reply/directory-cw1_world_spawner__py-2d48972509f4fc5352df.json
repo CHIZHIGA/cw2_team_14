@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "cw1_world_spawner__py",
+		"source" : "/home/bizare/Desktop/cw2_team_14/build/cw1_world_spawner/cw1_world_spawner__py"
+	}
+}

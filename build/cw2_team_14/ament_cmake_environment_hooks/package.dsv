@@ -1,0 +1,4 @@
+source;share/cw2_team_14/local_setup.bash
+source;share/cw2_team_14/local_setup.dsv
+source;share/cw2_team_14/local_setup.sh
+source;share/cw2_team_14/local_setup.zsh

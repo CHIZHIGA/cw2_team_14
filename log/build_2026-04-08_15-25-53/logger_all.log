@@ -1,0 +1,485 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.099s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x78a5c10de590>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78a5c10de0b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78a5c10de0b0>>, mixin_verb=('build',))
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.233s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/bizare/Desktop/cw2_team_14'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'python_setup_py'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ros'
+[0.280s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw2_team_14' with type 'ros.ament_cmake' and name 'cw2_team_14'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ros'
+[0.283s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw2_world_spawner' with type 'ros.ament_cmake' and name 'cw2_world_spawner'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ros'
+[0.285s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/panda_description' with type 'ros.ament_cmake' and name 'panda_description'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ros'
+[0.288s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/panda_moveit_config' with type 'ros.ament_cmake' and name 'panda_moveit_config'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ros'
+[0.290s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/realsense_gazebo_plugin' with type 'ros.ament_cmake' and name 'realsense_gazebo_plugin'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/rpl_panda_with_rs' with type 'ros.ament_cmake' and name 'rpl_panda_with_rs'
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.321s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/bizare/Desktop/cw2_team_14/install
+[0.322s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 375 installed packages in /opt/ros/humble
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'cmake_target' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'cmake_clean_cache' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'cmake_clean_first' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'cmake_force_configure' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'ament_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'catkin_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'cw2_world_spawner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.362s] DEBUG:colcon.colcon_core.verb:Building package 'cw2_world_spawner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner', 'symlink_install': False, 'test_result_base': None}
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'cmake_target' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'panda_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.362s] DEBUG:colcon.colcon_core.verb:Building package 'panda_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/panda_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/panda_description', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description', 'symlink_install': False, 'test_result_base': None}
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'panda_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.363s] DEBUG:colcon.colcon_core.verb:Building package 'panda_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_target' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.363s] Level 5:colcon.colcon_core.verb:set package 'realsense_gazebo_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.363s] DEBUG:colcon.colcon_core.verb:Building package 'realsense_gazebo_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/realsense_gazebo_plugin', 'symlink_install': False, 'test_result_base': None}
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_target' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_clean_cache' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_clean_first' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_force_configure' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'ament_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'catkin_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.364s] DEBUG:colcon.colcon_core.verb:Building package 'cw2_team_14' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14', 'symlink_install': False, 'test_result_base': None}
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'cmake_target' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'cmake_clean_first' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'cmake_force_configure' from command line to 'False'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'ament_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.364s] Level 5:colcon.colcon_core.verb:set package 'rpl_panda_with_rs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.364s] DEBUG:colcon.colcon_core.verb:Building package 'rpl_panda_with_rs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs', 'symlink_install': False, 'test_result_base': None}
+[0.365s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.366s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner' with build type 'ament_cmake'
+[0.366s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner'
+[0.368s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.368s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.368s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.371s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config' with build type 'ament_cmake'
+[0.371s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config'
+[0.371s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.371s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.382s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner -- -j2 -l2
+[0.389s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config -- -j2 -l2
+[0.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config -- -j2 -l2
+[0.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config
+[0.506s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(panda_moveit_config)
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config' for CMake module files
+[0.523s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config' for CMake config files
+[0.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('panda_moveit_config', 'cmake_prefix_path')
+[0.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/hook/cmake_prefix_path.ps1'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/hook/cmake_prefix_path.dsv'
+[0.526s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/hook/cmake_prefix_path.sh'
+[0.530s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/bin'
+[0.530s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/lib/pkgconfig/panda_moveit_config.pc'
+[0.530s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/lib/python3.10/site-packages'
+[0.531s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/bin'
+[0.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.ps1'
+[0.534s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.dsv'
+[0.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.sh'
+[0.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.bash'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.zsh'
+[0.539s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/colcon-core/packages/panda_moveit_config)
+[0.540s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(panda_moveit_config)
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config' for CMake module files
+[0.541s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config' for CMake config files
+[0.541s] Level 1:colcon.colcon_core.shell:create_environment_hook('panda_moveit_config', 'cmake_prefix_path')
+[0.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/hook/cmake_prefix_path.ps1'
+[0.541s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/hook/cmake_prefix_path.dsv'
+[0.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/hook/cmake_prefix_path.sh'
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/bin'
+[0.543s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/lib/pkgconfig/panda_moveit_config.pc'
+[0.543s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/lib/python3.10/site-packages'
+[0.543s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/bin'
+[0.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.ps1'
+[0.545s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.dsv'
+[0.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.sh'
+[0.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.bash'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.zsh'
+[0.549s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/colcon-core/packages/panda_moveit_config)
+[0.551s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/realsense_gazebo_plugin' with build type 'ament_cmake'
+[0.551s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/realsense_gazebo_plugin'
+[0.551s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.551s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.582s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin -- -j2 -l2
+[0.744s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin -- -j2 -l2
+[0.744s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin
+[0.769s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense_gazebo_plugin)
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin' for CMake module files
+[0.769s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin' for CMake config files
+[0.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'cmake_prefix_path')
+[0.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.ps1'
+[0.773s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.dsv'
+[0.773s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.sh'
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib'
+[0.778s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'ld_library_path_lib')
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.ps1'
+[0.776s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.dsv'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.sh'
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/bin'
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib/pkgconfig/realsense_gazebo_plugin.pc'
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib/python3.10/site-packages'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/bin'
+[0.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.ps1'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.dsv'
+[0.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.sh'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.bash'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.zsh'
+[0.791s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/colcon-core/packages/realsense_gazebo_plugin)
+[0.791s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense_gazebo_plugin)
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin' for CMake module files
+[0.794s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin' for CMake config files
+[0.794s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'cmake_prefix_path')
+[0.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.ps1'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.dsv'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/cmake_prefix_path.sh'
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib'
+[0.796s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense_gazebo_plugin', 'ld_library_path_lib')
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.ps1'
+[0.798s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.dsv'
+[0.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/hook/ld_library_path_lib.sh'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/bin'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib/pkgconfig/realsense_gazebo_plugin.pc'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib/python3.10/site-packages'
+[0.800s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/bin'
+[0.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.ps1'
+[0.803s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.dsv'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.sh'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.bash'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.zsh'
+[0.808s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/colcon-core/packages/realsense_gazebo_plugin)
+[0.809s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description' with build type 'ament_cmake'
+[0.809s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description'
+[0.809s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.809s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.824s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/panda_description -- -j2 -l2
+[0.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/panda_description -- -j2 -l2
+[0.907s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/panda_description
+[0.931s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(panda_description)
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description' for CMake module files
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description' for CMake config files
+[0.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('panda_description', 'cmake_prefix_path')
+[0.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/hook/cmake_prefix_path.ps1'
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/hook/cmake_prefix_path.dsv'
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/hook/cmake_prefix_path.sh'
+[0.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/panda_description
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/bin'
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/lib/pkgconfig/panda_description.pc'
+[0.939s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/lib/python3.10/site-packages'
+[0.939s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/bin'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.ps1'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.dsv'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.sh'
+[0.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.bash'
+[0.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.zsh'
+[0.943s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/panda_description/share/colcon-core/packages/panda_description)
+[0.944s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(panda_description)
+[0.944s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description' for CMake module files
+[0.945s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description' for CMake config files
+[0.945s] Level 1:colcon.colcon_core.shell:create_environment_hook('panda_description', 'cmake_prefix_path')
+[0.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/hook/cmake_prefix_path.ps1'
+[0.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/hook/cmake_prefix_path.dsv'
+[0.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/hook/cmake_prefix_path.sh'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/bin'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/lib/pkgconfig/panda_description.pc'
+[0.948s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/lib/python3.10/site-packages'
+[0.949s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/panda_description/bin'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.ps1'
+[0.951s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.dsv'
+[0.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.sh'
+[0.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.bash'
+[0.953s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/panda_description/share/panda_description/package.zsh'
+[0.956s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/panda_description/share/colcon-core/packages/panda_description)
+[0.956s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs' with build type 'ament_cmake'
+[0.956s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs'
+[0.957s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.957s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs -- -j2 -l2
+[1.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs -- -j2 -l2
+[1.073s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs
+[1.089s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rpl_panda_with_rs)
+[1.090s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs' for CMake module files
+[1.090s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs' for CMake config files
+[1.090s] Level 1:colcon.colcon_core.shell:create_environment_hook('rpl_panda_with_rs', 'cmake_prefix_path')
+[1.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/hook/cmake_prefix_path.ps1'
+[1.092s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/hook/cmake_prefix_path.dsv'
+[1.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs
+[1.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/hook/cmake_prefix_path.sh'
+[1.094s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib'
+[1.094s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/bin'
+[1.094s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib/pkgconfig/rpl_panda_with_rs.pc'
+[1.094s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib/python3.10/site-packages'
+[1.095s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/bin'
+[1.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.ps1'
+[1.098s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.dsv'
+[1.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.sh'
+[1.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.bash'
+[1.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.zsh'
+[1.102s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/colcon-core/packages/rpl_panda_with_rs)
+[1.103s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rpl_panda_with_rs)
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs' for CMake module files
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs' for CMake config files
+[1.103s] Level 1:colcon.colcon_core.shell:create_environment_hook('rpl_panda_with_rs', 'cmake_prefix_path')
+[1.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/hook/cmake_prefix_path.ps1'
+[1.106s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/hook/cmake_prefix_path.dsv'
+[1.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/hook/cmake_prefix_path.sh'
+[1.109s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib'
+[1.109s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/bin'
+[1.110s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib/pkgconfig/rpl_panda_with_rs.pc'
+[1.110s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib/python3.10/site-packages'
+[1.110s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/bin'
+[1.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.ps1'
+[1.112s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.dsv'
+[1.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.sh'
+[1.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.bash'
+[1.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.zsh'
+[1.117s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/colcon-core/packages/rpl_panda_with_rs)
+[1.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner -- -j2 -l2
+[1.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
+[1.330s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_world_spawner)
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner' for CMake module files
+[1.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
+[1.337s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner' for CMake config files
+[1.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_world_spawner', 'cmake_prefix_path')
+[1.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/cmake_prefix_path.ps1'
+[1.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/cmake_prefix_path.dsv'
+[1.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/cmake_prefix_path.sh'
+[1.339s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib'
+[1.339s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_world_spawner', 'ld_library_path_lib')
+[1.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/ld_library_path_lib.ps1'
+[1.340s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/ld_library_path_lib.dsv'
+[1.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/ld_library_path_lib.sh'
+[1.341s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/bin'
+[1.341s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/pkgconfig/cw2_world_spawner.pc'
+[1.341s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/python3.10/site-packages'
+[1.341s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/bin'
+[1.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.ps1'
+[1.342s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.dsv'
+[1.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.sh'
+[1.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.bash'
+[1.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.zsh'
+[1.343s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/colcon-core/packages/cw2_world_spawner)
+[1.344s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_world_spawner)
+[1.344s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner' for CMake module files
+[1.345s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner' for CMake config files
+[1.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_world_spawner', 'cmake_prefix_path')
+[1.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/cmake_prefix_path.ps1'
+[1.346s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/cmake_prefix_path.dsv'
+[1.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/cmake_prefix_path.sh'
+[1.347s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib'
+[1.347s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_world_spawner', 'ld_library_path_lib')
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/ld_library_path_lib.ps1'
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/ld_library_path_lib.dsv'
+[1.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/hook/ld_library_path_lib.sh'
+[1.348s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/bin'
+[1.348s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/pkgconfig/cw2_world_spawner.pc'
+[1.348s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/python3.10/site-packages'
+[1.348s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/bin'
+[1.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.ps1'
+[1.349s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.dsv'
+[1.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.sh'
+[1.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.bash'
+[1.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.zsh'
+[1.351s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/colcon-core/packages/cw2_world_spawner)
+[1.351s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14' with build type 'ament_cmake'
+[1.351s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14'
+[1.351s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.351s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.362s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[12.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '2': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[12.202s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_team_14)
+[12.202s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14' for CMake module files
+[12.203s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14' for CMake config files
+[12.203s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'cmake_prefix_path')
+[12.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.ps1'
+[12.204s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.dsv'
+[12.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.sh'
+[12.206s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib'
+[12.206s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'ld_library_path_lib')
+[12.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.ps1'
+[12.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.dsv'
+[12.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.sh'
+[12.208s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/bin'
+[12.208s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/pkgconfig/cw2_team_14.pc'
+[12.208s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/python3.10/site-packages'
+[12.208s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/bin'
+[12.208s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.ps1'
+[12.209s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.dsv'
+[12.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.sh'
+[12.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.bash'
+[12.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.zsh'
+[12.211s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/colcon-core/packages/cw2_team_14)
+[12.222s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.223s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.223s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[12.223s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.227s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.227s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.227s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[12.248s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.248s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.ps1'
+[12.249s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bizare/Desktop/cw2_team_14/install/_local_setup_util_ps1.py'
+[12.251s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.ps1'
+[12.252s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.sh'
+[12.252s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bizare/Desktop/cw2_team_14/install/_local_setup_util_sh.py'
+[12.253s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.sh'
+[12.254s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.bash'
+[12.254s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.bash'
+[12.256s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.zsh'
+[12.256s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.zsh'

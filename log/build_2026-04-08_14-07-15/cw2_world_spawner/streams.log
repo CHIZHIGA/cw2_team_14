@@ -1,0 +1,450 @@
+[0.037s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner
+[0.177s] -- The C compiler identification is GNU 11.4.0
+[0.271s] -- The CXX compiler identification is GNU 11.4.0
+[0.291s] -- Detecting C compiler ABI info
+[0.427s] -- Detecting C compiler ABI info - done
+[0.450s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.454s] -- Detecting C compile features
+[0.454s] -- Detecting C compile features - done
+[0.472s] -- Detecting CXX compiler ABI info
+[0.574s] -- Detecting CXX compiler ABI info - done
+[0.581s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.581s] -- Detecting CXX compile features
+[0.581s] -- Detecting CXX compile features - done
+[0.583s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.764s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.881s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.884s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.892s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.940s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.982s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.496s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.717s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.152s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.191s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.193s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.252s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.252s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.252s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.252s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.275s] -- Found PythonExtra: .so  
+[2.334s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.361s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.364s] -- Added test 'lint_cmake' to check CMake code style
+[2.365s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.369s] -- Added test 'xmllint' to check XML markup files
+[2.372s] -- Configuring done
+[2.412s] -- Generating done
+[2.426s] -- Build files have been written to: /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
+[2.435s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner
+[2.439s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner -- -j2 -l2
+[2.498s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.514s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.830s] [  5%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o[0m
+[3.922s] [  5%] Built target cw2_world_spawner__cpp
+[3.996s] [  7%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o[0m
+[4.006s] [  7%] Built target ament_cmake_python_copy_cw2_world_spawner
+[4.030s] [  9%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o[0m
+[4.104s] [ 10%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o[0m
+[4.199s] [ 10%] Built target ament_cmake_python_copy_cw2_world_spawner_lib
+[4.209s] [ 12%] [32m[1mLinking C shared library libcw2_world_spawner__rosidl_generator_c.so[0m
+[4.219s] [ 14%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.297s] [ 14%] Built target cw2_world_spawner__rosidl_generator_c
+[4.322s] [ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.105s] [ 18%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cw2_world_spawner/srv/task_setup__type_support.cpp.o[0m
+[5.732s] [ 20%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task_setup__type_support.cpp.o[0m
+[6.032s] [ 21%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cw2_world_spawner/srv/task1_service__type_support.cpp.o[0m
+[6.805s] [ 23%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task1_service__type_support.cpp.o[0m
+[7.033s] [ 25%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cw2_world_spawner/srv/task2_service__type_support.cpp.o[0m
+[7.849s] [ 27%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cw2_world_spawner/srv/task3_service__type_support.cpp.o[0m
+[8.185s] [ 29%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task2_service__type_support.cpp.o[0m
+[8.669s] [ 30%] [32m[1mLinking CXX shared library libcw2_world_spawner__rosidl_typesupport_cpp.so[0m
+[8.785s] [ 30%] Built target cw2_world_spawner__rosidl_typesupport_cpp
+[8.820s] [ 32%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[9.706s] [ 34%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task3_service__type_support.cpp.o[0m
+[10.287s] [ 36%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cw2_world_spawner/srv/detail/task_setup__type_support.cpp.o[0m
+[11.236s] [ 38%] [32m[1mLinking CXX shared library libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so[0m
+[11.557s] [ 38%] Built target cw2_world_spawner__rosidl_typesupport_fastrtps_cpp
+[11.594s] [ 40%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cw2_world_spawner/srv/detail/task1_service__type_support.cpp.o[0m
+[11.607s] [ 41%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cw2_world_spawner/srv/detail/task2_service__type_support.cpp.o[0m
+[13.054s] [ 43%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cw2_world_spawner/srv/detail/task3_service__type_support.cpp.o[0m
+[13.610s] running egg_info
+[13.613s] creating cw2_world_spawner.egg-info
+[13.613s] writing cw2_world_spawner.egg-info/PKG-INFO
+[13.613s] writing dependency_links to cw2_world_spawner.egg-info/dependency_links.txt
+[13.615s] writing top-level names to cw2_world_spawner.egg-info/top_level.txt
+[13.615s] writing manifest file 'cw2_world_spawner.egg-info/SOURCES.txt'
+[13.623s] reading manifest file 'cw2_world_spawner.egg-info/SOURCES.txt'
+[13.625s] writing manifest file 'cw2_world_spawner.egg-info/SOURCES.txt'
+[13.713s] [ 43%] Built target ament_cmake_python_build_cw2_world_spawner_egg
+[14.528s] [ 45%] [32m[1mLinking CXX shared library libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so[0m
+[14.551s] running egg_info
+[14.552s] creating cw2_world_spawner_lib.egg-info
+[14.552s] writing cw2_world_spawner_lib.egg-info/PKG-INFO
+[14.555s] writing dependency_links to cw2_world_spawner_lib.egg-info/dependency_links.txt
+[14.555s] writing top-level names to cw2_world_spawner_lib.egg-info/top_level.txt
+[14.557s] writing manifest file 'cw2_world_spawner_lib.egg-info/SOURCES.txt'
+[14.565s] reading manifest file 'cw2_world_spawner_lib.egg-info/SOURCES.txt'
+[14.568s] writing manifest file 'cw2_world_spawner_lib.egg-info/SOURCES.txt'
+[14.673s] [ 45%] Built target ament_cmake_python_build_cw2_world_spawner_lib_egg
+[14.710s] [ 47%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[14.818s] [ 47%] Built target cw2_world_spawner__rosidl_typesupport_introspection_cpp
+[14.853s] [ 49%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[16.393s] [ 50%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cw2_world_spawner/srv/detail/task_setup__type_support_c.cpp.o[0m
+[16.458s] [ 52%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cw2_world_spawner/srv/detail/task_setup__type_support.c.o[0m
+[16.603s] [ 54%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cw2_world_spawner/srv/detail/task1_service__type_support.c.o[0m
+[16.726s] [ 56%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cw2_world_spawner/srv/detail/task2_service__type_support.c.o[0m
+[16.884s] [ 58%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cw2_world_spawner/srv/detail/task3_service__type_support.c.o[0m
+[17.027s] [ 60%] [32m[1mLinking C shared library libcw2_world_spawner__rosidl_typesupport_introspection_c.so[0m
+[17.170s] [ 60%] Built target cw2_world_spawner__rosidl_typesupport_introspection_c
+[17.211s] [ 61%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[17.502s] [ 63%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cw2_world_spawner/srv/detail/task1_service__type_support_c.cpp.o[0m
+[18.440s] [ 65%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_c.dir/rosidl_typesupport_c/cw2_world_spawner/srv/task_setup__type_support.cpp.o[0m
+[18.560s] [ 67%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_c.dir/rosidl_typesupport_c/cw2_world_spawner/srv/task1_service__type_support.cpp.o[0m
+[18.683s] [ 69%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_c.dir/rosidl_typesupport_c/cw2_world_spawner/srv/task2_service__type_support.cpp.o[0m
+[18.734s] [ 70%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cw2_world_spawner/srv/detail/task2_service__type_support_c.cpp.o[0m
+[18.783s] [ 72%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_c.dir/rosidl_typesupport_c/cw2_world_spawner/srv/task3_service__type_support.cpp.o[0m
+[18.880s] [ 74%] [32m[1mLinking CXX shared library libcw2_world_spawner__rosidl_typesupport_c.so[0m
+[19.043s] [ 74%] Built target cw2_world_spawner__rosidl_typesupport_c
+[19.075s] [ 76%] [32mBuilding CXX object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cw2_world_spawner/srv/detail/task3_service__type_support_c.cpp.o[0m
+[20.149s] [ 78%] [32m[1mLinking CXX shared library libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so[0m
+[20.346s] [ 78%] Built target cw2_world_spawner__rosidl_typesupport_fastrtps_c
+[20.401s] [ 78%] Built target cw2_world_spawner
+[20.461s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[22.647s] [ 80%] Built target cw2_world_spawner__py
+[22.715s] [ 81%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_py.dir/rosidl_generator_py/cw2_world_spawner/srv/_task_setup_s.c.o[0m
+[22.715s] [ 83%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_py.dir/rosidl_generator_py/cw2_world_spawner/srv/_task1_service_s.c.o[0m
+[23.121s] [ 85%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_py.dir/rosidl_generator_py/cw2_world_spawner/srv/_task3_service_s.c.o[0m
+[23.131s] [ 87%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_generator_py.dir/rosidl_generator_py/cw2_world_spawner/srv/_task2_service_s.c.o[0m
+[23.438s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/cw2_world_spawner/libcw2_world_spawner__rosidl_generator_py.so[0m
+[23.585s] [ 89%] Built target cw2_world_spawner__rosidl_generator_py
+[23.652s] [ 90%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[23.670s] [ 92%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[24.055s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[24.076s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[24.191s] [ 96%] Built target cw2_world_spawner__rosidl_typesupport_fastrtps_c__pyext
+[24.202s] [ 96%] Built target cw2_world_spawner__rosidl_typesupport_introspection_c__pyext
+[24.257s] [ 98%] [32mBuilding C object CMakeFiles/cw2_world_spawner__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_c.c.o[0m
+[24.618s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[24.694s] [100%] Built target cw2_world_spawner__rosidl_typesupport_c__pyext
+[24.733s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner -- -j2 -l2
+[24.740s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
+[24.762s] -- Install configuration: ""
+[24.763s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/ament_index/resource_index/rosidl_interfaces/cw2_world_spawner
+[24.764s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner
+[24.764s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg
+[24.764s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg/rosidl_generator_c__visibility_control.h
+[24.764s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv
+[24.765s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task3_service.h
+[24.765s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail
+[24.767s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__struct.h
+[24.767s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__functions.c
+[24.767s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__functions.c
+[24.767s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__type_support.h
+[24.767s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__functions.h
+[24.769s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__type_support.h
+[24.769s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__type_support.h
+[24.769s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__functions.h
+[24.770s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__functions.c
+[24.770s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__functions.h
+[24.771s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__struct.h
+[24.771s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__functions.c
+[24.772s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__struct.h
+[24.775s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__type_support.h
+[24.775s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__struct.h
+[24.775s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__functions.h
+[24.775s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task2_service.h
+[24.775s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task1_service.h
+[24.776s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task_setup.h
+[24.776s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/library_path.sh
+[24.776s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/library_path.dsv
+[24.776s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
+[24.784s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so" to ""
+[24.784s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner
+[24.784s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg
+[24.784s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[24.784s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv
+[24.784s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail
+[24.784s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__rosidl_typesupport_fastrtps_c.h
+[24.784s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__rosidl_typesupport_fastrtps_c.h
+[24.784s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__rosidl_typesupport_fastrtps_c.h
+[24.784s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__rosidl_typesupport_fastrtps_c.h
+[24.784s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
+[24.785s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so" to ""
+[24.785s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner
+[24.785s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[24.785s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv
+[24.785s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__rosidl_typesupport_introspection_c.h
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__rosidl_typesupport_introspection_c.h
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__type_support.c
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__type_support.c
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__rosidl_typesupport_introspection_c.h
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__rosidl_typesupport_introspection_c.h
+[24.785s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__type_support.c
+[24.788s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__type_support.c
+[24.788s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
+[24.788s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so" to ""
+[24.788s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
+[24.789s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so" to ""
+[24.793s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner
+[24.793s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg/rosidl_generator_cpp__visibility_control.hpp
+[24.793s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task3_service.hpp
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task1_service.hpp
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task_setup.hpp
+[24.793s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__struct.hpp
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__type_support.hpp
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__type_support.hpp
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__builder.hpp
+[24.793s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__struct.hpp
+[24.794s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__builder.hpp
+[24.794s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__type_support.hpp
+[24.794s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__traits.hpp
+[24.794s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__struct.hpp
+[24.794s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__builder.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__traits.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__struct.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__builder.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__traits.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__type_support.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__traits.hpp
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task2_service.hpp
+[24.797s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner
+[24.797s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg
+[24.797s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[24.797s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv
+[24.800s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail
+[24.800s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/dds_fastrtps
+[24.800s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__rosidl_typesupport_fastrtps_cpp.hpp
+[24.800s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__rosidl_typesupport_fastrtps_cpp.hpp
+[24.800s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__rosidl_typesupport_fastrtps_cpp.hpp
+[24.800s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__rosidl_typesupport_fastrtps_cpp.hpp
+[24.800s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
+[24.800s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so" to ""
+[24.800s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner
+[24.800s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv
+[24.801s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail
+[24.801s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__rosidl_typesupport_introspection_cpp.hpp
+[24.801s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task3_service__type_support.cpp
+[24.801s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__type_support.cpp
+[24.801s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task2_service__rosidl_typesupport_introspection_cpp.hpp
+[24.802s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__rosidl_typesupport_introspection_cpp.hpp
+[24.804s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__type_support.cpp
+[24.804s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task_setup__rosidl_typesupport_introspection_cpp.hpp
+[24.804s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__type_support.cpp
+[24.804s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
+[24.804s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so" to ""
+[24.804s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
+[24.805s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so" to ""
+[24.805s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/pythonpath.sh
+[24.805s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/pythonpath.dsv
+[24.805s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info
+[24.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info/SOURCES.txt
+[24.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info/dependency_links.txt
+[24.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info/PKG-INFO
+[24.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info/top_level.txt
+[24.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner
+[24.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c
+[24.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_introspection_c.c
+[24.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[24.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/__init__.py
+[24.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_c.c
+[24.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[24.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/libcw2_world_spawner__rosidl_generator_py.so
+[24.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[24.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv
+[24.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task3_service_s.c
+[24.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task1_service_s.c
+[24.810s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/__init__.py
+[24.810s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task_setup_s.c
+[24.810s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task2_service_s.c
+[24.810s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task_setup.py
+[24.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task2_service.py
+[24.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task1_service.py
+[24.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task3_service.py
+[24.896s] Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner'...
+[24.896s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/__init__.py'...
+[24.896s] Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv'...
+[24.896s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/__init__.py'...
+[24.896s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task1_service.py'...
+[24.896s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task2_service.py'...
+[24.896s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task3_service.py'...
+[24.896s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/srv/_task_setup.py'...
+[24.907s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[24.907s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[24.907s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[24.908s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[24.908s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[24.908s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[24.909s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
+[24.911s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so" to ""
+[24.911s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/TaskSetup.idl
+[24.911s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task1Service.idl
+[24.911s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task2Service.idl
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task3Service.idl
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/TaskSetup.srv
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/TaskSetup_Request.msg
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/TaskSetup_Response.msg
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task1Service.srv
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task1Service_Request.msg
+[24.916s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task1Service_Response.msg
+[24.917s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task2Service.srv
+[24.918s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task2Service_Request.msg
+[24.918s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task2Service_Response.msg
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task3Service.srv
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task3Service_Request.msg
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/srv/Task3Service_Response.msg
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info/SOURCES.txt
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info/dependency_links.txt
+[24.920s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info/PKG-INFO
+[24.922s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info/top_level.txt
+[24.922s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib
+[24.924s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib/__init__.py
+[24.924s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib/coursework_world_spawner.py
+[24.993s] Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib'...
+[24.993s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib/__init__.py'...
+[24.993s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib/coursework_world_spawner.py'...
+[25.009s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/cw2_world_spawner/world_spawner.py
+[25.009s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models
+[25.009s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_20mm
+[25.010s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_20mm/cross_20mm_40H.STL
+[25.010s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_20mm/model.config
+[25.010s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_20mm/model.sdf
+[25.010s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_20mm/cross_40mm.STL
+[25.013s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_20mm
+[25.013s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_20mm/model.config
+[25.013s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_20mm/nought_20mm_40H.STL
+[25.014s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_20mm/model.sdf
+[25.016s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_40mm
+[25.017s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_40mm/model.config
+[25.017s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_40mm/model.sdf
+[25.018s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_40mm/cross_40mm.STL
+[25.018s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/all_tiles
+[25.018s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/all_tiles/model.config
+[25.019s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/all_tiles/model.sdf.xmacro
+[25.019s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/all_tiles/model.sdf
+[25.021s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_40mm
+[25.021s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_40mm/nought_40mm.STL
+[25.022s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_40mm/model.config
+[25.022s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_40mm/model.sdf
+[25.025s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_30mm
+[25.025s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_30mm/model.config
+[25.025s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_30mm/nought_30mm_40H.STL
+[25.026s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_30mm/model.sdf
+[25.026s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_4
+[25.026s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_4/model.config
+[25.027s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_4/model.sdf
+[25.027s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/basket
+[25.027s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/basket/model.config
+[25.027s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/basket/model.sdf.xmacro
+[25.030s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/basket/model.sdf
+[25.031s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_3
+[25.031s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_3/model.config
+[25.031s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_3/model.sdf
+[25.031s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_20mm
+[25.031s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_20mm/model.config
+[25.032s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_20mm/nought_20mm_40H.STL
+[25.036s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_20mm/model.sdf
+[25.036s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_40mm
+[25.036s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_40mm/nought_40mm.STL
+[25.037s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_40mm/model.config
+[25.037s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_blue_40mm/model.sdf
+[25.037s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_40mm
+[25.037s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_40mm/model.config
+[25.038s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_40mm/model.sdf
+[25.038s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_40mm/cross_40mm.STL
+[25.038s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_30mm
+[25.039s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_30mm/model.config
+[25.039s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_30mm/cross_30mm_40H.STL
+[25.039s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_30mm/model.sdf
+[25.039s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_30mm
+[25.039s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_30mm/model.config
+[25.040s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_30mm/cross_30mm_40H.STL
+[25.040s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_red_30mm/model.sdf
+[25.044s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_30mm
+[25.045s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_30mm/model.config
+[25.048s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_30mm/nought_30mm_40H.STL
+[25.048s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_30mm/model.sdf
+[25.048s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_30mm
+[25.048s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_30mm/model.config
+[25.048s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_30mm/nought_30mm_40H.STL
+[25.048s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_purple_30mm/model.sdf
+[25.052s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_20mm
+[25.052s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_20mm/cross_20mm_40H.STL
+[25.052s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_20mm/model.config
+[25.052s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_20mm/model.sdf
+[25.052s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_20mm/cross_40mm.STL
+[25.053s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_1
+[25.053s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_1/model.config
+[25.053s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_1/model.sdf
+[25.053s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_2
+[25.053s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_2/model.config
+[25.053s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/obstacle_2/model.sdf
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_20mm
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_20mm/model.config
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_20mm/nought_20mm_40H.STL
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_20mm/model.sdf
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_30mm
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_30mm/model.config
+[25.056s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_30mm/cross_30mm_40H.STL
+[25.057s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_blue_30mm/model.sdf
+[25.057s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_20mm
+[25.057s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_20mm/cross_20mm_40H.STL
+[25.060s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_20mm/model.config
+[25.061s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_20mm/model.sdf
+[25.061s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_20mm/cross_40mm.STL
+[25.061s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_40mm
+[25.061s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_40mm/model.config
+[25.062s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_40mm/model.sdf
+[25.062s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/cross_purple_40mm/cross_40mm.STL
+[25.062s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_40mm
+[25.062s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_40mm/nought_40mm.STL
+[25.063s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_40mm/model.config
+[25.063s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/models/nought_red_40mm/model.sdf
+[25.071s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/launch
+[25.071s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/launch/world_spawner.launch.py
+[25.071s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/ament_index/resource_index/package_run_dependencies/cw2_world_spawner
+[25.071s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/ament_index/resource_index/parent_prefix_path/cw2_world_spawner
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/ament_prefix_path.sh
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/ament_prefix_path.dsv
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/path.sh
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/environment/path.dsv
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/local_setup.bash
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/local_setup.sh
+[25.072s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/local_setup.zsh
+[25.074s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/local_setup.dsv
+[25.075s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.dsv
+[25.075s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/ament_index/resource_index/packages/cw2_world_spawner
+[25.075s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake
+[25.076s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport-noconfig.cmake
+[25.076s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake
+[25.076s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[25.077s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake
+[25.079s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[25.079s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake
+[25.079s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport-noconfig.cmake
+[25.080s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake
+[25.081s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake
+[25.081s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[25.081s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake
+[25.081s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[25.081s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake
+[25.084s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport-noconfig.cmake
+[25.084s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake
+[25.084s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport-noconfig.cmake
+[25.084s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/rosidl_cmake-extras.cmake
+[25.084s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/ament_cmake_export_dependencies-extras.cmake
+[25.084s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/ament_cmake_export_include_directories-extras.cmake
+[25.085s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/ament_cmake_export_libraries-extras.cmake
+[25.086s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/ament_cmake_export_targets-extras.cmake
+[25.086s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[25.086s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[25.087s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawnerConfig.cmake
+[25.087s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake/cw2_world_spawnerConfig-version.cmake
+[25.088s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/package.xml
+[25.099s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner

@@ -1,0 +1,10 @@
+[01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:[m[K In member function ‘[01m[Kvoid cw2::t1_callback(std::shared_ptr<cw2_world_spawner::srv::Task1Service_Request_<std::allocator<void> > >, std::shared_ptr<cw2_world_spawner::srv::Task1Service_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:401:30:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kgeometry_msgs::msg::Pose grasp_pose[m[K’
+  401 |     geometry_msgs::msg::Pose [01;31m[Kgrasp_pose[m[K = pre_grasp_pose;
+      |                              [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:392:30:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Pose grasp_pose[m[K’ previously declared here
+  392 |     geometry_msgs::msg::Pose [01;36m[Kgrasp_pose[m[K = pre_grasp_pose;
+      |                              [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make:76: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:595: CMakeFiles/cw2_team_14_cw2_class_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

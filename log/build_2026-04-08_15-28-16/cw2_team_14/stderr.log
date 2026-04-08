@@ -1,0 +1,4 @@
+[01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:[m[K In member function ‘[01m[Kvoid cw2::t1_callback(std::shared_ptr<cw2_world_spawner::srv::Task1Service_Request_<std::allocator<void> > >, std::shared_ptr<cw2_world_spawner::srv::Task1Service_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:443:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klifted[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  443 |     const bool [01;35m[Klifted[m[K = execute_cartesian_path(
+      |                [01;35m[K^~~~~~[m[K

@@ -1,0 +1,82 @@
+[0.021s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[0.089s] [  2%] Built target cw2_team_14__cpp
+[0.110s] [ 11%] Built target cw2_team_14__rosidl_generator_c
+[0.129s] [ 11%] Built target ament_cmake_python_copy_cw2_team_14
+[0.150s] [ 20%] Built target cw2_team_14__rosidl_typesupport_cpp
+[0.169s] [ 28%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c
+[0.176s] [ 37%] Built target cw2_team_14__rosidl_typesupport_introspection_c
+[0.208s] [ 45%] Built target cw2_team_14__rosidl_typesupport_c
+[0.212s] [ 54%] Built target cw2_team_14__rosidl_typesupport_fastrtps_cpp
+[0.236s] [ 62%] Built target cw2_team_14__rosidl_typesupport_introspection_cpp
+[0.263s] [35m[1mConsolidate compiler generated dependencies of target cw2_team_14_cw2_class_lib[0m
+[0.344s] [ 65%] [32mBuilding CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o[0m
+[0.625s] running egg_info
+[0.626s] writing cw2_team_14.egg-info/PKG-INFO
+[0.626s] writing dependency_links to cw2_team_14.egg-info/dependency_links.txt
+[0.627s] writing top-level names to cw2_team_14.egg-info/top_level.txt
+[0.635s] reading manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[0.635s] writing manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[0.664s] [ 65%] Built target ament_cmake_python_build_cw2_team_14_egg
+[0.698s] [ 65%] Built target cw2_team_14
+[0.742s] [ 68%] Built target cw2_team_14__py
+[0.799s] [ 74%] Built target cw2_team_14__rosidl_generator_py
+[0.834s] [ 80%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c__pyext
+[0.903s] [ 85%] Built target cw2_team_14__rosidl_typesupport_introspection_c__pyext
+[0.954s] [ 91%] Built target cw2_team_14__rosidl_typesupport_c__pyext
+[7.435s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:201:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool cw2::execute_cartesian_path(moveit::planning_interface::MoveGroupInterface&, const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double)[m[K’
+[7.435s]   201 | bool [01;31m[Kcw2[m[K::execute_cartesian_path(
+[7.435s]       |      [01;31m[K^~~[m[K
+[7.435s] In file included from [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:6[m[K:
+[7.435s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)[m[K’
+[7.435s]    82 |   bool [01;36m[Kexecute_cartesian_path[m[K(
+[7.435s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.435s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:35:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass cw2[m[K’ defined here
+[7.435s]    35 | class [01;36m[Kcw2[m[K
+[7.435s]       |       [01;36m[K^~~[m[K
+[7.442s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:[m[K In member function ‘[01m[Kvoid cw2::t1_callback(std::shared_ptr<cw2_world_spawner::srv::Task1Service_Request_<std::allocator<void> > >, std::shared_ptr<cw2_world_spawner::srv::Task1Service_Response_<std::allocator<void> > >)[m[K’:
+[7.442s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:368:32:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcw2::execute_cartesian_path(std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type&, <brace-enclosed initializer list>, const double&)[m[K’
+[7.443s]   368 |     if (![01;31m[Kexecute_cartesian_path(*arm_group_, {grasp_pose}, kCartesianMinFraction)[m[K) {
+[7.443s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.443s] In file included from [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:6[m[K:
+[7.443s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)[m[K’
+[7.443s]    82 |   bool [01;36m[Kexecute_cartesian_path[m[K(
+[7.443s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.454s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[7.455s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:394:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcw2::execute_cartesian_path(std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type&, <brace-enclosed initializer list>, const double&)[m[K’
+[7.455s]   394 |     const bool lifted = [01;31m[Kexecute_cartesian_path([m[K
+[7.456s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[7.456s]   395 | [01;31m[K      *arm_group_, {lift_pose}, kCartesianMinFraction)[m[K;
+[7.456s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.456s] In file included from [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:6[m[K:
+[7.456s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)[m[K’
+[7.456s]    82 |   bool [01;36m[Kexecute_cartesian_path[m[K(
+[7.456s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.456s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:408:29:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcw2::execute_cartesian_path(std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type&, <brace-enclosed initializer list>, double)[m[K’
+[7.458s]   408 |       [01;31m[Kexecute_cartesian_path(*arm_group_, {retreat_pose}, 0.8)[m[K;
+[7.458s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.458s] In file included from [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:6[m[K:
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)[m[K’
+[7.458s]    82 |   bool [01;36m[Kexecute_cartesian_path[m[K(
+[7.458s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:425:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcw2::execute_cartesian_path(std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type&, <brace-enclosed initializer list>, double)[m[K’
+[7.458s]   425 |     [01;31m[Kexecute_cartesian_path(*arm_group_, {place_release_pose}, 0.8)[m[K;
+[7.458s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.458s] In file included from [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:6[m[K:
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)[m[K’
+[7.458s]    82 |   bool [01;36m[Kexecute_cartesian_path[m[K(
+[7.458s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[7.458s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:434:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcw2::execute_cartesian_path(std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type&, <brace-enclosed initializer list>, double)[m[K’
+[7.458s]   434 |     [01;31m[Kexecute_cartesian_path(*arm_group_, {post_release_pose}, 0.8)[m[K;
+[7.461s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.461s] In file included from [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp:6[m[K:
+[7.461s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool cw2::execute_cartesian_path(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, const string&, double, double)[m[K’
+[7.461s]    82 |   bool [01;36m[Kexecute_cartesian_path[m[K(
+[7.461s]       |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.461s] [01m[K/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include/cw2_class.h:82:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[12.500s] gmake[2]: *** [CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make:76: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o] Error 1
+[12.500s] gmake[1]: *** [CMakeFiles/Makefile2:595: CMakeFiles/cw2_team_14_cw2_class_lib.dir/all] Error 2
+[12.501s] gmake: *** [Makefile:146: all] Error 2
+[12.524s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '2': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
