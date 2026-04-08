@@ -1,2 +1,0 @@
-geometry_msgs/PointStamped[] ref_object_points
-geometry_msgs/PointStamped mystery_object_point

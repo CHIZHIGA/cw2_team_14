@@ -1,9 +1,0 @@
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/uninstall.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/perception_pipeline_humble_demo_uninstall.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/test.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/edit_cache.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/rebuild_cache.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/list_install_components.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/install.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/install/local.dir
-/home/czg22/comp0250_s26_labs/build/perception_pipeline_humble_demo/CMakeFiles/install/strip.dir

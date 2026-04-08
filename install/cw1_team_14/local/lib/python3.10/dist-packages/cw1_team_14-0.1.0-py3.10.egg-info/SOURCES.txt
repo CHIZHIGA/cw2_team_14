@@ -1,8 +1,0 @@
-setup.py
-cw1_team_14/__init__.py
-cw1_team_14.egg-info/PKG-INFO
-cw1_team_14.egg-info/SOURCES.txt
-cw1_team_14.egg-info/dependency_links.txt
-cw1_team_14.egg-info/top_level.txt
-cw1_team_14/srv/__init__.py
-cw1_team_14/srv/_example.py
