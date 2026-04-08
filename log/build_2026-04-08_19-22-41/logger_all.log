@@ -1,0 +1,232 @@
+[0.142s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'cw2_team_14']
+[0.142s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['cw2_team_14'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7501b06d65c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7501b06d60e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7501b06d60e0>>, mixin_verb=('build',))
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.407s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/bizare/Desktop/cw2_team_14'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['ignore', 'ignore_ament_install']
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ignore'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ignore_ament_install'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['colcon_pkg']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'colcon_pkg'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['colcon_meta']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'colcon_meta'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['ros']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extensions ['python_setup_py']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks) by extension 'python_setup_py'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ignore_ament_install'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['colcon_pkg']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['colcon_meta']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'colcon_meta'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extensions ['ros']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_team_14) by extension 'ros'
+[0.478s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw2_team_14' with type 'ros.ament_cmake' and name 'cw2_team_14'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ignore'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ignore_ament_install'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['colcon_pkg']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/cw2_world_spawner) by extension 'ros'
+[0.479s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/cw2_world_spawner' with type 'ros.ament_cmake' and name 'cw2_world_spawner'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['colcon_pkg']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_description) by extension 'ros'
+[0.480s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/panda_description' with type 'ros.ament_cmake' and name 'panda_description'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/panda_moveit_config) by extension 'ros'
+[0.483s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/panda_moveit_config' with type 'ros.ament_cmake' and name 'panda_moveit_config'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/realsense_gazebo_plugin) by extension 'ros'
+[0.485s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/realsense_gazebo_plugin' with type 'ros.ament_cmake' and name 'realsense_gazebo_plugin'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'colcon_meta'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/courseworks/rpl_panda_with_rs) by extension 'ros'
+[0.486s] DEBUG:colcon.colcon_core.package_identification:Package 'src/courseworks/rpl_panda_with_rs' with type 'ros.ament_cmake' and name 'rpl_panda_with_rs'
+[0.486s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.486s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.486s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.486s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.486s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.507s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'cw2_world_spawner' in 'src/courseworks/cw2_world_spawner'
+[0.507s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_description' in 'src/courseworks/panda_description'
+[0.508s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'panda_moveit_config' in 'src/courseworks/panda_moveit_config'
+[0.508s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'realsense_gazebo_plugin' in 'src/courseworks/realsense_gazebo_plugin'
+[0.508s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rpl_panda_with_rs' in 'src/courseworks/rpl_panda_with_rs'
+[0.508s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.508s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.511s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/bizare/Desktop/cw2_team_14/install
+[0.512s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 375 installed packages in /opt/ros/humble
+[0.513s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_args' from command line to 'None'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_target' from command line to 'None'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_clean_cache' from command line to 'False'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_clean_first' from command line to 'False'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'cmake_force_configure' from command line to 'False'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'ament_cmake_args' from command line to 'None'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'catkin_cmake_args' from command line to 'None'
+[0.557s] Level 5:colcon.colcon_core.verb:set package 'cw2_team_14' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.557s] DEBUG:colcon.colcon_core.verb:Building package 'cw2_team_14' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14', 'merge_install': False, 'path': '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14', 'symlink_install': False, 'test_result_base': None}
+[0.557s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.558s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.559s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14' with build type 'ament_cmake'
+[0.559s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14'
+[0.563s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.563s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.564s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[22.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[22.152s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+[22.266s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_team_14)
+[22.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/home/bizare/Desktop/cw2_team_14/install/cw1_world_spawner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+[22.274s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14' for CMake module files
+[22.276s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14' for CMake config files
+[22.278s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'cmake_prefix_path')
+[22.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.ps1'
+[22.280s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.dsv'
+[22.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.sh'
+[22.281s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib'
+[22.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'ld_library_path_lib')
+[22.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.ps1'
+[22.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.dsv'
+[22.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.sh'
+[22.283s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/bin'
+[22.283s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/pkgconfig/cw2_team_14.pc'
+[22.283s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/python3.10/site-packages'
+[22.284s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/bin'
+[22.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.ps1'
+[22.285s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.dsv'
+[22.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.sh'
+[22.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.bash'
+[22.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.zsh'
+[22.289s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/colcon-core/packages/cw2_team_14)
+[22.290s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cw2_team_14)
+[22.290s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14' for CMake module files
+[22.290s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14' for CMake config files
+[22.291s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'cmake_prefix_path')
+[22.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.ps1'
+[22.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.dsv'
+[22.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/cmake_prefix_path.sh'
+[22.292s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib'
+[22.292s] Level 1:colcon.colcon_core.shell:create_environment_hook('cw2_team_14', 'ld_library_path_lib')
+[22.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.ps1'
+[22.293s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.dsv'
+[22.293s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/hook/ld_library_path_lib.sh'
+[22.293s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/bin'
+[22.294s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/pkgconfig/cw2_team_14.pc'
+[22.294s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/python3.10/site-packages'
+[22.294s] Level 1:colcon.colcon_core.environment:checking '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/bin'
+[22.294s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.ps1'
+[22.295s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.dsv'
+[22.295s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.sh'
+[22.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.bash'
+[22.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.zsh'
+[22.297s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/colcon-core/packages/cw2_team_14)
+[22.297s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[22.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[22.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[22.298s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[22.310s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[22.310s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[22.310s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[22.402s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[22.403s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.ps1'
+[22.404s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bizare/Desktop/cw2_team_14/install/_local_setup_util_ps1.py'
+[22.406s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.ps1'
+[22.408s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.sh'
+[22.408s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bizare/Desktop/cw2_team_14/install/_local_setup_util_sh.py'
+[22.409s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.sh'
+[22.410s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.bash'
+[22.411s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.bash'
+[22.412s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bizare/Desktop/cw2_team_14/install/local_setup.zsh'
+[22.413s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bizare/Desktop/cw2_team_14/install/setup.zsh'

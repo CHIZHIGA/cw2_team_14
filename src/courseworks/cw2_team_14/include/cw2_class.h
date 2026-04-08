@@ -23,6 +23,7 @@ solution is contained within the cw2_team_<your_team_number> package */
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/transform_listener.h>
+#include <geometry_msgs/msg/point.hpp>
 
 #include "cw2_world_spawner/srv/task1_service.hpp"
 #include "cw2_world_spawner/srv/task2_service.hpp"
@@ -80,12 +81,14 @@ private:
   bool move_arm_to_named_target(const std::string &target_name);
   bool move_arm_to_pose(const geometry_msgs::msg::Pose &pose, const std::string &frame_id);
   bool execute_cartesian_path(
+    moveit::planning_interface::MoveGroupInterface &arm_group,
     const std::vector<geometry_msgs::msg::Pose> &waypoints,
-    const std::string &frame_id,
-    double eef_step,
     double min_fraction);
   bool set_gripper_width(double width);
   double get_gripper_width() const;
+  bool rescan_task1_object_point(
+    geometry_msgs::msg::Point &object_point,
+    const std::string &frame_id);
   geometry_msgs::msg::Pose make_top_down_pose(
     double x,
     double y,

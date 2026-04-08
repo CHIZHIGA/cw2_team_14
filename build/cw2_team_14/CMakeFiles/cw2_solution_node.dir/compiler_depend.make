@@ -1949,6 +1949,9 @@ CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/bizare/Desktop/cw2_te
   /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__traits.hpp \
   /opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__type_support.hpp \
   /opt/ros/humble/include/tf2_ros/tf2_ros/qos.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__type_support.hpp \
   /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task1_service.hpp \
   /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp \
@@ -1978,6 +1981,10 @@ CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/bizare/Desktop/cw2_te
 /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/task2_service.hpp:
 
 /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/include/cw2_world_spawner/cw2_world_spawner/srv/detail/task1_service__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp:
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/qos.hpp:
 
@@ -2714,6 +2721,8 @@ CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/bizare/Desktop/cw2_te
 /opt/ros/humble/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
 
