@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/realsense_gazebo_plugin
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/realsense_gazebo_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin
 
 # Utility rule file for realsense_gazebo_plugin_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/realsense_gazebo_plugin_uninstall.dir/compiler_depend.make
 include CMakeFiles/realsense_gazebo_plugin_uninstall.dir/progress.make
 
 CMakeFiles/realsense_gazebo_plugin_uninstall:
-	/usr/bin/cmake -P /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 realsense_gazebo_plugin_uninstall: CMakeFiles/realsense_gazebo_plugin_uninstall
 realsense_gazebo_plugin_uninstall: CMakeFiles/realsense_gazebo_plugin_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/realsense_gazebo_plugin_uninstall.dir/clean:
 .PHONY : CMakeFiles/realsense_gazebo_plugin_uninstall.dir/clean
 
 CMakeFiles/realsense_gazebo_plugin_uninstall.dir/depend:
-	cd /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/realsense_gazebo_plugin /home/czg22/comp0250_s26_labs/src/courseworks/realsense_gazebo_plugin /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/realsense_gazebo_plugin /home/ethan/COMP0250/cw2_team_14/src/courseworks/realsense_gazebo_plugin /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/realsense_gazebo_plugin_uninstall.dir/depend
 

@@ -1,0 +1,276 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d84d468ece8dc0f1c977.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						19,
+						20
+					]
+				},
+				{
+					"build" : "cw2_world_spawner__py",
+					"jsonFile" : "directory-cw2_world_spawner__py-bc6215ba0b36fc717b61.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "cw2_world_spawner__rs",
+					"jsonFile" : "directory-cw2_world_spawner__rs-798f77c907e2158bd1f0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__rs",
+					"targetIndexes" : 
+					[
+						18
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "cw2_world_spawner",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_cw2_world_spawner_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_cw2_world_spawner_egg-259ad21bdf5582d386f7.json",
+					"name" : "ament_cmake_python_build_cw2_world_spawner_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_cw2_world_spawner_lib_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_cw2_world_spawner_lib_egg-85f62d705f03c59536f3.json",
+					"name" : "ament_cmake_python_build_cw2_world_spawner_lib_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_cw2_world_spawner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_cw2_world_spawner-f9636feb4d58738502e8.json",
+					"name" : "ament_cmake_python_copy_cw2_world_spawner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_cw2_world_spawner_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_cw2_world_spawner_lib-58c92f22ab7618e882b3.json",
+					"name" : "ament_cmake_python_copy_cw2_world_spawner_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner-1aeda3303caade2b84c7.json",
+					"name" : "cw2_world_spawner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__cpp-fa1c887b66a65cfc892e.json",
+					"name" : "cw2_world_spawner__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cw2_world_spawner__py::@dfb85e373b14ad5172ef",
+					"jsonFile" : "target-cw2_world_spawner__py-3f0ba1f0a84cb099584b.json",
+					"name" : "cw2_world_spawner__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_generator_c-96bc6ff37d8003688bb1.json",
+					"name" : "cw2_world_spawner__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_generator_py-2580f382e28f697dab15.json",
+					"name" : "cw2_world_spawner__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_c-ead91c9f694a73c6c7b2.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_c__pyext-e40156c96d1be1b94513.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_cpp-1609f56dd25126c2b24a.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_fastrtps_c-f872fff03bcef29aeeab.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_fastrtps_c__pyext-601f112f45a191c8e49f.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_fastrtps_cpp-bd24d7bc88c804c48652.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_introspection_c-d44737d5d0f9d8aa8501.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_introspection_c__pyext-52c8b914fb473e5c73b2.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner__rosidl_typesupport_introspection_cpp-3979a9fe795897faa71f.json",
+					"name" : "cw2_world_spawner__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "cw2_world_spawner__rs::@3704f6e31e42df7caa74",
+					"jsonFile" : "target-cw2_world_spawner__rs-19718f44c2b075672159.json",
+					"name" : "cw2_world_spawner__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cw2_world_spawner_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cw2_world_spawner_uninstall-26d13a5b082981a1a693.json",
+					"name" : "cw2_world_spawner_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0480878a0b12832a96f8.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner",
+		"source" : "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

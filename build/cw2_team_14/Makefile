@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles /home/czg22/comp0250_s26_labs/build/cw2_team_14//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -430,6 +430,19 @@ cw2_team_14__py: cmake_check_build_system
 cw2_team_14__py/fast:
 	$(MAKE) $(MAKESILENT) -f cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/build.make cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/build
 .PHONY : cw2_team_14__py/fast
+
+#=============================================================================
+# Target rules for targets named cw2_team_14__rs
+
+# Build rule for target.
+cw2_team_14__rs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cw2_team_14__rs
+.PHONY : cw2_team_14__rs
+
+# fast build rule for target.
+cw2_team_14__rs/fast:
+	$(MAKE) $(MAKESILENT) -f cw2_team_14__rs/CMakeFiles/cw2_team_14__rs.dir/build.make cw2_team_14__rs/CMakeFiles/cw2_team_14__rs.dir/build
+.PHONY : cw2_team_14__rs/fast
 
 rosidl_generator_c/cw2_team_14/srv/detail/example__functions.o: rosidl_generator_c/cw2_team_14/srv/detail/example__functions.c.o
 .PHONY : rosidl_generator_c/cw2_team_14/srv/detail/example__functions.o
@@ -761,6 +774,7 @@ help:
 	@echo "... cw2_team_14"
 	@echo "... cw2_team_14__cpp"
 	@echo "... cw2_team_14__py"
+	@echo "... cw2_team_14__rs"
 	@echo "... cw2_team_14_uninstall"
 	@echo "... uninstall"
 	@echo "... cw2_solution_node"

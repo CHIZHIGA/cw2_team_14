@@ -1,8 +1,8 @@
-# Install script for directory: /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14
+# Install script for directory: /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/czg22/comp0250_s26_labs/install/cw2_team_14")
+  set(CMAKE_INSTALL_PREFIX "/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,11 +43,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/cw2_team_14")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/cw2_team_14")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_c/cw2_team_14/" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_c/cw2_team_14/" REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -55,7 +55,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/library_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/library_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -65,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_generator_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_generator_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_c.so")
     file(RPATH_CHANGE
@@ -82,7 +82,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_typesupport_fastrtps_c/cw2_team_14/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_typesupport_fastrtps_c/cw2_team_14/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -92,12 +92,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_fastrtps_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_fastrtps_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so")
@@ -109,7 +109,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_typesupport_introspection_c/cw2_team_14/" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_typesupport_introspection_c/cw2_team_14/" REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -119,12 +119,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_introspection_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_introspection_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so")
@@ -142,12 +142,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_c.so")
@@ -159,11 +159,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_cpp/cw2_team_14/" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_cpp/cw2_team_14/" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_typesupport_fastrtps_cpp/cw2_team_14/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_typesupport_fastrtps_cpp/cw2_team_14/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -173,7 +173,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHANGE
@@ -190,7 +190,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_typesupport_introspection_cpp/cw2_team_14/" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_team_14/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_typesupport_introspection_cpp/cw2_team_14/" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -200,7 +200,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_introspection_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_introspection_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHANGE
@@ -223,7 +223,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14__rosidl_typesupport_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_typesupport_cpp.so")
     file(RPATH_CHANGE
@@ -240,26 +240,26 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/pythonpath.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/pythonpath.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/pythonpath.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/pythonpath.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_python/cw2_team_14/cw2_team_14.egg-info/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_python/cw2_team_14/cw2_team_14.egg-info/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/czg22/comp0250_s26_labs/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14"
+        "/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14"
       )
 endif()
 
@@ -270,12 +270,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14:/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14:/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
@@ -293,12 +293,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14:/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14:/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
@@ -316,12 +316,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14:/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14:/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
@@ -339,12 +339,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_py.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14/libcw2_team_14__rosidl_generator_py.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14/libcw2_team_14__rosidl_generator_py.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_py.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_py.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_py.so"
-         OLD_RPATH "/home/czg22/comp0250_s26_labs/build/cw2_team_14:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14__rosidl_generator_py.so")
@@ -356,19 +356,27 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_adapter/cw2_team_14/srv/Example.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rust_packages" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/rust_packages/cw2_team_14")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/srv/Example.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_rs/cw2_team_14/rust")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_cmake/srv/Example_Request.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_adapter/cw2_team_14/srv/Example.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_cmake/srv/Example_Response.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/srv/Example.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_cmake/srv/Example_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_cmake/srv/Example_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -378,12 +386,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14_cw2_class_lib.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/libcw2_team_14_cw2_class_lib.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/libcw2_team_14_cw2_class_lib.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14_cw2_class_lib.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14_cw2_class_lib.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14_cw2_class_lib.so"
-         OLD_RPATH "/home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/czg22/ws_moveit2/install/moveit_ros_move_group/lib:/home/czg22/ws_moveit2/install/moveit_ros_warehouse/lib:/home/czg22/ws_moveit2/install/moveit_ros_planning/lib:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/czg22/ws_moveit2/install/moveit_core/lib:/opt/ros/humble/lib:/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/home/czg22/comp0250_s26_labs/build/cw2_team_14:/home/czg22/ws_moveit2/install/srdfdom/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_team_14_cw2_class_lib.so")
@@ -401,12 +409,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14/cw2_solution_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14" TYPE EXECUTABLE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/cw2_solution_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14" TYPE EXECUTABLE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_solution_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14/cw2_solution_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14/cw2_solution_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14/cw2_solution_node"
-         OLD_RPATH "/home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/czg22/ws_moveit2/install/moveit_ros_move_group/lib:/home/czg22/ws_moveit2/install/moveit_ros_warehouse/lib:/home/czg22/ws_moveit2/install/moveit_ros_planning/lib:/home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/czg22/ws_moveit2/install/moveit_core/lib:/opt/ros/humble/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/home/czg22/comp0250_s26_labs/build/cw2_team_14:/home/czg22/ws_moveit2/install/srdfdom/lib:/home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14:/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cw2_team_14/cw2_solution_node")
@@ -415,15 +423,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/launch" REGEX "/[^/]*\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/launch" REGEX "/[^/]*\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cw2_team_14")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cw2_team_14")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cw2_team_14")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cw2_team_14")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -431,7 +439,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -439,38 +447,38 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/packages/cw2_team_14")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_index/share/ament_index/resource_index/packages/cw2_team_14")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -479,9 +487,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -489,7 +497,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -498,9 +506,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -508,7 +516,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -517,9 +525,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -527,7 +535,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -536,9 +544,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -546,7 +554,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -555,14 +563,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -571,9 +579,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -581,7 +589,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -590,9 +598,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -600,7 +608,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -609,9 +617,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -619,7 +627,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake"
-         "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake")
+         "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -628,54 +636,55 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/Export/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-noconfig.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_cmake/rosidl_cmake-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_cmake/rosidl_cmake-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14/cmake" TYPE FILE FILES
-    "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_core/cw2_team_14Config.cmake"
-    "/home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_core/cw2_team_14Config-version.cmake"
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_core/cw2_team_14Config.cmake"
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/ament_cmake_core/cw2_team_14Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_team_14" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/czg22/comp0250_s26_labs/build/cw2_team_14/cw2_team_14__py/cmake_install.cmake")
+  include("/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py/cmake_install.cmake")
+  include("/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__rs/cmake_install.cmake")
 
 endif()
 
@@ -687,5 +696,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/czg22/comp0250_s26_labs/build/cw2_team_14/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

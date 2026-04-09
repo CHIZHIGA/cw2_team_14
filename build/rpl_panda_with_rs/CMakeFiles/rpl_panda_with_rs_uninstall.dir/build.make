@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/rpl_panda_with_rs
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs
 
 # Utility rule file for rpl_panda_with_rs_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/rpl_panda_with_rs_uninstall.dir/compiler_depend.make
 include CMakeFiles/rpl_panda_with_rs_uninstall.dir/progress.make
 
 CMakeFiles/rpl_panda_with_rs_uninstall:
-	/usr/bin/cmake -P /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 rpl_panda_with_rs_uninstall: CMakeFiles/rpl_panda_with_rs_uninstall
 rpl_panda_with_rs_uninstall: CMakeFiles/rpl_panda_with_rs_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/rpl_panda_with_rs_uninstall.dir/clean:
 .PHONY : CMakeFiles/rpl_panda_with_rs_uninstall.dir/clean
 
 CMakeFiles/rpl_panda_with_rs_uninstall.dir/depend:
-	cd /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/src/courseworks/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs/CMakeFiles/rpl_panda_with_rs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/CMakeFiles/rpl_panda_with_rs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rpl_panda_with_rs_uninstall.dir/depend
 

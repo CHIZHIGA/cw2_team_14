@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_world_spawner
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner
 
 # Utility rule file for cw2_world_spawner_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/cw2_world_spawner_uninstall.dir/compiler_depend.make
 include CMakeFiles/cw2_world_spawner_uninstall.dir/progress.make
 
 CMakeFiles/cw2_world_spawner_uninstall:
-	/usr/bin/cmake -P /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 cw2_world_spawner_uninstall: CMakeFiles/cw2_world_spawner_uninstall
 cw2_world_spawner_uninstall: CMakeFiles/cw2_world_spawner_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/cw2_world_spawner_uninstall.dir/clean:
 .PHONY : CMakeFiles/cw2_world_spawner_uninstall.dir/clean
 
 CMakeFiles/cw2_world_spawner_uninstall.dir/depend:
-	cd /home/czg22/comp0250_s26_labs/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles/cw2_world_spawner_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/cw2_world_spawner_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_world_spawner_uninstall.dir/depend
 

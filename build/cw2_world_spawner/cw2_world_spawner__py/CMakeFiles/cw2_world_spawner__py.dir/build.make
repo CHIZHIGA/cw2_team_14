@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_world_spawner
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner
 
 # Utility rule file for cw2_world_spawner__py.
 
@@ -160,8 +160,8 @@ rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport
 rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/cw2_world_spawner__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cw2_world_spawner/_cw2_world_spawner_s.ep.rosidl_typesupport_introspection_c.c
@@ -217,10 +217,10 @@ cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/build: cw2_world_spaw
 .PHONY : cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/build
 
 cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/clean:
-	cd /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/cw2_world_spawner__py && $(CMAKE_COMMAND) -P CMakeFiles/cw2_world_spawner__py.dir/cmake_clean.cmake
+	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py && $(CMAKE_COMMAND) -P CMakeFiles/cw2_world_spawner__py.dir/cmake_clean.cmake
 .PHONY : cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/clean
 
 cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/depend:
-	cd /home/czg22/comp0250_s26_labs/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/cw2_world_spawner__py /home/czg22/comp0250_s26_labs/build/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/cw2_world_spawner__py /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/depend
 

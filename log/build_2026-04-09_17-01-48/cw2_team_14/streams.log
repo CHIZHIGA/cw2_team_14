@@ -1,0 +1,172 @@
+[0.013s] Invoking command in '/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14': AMENT_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 -- -j32 -l32
+[0.116s] [  2%] Built target cw2_team_14__cpp
+[0.117s] [  5%] Built target cw2_team_14__rs
+[0.123s] [  5%] Built target ament_cmake_python_copy_cw2_team_14
+[0.123s] [ 13%] Built target cw2_team_14__rosidl_generator_c
+[0.141s] [ 30%] Built target cw2_team_14__rosidl_typesupport_introspection_cpp
+[0.141s] [ 30%] Built target cw2_team_14__rosidl_typesupport_cpp
+[0.141s] [ 38%] Built target cw2_team_14__rosidl_typesupport_fastrtps_cpp
+[0.144s] [ 47%] Built target cw2_team_14__rosidl_typesupport_c
+[0.145s] [ 63%] Built target cw2_team_14__rosidl_typesupport_introspection_c
+[0.145s] [ 63%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c
+[0.163s] [ 63%] Built target cw2_team_14
+[0.181s] [ 66%] Built target cw2_team_14__py
+[0.202s] [ 72%] Built target cw2_team_14__rosidl_generator_py
+[0.219s] [ 75%] Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o
+[0.222s] [ 80%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c__pyext
+[0.223s] [ 86%] Built target cw2_team_14__rosidl_typesupport_c__pyext
+[0.224s] [ 91%] Built target cw2_team_14__rosidl_typesupport_introspection_c__pyext
+[0.287s] running egg_info
+[0.287s] writing cw2_team_14.egg-info/PKG-INFO
+[0.287s] writing dependency_links to cw2_team_14.egg-info/dependency_links.txt
+[0.288s] writing top-level names to cw2_team_14.egg-info/top_level.txt
+[0.289s] reading manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[0.290s] writing manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[0.310s] [ 91%] Built target ament_cmake_python_build_cw2_team_14_egg
+[11.992s] [ 94%] Linking CXX shared library libcw2_team_14_cw2_class_lib.so
+[13.303s] [ 94%] Built target cw2_team_14_cw2_class_lib
+[13.332s] [ 97%] Linking CXX executable cw2_solution_node
+[14.058s] [100%] Built target cw2_solution_node
+[14.067s] Invoked command in '/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14' returned '0': AMENT_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 -- -j32 -l32
+[14.074s] Invoking command in '/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14': AMENT_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
+[14.080s] -- Install configuration: ""
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/rosidl_interfaces/cw2_team_14
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_c__visibility_control.h
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.h
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.c
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.h
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.h
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.h
+[14.080s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/library_path.sh
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/library_path.dsv
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_c.so
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_c.h
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_c.h
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.c
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_c.so
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_cpp__visibility_control.hpp
+[14.081s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__traits.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__builder.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_cpp.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/dds_fastrtps
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.cpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_cpp.hpp
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_cpp.so
+[14.082s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.sh
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.dsv
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info
+[14.083s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/PKG-INFO
+[14.083s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/dependency_links.txt
+[14.083s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/top_level.txt
+[14.083s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/SOURCES.txt
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_c.c
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/__init__.py
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/libcw2_team_14__rosidl_generator_py.so
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/__init__.py
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example_s.c
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example.py
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c
+[14.083s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c
+[14.101s] Listing '/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14'...
+[14.101s] Listing '/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv'...
+[14.104s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[14.104s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[14.104s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[14.104s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_py.so
+[14.104s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/rust_packages/cw2_team_14
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/Cargo.toml
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/src
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/src/srv.rs
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/src/lib.rs
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/src/srv
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/src/srv/rmw.rs
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/rust/build.rs
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example.idl
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example.srv
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example_Request.msg
+[14.105s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example_Response.msg
+[14.105s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so
+[14.115s] -- Set runtime path of "/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so" to ""
+[14.116s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node
+[14.116s] -- Set runtime path of "/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node" to ""
+[14.116s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/launch
+[14.116s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/launch/run_solution.launch.py
+[14.116s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/package_run_dependencies/cw2_team_14
+[14.116s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/parent_prefix_path/cw2_team_14
+[14.116s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.sh
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.dsv
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/path.sh
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/path.dsv
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.bash
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.sh
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.zsh
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.dsv
+[14.117s] -- Installing: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.dsv
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/packages/cw2_team_14
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-noconfig.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-noconfig.cmake
+[14.117s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-noconfig.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-noconfig.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_libraries-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_targets-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config-version.cmake
+[14.118s] -- Up-to-date: /home/ethan/COMP0250/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.xml
+[14.119s] Invoked command in '/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14' returned '0': AMENT_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble LD_LIBRARY_PATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14

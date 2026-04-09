@@ -1,9 +1,9 @@
 {
   "package_name": "cw2_world_spawner",
   "non_idl_tuples": [
-    "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner:srv/TaskSetup.srv",
-    "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner:srv/Task1Service.srv",
-    "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner:srv/Task2Service.srv",
-    "/home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner:srv/Task3Service.srv"
+    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner:srv/TaskSetup.srv",
+    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner:srv/Task1Service.srv",
+    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner:srv/Task2Service.srv",
+    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner:srv/Task3Service.srv"
   ]
 }

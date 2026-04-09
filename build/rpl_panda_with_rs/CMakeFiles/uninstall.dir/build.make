@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/rpl_panda_with_rs
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/src/courseworks/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs /home/czg22/comp0250_s26_labs/build/rpl_panda_with_rs/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs /home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

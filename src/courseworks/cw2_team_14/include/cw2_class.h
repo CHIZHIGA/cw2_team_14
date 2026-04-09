@@ -128,6 +128,48 @@ private:
     double y,
     double z,
     double closing_axis_yaw) const;
+
+  // ── Task 3 helpers ─────────────────────────────────────────────────────────
+  struct Task3ShapeInfo
+  {
+    geometry_msgs::msg::Point centroid;
+    std::string shape_type;   // "nought", "cross", or "unknown"
+  };
+
+  /// Move to a grid of scan poses and build a merged, world-frame cloud.
+  bool t3_collect_scene_cloud(
+    PointCPtr &merged_cloud,
+    const std::string &target_frame);
+
+  /// Downsample a cloud and run Euclidean clustering; fills @p clusters.
+  void t3_cluster_cloud(
+    const PointCPtr &cloud,
+    std::vector<PointCPtr> &clusters);
+
+  /// Classify one shape cluster as "nought" or "cross".
+  /// Tries direct signature extraction first; falls back to arm scan if needed.
+  std::string t3_classify_cluster(
+    const PointCPtr &cluster,
+    const geometry_msgs::msg::Point &centroid);
+
+  /// Find the basket centroid from basket-coloured points; returns false if
+  /// not enough points are found.
+  bool t3_find_basket_pos(
+    const PointCPtr &basket_cloud,
+    geometry_msgs::msg::Point &basket_pos);
+
+  /// Add one obstacle cluster as an inflated collision box to the MoveIt
+  /// planning scene under the given id.
+  void t3_register_obstacle(const PointCPtr &cluster, const std::string &id);
+
+  /// Remove collision objects with the given ids from the planning scene.
+  void t3_clear_obstacles(const std::vector<std::string> &ids);
+
+  /// Pick @p object_pos and place it into @p basket_pos; reuses T1 grasp logic.
+  bool t3_pick_and_place(
+    const geometry_msgs::msg::Point &object_pos,
+    const geometry_msgs::msg::Point &basket_pos,
+    const std::string &shape_type);
 };
 
 #endif  // CW2_CLASS_H_

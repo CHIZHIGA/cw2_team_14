@@ -1,12 +1,12 @@
 {
   "package_name": "cw2_world_spawner",
-  "output_dir": "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_cpp/cw2_world_spawner",
+  "output_dir": "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_cpp/cw2_world_spawner",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/TaskSetup.idl",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/Task1Service.idl",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/Task2Service.idl",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/Task3Service.idl"
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/TaskSetup.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/Task1Service.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/Task2Service.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner:srv/Task3Service.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -90,10 +90,10 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/TaskSetup.idl",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task1Service.idl",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task2Service.idl",
-    "/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task3Service.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/TaskSetup.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task1Service.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task2Service.idl",
+    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task3Service.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/realsense_gazebo_plugin
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/realsense_gazebo_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin/CMakeFiles /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin/CMakeFiles /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg22/comp0250_s26_labs/build/realsense_gazebo_plugin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/realsense_gazebo_plugin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

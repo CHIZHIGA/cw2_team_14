@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
 
 # Utility rule file for cw2_team_14__cpp.
 
@@ -153,8 +153,8 @@ rosidl_generator_cpp/cw2_team_14/srv/example.hpp: /opt/ros/humble/share/geometry
 rosidl_generator_cpp/cw2_team_14/srv/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_cpp/cw2_team_14/srv/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_cpp/cw2_team_14/srv/example.hpp: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/cw2_team_14/srv/detail/example__builder.hpp: rosidl_generator_cpp/cw2_team_14/srv/example.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cw2_team_14/srv/detail/example__builder.hpp
@@ -186,6 +186,6 @@ CMakeFiles/cw2_team_14__cpp.dir/clean:
 .PHONY : CMakeFiles/cw2_team_14__cpp.dir/clean
 
 CMakeFiles/cw2_team_14__cpp.dir/depend:
-	cd /home/czg22/comp0250_s26_labs/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/cw2_team_14__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_team_14__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_team_14__cpp.dir/depend
 
