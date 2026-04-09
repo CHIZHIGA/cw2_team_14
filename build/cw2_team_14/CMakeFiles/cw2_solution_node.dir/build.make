@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_team_14
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cw2_solution_node.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/cw2_solution_node.dir/progress.make
 include CMakeFiles/cw2_solution_node.dir/flags.make
 
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: CMakeFiles/cw2_solution_node.dir/flags.make
-CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp
+CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/src/cw2_node.cpp
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: CMakeFiles/cw2_solution_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -MF CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o.d -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -c /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -MF CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o.d -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -c /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/src/cw2_node.cpp
 
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp > CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/src/cw2_node.cpp > CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i
 
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/src/cw2_node.cpp -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s
 
 # Object files for target cw2_solution_node
 cw2_solution_node_OBJECTS = \
@@ -137,11 +137,11 @@ cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/liboctomap.so
 cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/liboctomath.so
 cw2_solution_node: libcw2_team_14_cw2_class_lib.so
 cw2_solution_node: libcw2_team_14__rosidl_typesupport_cpp.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_move_group_interface.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_common_planning_interface_objects.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_planning_scene_interface.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_move_group_default_capabilities.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_move_group_capabilities_base.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib/libmoveit_move_group_interface.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib/libmoveit_common_planning_interface_objects.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning_interface/lib/libmoveit_planning_scene_interface.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_move_group/lib/libmoveit_move_group_default_capabilities.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_move_group/lib/libmoveit_move_group_capabilities_base.so.2.5.9
 cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_introspection_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_cpp.so
@@ -150,21 +150,21 @@ cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_srvs__rosidl_generator_c.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_warehouse.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_constraint_sampler_manager_loader.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_plan_execution.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_default_planning_request_adapter_plugins.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_cpp.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_planning_pipeline.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_trajectory_execution_manager.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_planning_scene_monitor.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_robot_model_loader.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_kinematics_plugin_loader.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_rdf_loader.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_collision_plugin_loader.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_ros_occupancy_map_monitor.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libcollision_detector_bullet_plugin.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_butterworth_filter.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_warehouse/lib/libmoveit_warehouse.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_constraint_sampler_manager_loader.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_plan_execution.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_default_planning_request_adapter_plugins.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_cpp.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_planning_pipeline.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_trajectory_execution_manager.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_planning_scene_monitor.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_robot_model_loader.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_kinematics_plugin_loader.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_rdf_loader.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_planning/lib/libmoveit_collision_plugin_loader.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib/libmoveit_ros_occupancy_map_monitor.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libcollision_detector_bullet_plugin.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_butterworth_filter.so.2.5.9
 cw2_solution_node: /opt/ros/humble/lib/librclcpp_lifecycle.so
 cw2_solution_node: /opt/ros/humble/lib/librcl_lifecycle.so
 cw2_solution_node: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_c.so
@@ -176,41 +176,41 @@ cw2_solution_node: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_c.so
 cw2_solution_node: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_c.so
 cw2_solution_node: /opt/ros/humble/lib/librsl.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_collision_distance_field.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_collision_detection_bullet.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_collision_distance_field.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_collision_detection_bullet.so.2.5.9
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libLinearMath.so
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_dynamics_solver.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_dynamics_solver.so.2.5.9
 cw2_solution_node: /opt/ros/humble/lib/libkdl_parser.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_constraint_samplers.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_distance_field.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_kinematics_metrics.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_planning_interface.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_planning_request_adapter.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_planning_scene.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_kinematic_constraints.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_collision_detection_fcl.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_collision_detection.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_smoothing_base.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_test_utils.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_trajectory_processing.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_robot_trajectory.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_robot_state.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_robot_model.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_exceptions.so.2.5.9
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_kinematics_base.so
-cw2_solution_node: /opt/ros/humble/lib/libsrdfdom.so.2.0.7
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_constraint_samplers.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_distance_field.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_kinematics_metrics.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_planning_interface.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_planning_request_adapter.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_planning_scene.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_kinematic_constraints.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_collision_detection_fcl.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_collision_detection.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_smoothing_base.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_test_utils.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_trajectory_processing.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_robot_trajectory.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_robot_state.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_robot_model.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_exceptions.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_kinematics_base.so
+cw2_solution_node: /home/czg22/ws_moveit2/install/srdfdom/lib/libsrdfdom.so.2.0.8
 cw2_solution_node: /opt/ros/humble/lib/liburdf.so
 cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/libruckig.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_transforms.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_transforms.so.2.5.9
 cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/liburdfdom_sensor.so.3.0
 cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/liburdfdom_model_state.so.3.0
 cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/liburdfdom_model.so.3.0
 cw2_solution_node: /opt/ros/humble/lib/x86_64-linux-gnu/liburdfdom_world.so.3.0
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-cw2_solution_node: /opt/ros/humble/lib/libmoveit_utils.so.2.5.9
+cw2_solution_node: /home/czg22/ws_moveit2/install/moveit_core/lib/libmoveit_utils.so.2.5.9
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.74.0
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
 cw2_solution_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
@@ -362,24 +362,24 @@ cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_typesupport_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_typesupport_c.so
 cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_generator_c.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
-cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
+cw2_solution_node: /home/czg22/comp0250_s26_labs/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
 cw2_solution_node: /opt/ros/humble/lib/libmessage_filters.so
 cw2_solution_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/librmw.so
@@ -561,7 +561,7 @@ cw2_solution_node: /opt/ros/humble/lib/librcpputils.so
 cw2_solution_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 cw2_solution_node: /opt/ros/humble/lib/librcutils.so
 cw2_solution_node: CMakeFiles/cw2_solution_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cw2_solution_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cw2_solution_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cw2_solution_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -573,6 +573,6 @@ CMakeFiles/cw2_solution_node.dir/clean:
 .PHONY : CMakeFiles/cw2_solution_node.dir/clean
 
 CMakeFiles/cw2_solution_node.dir/depend:
-	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_solution_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/czg22/comp0250_s26_labs/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/cw2_solution_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_solution_node.dir/depend
 

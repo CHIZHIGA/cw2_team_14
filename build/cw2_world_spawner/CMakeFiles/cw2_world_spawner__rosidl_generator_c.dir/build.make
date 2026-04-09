@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner
+CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
+CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_world_spawner
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/depend.make
@@ -150,8 +150,8 @@ rosidl_generator_c/cw2_world_spawner/srv/task_setup.h: /opt/ros/humble/share/std
 rosidl_generator_c/cw2_world_spawner/srv/task_setup.h: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_c/cw2_world_spawner/srv/task_setup.h: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/cw2_world_spawner/srv/task_setup.h: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.h: rosidl_generator_c/cw2_world_spawner/srv/task_setup.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.h
@@ -213,58 +213,58 @@ rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c: rosi
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/flags.make
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o: rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o -c /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.o -c /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.i
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task_setup__functions.c.s
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/flags.make
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o: rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o -c /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o -c /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.i
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.s
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/flags.make
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o: rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o -c /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.o -c /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.i
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task2_service__functions.c.s
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/flags.make
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o: rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o -c /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o -MF CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o.d -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.o -c /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c > CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.i
 
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c -o CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/rosidl_generator_c/cw2_world_spawner/srv/detail/task3_service__functions.c.s
 
 # Object files for target cw2_world_spawner__rosidl_generator_c
 cw2_world_spawner__rosidl_generator_c_OBJECTS = \
@@ -287,7 +287,7 @@ libcw2_world_spawner__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_inte
 libcw2_world_spawner__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcw2_world_spawner__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libcw2_world_spawner__rosidl_generator_c.so: CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libcw2_world_spawner__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libcw2_world_spawner__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -318,6 +318,6 @@ CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/depend: rosidl_generator_c/
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/depend: rosidl_generator_c/cw2_world_spawner/srv/task2_service.h
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/depend: rosidl_generator_c/cw2_world_spawner/srv/task3_service.h
 CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/depend: rosidl_generator_c/cw2_world_spawner/srv/task_setup.h
-	cd /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/czg22/comp0250_s26_labs/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner /home/czg22/comp0250_s26_labs/src/courseworks/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_world_spawner__rosidl_generator_c.dir/depend
 

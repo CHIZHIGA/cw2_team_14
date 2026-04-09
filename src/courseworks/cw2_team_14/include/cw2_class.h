@@ -7,6 +7,8 @@ solution is contained within the cw2_team_<your_team_number> package */
 #define CW2_CLASS_H_
 
 #include <cstdint>
+#include <array>
+#include <cstddef>
 #include <memory>
 #include <mutex>
 #include <string>
@@ -24,6 +26,7 @@ solution is contained within the cw2_team_<your_team_number> package */
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/transform_listener.h>
 #include <geometry_msgs/msg/point.hpp>
+#include <geometry_msgs/msg/point_stamped.hpp>
 
 #include "cw2_world_spawner/srv/task1_service.hpp"
 #include "cw2_world_spawner/srv/task2_service.hpp"
@@ -78,6 +81,16 @@ public:
   bool pointcloud_qos_reliable_ = false;
 
 private:
+  struct Task2ShapeSignature
+  {
+    std::array<double, 8> radial_histogram{};
+    double core_fraction = 0.0;
+    double inner_fraction = 0.0;
+    double mid_fraction = 0.0;
+    double mean_radius = 0.0;
+    std::size_t point_count = 0;
+  };
+
   bool move_arm_to_named_target(const std::string &target_name);
   bool move_arm_to_pose(const geometry_msgs::msg::Pose &pose, const std::string &frame_id);
   bool execute_cartesian_path(
@@ -89,6 +102,27 @@ private:
   bool rescan_task1_object_point(
     geometry_msgs::msg::Point &object_point,
     const std::string &frame_id);
+  bool extract_task2_object_cloud(
+    const geometry_msgs::msg::PointStamped &object_point,
+    PointC &object_cloud);
+  bool build_task2_shape_signature(
+    const PointC &object_cloud,
+    Task2ShapeSignature &signature) const;
+  double compare_task2_shape_signatures(
+    const Task2ShapeSignature &lhs,
+    const Task2ShapeSignature &rhs) const;
+  bool observe_task2_shape(
+    const geometry_msgs::msg::PointStamped &object_point,
+    const std::string &label,
+    Task2ShapeSignature &signature);
+  bool build_task2_scan_pose(
+    const geometry_msgs::msg::PointStamped &object_point,
+    const std::pair<double, double> &scan_offset,
+    geometry_msgs::msg::Pose &scan_pose,
+    std::string &frame_id);
+  std::string classify_task2_shape_pairwise(
+    const Task2ShapeSignature &target_signature,
+    const Task2ShapeSignature &other_signature) const;
   geometry_msgs::msg::Pose make_top_down_pose(
     double x,
     double y,

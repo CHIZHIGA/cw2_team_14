@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_team_14
 
 # Utility rule file for ament_cmake_python_copy_cw2_team_14.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/compiler_depend.make
 include CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_cw2_team_14:
-	/usr/bin/cmake -E copy_directory /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/rosidl_generator_py/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/ament_cmake_python/cw2_team_14/cw2_team_14
+	/usr/bin/cmake -E copy_directory /home/czg22/comp0250_s26_labs/build/cw2_team_14/rosidl_generator_py/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14/ament_cmake_python/cw2_team_14/cw2_team_14
 
 ament_cmake_python_copy_cw2_team_14: CMakeFiles/ament_cmake_python_copy_cw2_team_14
 ament_cmake_python_copy_cw2_team_14: CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/depend:
-	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/czg22/comp0250_s26_labs/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_cw2_team_14.dir/depend
 

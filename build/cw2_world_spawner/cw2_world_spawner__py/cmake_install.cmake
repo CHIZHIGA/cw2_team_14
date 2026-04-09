@@ -1,8 +1,8 @@
-# Install script for directory: /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py
+# Install script for directory: /home/czg22/comp0250_s26_labs/build/cw2_world_spawner/cw2_world_spawner__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner")
+  set(CMAKE_INSTALL_PREFIX "/home/czg22/comp0250_s26_labs/install/cw2_world_spawner")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

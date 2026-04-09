@@ -1,8 +1,8 @@
-# Install script for directory: /home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description
+# Install script for directory: /home/czg22/comp0250_s26_labs/src/courseworks/panda_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bizare/Desktop/cw2_team_14/install/panda_description")
+  set(CMAKE_INSTALL_PREFIX "/home/czg22/comp0250_s26_labs/install/panda_description")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,26 +44,26 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE DIRECTORY FILES
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/config"
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/meshes"
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/rviz"
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/sdf"
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/srdf"
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/urdf"
-    "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/xacro"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/config"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/meshes"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/rviz"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/sdf"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/srdf"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/urdf"
+    "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/xacro"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/launch" REGEX "/[^/]*\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE DIRECTORY FILES "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/launch" REGEX "/[^/]*\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/panda_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/panda_description")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/panda_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/panda_description")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -71,7 +71,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,42 +79,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description/environment" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_index/share/ament_index/resource_index/packages/panda_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_index/share/ament_index/resource_index/packages/panda_description")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description/cmake" TYPE FILE FILES
-    "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_core/panda_descriptionConfig.cmake"
-    "/home/bizare/Desktop/cw2_team_14/build/panda_description/ament_cmake_core/panda_descriptionConfig-version.cmake"
+    "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_core/panda_descriptionConfig.cmake"
+    "/home/czg22/comp0250_s26_labs/build/panda_description/ament_cmake_core/panda_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_description" TYPE FILE FILES "/home/czg22/comp0250_s26_labs/src/courseworks/panda_description/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -125,5 +125,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bizare/Desktop/cw2_team_14/build/panda_description/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/czg22/comp0250_s26_labs/build/panda_description/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

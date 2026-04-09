@@ -1,0 +1,10 @@
+[0.000000] (-) TimerEvent: {}
+[0.000294] (-) JobUnselected: {'identifier': 'cw2_world_spawner'}
+[0.000341] (-) JobUnselected: {'identifier': 'panda_description'}
+[0.000372] (-) JobUnselected: {'identifier': 'panda_moveit_config'}
+[0.000387] (-) JobUnselected: {'identifier': 'realsense_gazebo_plugin'}
+[0.000417] (-) JobUnselected: {'identifier': 'rpl_panda_with_rs'}
+[0.000431] (cw2_team_14) JobQueued: {'identifier': 'cw2_team_14', 'dependencies': OrderedDict([('cw2_world_spawner', '/home/czg22/comp0250_s26_labs/install/cw2_world_spawner')])}
+[0.000773] (cw2_team_14) JobStarted: {'identifier': 'cw2_team_14'}
+[0.012158] (cw2_team_14) JobEnded: {'identifier': 'cw2_team_14', 'rc': 1}
+[0.022804] (-) EventReactorShutdown: {}

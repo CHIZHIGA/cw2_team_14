@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/czg22/comp0250_s26_labs/build/cw2_team_14
 
 # Utility rule file for cw2_team_14.
 
@@ -66,7 +66,7 @@ include CMakeFiles/cw2_team_14.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/cw2_team_14.dir/progress.make
 
-CMakeFiles/cw2_team_14: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/srv/Example.srv
+CMakeFiles/cw2_team_14: /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14/srv/Example.srv
 CMakeFiles/cw2_team_14: rosidl_cmake/srv/Example_Request.msg
 CMakeFiles/cw2_team_14: rosidl_cmake/srv/Example_Response.msg
 CMakeFiles/cw2_team_14: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -145,6 +145,6 @@ CMakeFiles/cw2_team_14.dir/clean:
 .PHONY : CMakeFiles/cw2_team_14.dir/clean
 
 CMakeFiles/cw2_team_14.dir/depend:
-	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_team_14.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/czg22/comp0250_s26_labs/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/src/courseworks/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14 /home/czg22/comp0250_s26_labs/build/cw2_team_14/CMakeFiles/cw2_team_14.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_team_14.dir/depend
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROSIDL_TYPESUPPORT_INTROSPECTION_CPP_BUILDING_DLL -DROS_PACKAGE_NAME=\"cw2_world_spawner\"
 
-CXX_INCLUDES = -I/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_introspection_cpp -I/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_cpp -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_cpp -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_c
+CXX_INCLUDES = -I/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_typesupport_introspection_cpp -I/home/czg22/comp0250_s26_labs/build/cw2_world_spawner/rosidl_generator_cpp -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_cpp -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_c
 
 CXX_FLAGS = -fPIC -Wall -Wextra -Wpedantic
 
