@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cw2_team_14_cw2_class_lib.dir/depend.make
@@ -70,37 +70,85 @@ include CMakeFiles/cw2_team_14_cw2_class_lib.dir/progress.make
 include CMakeFiles/cw2_team_14_cw2_class_lib.dir/flags.make
 
 CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/flags.make
-CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o: /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp
 CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o -MF CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o.d -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o -c /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o -MF CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o.d -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o -c /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp
 
 CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp > CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp > CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.i
 
 CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_class.cpp -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.s
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/flags.make
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task1.cpp
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o -MF CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o.d -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o -c /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task1.cpp
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task1.cpp > CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.i
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task1.cpp -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.s
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/flags.make
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task2.cpp
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o -MF CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o.d -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o -c /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task2.cpp
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task2.cpp > CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.i
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task2.cpp -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.s
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/flags.make
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task3.cpp
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o: CMakeFiles/cw2_team_14_cw2_class_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o -MF CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o.d -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o -c /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task3.cpp
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task3.cpp > CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.i
+
+CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/task3.cpp -o CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.s
 
 # Object files for target cw2_team_14_cw2_class_lib
 cw2_team_14_cw2_class_lib_OBJECTS = \
-"CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o"
+"CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o" \
+"CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o" \
+"CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o" \
+"CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o"
 
 # External object files for target cw2_team_14_cw2_class_lib
 cw2_team_14_cw2_class_lib_EXTERNAL_OBJECTS =
 
 libcw2_team_14_cw2_class_lib.so: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o
+libcw2_team_14_cw2_class_lib.so: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o
+libcw2_team_14_cw2_class_lib.so: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o
+libcw2_team_14_cw2_class_lib.so: CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o
 libcw2_team_14_cw2_class_lib.so: CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libmoveit_move_group_interface.so.2.5.9
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libpcl_ros_tf.a
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libpcd_to_pointcloud_lib.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libmessage_filters.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librmw.so
@@ -473,10 +521,10 @@ libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librosidl_typesupport_intro
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
-libcw2_team_14_cw2_class_lib.so: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
+libcw2_team_14_cw2_class_lib.so: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
@@ -565,7 +613,7 @@ libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librcpputils.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcw2_team_14_cw2_class_lib.so: /opt/ros/humble/lib/librcutils.so
 libcw2_team_14_cw2_class_lib.so: CMakeFiles/cw2_team_14_cw2_class_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libcw2_team_14_cw2_class_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libcw2_team_14_cw2_class_lib.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cw2_team_14_cw2_class_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -577,6 +625,6 @@ CMakeFiles/cw2_team_14_cw2_class_lib.dir/clean:
 .PHONY : CMakeFiles/cw2_team_14_cw2_class_lib.dir/clean
 
 CMakeFiles/cw2_team_14_cw2_class_lib.dir/depend:
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_team_14_cw2_class_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_team_14_cw2_class_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_team_14_cw2_class_lib.dir/depend
 

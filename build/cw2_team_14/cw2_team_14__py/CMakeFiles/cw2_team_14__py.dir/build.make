@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
 
 # Utility rule file for cw2_team_14__py.
 
@@ -151,8 +151,8 @@ rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.
 rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/cw2_team_14__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c
@@ -184,10 +184,10 @@ cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/build: cw2_team_14__py
 .PHONY : cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/build
 
 cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/clean:
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py && $(CMAKE_COMMAND) -P CMakeFiles/cw2_team_14__py.dir/cmake_clean.cmake
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/cw2_team_14__py && $(CMAKE_COMMAND) -P CMakeFiles/cw2_team_14__py.dir/cmake_clean.cmake
 .PHONY : cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/clean
 
 cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/depend:
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/cw2_team_14__py /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/cw2_team_14__py /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/depend
 

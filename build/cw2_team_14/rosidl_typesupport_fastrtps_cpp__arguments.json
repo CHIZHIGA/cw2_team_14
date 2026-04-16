@@ -1,9 +1,9 @@
 {
   "package_name": "cw2_team_14",
-  "output_dir": "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_typesupport_fastrtps_cpp/cw2_team_14",
+  "output_dir": "/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/rosidl_typesupport_fastrtps_cpp/cw2_team_14",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_adapter/cw2_team_14:srv/Example.idl"
+    "/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/rosidl_adapter/cw2_team_14:srv/Example.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -80,7 +80,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/rosidl_adapter/cw2_team_14/srv/Example.idl",
+    "/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/rosidl_adapter/cw2_team_14/srv/Example.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",

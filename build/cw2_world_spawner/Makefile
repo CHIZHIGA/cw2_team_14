@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -430,19 +430,6 @@ cw2_world_spawner__py: cmake_check_build_system
 cw2_world_spawner__py/fast:
 	$(MAKE) $(MAKESILENT) -f cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/build.make cw2_world_spawner__py/CMakeFiles/cw2_world_spawner__py.dir/build
 .PHONY : cw2_world_spawner__py/fast
-
-#=============================================================================
-# Target rules for targets named cw2_world_spawner__rs
-
-# Build rule for target.
-cw2_world_spawner__rs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cw2_world_spawner__rs
-.PHONY : cw2_world_spawner__rs
-
-# fast build rule for target.
-cw2_world_spawner__rs/fast:
-	$(MAKE) $(MAKESILENT) -f cw2_world_spawner__rs/CMakeFiles/cw2_world_spawner__rs.dir/build.make cw2_world_spawner__rs/CMakeFiles/cw2_world_spawner__rs.dir/build
-.PHONY : cw2_world_spawner__rs/fast
 
 rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.o: rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.c.o
 .PHONY : rosidl_generator_c/cw2_world_spawner/srv/detail/task1_service__functions.o
@@ -1304,7 +1291,6 @@ help:
 	@echo "... cw2_world_spawner"
 	@echo "... cw2_world_spawner__cpp"
 	@echo "... cw2_world_spawner__py"
-	@echo "... cw2_world_spawner__rs"
 	@echo "... cw2_world_spawner_uninstall"
 	@echo "... uninstall"
 	@echo "... cw2_world_spawner__rosidl_generator_c"

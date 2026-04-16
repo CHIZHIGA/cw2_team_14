@@ -102,6 +102,11 @@ private:
   bool rescan_task1_object_point(
     geometry_msgs::msg::Point &object_point,
     const std::string &frame_id);
+  bool estimate_task1_object_yaw(
+    const geometry_msgs::msg::Point &object_point,
+    const std::string &frame_id,
+    const std::string &shape_type,
+    double &object_yaw);
   bool extract_task2_object_cloud(
     const geometry_msgs::msg::PointStamped &object_point,
     PointC &object_cloud);

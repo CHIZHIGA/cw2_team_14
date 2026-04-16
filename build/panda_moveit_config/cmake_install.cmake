@@ -1,8 +1,8 @@
-# Install script for directory: /home/ethan/COMP0250/cw2_team_14/src/courseworks/panda_moveit_config
+# Install script for directory: /home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ethan/COMP0250/cw2_team_14/install/panda_moveit_config")
+  set(CMAKE_INSTALL_PREFIX "/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,19 +43,19 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/panda_moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/panda_moveit_config/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config/config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/panda_moveit_config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/panda_moveit_config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/panda_moveit_config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/panda_moveit_config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -63,7 +63,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -71,42 +71,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_index/share/ament_index/resource_index/packages/panda_moveit_config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_index/share/ament_index/resource_index/packages/panda_moveit_config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config/cmake" TYPE FILE FILES
-    "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_core/panda_moveit_configConfig.cmake"
-    "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/ament_cmake_core/panda_moveit_configConfig-version.cmake"
+    "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_core/panda_moveit_configConfig.cmake"
+    "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/ament_cmake_core/panda_moveit_configConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/panda_moveit_config/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_moveit_config" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -117,5 +117,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ethan/COMP0250/cw2_team_14/build/panda_moveit_config/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

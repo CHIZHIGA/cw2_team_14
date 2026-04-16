@@ -43,6 +43,9 @@ include_directories(
 
 add_library(${PROJECT_NAME}_cw2_class_lib
   src/cw2_class.cpp
+  src/task1.cpp
+  src/task2.cpp
+  src/task3.cpp
 )
 
 ament_target_dependencies(${PROJECT_NAME}_cw2_class_lib

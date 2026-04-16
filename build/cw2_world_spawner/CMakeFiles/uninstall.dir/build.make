@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

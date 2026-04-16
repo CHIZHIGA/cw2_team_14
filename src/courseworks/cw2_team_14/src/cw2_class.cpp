@@ -3,172 +3,19 @@ you can do whatever you want with this template code, including deleting it all
 and starting from scratch. The only requirment is to make sure your entire
 solution is contained within the cw2_team_<your_team_number> package */
 
-#include <cw2_class.h>
+#include "cw2_shared.hpp"
 
-#include <moveit/robot_trajectory/robot_trajectory.h>
-#include <moveit/trajectory_processing/iterative_time_parameterization.h>
 #include <moveit/utils/moveit_error_code.h>
 #include <moveit_msgs/msg/robot_trajectory.hpp>
-#include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Matrix3x3.h>
+#include <tf2/LinearMath/Quaternion.h>
 #include <tf2/time.h>
 
 #include <algorithm>
-#include <array>
-#include <chrono>
-#include <cmath>
-#include <cctype>
-#include <limits>
-#include <string_view>
 #include <utility>
 #include <vector>
 
-#include <pcl/filters/voxel_grid.h>
-#include <pcl/search/kdtree.h>
-#include <pcl/segmentation/extract_clusters.h>
-#include <moveit_msgs/msg/collision_object.hpp>
-#include <shape_msgs/msg/solid_primitive.hpp>
-
-namespace
-{
-
-constexpr double kPi = 3.14159265358979323846;
-
-constexpr double kOpenWidth = 0.04;
-constexpr double kClosedWidth = 0.010;
-constexpr double kGraspDetectionMargin = 0.002;
-
-constexpr double kPreGraspOffsetZ = 0.3;
-constexpr double kGraspOffsetZ = 0.15;
-constexpr double kLiftDistance = 0.4;
-constexpr double kPlaceHoverOffsetZ = 0.30;
-constexpr double kPlaceReleaseOffsetZ = 0.18;
-constexpr double kRetreatDistance = 0.08;
-
-constexpr double kCartesianEefStep = 0.005;
-constexpr double kCartesianMinFraction = 0.95;
-
-constexpr double kNoughtRadialOffset = 0.08;
-constexpr double kCrossRadialOffset = 0.05;
-
-constexpr double kTask2CropHalfWidth = 0.075;
-constexpr double kTask2CropBelowCenterZ = 0.05;
-constexpr double kTask2CropAboveCenterZ = 0.10;
-constexpr double kTask2ScanHeight = 0.50;
-constexpr double kTask2ScanOffset = 0.03;
-constexpr std::size_t kTask2MinObjectPoints = 30;
-constexpr std::size_t kTask2HistogramBins = 8;
-constexpr int kTask2MaxObservationAttemptsPerPose = 4;
-
-bool is_ground_coloured(const PointT &point)
-{
-  return point.g > point.r + 25 && point.g > point.b + 25;
-}
-
-bool is_desaturated_colour(const PointT &point)
-{
-  const int min_channel = std::min({static_cast<int>(point.r), static_cast<int>(point.g), static_cast<int>(point.b)});
-  const int max_channel = std::max({static_cast<int>(point.r), static_cast<int>(point.g), static_cast<int>(point.b)});
-  return (max_channel - min_channel) < 25;
-}
-
-struct Task1Candidate
-{
-  double grasp_x;
-  double grasp_y;
-  double closing_axis_yaw;
-  std::string description;
-};
-
-std::string to_lower_copy(std::string_view text)
-{
-  std::string lowered(text);
-  for (char &ch : lowered) {
-    ch = static_cast<char>(std::tolower(static_cast<unsigned char>(ch)));
-  }
-  return lowered;
-}
-
-std::vector<Task1Candidate> build_task1_candidates(
-  const geometry_msgs::msg::Point &object_point,
-  std::string_view shape_type)
-{
-  const std::string lowered_shape = to_lower_copy(shape_type);
-  const bool is_nought = lowered_shape.find("nought") != std::string::npos;
-  std::vector<double> radial_angles;
-  if (is_nought) {
-    radial_angles = {0.0, 0.5 * kPi, kPi, 1.5 * kPi};
-  } else {
-    radial_angles = {
-      0.0, 0.5 * kPi, kPi, 1.5 * kPi,
-      0.25 * kPi, 0.75 * kPi, 1.25 * kPi, 1.75 * kPi};
-  }
-
-  const double grasp_radius = is_nought ? kNoughtRadialOffset : kCrossRadialOffset;
-  std::vector<Task1Candidate> candidates;
-  candidates.reserve(radial_angles.size());
-
-  for (const double radial_angle : radial_angles) {
-    const double grasp_x = object_point.x + grasp_radius * std::cos(radial_angle);
-    const double grasp_y = object_point.y + grasp_radius * std::sin(radial_angle);
-    const double closing_axis_yaw = is_nought ? radial_angle : radial_angle + (0.5 * kPi);
-    candidates.push_back(
-      {grasp_x, grasp_y, closing_axis_yaw, "candidate angle " +
-      std::to_string(static_cast<int>(std::round(radial_angle * 180.0 / kPi))) + " deg"});
-  }
-
-  return candidates;
-}
-
-// ── Task 3 constants ──────────────────────────────────────────────────────────
-constexpr double kTask3ScanHeight = 0.60;
-constexpr double kTask3CloudZMin = 0.010;
-constexpr double kTask3CloudZMax = 0.150;
-constexpr float  kTask3VoxelLeaf = 0.008f;
-constexpr double kTask3ClusterTol = 0.04;
-constexpr int    kTask3MinClusterPts = 40;
-constexpr int    kTask3MaxClusterPts = 60000;
-constexpr double kTask3CoreFracThreshold = 0.04;   // > this → cross, ≤ → nought
-constexpr double kTask3ObstacleInflation = 0.06;   // extra safety margin around obstacles
-// Shapes are always 40mm tall (spec). The overhead camera sees the top surface,
-// so the point-cloud centroid z is biased ~half-height above the true shape centre.
-// We subtract this to recover the correct grasp height (matching Task 1 spawner centroid).
-constexpr double kTask3ShapeHalfHeight = 0.020;    // half of 40mm fixed shape height
-
-// True when the point is vivid enough to be a shape (purple / red / blue).
-bool is_task3_shape_coloured(const PointT &pt)
-{
-  const int r = static_cast<int>(pt.r);
-  const int g = static_cast<int>(pt.g);
-  const int b = static_cast<int>(pt.b);
-  const int mx = std::max({r, g, b});
-  const int mn = std::min({r, g, b});
-  return mx > 150 && (mx - mn) > 100;
-}
-
-// True when the point is dark grey / black – the obstacle colour.
-bool is_task3_obstacle_coloured(const PointT &pt)
-{
-  const int r = static_cast<int>(pt.r);
-  const int g = static_cast<int>(pt.g);
-  const int b = static_cast<int>(pt.b);
-  const int mx = std::max({r, g, b});
-  const int mn = std::min({r, g, b});
-  return mx < 80 && (mx - mn) < 40;
-}
-
-// True when the point is brownish – the basket colour (RGB≈[0.5,0.2,0.2]).
-bool is_task3_basket_coloured(const PointT &pt)
-{
-  const int r = static_cast<int>(pt.r);
-  const int g = static_cast<int>(pt.g);
-  const int b = static_cast<int>(pt.b);
-  return r > 80 && r < 190
-    && r > g + 40 && r > b + 40
-    && std::abs(g - b) < 40;
-}
-
-}  // namespace
+using namespace cw2_detail;
 
 cw2::cw2(const rclcpp::Node::SharedPtr &node)
 : node_(node),
@@ -283,8 +130,7 @@ bool cw2::execute_cartesian_path(
   const std::vector<geometry_msgs::msg::Pose> &waypoints,
   double min_fraction)
 {
-  if (waypoints.empty())
-  {
+  if (waypoints.empty()) {
     return true;
   }
 
@@ -300,8 +146,7 @@ bool cw2::execute_cartesian_path(
     trajectory,
     true);
 
-  if (fraction < min_fraction)
-  {
+  if (fraction < min_fraction) {
     RCLCPP_WARN(
       node_->get_logger(),
       "Cartesian path fraction %.3f below required minimum %.3f",
@@ -311,8 +156,7 @@ bool cw2::execute_cartesian_path(
   }
 
   const auto result = arm_group.execute(trajectory);
-  if (result != moveit::core::MoveItErrorCode::SUCCESS)
-  {
+  if (result != moveit::core::MoveItErrorCode::SUCCESS) {
     RCLCPP_WARN(node_->get_logger(), "Failed to execute Cartesian path");
     return false;
   }
@@ -322,12 +166,19 @@ bool cw2::execute_cartesian_path(
 
 bool cw2::set_gripper_width(const double width)
 {
+  const double current_width = get_gripper_width();
+  const bool closing_motion = current_width > 0.0 && width < current_width;
+
   hand_group_->startStateMonitor();
   hand_group_->setStartStateToCurrentState();
+  hand_group_->setMaxVelocityScalingFactor(closing_motion ? 0.15 : 1.0);
+  hand_group_->setMaxAccelerationScalingFactor(closing_motion ? 0.15 : 1.0);
   hand_group_->setJointValueTarget(std::vector<double>{width, width});
 
   const auto result = hand_group_->move();
   hand_group_->stop();
+  hand_group_->setMaxVelocityScalingFactor(1.0);
+  hand_group_->setMaxAccelerationScalingFactor(1.0);
 
   return result == moveit::core::MoveItErrorCode::SUCCESS;
 }
@@ -361,13 +212,33 @@ bool cw2::rescan_task1_object_point(
     cloud_frame = g_input_pc_frame_id_;
   }
 
-  if (cloud_frame != frame_id) {
+  geometry_msgs::msg::TransformStamped transform;
+  try {
+    transform = tf_buffer_.lookupTransform(
+      frame_id,
+      cloud_frame,
+      tf2::TimePointZero,
+      tf2::durationFromSec(0.5));
+  } catch (const tf2::TransformException &ex) {
     RCLCPP_WARN(
       node_->get_logger(),
-      "Rescan warning: cloud frame '%s' != target frame '%s', using raw coordinates",
+      "Rescan failed: unable to transform cloud from '%s' to '%s': %s",
       cloud_frame.c_str(),
-      frame_id.c_str());
+      frame_id.c_str(),
+      ex.what());
+    return false;
   }
+
+  const tf2::Quaternion rotation(
+    transform.transform.rotation.x,
+    transform.transform.rotation.y,
+    transform.transform.rotation.z,
+    transform.transform.rotation.w);
+  const tf2::Matrix3x3 rotation_matrix(rotation);
+  const tf2::Vector3 translation(
+    transform.transform.translation.x,
+    transform.transform.translation.y,
+    transform.transform.translation.z);
 
   const double half_xy = 0.10;
   const double min_z = object_point.z - 0.02;
@@ -383,19 +254,29 @@ bool cw2::rescan_task1_object_point(
       continue;
     }
 
-    if (pt.x < object_point.x - half_xy || pt.x > object_point.x + half_xy) {
+    const tf2::Vector3 cloud_point(pt.x, pt.y, pt.z);
+    const tf2::Vector3 transformed_point = rotation_matrix * cloud_point + translation;
+
+    if (transformed_point.x() < object_point.x - half_xy ||
+      transformed_point.x() > object_point.x + half_xy)
+    {
       continue;
     }
-    if (pt.y < object_point.y - half_xy || pt.y > object_point.y + half_xy) {
+    if (transformed_point.y() < object_point.y - half_xy ||
+      transformed_point.y() > object_point.y + half_xy)
+    {
       continue;
     }
-    if (pt.z < min_z || pt.z > max_z) {
+    if (transformed_point.z() < min_z || transformed_point.z() > max_z) {
+      continue;
+    }
+    if (is_ground_coloured(pt) || is_desaturated_colour(pt)) {
       continue;
     }
 
-    sum_x += pt.x;
-    sum_y += pt.y;
-    sum_z += pt.z;
+    sum_x += transformed_point.x();
+    sum_y += transformed_point.y();
+    sum_z += transformed_point.z();
     ++count;
   }
 
@@ -422,9 +303,11 @@ bool cw2::rescan_task1_object_point(
   return true;
 }
 
-bool cw2::extract_task2_object_cloud(
-  const geometry_msgs::msg::PointStamped &object_point,
-  PointC &object_cloud)
+bool cw2::estimate_task1_object_yaw(
+  const geometry_msgs::msg::Point &object_point,
+  const std::string &frame_id,
+  const std::string &shape_type,
+  double &object_yaw)
 {
   PointCPtr cloud;
   std::string cloud_frame;
@@ -432,29 +315,26 @@ bool cw2::extract_task2_object_cloud(
   {
     std::lock_guard<std::mutex> lock(cloud_mutex_);
     if (!g_cloud_ptr || g_cloud_ptr->empty()) {
-      RCLCPP_WARN(node_->get_logger(), "Task 2 extraction failed: no point cloud available");
+      RCLCPP_WARN(node_->get_logger(), "Yaw estimate failed: no point cloud available");
       return false;
     }
     cloud = g_cloud_ptr;
     cloud_frame = g_input_pc_frame_id_;
   }
 
-  const std::string target_frame =
-    object_point.header.frame_id.empty() ? cloud_frame : object_point.header.frame_id;
-
   geometry_msgs::msg::TransformStamped transform;
   try {
     transform = tf_buffer_.lookupTransform(
-      target_frame,
+      frame_id,
       cloud_frame,
       tf2::TimePointZero,
       tf2::durationFromSec(0.5));
   } catch (const tf2::TransformException &ex) {
     RCLCPP_WARN(
       node_->get_logger(),
-      "Task 2 extraction failed: unable to transform cloud from '%s' to '%s': %s",
+      "Yaw estimate failed: unable to transform cloud from '%s' to '%s': %s",
       cloud_frame.c_str(),
-      target_frame.c_str(),
+      frame_id.c_str(),
       ex.what());
     return false;
   }
@@ -470,8 +350,10 @@ bool cw2::extract_task2_object_cloud(
     transform.transform.translation.y,
     transform.transform.translation.z);
 
-  object_cloud.clear();
-  object_cloud.reserve(cloud->size() / 20);
+  std::vector<std::pair<double, double>> points_xy;
+  points_xy.reserve(cloud->size() / 20);
+  double sum_x = 0.0;
+  double sum_y = 0.0;
 
   for (const auto &point : cloud->points) {
     if (!std::isfinite(point.x) || !std::isfinite(point.y) || !std::isfinite(point.z)) {
@@ -481,306 +363,58 @@ bool cw2::extract_task2_object_cloud(
     const tf2::Vector3 cloud_point(point.x, point.y, point.z);
     const tf2::Vector3 transformed_point = rotation_matrix * cloud_point + translation;
 
-    if (std::abs(transformed_point.x() - object_point.point.x) > kTask2CropHalfWidth) {
+    if (std::abs(transformed_point.x() - object_point.x) > kTask1YawCropHalfWidth) {
       continue;
     }
-    if (std::abs(transformed_point.y() - object_point.point.y) > kTask2CropHalfWidth) {
+    if (std::abs(transformed_point.y() - object_point.y) > kTask1YawCropHalfWidth) {
       continue;
     }
-    if (transformed_point.z() < object_point.point.z - kTask2CropBelowCenterZ) {
+    if (transformed_point.z() < object_point.z - kTask1YawCropBelowCenterZ) {
       continue;
     }
-    if (transformed_point.z() > object_point.point.z + kTask2CropAboveCenterZ) {
+    if (transformed_point.z() > object_point.z + kTask1YawCropAboveCenterZ) {
       continue;
     }
-    if (is_ground_coloured(point)) {
-      continue;
-    }
-    if (is_desaturated_colour(point)) {
+    if (is_ground_coloured(point) || is_desaturated_colour(point)) {
       continue;
     }
 
-    PointT centred_point = point;
-    centred_point.x = transformed_point.x() - object_point.point.x;
-    centred_point.y = transformed_point.y() - object_point.point.y;
-    centred_point.z = transformed_point.z() - object_point.point.z;
-    object_cloud.push_back(centred_point);
+    sum_x += transformed_point.x();
+    sum_y += transformed_point.y();
+    points_xy.emplace_back(transformed_point.x(), transformed_point.y());
   }
 
-  if (object_cloud.size() < kTask2MinObjectPoints) {
-    RCLCPP_DEBUG(
+  if (points_xy.size() < kTask1MinYawPoints) {
+    RCLCPP_WARN(
       node_->get_logger(),
-      "Task 2 extraction found only %zu object points near (%.3f, %.3f, %.3f)",
-      object_cloud.size(),
-      object_point.point.x,
-      object_point.point.y,
-      object_point.point.z);
+      "Yaw estimate failed: only %zu nearby points found",
+      points_xy.size());
     return false;
   }
 
+  const double centroid_x = sum_x / static_cast<double>(points_xy.size());
+  const double centroid_y = sum_y / static_cast<double>(points_xy.size());
+
+  double cov_xx = 0.0;
+  double cov_xy = 0.0;
+  double cov_yy = 0.0;
+  for (const auto &[x, y] : points_xy) {
+    const double dx = x - centroid_x;
+    const double dy = y - centroid_y;
+    cov_xx += dx * dx;
+    cov_xy += dx * dy;
+    cov_yy += dy * dy;
+  }
+
+  object_yaw = 0.5 * std::atan2(2.0 * cov_xy, cov_xx - cov_yy);
+  RCLCPP_INFO(
+    node_->get_logger(),
+    "Estimated object yaw for '%s': %.1f deg",
+    shape_type.c_str(),
+    object_yaw * 180.0 / kPi);
+
   return true;
 }
-
-bool cw2::build_task2_shape_signature(
-  const PointC &object_cloud,
-  Task2ShapeSignature &signature) const
-{
-  if (object_cloud.size() < kTask2MinObjectPoints) {
-    return false;
-  }
-
-  double centroid_x = 0.0;
-  double centroid_y = 0.0;
-  for (const auto &point : object_cloud.points) {
-    centroid_x += point.x;
-    centroid_y += point.y;
-  }
-
-  const double inverse_point_count = 1.0 / static_cast<double>(object_cloud.size());
-  centroid_x *= inverse_point_count;
-  centroid_y *= inverse_point_count;
-
-  std::vector<double> radii;
-  radii.reserve(object_cloud.size());
-  for (const auto &point : object_cloud.points) {
-    radii.push_back(std::hypot(point.x - centroid_x, point.y - centroid_y));
-  }
-
-  std::sort(radii.begin(), radii.end());
-  const std::size_t scale_index =
-    std::min(radii.size() - 1, (radii.size() * 95) / 100);
-  const double radius_scale = radii[scale_index];
-
-  if (radius_scale < 1e-4) {
-    return false;
-  }
-
-  signature = Task2ShapeSignature{};
-  signature.point_count = object_cloud.size();
-
-  double mean_normalised_radius = 0.0;
-  std::size_t core_count = 0;
-  std::size_t inner_count = 0;
-  std::size_t mid_count = 0;
-
-  for (const double radius : radii) {
-    const double normalised_radius = std::clamp(radius / radius_scale, 0.0, 1.0);
-    const std::size_t bin = std::min<std::size_t>(
-      kTask2HistogramBins - 1,
-      static_cast<std::size_t>(normalised_radius * static_cast<double>(kTask2HistogramBins)));
-
-    signature.radial_histogram[bin] += 1.0;
-    mean_normalised_radius += normalised_radius;
-
-    if (normalised_radius < 0.18) {
-      ++core_count;
-    }
-    if (normalised_radius < 0.30) {
-      ++inner_count;
-    }
-    if (normalised_radius >= 0.45 && normalised_radius < 0.75) {
-      ++mid_count;
-    }
-  }
-
-  for (double &bin_value : signature.radial_histogram) {
-    bin_value *= inverse_point_count;
-  }
-
-  signature.core_fraction = static_cast<double>(core_count) * inverse_point_count;
-  signature.inner_fraction = static_cast<double>(inner_count) * inverse_point_count;
-  signature.mid_fraction = static_cast<double>(mid_count) * inverse_point_count;
-  signature.mean_radius = mean_normalised_radius * inverse_point_count;
-  return true;
-}
-
-double cw2::compare_task2_shape_signatures(
-  const Task2ShapeSignature &lhs,
-  const Task2ShapeSignature &rhs) const
-{
-  double score = 0.0;
-
-  for (std::size_t i = 0; i < lhs.radial_histogram.size(); ++i) {
-    score += std::abs(lhs.radial_histogram[i] - rhs.radial_histogram[i]);
-  }
-
-  score += 4.0 * std::abs(lhs.core_fraction - rhs.core_fraction);
-  score += 2.5 * std::abs(lhs.inner_fraction - rhs.inner_fraction);
-  score += 1.5 * std::abs(lhs.mid_fraction - rhs.mid_fraction);
-  score += 0.5 * std::abs(lhs.mean_radius - rhs.mean_radius);
-
-  return score;
-}
-
-bool cw2::build_task2_scan_pose(
-  const geometry_msgs::msg::PointStamped &object_point,
-  const std::pair<double, double> &scan_offset,
-  geometry_msgs::msg::Pose &scan_pose,
-  std::string &frame_id)
-{
-  frame_id = object_point.header.frame_id.empty() ? "panda_link0" : object_point.header.frame_id;
-
-  const geometry_msgs::msg::Pose nominal_pose = make_top_down_pose(
-    object_point.point.x + scan_offset.first,
-    object_point.point.y + scan_offset.second,
-    object_point.point.z + kTask2ScanHeight,
-    0.0);
-
-  const std::string end_effector_link =
-    arm_group_->getEndEffectorLink().empty() ? "panda_link8" : arm_group_->getEndEffectorLink();
-
-  std::string cloud_frame;
-  {
-    std::lock_guard<std::mutex> lock(cloud_mutex_);
-    cloud_frame = g_input_pc_frame_id_;
-  }
-
-  if (cloud_frame.empty()) {
-    scan_pose = nominal_pose;
-    return true;
-  }
-
-  geometry_msgs::msg::TransformStamped camera_in_eef_msg;
-  try {
-    camera_in_eef_msg = tf_buffer_.lookupTransform(
-      end_effector_link,
-      cloud_frame,
-      tf2::TimePointZero,
-      tf2::durationFromSec(0.5));
-  } catch (const tf2::TransformException &ex) {
-    RCLCPP_DEBUG(
-      node_->get_logger(),
-      "Task 2 falling back to nominal scan pose because camera offset lookup failed: %s",
-      ex.what());
-    scan_pose = nominal_pose;
-    return true;
-  }
-
-  tf2::Quaternion pose_orientation(
-    nominal_pose.orientation.x,
-    nominal_pose.orientation.y,
-    nominal_pose.orientation.z,
-    nominal_pose.orientation.w);
-  tf2::Matrix3x3 pose_rotation(pose_orientation);
-  const tf2::Vector3 camera_in_eef(
-    camera_in_eef_msg.transform.translation.x,
-    camera_in_eef_msg.transform.translation.y,
-    camera_in_eef_msg.transform.translation.z);
-  const tf2::Vector3 camera_offset_in_base = pose_rotation * camera_in_eef;
-
-  scan_pose = nominal_pose;
-  scan_pose.position.x -= camera_offset_in_base.x();
-  scan_pose.position.y -= camera_offset_in_base.y();
-  scan_pose.position.z -= camera_offset_in_base.z();
-  return true;
-}
-
-std::string cw2::classify_task2_shape_pairwise(
-  const Task2ShapeSignature &target_signature,
-  const Task2ShapeSignature &other_signature) const
-{
-  if (target_signature.core_fraction > other_signature.core_fraction) {
-    return "Cross";
-  }
-  if (target_signature.core_fraction < other_signature.core_fraction) {
-    return "Nought";
-  }
-
-  if (target_signature.inner_fraction < other_signature.inner_fraction) {
-    return "Nought";
-  }
-  if (target_signature.inner_fraction > other_signature.inner_fraction) {
-    return "Cross";
-  }
-
-  if (target_signature.mean_radius > other_signature.mean_radius) {
-    return "Nought";
-  }
-
-  return "Cross";
-}
-
-bool cw2::observe_task2_shape(
-  const geometry_msgs::msg::PointStamped &object_point,
-  const std::string &label,
-  Task2ShapeSignature &signature)
-{
-  const std::array<std::pair<double, double>, 5> scan_offsets = {{
-      {0.0, 0.0},
-      {kTask2ScanOffset, 0.0},
-      {-kTask2ScanOffset, 0.0},
-      {0.0, kTask2ScanOffset},
-      {0.0, -kTask2ScanOffset},
-    }};
-
-  for (std::size_t pose_index = 0; pose_index < scan_offsets.size(); ++pose_index) {
-    geometry_msgs::msg::Pose scan_pose;
-    std::string frame_id;
-    if (!build_task2_scan_pose(object_point, scan_offsets[pose_index], scan_pose, frame_id)) {
-      continue;
-    }
-
-    if (!move_arm_to_pose(scan_pose, frame_id)) {
-      RCLCPP_WARN(
-        node_->get_logger(),
-        "Task 2 could not move to scan pose %zu for %s",
-        pose_index + 1,
-        label.c_str());
-      continue;
-    }
-
-    std::uint64_t initial_sequence = 0;
-    {
-      std::lock_guard<std::mutex> lock(cloud_mutex_);
-      initial_sequence = g_cloud_sequence_;
-    }
-
-    for (int attempt = 0; attempt < kTask2MaxObservationAttemptsPerPose; ++attempt) {
-      if (attempt == 0) {
-        rclcpp::sleep_for(std::chrono::milliseconds(700));
-      } else {
-        rclcpp::sleep_for(std::chrono::milliseconds(350));
-      }
-
-      std::uint64_t current_sequence = 0;
-      {
-        std::lock_guard<std::mutex> lock(cloud_mutex_);
-        current_sequence = g_cloud_sequence_;
-      }
-
-      if (current_sequence <= initial_sequence &&
-        attempt < kTask2MaxObservationAttemptsPerPose - 1)
-      {
-        continue;
-      }
-
-      PointC object_cloud;
-      if (!extract_task2_object_cloud(object_point, object_cloud)) {
-        continue;
-      }
-
-      if (!build_task2_shape_signature(object_cloud, signature)) {
-        continue;
-      }
-
-      RCLCPP_DEBUG(
-        node_->get_logger(),
-        "Task 2 observed %s from scan pose %zu attempt %d with %zu points "
-        "(inner=%.3f, mean_radius=%.3f)",
-        label.c_str(),
-        pose_index + 1,
-        attempt + 1,
-        signature.point_count,
-        signature.inner_fraction,
-        signature.mean_radius);
-      return true;
-    }
-  }
-
-  RCLCPP_ERROR(node_->get_logger(), "Task 2 failed to observe %s from all scan poses", label.c_str());
-  return false;
-}
-
 
 geometry_msgs::msg::Pose cw2::make_top_down_pose(
   const double x,
@@ -803,852 +437,4 @@ geometry_msgs::msg::Pose cw2::make_top_down_pose(
   pose.orientation.w = orientation.w();
 
   return pose;
-}
-
-void cw2::t1_callback(
-  const std::shared_ptr<cw2_world_spawner::srv::Task1Service::Request> request,
-  std::shared_ptr<cw2_world_spawner::srv::Task1Service::Response> response)
-{
-  (void)response;
-
-  const std::string object_frame =
-    request->object_point.header.frame_id.empty() ? "panda_link0" : request->object_point.header.frame_id;
-  const std::string goal_frame =
-    request->goal_point.header.frame_id.empty() ? object_frame : request->goal_point.header.frame_id;
-
-  RCLCPP_INFO(
-    node_->get_logger(),
-    "Task 1 started for shape '%s' at (%.3f, %.3f, %.3f) -> basket (%.3f, %.3f, %.3f)",
-    request->shape_type.c_str(),
-    request->object_point.point.x,
-    request->object_point.point.y,
-    request->object_point.point.z,
-    request->goal_point.point.x,
-    request->goal_point.point.y,
-    request->goal_point.point.z);
-
-  if (!set_gripper_width(kOpenWidth)) {
-    RCLCPP_ERROR(node_->get_logger(), "Failed to open gripper before Task 1");
-    return;
-  }
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "Failed to move arm to ready pose before Task 1");
-  }
-
-  geometry_msgs::msg::Point current_object_point = request->object_point.point;
-
-  bool task_completed = false;
-  constexpr int kMaxRescanRounds = 3;
-
-  for (int scan_round = 0; scan_round < kMaxRescanRounds && !task_completed; ++scan_round) {
-    RCLCPP_INFO(
-      node_->get_logger(),
-      "Task 1 scan round %d using object point (%.3f, %.3f, %.3f)",
-      scan_round + 1,
-      current_object_point.x,
-      current_object_point.y,
-      current_object_point.z);
-
-    const std::vector<Task1Candidate> candidates =
-      build_task1_candidates(current_object_point, request->shape_type);
-
-    bool round_succeeded = false;
-
-    for (const Task1Candidate &candidate : candidates) {
-      RCLCPP_INFO(node_->get_logger(), "Trying %s", candidate.description.c_str());
-
-      const double grasp_dx = candidate.grasp_x - current_object_point.x;
-      const double grasp_dy = candidate.grasp_y - current_object_point.y;
-
-      const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
-        candidate.grasp_x,
-        candidate.grasp_y,
-        current_object_point.z + kPreGraspOffsetZ,
-        candidate.closing_axis_yaw);
-
-      if (!move_arm_to_pose(pre_grasp_pose, object_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to reach pre-grasp pose for %s", candidate.description.c_str());
-        continue;
-      }
-
-      geometry_msgs::msg::Pose grasp_pose = pre_grasp_pose;
-      grasp_pose.position.z = current_object_point.z + kGraspOffsetZ;
-
-      arm_group_->setPoseReferenceFrame(object_frame);
-      if (!execute_cartesian_path(*arm_group_, {grasp_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to descend for %s", candidate.description.c_str());
-
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after descend failure");
-        }
-        continue;
-      }
-
-      const bool close_command_succeeded = set_gripper_width(kClosedWidth);
-      rclcpp::sleep_for(std::chrono::milliseconds(400));
-      const double achieved_width = get_gripper_width();
-      const bool object_grasped = achieved_width > (2.0 * kClosedWidth + kGraspDetectionMargin);
-
-      RCLCPP_INFO(
-        node_->get_logger(),
-        "Close result for %s: command=%s finger_width=%.3f m",
-        candidate.description.c_str(),
-        close_command_succeeded ? "success" : "blocked",
-        achieved_width);
-
-      if (!close_command_succeeded && !object_grasped) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "Failed to close gripper for %s (finger width %.3f m)",
-          candidate.description.c_str(),
-          achieved_width);
-
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after close failure");
-        }
-        continue;
-      }
-
-      geometry_msgs::msg::Pose lift_pose = grasp_pose;
-      lift_pose.position.z += kLiftDistance;
-      arm_group_->setPoseReferenceFrame(object_frame);
-      const bool lifted = execute_cartesian_path(
-        *arm_group_, {lift_pose}, kCartesianMinFraction);
-
-      if (!object_grasped || !lifted) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "No stable grasp detected for %s (finger width %.3f m)",
-          candidate.description.c_str(),
-          achieved_width);
-
-        set_gripper_width(kOpenWidth);
-
-        geometry_msgs::msg::Pose retreat_pose = grasp_pose;
-        retreat_pose.position.z += kRetreatDistance;
-        arm_group_->setPoseReferenceFrame(object_frame);
-        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.8);
-
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after unstable grasp");
-        }
-        continue;
-      }
-
-      const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
-        request->goal_point.point.x + grasp_dx,
-        request->goal_point.point.y + grasp_dy,
-        request->goal_point.point.z + kPlaceHoverOffsetZ,
-        candidate.closing_axis_yaw);
-
-      if (!move_arm_to_pose(place_hover_pose, goal_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to move above basket after grasp");
-        set_gripper_width(kOpenWidth);
-        break;
-      }
-
-      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
-      place_release_pose.position.z = request->goal_point.point.z + kPlaceReleaseOffsetZ;
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      execute_cartesian_path(*arm_group_, {place_release_pose}, 0.8);
-
-      if (!set_gripper_width(kOpenWidth)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to release object above basket");
-      }
-
-      rclcpp::sleep_for(std::chrono::milliseconds(300));
-
-      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
-      post_release_pose.position.z = request->goal_point.point.z + kPlaceHoverOffsetZ;
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
-
-      task_completed = true;
-      round_succeeded = true;
-      break;
-    }
-
-    if (task_completed || round_succeeded) {
-      break;
-    }
-
-    if (scan_round < kMaxRescanRounds - 1) {
-      if (!move_arm_to_named_target("ready")) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to move to ready before rescan");
-      }
-
-      if (!rescan_task1_object_point(current_object_point, object_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Rescan failed, stopping further retries");
-        break;
-      }
-    }
-  }
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "Failed to return arm to ready pose after Task 1");
-  }
-
-  if (!task_completed) {
-    RCLCPP_ERROR(node_->get_logger(), "Task 1 failed: no successful grasp candidate completed the place action");
-    return;
-  }
-
-  RCLCPP_INFO(node_->get_logger(), "Task 1 completed");
-}
-
-void cw2::t2_callback(
-  const std::shared_ptr<cw2_world_spawner::srv::Task2Service::Request> request,
-  std::shared_ptr<cw2_world_spawner::srv::Task2Service::Response> response)
-{
-  response->mystery_object_num = -1;
-
-  if (request->ref_object_points.empty()) {
-    RCLCPP_ERROR(node_->get_logger(), "Task 2 request did not contain any reference shapes");
-    return;
-  }
-
-  Task2ShapeSignature mystery_signature;
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "Task 2 could not move to the ready pose before scanning");
-  }
-
-  if (!observe_task2_shape(request->mystery_object_point, "mystery shape", mystery_signature)) {
-    return;
-  }
-
-  std::vector<Task2ShapeSignature> reference_signatures;
-  reference_signatures.reserve(request->ref_object_points.size());
-
-  double best_score = std::numeric_limits<double>::infinity();
-  int best_reference_index = -1;
-
-  for (std::size_t i = 0; i < request->ref_object_points.size(); ++i) {
-    Task2ShapeSignature reference_signature;
-    if (!observe_task2_shape(
-        request->ref_object_points[i],
-        "reference shape " + std::to_string(i + 1),
-        reference_signature))
-    {
-      continue;
-    }
-
-    reference_signatures.push_back(reference_signature);
-
-    const double score = compare_task2_shape_signatures(mystery_signature, reference_signature);
-    RCLCPP_DEBUG(
-      node_->get_logger(),
-      "Task 2 reference %zu score: %.5f (mystery points=%zu, reference points=%zu)",
-      i + 1,
-      score,
-      mystery_signature.point_count,
-      reference_signature.point_count);
-
-    if (score < best_score) {
-      best_score = score;
-      best_reference_index = static_cast<int>(i);
-    }
-  }
-
-  if (best_reference_index < 0 || reference_signatures.size() != request->ref_object_points.size()) {
-    RCLCPP_ERROR(node_->get_logger(), "Task 2 failed: both reference shapes must be observed and matched");
-    return;
-  }
-
-  std::vector<std::string> reference_labels(reference_signatures.size());
-  if (reference_signatures.size() == 2) {
-    reference_labels[0] = classify_task2_shape_pairwise(reference_signatures[0], reference_signatures[1]);
-    reference_labels[1] = classify_task2_shape_pairwise(reference_signatures[1], reference_signatures[0]);
-  } else {
-    for (std::size_t i = 0; i < reference_labels.size(); ++i) {
-      reference_labels[i] = "Unknown";
-    }
-  }
-
-  response->mystery_object_num = best_reference_index + 1;
-  const std::string mystery_label =
-    reference_labels[static_cast<std::size_t>(best_reference_index)];
-
-  for (std::size_t i = 0; i < reference_labels.size(); ++i) {
-    RCLCPP_INFO(
-      node_->get_logger(),
-      "Task 2 summary: Reference shape %zu = %s",
-      i + 1,
-      reference_labels[i].c_str());
-  }
-
-  RCLCPP_INFO(
-    node_->get_logger(),
-    "Task 2 summary: Mystery shape matches reference shape %ld",
-    response->mystery_object_num);
-  RCLCPP_INFO(
-    node_->get_logger(),
-    "Task 2 summary: Mystery shape = %s",
-    mystery_label.c_str());
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "Task 2 could not return the arm to ready after scanning");
-  }
-}
-
-void cw2::t3_callback(
-  const std::shared_ptr<cw2_world_spawner::srv::Task3Service::Request> request,
-  std::shared_ptr<cw2_world_spawner::srv::Task3Service::Response> response)
-{
-  (void)request;
-  response->total_num_shapes = 0;
-  response->num_most_common_shape = 0;
-  response->most_common_shape_vector.clear();
-
-  RCLCPP_INFO(node_->get_logger(), "Task 3 started");
-
-  set_gripper_width(kOpenWidth);
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "T3: failed to reach ready pose");
-  }
-
-  // ── 1. Global scene scan ────────────────────────────────────────────────────
-  PointCPtr merged_cloud(new PointC);
-  if (!t3_collect_scene_cloud(merged_cloud, "panda_link0")) {
-    RCLCPP_ERROR(node_->get_logger(), "T3: failed to collect scene cloud");
-    return;
-  }
-  RCLCPP_INFO(node_->get_logger(), "T3: merged cloud has %zu points", merged_cloud->size());
-
-  // ── 2. Separate by colour ───────────────────────────────────────────────────
-  PointCPtr shape_cloud(new PointC);
-  PointCPtr obstacle_cloud(new PointC);
-  PointCPtr basket_cloud(new PointC);
-
-  for (const auto &pt : merged_cloud->points) {
-    if (is_task3_shape_coloured(pt))    { shape_cloud->push_back(pt); }
-    else if (is_task3_obstacle_coloured(pt)) { obstacle_cloud->push_back(pt); }
-    else if (is_task3_basket_coloured(pt))   { basket_cloud->push_back(pt); }
-  }
-
-  RCLCPP_INFO(node_->get_logger(),
-    "T3: colour split – shapes=%zu  obstacles=%zu  basket=%zu",
-    shape_cloud->size(), obstacle_cloud->size(), basket_cloud->size());
-
-  // ── 3. Cluster each sub-cloud ───────────────────────────────────────────────
-  std::vector<PointCPtr> shape_clusters;
-  t3_cluster_cloud(shape_cloud, shape_clusters);
-
-  std::vector<PointCPtr> obstacle_clusters;
-  t3_cluster_cloud(obstacle_cloud, obstacle_clusters);
-
-  RCLCPP_INFO(node_->get_logger(),
-    "T3: clusters – shapes=%zu  obstacles=%zu",
-    shape_clusters.size(), obstacle_clusters.size());
-
-  // ── 4. Locate basket ────────────────────────────────────────────────────────
-  geometry_msgs::msg::Point basket_pos;
-  if (!t3_find_basket_pos(basket_cloud, basket_pos)) {
-    // Fallback: check which of the two known basket locations has more cloud coverage
-    const std::array<std::pair<double, double>, 2> known_locs = {{{-0.41, -0.36}, {-0.41, 0.36}}};
-    std::size_t best_count = 0;
-    basket_pos.x = known_locs[0].first;
-    basket_pos.y = known_locs[0].second;
-    for (const auto &loc : known_locs) {
-      std::size_t cnt = 0;
-      for (const auto &pt : merged_cloud->points) {
-        if (std::abs(pt.x - loc.first) < 0.25 && std::abs(pt.y - loc.second) < 0.25) { ++cnt; }
-      }
-      if (cnt > best_count) {
-        best_count = cnt;
-        basket_pos.x = loc.first;
-        basket_pos.y = loc.second;
-      }
-    }
-    basket_pos.z = 0.025;
-    RCLCPP_WARN(node_->get_logger(),
-      "T3: basket not detected by colour, using fallback (%.3f, %.3f)", basket_pos.x, basket_pos.y);
-  }
-
-  // ── 5. Add obstacles to MoveIt planning scene ───────────────────────────────
-  std::vector<std::string> collision_ids;
-  for (std::size_t i = 0; i < obstacle_clusters.size(); ++i) {
-    const std::string id = "t3_obs_" + std::to_string(i);
-    t3_register_obstacle(obstacle_clusters[i], id);
-    collision_ids.push_back(id);
-  }
-
-  // Return to ready before beginning classification arm moves
-  move_arm_to_named_target("ready");
-
-  // ── 6. Classify each shape cluster ─────────────────────────────────────────
-  std::vector<Task3ShapeInfo> detected_shapes;
-  for (const auto &cluster : shape_clusters) {
-    if (!cluster || cluster->empty()) { continue; }
-
-    double cx = 0.0, cy = 0.0, cz = 0.0;
-    double z_min = std::numeric_limits<double>::max();
-    for (const auto &pt : cluster->points) {
-      cx += pt.x; cy += pt.y; cz += pt.z;
-      if (pt.z < z_min) { z_min = pt.z; }
-    }
-    const double inv = 1.0 / static_cast<double>(cluster->size());
-    geometry_msgs::msg::Point centroid;
-    centroid.x = cx * inv;
-    centroid.y = cy * inv;
-    // All shape SDF models have: link pose z-offset = 20mm, mesh Y [0, 0.040].
-    // After the 90-deg x-rotation in the SDF, mesh-Y maps to link-Z, so:
-    //   shape_bottom_world_z = model_origin_z + link_offset_z = spawn_z + 0.020
-    // Therefore: spawn_z (what Task 1's spawner sends) = z_min - link_offset_z
-    //                                                   = z_min - kTask3ShapeHalfHeight
-    // Using this makes the centroid.z identical to the Task 1 spawner value, so the
-    // same kGraspOffsetZ calculation produces the correct gripper height.
-    centroid.z = z_min - kTask3ShapeHalfHeight;
-
-    const std::string shape_type = t3_classify_cluster(cluster, centroid);
-
-    RCLCPP_INFO(node_->get_logger(),
-      "T3 cluster at (%.3f, %.3f, %.3f) [z_min=%.3f]: %s  (%zu pts)",
-      centroid.x, centroid.y, centroid.z, z_min, shape_type.c_str(), cluster->size());
-
-    detected_shapes.push_back({centroid, shape_type});
-  }
-
-  // ── 7. Count and determine most-common shape ────────────────────────────────
-  int n_nought = 0;
-  int n_cross  = 0;
-  for (const auto &s : detected_shapes) {
-    if (s.shape_type == "nought")      { ++n_nought; }
-    else if (s.shape_type == "cross")  { ++n_cross; }
-  }
-  const int total = n_nought + n_cross;
-  const bool cross_wins     = (n_cross >= n_nought);
-  const std::string most_common = cross_wins ? "cross" : "nought";
-  const int most_common_count   = cross_wins ? n_cross : n_nought;
-
-  RCLCPP_INFO(node_->get_logger(),
-    "T3 summary: total=%d  nought=%d  cross=%d  most_common=%s(%d)",
-    total, n_nought, n_cross, most_common.c_str(), most_common_count);
-
-  // ── 8. Fill response ────────────────────────────────────────────────────────
-  response->total_num_shapes      = total;
-  response->num_most_common_shape = most_common_count;
-  for (const auto &s : detected_shapes) {
-    if (s.shape_type == "nought")      { response->most_common_shape_vector.push_back(1); }
-    else if (s.shape_type == "cross")  { response->most_common_shape_vector.push_back(2); }
-  }
-
-  // ── 9. Pick and place one of the most-common shape ──────────────────────────
-  for (const auto &s : detected_shapes) {
-    if (s.shape_type == most_common) {
-      RCLCPP_INFO(node_->get_logger(),
-        "T3: picking %s at (%.3f, %.3f, %.3f) → basket (%.3f, %.3f)",
-        most_common.c_str(), s.centroid.x, s.centroid.y, s.centroid.z,
-        basket_pos.x, basket_pos.y);
-
-      if (t3_pick_and_place(s.centroid, basket_pos, most_common)) {
-        RCLCPP_INFO(node_->get_logger(), "T3: pick and place succeeded");
-      } else {
-        RCLCPP_WARN(node_->get_logger(), "T3: pick and place failed");
-      }
-      break;
-    }
-  }
-
-  // ── 10. Clean up ─────────────────────────────────────────────────────────────
-  t3_clear_obstacles(collision_ids);
-  move_arm_to_named_target("ready");
-
-  RCLCPP_INFO(node_->get_logger(),
-    "Task 3 completed: total_num_shapes=%d  num_most_common_shape=%d",
-    total, most_common_count);
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// Task 3 helper implementations
-// ═══════════════════════════════════════════════════════════════════════════════
-
-bool cw2::t3_collect_scene_cloud(PointCPtr &merged_cloud, const std::string &target_frame)
-{
-  // A 3×3 grid of overhead scan positions (x, y) covering the T3 workspace.
-  // Heights below are absolute EEF z values.
-  const std::array<std::pair<double, double>, 9> scan_xy = {{
-    {0.45,  0.00}, {0.45, -0.35}, {0.45,  0.35},
-    {0.10, -0.45}, {0.10,  0.00}, {0.10,  0.45},
-    {-0.25, -0.30}, {-0.25,  0.00}, {-0.25,  0.30},
-  }};
-
-  merged_cloud->clear();
-  int good_scans = 0;
-
-  for (std::size_t k = 0; k < scan_xy.size(); ++k) {
-    const double sx = scan_xy[k].first;
-    const double sy = scan_xy[k].second;
-
-    const geometry_msgs::msg::Pose scan_pose =
-      make_top_down_pose(sx, sy, kTask3ScanHeight, 0.0);
-
-    if (!move_arm_to_pose(scan_pose, target_frame)) {
-      RCLCPP_WARN(node_->get_logger(),
-        "T3 scan %zu: could not reach (%.2f, %.2f, %.2f)", k, sx, sy, kTask3ScanHeight);
-      continue;
-    }
-
-    // Wait for a fresh cloud frame after arm stops
-    std::uint64_t init_seq = 0;
-    {
-      std::lock_guard<std::mutex> lk(cloud_mutex_);
-      init_seq = g_cloud_sequence_;
-    }
-    for (int wait = 0; wait < 8; ++wait) {
-      rclcpp::sleep_for(std::chrono::milliseconds(200));
-      std::lock_guard<std::mutex> lk(cloud_mutex_);
-      if (g_cloud_sequence_ > init_seq) { break; }
-    }
-
-    PointCPtr cloud;
-    std::string cloud_frame;
-    {
-      std::lock_guard<std::mutex> lk(cloud_mutex_);
-      if (!g_cloud_ptr || g_cloud_ptr->empty()) { continue; }
-      cloud      = g_cloud_ptr;
-      cloud_frame = g_input_pc_frame_id_;
-    }
-
-    geometry_msgs::msg::TransformStamped tf_msg;
-    try {
-      tf_msg = tf_buffer_.lookupTransform(
-        target_frame, cloud_frame, tf2::TimePointZero, tf2::durationFromSec(0.5));
-    } catch (const tf2::TransformException &ex) {
-      RCLCPP_WARN(node_->get_logger(), "T3 scan %zu TF error: %s", k, ex.what());
-      continue;
-    }
-
-    const tf2::Quaternion qrot(
-      tf_msg.transform.rotation.x, tf_msg.transform.rotation.y,
-      tf_msg.transform.rotation.z, tf_msg.transform.rotation.w);
-    const tf2::Matrix3x3 Rmat(qrot);
-    const tf2::Vector3 tvec(
-      tf_msg.transform.translation.x,
-      tf_msg.transform.translation.y,
-      tf_msg.transform.translation.z);
-
-    for (const auto &pt : cloud->points) {
-      if (!std::isfinite(pt.x) || !std::isfinite(pt.y) || !std::isfinite(pt.z)) { continue; }
-      if (is_ground_coloured(pt)) { continue; }
-
-      const tf2::Vector3 tp = Rmat * tf2::Vector3(pt.x, pt.y, pt.z) + tvec;
-      if (tp.z() < kTask3CloudZMin || tp.z() > kTask3CloudZMax) { continue; }
-
-      PointT out = pt;
-      out.x = static_cast<float>(tp.x());
-      out.y = static_cast<float>(tp.y());
-      out.z = static_cast<float>(tp.z());
-      merged_cloud->push_back(out);
-    }
-
-    ++good_scans;
-    RCLCPP_INFO(node_->get_logger(),
-      "T3 scan %zu/(%.2f,%.2f): merged cloud now %zu pts", k, sx, sy, merged_cloud->size());
-  }
-
-  return good_scans > 0 && !merged_cloud->empty();
-}
-
-void cw2::t3_cluster_cloud(const PointCPtr &cloud, std::vector<PointCPtr> &clusters)
-{
-  clusters.clear();
-  if (!cloud || cloud->empty()) { return; }
-
-  // Voxel-grid downsample to reduce density and merge overlapping observations
-  PointCPtr ds(new PointC);
-  pcl::VoxelGrid<PointT> vg;
-  vg.setInputCloud(cloud);
-  vg.setLeafSize(kTask3VoxelLeaf, kTask3VoxelLeaf, kTask3VoxelLeaf);
-  vg.filter(*ds);
-  if (ds->empty()) { return; }
-
-  // Euclidean clustering
-  pcl::search::KdTree<PointT>::Ptr tree(new pcl::search::KdTree<PointT>);
-  tree->setInputCloud(ds);
-
-  std::vector<pcl::PointIndices> cluster_indices;
-  pcl::EuclideanClusterExtraction<PointT> ec;
-  ec.setClusterTolerance(kTask3ClusterTol);
-  ec.setMinClusterSize(kTask3MinClusterPts);
-  ec.setMaxClusterSize(kTask3MaxClusterPts);
-  ec.setSearchMethod(tree);
-  ec.setInputCloud(ds);
-  ec.extract(cluster_indices);
-
-  clusters.reserve(cluster_indices.size());
-  for (const auto &idx_set : cluster_indices) {
-    PointCPtr c(new PointC);
-    c->reserve(idx_set.indices.size());
-    for (const int i : idx_set.indices) { c->push_back(ds->points[static_cast<std::size_t>(i)]); }
-    clusters.push_back(c);
-  }
-}
-
-std::string cw2::t3_classify_cluster(
-  const PointCPtr &cluster,
-  const geometry_msgs::msg::Point &centroid)
-{
-  // Attempt direct classification from the already-collected cluster points.
-  // build_task2_shape_signature computes its own centroid, so world-frame
-  // coordinates are fine.
-  if (cluster && cluster->size() >= kTask2MinObjectPoints) {
-    Task2ShapeSignature sig;
-    if (build_task2_shape_signature(*cluster, sig)) {
-      RCLCPP_DEBUG(node_->get_logger(),
-        "T3 classify direct: core=%.4f inner=%.4f mean_r=%.4f (%zu pts)",
-        sig.core_fraction, sig.inner_fraction, sig.mean_radius, cluster->size());
-      return (sig.core_fraction > kTask3CoreFracThreshold) ? "cross" : "nought";
-    }
-  }
-
-  // Fallback: move the arm over the object and scan close-up.
-  geometry_msgs::msg::PointStamped ps;
-  ps.header.frame_id = "panda_link0";
-  ps.point           = centroid;
-
-  Task2ShapeSignature sig;
-  if (observe_task2_shape(ps, "t3_shape", sig)) {
-    RCLCPP_DEBUG(node_->get_logger(),
-      "T3 classify fallback: core=%.4f inner=%.4f mean_r=%.4f",
-      sig.core_fraction, sig.inner_fraction, sig.mean_radius);
-    return (sig.core_fraction > kTask3CoreFracThreshold) ? "cross" : "nought";
-  }
-
-  RCLCPP_WARN(node_->get_logger(),
-    "T3: could not classify cluster at (%.3f, %.3f)", centroid.x, centroid.y);
-  return "unknown";
-}
-
-bool cw2::t3_find_basket_pos(const PointCPtr &basket_cloud, geometry_msgs::msg::Point &basket_pos)
-{
-  if (!basket_cloud || basket_cloud->size() < 30) { return false; }
-
-  double cx = 0.0, cy = 0.0;
-  for (const auto &pt : basket_cloud->points) { cx += pt.x; cy += pt.y; }
-  const double inv = 1.0 / static_cast<double>(basket_cloud->size());
-  basket_pos.x = cx * inv;
-  basket_pos.y = cy * inv;
-  basket_pos.z = 0.025;   // place target is just above ground/basket bottom
-
-  RCLCPP_INFO(node_->get_logger(),
-    "T3: basket detected at (%.3f, %.3f) from %zu pts",
-    basket_pos.x, basket_pos.y, basket_cloud->size());
-  return true;
-}
-
-void cw2::t3_register_obstacle(const PointCPtr &cluster, const std::string &id)
-{
-  if (!cluster || cluster->empty()) { return; }
-
-  float xmin =  std::numeric_limits<float>::max();
-  float ymin =  std::numeric_limits<float>::max();
-  float xmax = -std::numeric_limits<float>::max();
-  float ymax = -std::numeric_limits<float>::max();
-  float zmax = -std::numeric_limits<float>::max();
-
-  for (const auto &pt : cluster->points) {
-    xmin = std::min(xmin, pt.x); xmax = std::max(xmax, pt.x);
-    ymin = std::min(ymin, pt.y); ymax = std::max(ymax, pt.y);
-    zmax = std::max(zmax, pt.z);
-  }
-
-  const double inf = kTask3ObstacleInflation;
-  const double sx = (xmax - xmin) + 2.0 * inf;
-  const double sy = (ymax - ymin) + 2.0 * inf;
-  const double sz = static_cast<double>(zmax) + inf;  // from ground up
-
-  moveit_msgs::msg::CollisionObject obj;
-  obj.header.frame_id = "panda_link0";
-  obj.id              = id;
-  obj.operation       = moveit_msgs::msg::CollisionObject::ADD;
-
-  shape_msgs::msg::SolidPrimitive box;
-  box.type       = shape_msgs::msg::SolidPrimitive::BOX;
-  box.dimensions = {sx, sy, sz};
-  obj.primitives.push_back(box);
-
-  geometry_msgs::msg::Pose pose;
-  pose.position.x    = ((xmin + xmax) / 2.0);
-  pose.position.y    = ((ymin + ymax) / 2.0);
-  pose.position.z    = sz / 2.0;
-  pose.orientation.w = 1.0;
-  obj.primitive_poses.push_back(pose);
-
-  planning_scene_interface_.applyCollisionObject(obj);
-
-  RCLCPP_INFO(node_->get_logger(),
-    "T3 obstacle '%s' added at (%.3f, %.3f) size (%.3f × %.3f × %.3f)",
-    id.c_str(), pose.position.x, pose.position.y, sx, sy, sz);
-}
-
-void cw2::t3_clear_obstacles(const std::vector<std::string> &ids)
-{
-  if (!ids.empty()) {
-    planning_scene_interface_.removeCollisionObjects(ids);
-    RCLCPP_INFO(node_->get_logger(), "T3: removed %zu collision object(s)", ids.size());
-  }
-}
-
-bool cw2::t3_pick_and_place(
-  const geometry_msgs::msg::Point &object_pos,
-  const geometry_msgs::msg::Point &basket_pos,
-  const std::string &shape_type)
-{
-  // object_pos.z has already been corrected to z_min + kTask3ShapeHalfHeight
-  // in t3_callback, so it is equivalent to the spawner-provided centroid used in Task 1.
-  const std::string frame_id = "panda_link0";
-
-  if (!set_gripper_width(kOpenWidth)) {
-    RCLCPP_ERROR(node_->get_logger(), "T3: failed to open gripper before pick");
-    return false;
-  }
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "T3: failed to reach ready pose before pick");
-  }
-
-  geometry_msgs::msg::Point current_object_point = object_pos;
-
-  bool task_completed = false;
-  constexpr int kMaxRescanRounds = 3;
-
-  for (int scan_round = 0; scan_round < kMaxRescanRounds && !task_completed; ++scan_round) {
-    RCLCPP_INFO(node_->get_logger(),
-      "T3 pick round %d: object=(%.3f, %.3f, %.3f) shape=%s",
-      scan_round + 1,
-      current_object_point.x, current_object_point.y, current_object_point.z,
-      shape_type.c_str());
-
-    const std::vector<Task1Candidate> candidates =
-      build_task1_candidates(current_object_point, shape_type);
-
-    bool round_succeeded = false;
-
-    for (const Task1Candidate &candidate : candidates) {
-      RCLCPP_INFO(node_->get_logger(), "T3 trying %s", candidate.description.c_str());
-
-      const double grasp_dx = candidate.grasp_x - current_object_point.x;
-      const double grasp_dy = candidate.grasp_y - current_object_point.y;
-
-      // ── Pre-grasp hover ──────────────────────────────────────────────────────
-      const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
-        candidate.grasp_x,
-        candidate.grasp_y,
-        current_object_point.z + kPreGraspOffsetZ,
-        candidate.closing_axis_yaw);
-
-      if (!move_arm_to_pose(pre_grasp_pose, frame_id)) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to reach pre-grasp for %s", candidate.description.c_str());
-        continue;
-      }
-
-      // ── Cartesian descent to grasp height ────────────────────────────────────
-      geometry_msgs::msg::Pose grasp_pose = pre_grasp_pose;
-      grasp_pose.position.z = current_object_point.z + kGraspOffsetZ;
-
-      arm_group_->setPoseReferenceFrame(frame_id);
-      if (!execute_cartesian_path(*arm_group_, {grasp_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to descend for %s", candidate.description.c_str());
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Close gripper ────────────────────────────────────────────────────────
-      const bool close_command_succeeded = set_gripper_width(kClosedWidth);
-      rclcpp::sleep_for(std::chrono::milliseconds(400));
-      const double achieved_width = get_gripper_width();
-      const bool object_grasped = achieved_width > (2.0 * kClosedWidth + kGraspDetectionMargin);
-
-      RCLCPP_INFO(node_->get_logger(),
-        "T3 close result for %s: command=%s finger_width=%.3f m",
-        candidate.description.c_str(),
-        close_command_succeeded ? "success" : "blocked",
-        achieved_width);
-
-      if (!close_command_succeeded && !object_grasped) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to close gripper for %s (finger width %.3f m)",
-          candidate.description.c_str(), achieved_width);
-        set_gripper_width(kOpenWidth);
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Lift ────────────────────────────────────────────────────────────────
-      geometry_msgs::msg::Pose lift_pose = grasp_pose;
-      lift_pose.position.z += kLiftDistance;
-      arm_group_->setPoseReferenceFrame(frame_id);
-      const bool lifted = execute_cartesian_path(*arm_group_, {lift_pose}, kCartesianMinFraction);
-
-      if (!object_grasped || !lifted) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: no stable grasp for %s (finger width %.3f m)",
-          candidate.description.c_str(), achieved_width);
-        set_gripper_width(kOpenWidth);
-        geometry_msgs::msg::Pose retreat_pose = grasp_pose;
-        retreat_pose.position.z += kRetreatDistance;
-        arm_group_->setPoseReferenceFrame(frame_id);
-        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.8);
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Move to basket hover ────────────────────────────────────────────────
-      const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
-        basket_pos.x + grasp_dx,
-        basket_pos.y + grasp_dy,
-        basket_pos.z + kPlaceHoverOffsetZ,
-        candidate.closing_axis_yaw);
-
-      if (!move_arm_to_pose(place_hover_pose, frame_id)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to move above basket after grasp");
-        set_gripper_width(kOpenWidth);
-        break;
-      }
-
-      // ── Lower and release ───────────────────────────────────────────────────
-      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
-      place_release_pose.position.z = basket_pos.z + kPlaceReleaseOffsetZ;
-      arm_group_->setPoseReferenceFrame(frame_id);
-      execute_cartesian_path(*arm_group_, {place_release_pose}, 0.8);
-
-      if (!set_gripper_width(kOpenWidth)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to release object above basket");
-      }
-      rclcpp::sleep_for(std::chrono::milliseconds(300));
-
-      // ── Post-release retreat ─────────────────────────────────────────────────
-      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
-      post_release_pose.position.z = basket_pos.z + kPlaceHoverOffsetZ;
-      arm_group_->setPoseReferenceFrame(frame_id);
-      execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
-
-      task_completed = true;
-      round_succeeded = true;
-      break;
-    }
-
-    if (task_completed || round_succeeded) { break; }
-
-    // Rescan to refine object XY from the live point cloud before next round.
-    // Preserve the corrected z (= spawner-equivalent z = z_min - link_offset).
-    // The raw cloud centroid z returned by rescan is the shape centre (~0.065m),
-    // NOT the model-origin z (~0.025m) that kGraspOffsetZ is calibrated for.
-    if (scan_round < kMaxRescanRounds - 1) {
-      move_arm_to_named_target("ready");
-      const double corrected_z = current_object_point.z;
-      if (!rescan_task1_object_point(current_object_point, frame_id)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: rescan failed, stopping retries");
-        break;
-      }
-      current_object_point.z = corrected_z;  // restore: rescan z is cloud centroid, not model-origin z
-    }
-  }
-
-  move_arm_to_named_target("ready");
-  return task_completed;
 }

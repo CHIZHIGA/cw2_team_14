@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner
 
 # Utility rule file for ament_cmake_python_copy_cw2_world_spawner.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/compiler_depend
 include CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_cw2_world_spawner:
-	/usr/bin/cmake -E copy_directory /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_python/cw2_world_spawner/cw2_world_spawner
+	/usr/bin/cmake -E copy_directory /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_python/cw2_world_spawner/cw2_world_spawner
 
 ament_cmake_python_copy_cw2_world_spawner: CMakeFiles/ament_cmake_python_copy_cw2_world_spawner
 ament_cmake_python_copy_cw2_world_spawner: CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/depend:
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner /home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner /home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_cw2_world_spawner.dir/depend
 

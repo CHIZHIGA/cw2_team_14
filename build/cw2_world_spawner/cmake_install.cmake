@@ -1,8 +1,8 @@
-# Install script for directory: /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner
+# Install script for directory: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner")
+  set(CMAKE_INSTALL_PREFIX "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,11 +43,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/cw2_world_spawner")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/cw2_world_spawner")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_c/cw2_world_spawner/" REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -55,7 +55,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/library_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/library_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -65,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_generator_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_generator_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_c.so")
     file(RPATH_CHANGE
@@ -82,7 +82,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_fastrtps_c/cw2_world_spawner/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_fastrtps_c/cw2_world_spawner/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -92,12 +92,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so")
@@ -109,7 +109,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_introspection_c/cw2_world_spawner/" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_introspection_c/cw2_world_spawner/" REGEX "/[^/]*\\.h$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -119,12 +119,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_introspection_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_introspection_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so")
@@ -142,12 +142,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_c.so")
@@ -159,11 +159,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_cpp/cw2_world_spawner/" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_cpp/cw2_world_spawner/" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -173,7 +173,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHANGE
@@ -190,7 +190,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_introspection_cpp/cw2_world_spawner/" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cw2_world_spawner/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_typesupport_introspection_cpp/cw2_world_spawner/" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -200,7 +200,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHANGE
@@ -223,7 +223,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/libcw2_world_spawner__rosidl_typesupport_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so")
     file(RPATH_CHANGE
@@ -240,26 +240,26 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/pythonpath.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/pythonpath.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/pythonpath.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/pythonpath.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_python/cw2_world_spawner/cw2_world_spawner.egg-info/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner-0.1.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_python/cw2_world_spawner/cw2_world_spawner.egg-info/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner"
+        "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner"
       )
 endif()
 
@@ -270,12 +270,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner:/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
@@ -293,12 +293,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner:/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
@@ -316,12 +316,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner:/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner/cw2_world_spawner_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
@@ -339,12 +339,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_py.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/libcw2_world_spawner__rosidl_generator_py.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_generator_py/cw2_world_spawner/libcw2_world_spawner__rosidl_generator_py.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_py.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_py.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_py.so"
-         OLD_RPATH "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcw2_world_spawner__rosidl_generator_py.so")
@@ -356,111 +356,103 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rust_packages" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/rust_packages/cw2_world_spawner")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/TaskSetup.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_generator_rs/cw2_world_spawner/rust")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task1Service.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/TaskSetup.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task2Service.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task1Service.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task3Service.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task2Service.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/srv/TaskSetup.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_adapter/cw2_world_spawner/srv/Task3Service.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/TaskSetup_Request.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/srv/TaskSetup.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/TaskSetup_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/TaskSetup_Request.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/srv/Task1Service.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/TaskSetup_Response.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task1Service_Request.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/srv/Task1Service.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task1Service_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task1Service_Request.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/srv/Task2Service.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task1Service_Response.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task2Service_Request.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/srv/Task2Service.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task2Service_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task2Service_Request.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/srv/Task3Service.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task2Service_Response.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task3Service_Request.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/srv/Task3Service.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task3Service_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task3Service_Request.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_python/cw2_world_spawner_lib/cw2_world_spawner_lib.egg-info/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/srv" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/srv/Task3Service_Response.msg")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner_lib-0.1.0-py3.10.egg-info" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_python/cw2_world_spawner_lib/cw2_world_spawner_lib.egg-info/")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner_lib" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/src/cw2_world_spawner_lib/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/cw2_world_spawner_lib" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/src/cw2_world_spawner_lib/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib"
+        "/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/local/lib/python3.10/dist-packages/cw2_world_spawner_lib"
       )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cw2_world_spawner" TYPE PROGRAM FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/scripts/world_spawner.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cw2_world_spawner" TYPE PROGRAM FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/scripts/world_spawner.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/models")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/models")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE DIRECTORY FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/launch" REGEX "/[^/]*\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE DIRECTORY FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/launch" REGEX "/[^/]*\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cw2_world_spawner")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cw2_world_spawner")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cw2_world_spawner")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cw2_world_spawner")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -468,7 +460,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -476,38 +468,38 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/packages/cw2_world_spawner")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_index/share/ament_index/resource_index/packages/cw2_world_spawner")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -516,9 +508,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -526,7 +518,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -535,9 +527,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -545,7 +537,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -554,9 +546,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -564,7 +556,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -573,9 +565,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -583,7 +575,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -592,14 +584,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_cppExport.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -608,9 +600,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -618,7 +610,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -627,9 +619,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -637,7 +629,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -646,9 +638,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/cw2_world_spawner__rosidl_typesupport_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -656,7 +648,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake"
-         "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake")
+         "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -665,55 +657,54 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/CMakeFiles/Export/share/cw2_world_spawner/cmake/export_cw2_world_spawner__rosidl_generator_pyExport-noconfig.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/rosidl_cmake-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/rosidl_cmake-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner/cmake" TYPE FILE FILES
-    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_core/cw2_world_spawnerConfig.cmake"
-    "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/ament_cmake_core/cw2_world_spawnerConfig-version.cmake"
+    "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_core/cw2_world_spawnerConfig.cmake"
+    "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/ament_cmake_core/cw2_world_spawnerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_world_spawner/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cw2_world_spawner" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_world_spawner/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py/cmake_install.cmake")
-  include("/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__rs/cmake_install.cmake")
+  include("/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/cw2_world_spawner__py/cmake_install.cmake")
 
 endif()
 
@@ -725,5 +716,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ethan/COMP0250/cw2_team_14/build/cw2_world_spawner/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bizare/Desktop/cw2_team_14/build/cw2_world_spawner/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cw2_solution_node.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/cw2_solution_node.dir/progress.make
 include CMakeFiles/cw2_solution_node.dir/flags.make
 
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: CMakeFiles/cw2_solution_node.dir/flags.make
-CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp
+CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o: CMakeFiles/cw2_solution_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -MF CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o.d -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -c /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -MF CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o.d -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o -c /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp
 
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp > CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp > CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.i
 
 CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/src/cw2_node.cpp -o CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s
 
 # Object files for target cw2_solution_node
 cw2_solution_node_OBJECTS = \
@@ -362,24 +362,24 @@ cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_typesupport_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_typesupport_c.so
 cw2_solution_node: /opt/ros/humble/lib/libshape_msgs__rosidl_generator_c.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_c.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_introspection_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_cpp.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so
 cw2_solution_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
-cw2_solution_node: /home/ethan/COMP0250/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_typesupport_c.so
+cw2_solution_node: /home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib/libcw2_world_spawner__rosidl_generator_c.so
 cw2_solution_node: /opt/ros/humble/lib/libmessage_filters.so
 cw2_solution_node: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 cw2_solution_node: /opt/ros/humble/lib/librmw.so
@@ -561,7 +561,7 @@ cw2_solution_node: /opt/ros/humble/lib/librcpputils.so
 cw2_solution_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 cw2_solution_node: /opt/ros/humble/lib/librcutils.so
 cw2_solution_node: CMakeFiles/cw2_solution_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cw2_solution_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cw2_solution_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cw2_solution_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -573,6 +573,6 @@ CMakeFiles/cw2_solution_node.dir/clean:
 .PHONY : CMakeFiles/cw2_solution_node.dir/clean
 
 CMakeFiles/cw2_solution_node.dir/depend:
-	cd /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14 /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_solution_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles/cw2_solution_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cw2_solution_node.dir/depend
 

@@ -1,0 +1,61 @@
+[0.050s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs
+[0.202s] -- The C compiler identification is GNU 11.4.0
+[0.354s] -- The CXX compiler identification is GNU 11.4.0
+[0.379s] -- Detecting C compiler ABI info
+[0.539s] -- Detecting C compiler ABI info - done
+[0.559s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.560s] -- Detecting C compile features
+[0.560s] -- Detecting C compile features - done
+[0.569s] -- Detecting CXX compiler ABI info
+[0.760s] -- Detecting CXX compiler ABI info - done
+[0.785s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.785s] -- Detecting CXX compile features
+[0.785s] -- Detecting CXX compile features - done
+[0.814s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.221s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.676s] -- Configuring done
+[1.677s] -- Generating done
+[1.680s] -- Build files have been written to: /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs
+[1.696s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs
+[1.698s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs -- -j2 -l2
+[1.787s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs -- -j2 -l2
+[1.789s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs
+[1.805s] -- Install configuration: ""
+[1.805s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/config
+[1.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/config/ros2_controllers.yaml
+[1.806s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/config/moveit_controllers.yaml
+[1.807s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/config/ros2_controllers_effort.yaml
+[1.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/config/ros2_controllers_hybrid.yaml
+[1.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch
+[1.808s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch/display_real.launch.py
+[1.809s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch/camera_proc.launch
+[1.811s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch/display.launch.py
+[1.811s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch/display.launch
+[1.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch/camera_proc.launch.py
+[1.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/launch/display_real.launch
+[1.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/rviz
+[1.812s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/rviz/urdf.rviz
+[1.813s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/rviz/real_rviz.rviz
+[1.813s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/srdf
+[1.813s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/srdf/panda_with_rs.srdf.xacro
+[1.815s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/urdf
+[1.815s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/urdf/panda_with_rs.xacro
+[1.815s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/urdf/panda_with_rs_PYBULLET.urdf
+[1.815s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/urdf/panda_with_rs.urdf
+[1.819s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/lib/rpl_panda_with_rs/init_panda_pose.py
+[1.820s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/ament_index/resource_index/package_run_dependencies/rpl_panda_with_rs
+[1.820s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/ament_index/resource_index/parent_prefix_path/rpl_panda_with_rs
+[1.824s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/environment/ament_prefix_path.sh
+[1.824s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/environment/ament_prefix_path.dsv
+[1.824s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/environment/path.sh
+[1.825s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/environment/path.dsv
+[1.825s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/local_setup.bash
+[1.825s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/local_setup.sh
+[1.825s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/local_setup.zsh
+[1.825s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/local_setup.dsv
+[1.832s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.dsv
+[1.833s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/ament_index/resource_index/packages/rpl_panda_with_rs
+[1.833s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/cmake/rpl_panda_with_rsConfig.cmake
+[1.834s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/cmake/rpl_panda_with_rsConfig-version.cmake
+[1.834s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs/share/rpl_panda_with_rs/package.xml
+[1.836s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs

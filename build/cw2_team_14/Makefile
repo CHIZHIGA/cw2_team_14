@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/COMP0250/cw2_team_14/src/courseworks/cw2_team_14
+CMAKE_SOURCE_DIR = /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14
+CMAKE_BINARY_DIR = /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles /home/bizare/Desktop/cw2_team_14/build/cw2_team_14//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -430,19 +430,6 @@ cw2_team_14__py: cmake_check_build_system
 cw2_team_14__py/fast:
 	$(MAKE) $(MAKESILENT) -f cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/build.make cw2_team_14__py/CMakeFiles/cw2_team_14__py.dir/build
 .PHONY : cw2_team_14__py/fast
-
-#=============================================================================
-# Target rules for targets named cw2_team_14__rs
-
-# Build rule for target.
-cw2_team_14__rs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cw2_team_14__rs
-.PHONY : cw2_team_14__rs
-
-# fast build rule for target.
-cw2_team_14__rs/fast:
-	$(MAKE) $(MAKESILENT) -f cw2_team_14__rs/CMakeFiles/cw2_team_14__rs.dir/build.make cw2_team_14__rs/CMakeFiles/cw2_team_14__rs.dir/build
-.PHONY : cw2_team_14__rs/fast
 
 rosidl_generator_c/cw2_team_14/srv/detail/example__functions.o: rosidl_generator_c/cw2_team_14/srv/detail/example__functions.c.o
 .PHONY : rosidl_generator_c/cw2_team_14/srv/detail/example__functions.o
@@ -756,6 +743,78 @@ src/cw2_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_solution_node.dir/build.make CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.s
 .PHONY : src/cw2_node.cpp.s
 
+src/task1.o: src/task1.cpp.o
+.PHONY : src/task1.o
+
+# target to build an object file
+src/task1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.o
+.PHONY : src/task1.cpp.o
+
+src/task1.i: src/task1.cpp.i
+.PHONY : src/task1.i
+
+# target to preprocess a source file
+src/task1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.i
+.PHONY : src/task1.cpp.i
+
+src/task1.s: src/task1.cpp.s
+.PHONY : src/task1.s
+
+# target to generate assembly for a file
+src/task1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task1.cpp.s
+.PHONY : src/task1.cpp.s
+
+src/task2.o: src/task2.cpp.o
+.PHONY : src/task2.o
+
+# target to build an object file
+src/task2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.o
+.PHONY : src/task2.cpp.o
+
+src/task2.i: src/task2.cpp.i
+.PHONY : src/task2.i
+
+# target to preprocess a source file
+src/task2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.i
+.PHONY : src/task2.cpp.i
+
+src/task2.s: src/task2.cpp.s
+.PHONY : src/task2.s
+
+# target to generate assembly for a file
+src/task2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task2.cpp.s
+.PHONY : src/task2.cpp.s
+
+src/task3.o: src/task3.cpp.o
+.PHONY : src/task3.o
+
+# target to build an object file
+src/task3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.o
+.PHONY : src/task3.cpp.o
+
+src/task3.i: src/task3.cpp.i
+.PHONY : src/task3.i
+
+# target to preprocess a source file
+src/task3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.i
+.PHONY : src/task3.cpp.i
+
+src/task3.s: src/task3.cpp.s
+.PHONY : src/task3.s
+
+# target to generate assembly for a file
+src/task3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cw2_team_14_cw2_class_lib.dir/build.make CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/task3.cpp.s
+.PHONY : src/task3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -774,7 +833,6 @@ help:
 	@echo "... cw2_team_14"
 	@echo "... cw2_team_14__cpp"
 	@echo "... cw2_team_14__py"
-	@echo "... cw2_team_14__rs"
 	@echo "... cw2_team_14_uninstall"
 	@echo "... uninstall"
 	@echo "... cw2_solution_node"
@@ -829,6 +887,15 @@ help:
 	@echo "... src/cw2_node.o"
 	@echo "... src/cw2_node.i"
 	@echo "... src/cw2_node.s"
+	@echo "... src/task1.o"
+	@echo "... src/task1.i"
+	@echo "... src/task1.s"
+	@echo "... src/task2.o"
+	@echo "... src/task2.i"
+	@echo "... src/task2.s"
+	@echo "... src/task3.o"
+	@echo "... src/task3.i"
+	@echo "... src/task3.s"
 .PHONY : help
 
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs
+# Install script for directory: /home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ethan/COMP0250/cw2_team_14/install/rpl_panda_with_rs")
+  set(CMAKE_INSTALL_PREFIX "/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,24 +44,24 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE DIRECTORY FILES
-    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/config"
-    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/launch"
-    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/rviz"
-    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/srdf"
-    "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/urdf"
+    "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/config"
+    "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/launch"
+    "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/rviz"
+    "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/srdf"
+    "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/urdf"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rpl_panda_with_rs" TYPE PROGRAM FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/scripts/init_panda_pose.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rpl_panda_with_rs" TYPE PROGRAM FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/scripts/init_panda_pose.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rpl_panda_with_rs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rpl_panda_with_rs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/rpl_panda_with_rs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/rpl_panda_with_rs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -69,7 +69,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -77,42 +77,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs/environment" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs/environment" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_index/share/ament_index/resource_index/packages/rpl_panda_with_rs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_index/share/ament_index/resource_index/packages/rpl_panda_with_rs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs/cmake" TYPE FILE FILES
-    "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_core/rpl_panda_with_rsConfig.cmake"
-    "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_core/rpl_panda_with_rsConfig-version.cmake"
+    "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_core/rpl_panda_with_rsConfig.cmake"
+    "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/ament_cmake_core/rpl_panda_with_rsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/ethan/COMP0250/cw2_team_14/src/courseworks/rpl_panda_with_rs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rpl_panda_with_rs" TYPE FILE FILES "/home/bizare/Desktop/cw2_team_14/src/courseworks/rpl_panda_with_rs/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -123,5 +123,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ethan/COMP0250/cw2_team_14/build/rpl_panda_with_rs/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bizare/Desktop/cw2_team_14/build/rpl_panda_with_rs/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

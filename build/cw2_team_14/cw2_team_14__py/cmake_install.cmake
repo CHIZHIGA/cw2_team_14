@@ -1,8 +1,8 @@
-# Install script for directory: /home/ethan/COMP0250/cw2_team_14/build/cw2_team_14/cw2_team_14__py
+# Install script for directory: /home/bizare/Desktop/cw2_team_14/build/cw2_team_14/cw2_team_14__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ethan/COMP0250/cw2_team_14/install/cw2_team_14")
+  set(CMAKE_INSTALL_PREFIX "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
