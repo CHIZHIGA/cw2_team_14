@@ -121,14 +121,15 @@ std::vector<Task1Candidate> build_task1_candidates(
 }
 
 // ── Task 3 constants ──────────────────────────────────────────────────────────
-constexpr double kTask3ScanHeight = 0.60;
+constexpr double kTask3ScanHeight = 0.66;
 constexpr double kTask3CloudZMin = 0.010;
 constexpr double kTask3CloudZMax = 0.150;
-constexpr float  kTask3VoxelLeaf = 0.008f;
+constexpr float  kTask3VoxelLeaf = 0.006f;
 constexpr double kTask3ClusterTol = 0.04;
-constexpr int    kTask3MinClusterPts = 40;
+constexpr int    kTask3MinClusterPts = 20;
 constexpr int    kTask3MaxClusterPts = 60000;
-constexpr double kTask3CoreFracThreshold = 0.04;   // > this → cross, ≤ → nought
+constexpr double kTask3CoreFracThreshold = 0.025;  // > this -> cross, <= -> nought
+constexpr double kTask3CoreRadius = 0.025;
 constexpr double kTask3ObstacleInflation = 0.06;   // extra safety margin around obstacles
 // Shapes are always 40mm tall (spec). The overhead camera sees the top surface,
 // so the point-cloud centroid z is biased ~half-height above the true shape centre.
@@ -143,7 +144,7 @@ bool is_task3_shape_coloured(const PointT &pt)
   const int b = static_cast<int>(pt.b);
   const int mx = std::max({r, g, b});
   const int mn = std::min({r, g, b});
-  return mx > 150 && (mx - mn) > 100;
+  return mx > 90 && (mx - mn) > 50;
 }
 
 // True when the point is dark grey / black – the obstacle colour.
@@ -163,9 +164,12 @@ bool is_task3_basket_coloured(const PointT &pt)
   const int r = static_cast<int>(pt.r);
   const int g = static_cast<int>(pt.g);
   const int b = static_cast<int>(pt.b);
-  return r > 80 && r < 190
-    && r > g + 40 && r > b + 40
-    && std::abs(g - b) < 40;
+  const int other_max = std::max(g, b);
+  return r > 70 && r < 170
+    && g > 20 && b > 20
+    && r > g + 20 && r > b + 20
+    && (r - other_max) < 110
+    && std::abs(g - b) < 35;
 }
 
 }  // namespace
@@ -1114,22 +1118,16 @@ void cw2::t3_callback(
     RCLCPP_ERROR(node_->get_logger(), "T3: failed to collect scene cloud");
     return;
   }
-  RCLCPP_INFO(node_->get_logger(), "T3: merged cloud has %zu points", merged_cloud->size());
-
   // ── 2. Separate by colour ───────────────────────────────────────────────────
   PointCPtr shape_cloud(new PointC);
   PointCPtr obstacle_cloud(new PointC);
   PointCPtr basket_cloud(new PointC);
 
   for (const auto &pt : merged_cloud->points) {
-    if (is_task3_shape_coloured(pt))    { shape_cloud->push_back(pt); }
-    else if (is_task3_obstacle_coloured(pt)) { obstacle_cloud->push_back(pt); }
+    if (is_task3_obstacle_coloured(pt)) { obstacle_cloud->push_back(pt); }
     else if (is_task3_basket_coloured(pt))   { basket_cloud->push_back(pt); }
+    else if (is_task3_shape_coloured(pt))    { shape_cloud->push_back(pt); }
   }
-
-  RCLCPP_INFO(node_->get_logger(),
-    "T3: colour split – shapes=%zu  obstacles=%zu  basket=%zu",
-    shape_cloud->size(), obstacle_cloud->size(), basket_cloud->size());
 
   // ── 3. Cluster each sub-cloud ───────────────────────────────────────────────
   std::vector<PointCPtr> shape_clusters;
@@ -1138,9 +1136,14 @@ void cw2::t3_callback(
   std::vector<PointCPtr> obstacle_clusters;
   t3_cluster_cloud(obstacle_cloud, obstacle_clusters);
 
-  RCLCPP_INFO(node_->get_logger(),
-    "T3: clusters – shapes=%zu  obstacles=%zu",
-    shape_clusters.size(), obstacle_clusters.size());
+  RCLCPP_INFO(
+    node_->get_logger(),
+    "T3 detection: merged=%zu shape_pts=%zu obstacle_pts=%zu basket_pts=%zu shape_clusters=%zu",
+    merged_cloud->size(),
+    shape_cloud->size(),
+    obstacle_cloud->size(),
+    basket_cloud->size(),
+    shape_clusters.size());
 
   // ── 4. Locate basket ────────────────────────────────────────────────────────
   geometry_msgs::msg::Point basket_pos;
@@ -1163,7 +1166,7 @@ void cw2::t3_callback(
     }
     basket_pos.z = 0.025;
     RCLCPP_WARN(node_->get_logger(),
-      "T3: basket not detected by colour, using fallback (%.3f, %.3f)", basket_pos.x, basket_pos.y);
+      "T3: basket fallback at (%.3f, %.3f)", basket_pos.x, basket_pos.y);
   }
 
   // ── 5. Add obstacles to MoveIt planning scene ───────────────────────────────
@@ -1203,10 +1206,6 @@ void cw2::t3_callback(
 
     const std::string shape_type = t3_classify_cluster(cluster, centroid);
 
-    RCLCPP_INFO(node_->get_logger(),
-      "T3 cluster at (%.3f, %.3f, %.3f) [z_min=%.3f]: %s  (%zu pts)",
-      centroid.x, centroid.y, centroid.z, z_min, shape_type.c_str(), cluster->size());
-
     detected_shapes.push_back({centroid, shape_type});
   }
 
@@ -1218,13 +1217,26 @@ void cw2::t3_callback(
     else if (s.shape_type == "cross")  { ++n_cross; }
   }
   const int total = n_nought + n_cross;
-  const bool cross_wins     = (n_cross >= n_nought);
-  const std::string most_common = cross_wins ? "cross" : "nought";
-  const int most_common_count   = cross_wins ? n_cross : n_nought;
+  std::string most_common;
+  int most_common_count = 0;
+  if (n_cross > n_nought) {
+    most_common = "cross";
+    most_common_count = n_cross;
+  } else if (n_nought > n_cross) {
+    most_common = "nought";
+    most_common_count = n_nought;
+  } else if (!detected_shapes.empty()) {
+    most_common = detected_shapes.front().shape_type;
+    most_common_count = n_cross;
+  }
 
   RCLCPP_INFO(node_->get_logger(),
-    "T3 summary: total=%d  nought=%d  cross=%d  most_common=%s(%d)",
-    total, n_nought, n_cross, most_common.c_str(), most_common_count);
+    "T3 summary: total=%d nought=%d cross=%d most_common=%s%s",
+    total,
+    n_nought,
+    n_cross,
+    most_common.empty() ? "none" : most_common.c_str(),
+    (n_nought == n_cross && total > 0) ? " (tie, using first detected)" : "");
 
   // ── 8. Fill response ────────────────────────────────────────────────────────
   response->total_num_shapes      = total;
@@ -1236,7 +1248,7 @@ void cw2::t3_callback(
 
   // ── 9. Pick and place one of the most-common shape ──────────────────────────
   for (const auto &s : detected_shapes) {
-    if (s.shape_type == most_common) {
+    if (!most_common.empty() && s.shape_type == most_common) {
       RCLCPP_INFO(node_->get_logger(),
         "T3: picking %s at (%.3f, %.3f, %.3f) → basket (%.3f, %.3f)",
         most_common.c_str(), s.centroid.x, s.centroid.y, s.centroid.z,
@@ -1256,7 +1268,7 @@ void cw2::t3_callback(
   move_arm_to_named_target("ready");
 
   RCLCPP_INFO(node_->get_logger(),
-    "Task 3 completed: total_num_shapes=%d  num_most_common_shape=%d",
+    "Task 3 completed: total_num_shapes=%d num_most_common_shape=%d",
     total, most_common_count);
 }
 
@@ -1281,12 +1293,50 @@ bool cw2::t3_collect_scene_cloud(PointCPtr &merged_cloud, const std::string &tar
     const double sx = scan_xy[k].first;
     const double sy = scan_xy[k].second;
 
-    const geometry_msgs::msg::Pose scan_pose =
+    const geometry_msgs::msg::Pose nominal_pose =
       make_top_down_pose(sx, sy, kTask3ScanHeight, 0.0);
+    geometry_msgs::msg::Pose scan_pose = nominal_pose;
+
+    std::string cloud_frame;
+    {
+      std::lock_guard<std::mutex> lk(cloud_mutex_);
+      cloud_frame = g_input_pc_frame_id_;
+    }
+
+    const std::string end_effector_link =
+      arm_group_->getEndEffectorLink().empty() ? "panda_link8" : arm_group_->getEndEffectorLink();
+    if (!cloud_frame.empty()) {
+      try {
+        const geometry_msgs::msg::TransformStamped camera_in_eef_msg =
+          tf_buffer_.lookupTransform(
+            end_effector_link, cloud_frame, tf2::TimePointZero, tf2::durationFromSec(0.5));
+        const tf2::Quaternion pose_q(
+          nominal_pose.orientation.x,
+          nominal_pose.orientation.y,
+          nominal_pose.orientation.z,
+          nominal_pose.orientation.w);
+        const tf2::Matrix3x3 pose_rot(pose_q);
+        const tf2::Vector3 camera_in_eef(
+          camera_in_eef_msg.transform.translation.x,
+          camera_in_eef_msg.transform.translation.y,
+          camera_in_eef_msg.transform.translation.z);
+        const tf2::Vector3 camera_offset_in_base = pose_rot * camera_in_eef;
+        scan_pose.position.x -= camera_offset_in_base.x();
+        scan_pose.position.y -= camera_offset_in_base.y();
+        scan_pose.position.z -= camera_offset_in_base.z();
+      } catch (const tf2::TransformException &ex) {
+        RCLCPP_DEBUG(
+          node_->get_logger(),
+          "T3 scan %zu using nominal pose because camera offset lookup failed: %s",
+          k,
+          ex.what());
+      }
+    }
 
     if (!move_arm_to_pose(scan_pose, target_frame)) {
       RCLCPP_WARN(node_->get_logger(),
-        "T3 scan %zu: could not reach (%.2f, %.2f, %.2f)", k, sx, sy, kTask3ScanHeight);
+        "T3 scan %zu: could not reach camera target (%.2f, %.2f, %.2f)",
+        k, sx, sy, kTask3ScanHeight);
       continue;
     }
 
@@ -1303,7 +1353,6 @@ bool cw2::t3_collect_scene_cloud(PointCPtr &merged_cloud, const std::string &tar
     }
 
     PointCPtr cloud;
-    std::string cloud_frame;
     {
       std::lock_guard<std::mutex> lk(cloud_mutex_);
       if (!g_cloud_ptr || g_cloud_ptr->empty()) { continue; }
@@ -1344,7 +1393,7 @@ bool cw2::t3_collect_scene_cloud(PointCPtr &merged_cloud, const std::string &tar
     }
 
     ++good_scans;
-    RCLCPP_INFO(node_->get_logger(),
+    RCLCPP_DEBUG(node_->get_logger(),
       "T3 scan %zu/(%.2f,%.2f): merged cloud now %zu pts", k, sx, sy, merged_cloud->size());
   }
 
@@ -1390,35 +1439,36 @@ std::string cw2::t3_classify_cluster(
   const PointCPtr &cluster,
   const geometry_msgs::msg::Point &centroid)
 {
-  // Attempt direct classification from the already-collected cluster points.
-  // build_task2_shape_signature computes its own centroid, so world-frame
-  // coordinates are fine.
-  if (cluster && cluster->size() >= kTask2MinObjectPoints) {
-    Task2ShapeSignature sig;
-    if (build_task2_shape_signature(*cluster, sig)) {
-      RCLCPP_DEBUG(node_->get_logger(),
-        "T3 classify direct: core=%.4f inner=%.4f mean_r=%.4f (%zu pts)",
-        sig.core_fraction, sig.inner_fraction, sig.mean_radius, cluster->size());
-      return (sig.core_fraction > kTask3CoreFracThreshold) ? "cross" : "nought";
+  if (!cluster || cluster->empty()) {
+    return "unknown";
+  }
+
+  std::size_t core_count = 0;
+  std::size_t coloured_count = 0;
+  for (const auto &pt : cluster->points) {
+    if (!is_task3_shape_coloured(pt)) {
+      continue;
+    }
+    ++coloured_count;
+    if (std::hypot(pt.x - centroid.x, pt.y - centroid.y) < kTask3CoreRadius) {
+      ++core_count;
     }
   }
 
-  // Fallback: move the arm over the object and scan close-up.
-  geometry_msgs::msg::PointStamped ps;
-  ps.header.frame_id = "panda_link0";
-  ps.point           = centroid;
-
-  Task2ShapeSignature sig;
-  if (observe_task2_shape(ps, "t3_shape", sig)) {
-    RCLCPP_DEBUG(node_->get_logger(),
-      "T3 classify fallback: core=%.4f inner=%.4f mean_r=%.4f",
-      sig.core_fraction, sig.inner_fraction, sig.mean_radius);
-    return (sig.core_fraction > kTask3CoreFracThreshold) ? "cross" : "nought";
+  if (coloured_count == 0) {
+    return "unknown";
   }
 
-  RCLCPP_WARN(node_->get_logger(),
-    "T3: could not classify cluster at (%.3f, %.3f)", centroid.x, centroid.y);
-  return "unknown";
+  const double core_fraction =
+    static_cast<double>(core_count) / static_cast<double>(coloured_count);
+  RCLCPP_DEBUG(
+    node_->get_logger(),
+    "T3 classify centre: core_fraction=%.3f (%zu/%zu pts)",
+    core_fraction,
+    core_count,
+    coloured_count);
+
+  return (core_fraction > kTask3CoreFracThreshold) ? "cross" : "nought";
 }
 
 bool cw2::t3_find_basket_pos(const PointCPtr &basket_cloud, geometry_msgs::msg::Point &basket_pos)
@@ -1432,7 +1482,7 @@ bool cw2::t3_find_basket_pos(const PointCPtr &basket_cloud, geometry_msgs::msg::
   basket_pos.y = cy * inv;
   basket_pos.z = 0.025;   // place target is just above ground/basket bottom
 
-  RCLCPP_INFO(node_->get_logger(),
+  RCLCPP_DEBUG(node_->get_logger(),
     "T3: basket detected at (%.3f, %.3f) from %zu pts",
     basket_pos.x, basket_pos.y, basket_cloud->size());
   return true;
@@ -1478,7 +1528,7 @@ void cw2::t3_register_obstacle(const PointCPtr &cluster, const std::string &id)
 
   planning_scene_interface_.applyCollisionObject(obj);
 
-  RCLCPP_INFO(node_->get_logger(),
+  RCLCPP_DEBUG(node_->get_logger(),
     "T3 obstacle '%s' added at (%.3f, %.3f) size (%.3f × %.3f × %.3f)",
     id.c_str(), pose.position.x, pose.position.y, sx, sy, sz);
 }
@@ -1487,7 +1537,7 @@ void cw2::t3_clear_obstacles(const std::vector<std::string> &ids)
 {
   if (!ids.empty()) {
     planning_scene_interface_.removeCollisionObjects(ids);
-    RCLCPP_INFO(node_->get_logger(), "T3: removed %zu collision object(s)", ids.size());
+    RCLCPP_DEBUG(node_->get_logger(), "T3: removed %zu collision object(s)", ids.size());
   }
 }
 
