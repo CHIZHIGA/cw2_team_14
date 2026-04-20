@@ -46,6 +46,7 @@ constexpr double kCarryTransitOffsetZ = 0.60;
 constexpr double kPlaceHoverOffsetZ = 0.30;
 constexpr double kPlaceReleaseOffsetZ = 0.18;
 constexpr double kRetreatDistance = 0.08;
+constexpr char kAttachedObjectId[] = "grasped_shape";
 
 constexpr double kCartesianEefStep = 0.005;
 constexpr double kCartesianMinFraction = 0.95;
@@ -352,6 +353,47 @@ double cw2::get_gripper_width() const
   }
 
   return left_it->second + right_it->second;
+}
+
+void cw2::attach_grasped_object_collision(const std::string &shape_type)
+{
+  const std::string lowered_shape = to_lower_copy(shape_type);
+  const bool is_nought = lowered_shape.find("nought") != std::string::npos;
+
+  moveit_msgs::msg::AttachedCollisionObject attached_object;
+  attached_object.link_name = "panda_link8";
+  attached_object.object.header.frame_id = "panda_link8";
+  attached_object.object.id = kAttachedObjectId;
+
+  shape_msgs::msg::SolidPrimitive primitive;
+  primitive.type = shape_msgs::msg::SolidPrimitive::BOX;
+  primitive.dimensions.resize(3);
+  if (is_nought) {
+    primitive.dimensions[shape_msgs::msg::SolidPrimitive::BOX_X] = 0.095;
+    primitive.dimensions[shape_msgs::msg::SolidPrimitive::BOX_Y] = 0.095;
+  } else {
+    primitive.dimensions[shape_msgs::msg::SolidPrimitive::BOX_X] = 0.110;
+    primitive.dimensions[shape_msgs::msg::SolidPrimitive::BOX_Y] = 0.110;
+  }
+  primitive.dimensions[shape_msgs::msg::SolidPrimitive::BOX_Z] = 0.050;
+
+  geometry_msgs::msg::Pose object_pose;
+  object_pose.orientation.w = 1.0;
+  object_pose.position.z = kGraspOffsetZ;
+
+  attached_object.object.primitives.push_back(primitive);
+  attached_object.object.primitive_poses.push_back(object_pose);
+  attached_object.object.operation = moveit_msgs::msg::CollisionObject::ADD;
+  attached_object.touch_links = {"panda_link8", "panda_hand", "panda_leftfinger", "panda_rightfinger"};
+
+  planning_scene_interface_.applyAttachedCollisionObject(attached_object);
+  RCLCPP_INFO(node_->get_logger(), "Attached grasped-object collision geometry for %s", shape_type.c_str());
+}
+
+void cw2::detach_grasped_object_collision()
+{
+  planning_scene_interface_.removeAttachedCollisionObjects({kAttachedObjectId});
+  planning_scene_interface_.removeCollisionObjects({kAttachedObjectId});
 }
 
 bool cw2::rescan_task1_object_point(
@@ -979,6 +1021,8 @@ void cw2::t1_callback(
     request->goal_point.point.y,
     request->goal_point.point.z);
 
+  detach_grasped_object_collision();
+
   if (!set_gripper_width(kOpenWidth)) {
     RCLCPP_ERROR(node_->get_logger(), "Failed to open gripper before Task 1");
     return;
@@ -1137,6 +1181,8 @@ void cw2::t1_callback(
         continue;
       }
 
+      attach_grasped_object_collision(request->shape_type);
+
       const double carry_transit_z = std::max(
         lift_pose.position.z,
         request->goal_point.point.z + kCarryTransitOffsetZ);
@@ -1152,6 +1198,7 @@ void cw2::t1_callback(
           node_->get_logger(),
           "Failed to carry object at safe transit height for %s",
           candidate.description.c_str());
+        detach_grasped_object_collision();
         set_gripper_width(kOpenWidth);
         if (!move_arm_to_named_target("ready")) {
           RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after carry transit failure");
@@ -1168,6 +1215,7 @@ void cw2::t1_callback(
       arm_group_->setPoseReferenceFrame(goal_frame);
       if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to descend to basket hover after grasp");
+        detach_grasped_object_collision();
         set_gripper_width(kOpenWidth);
         if (!move_arm_to_named_target("ready")) {
           RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after basket-hover failure");
@@ -1183,6 +1231,7 @@ void cw2::t1_callback(
       if (!set_gripper_width(kOpenWidth)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to release object above basket");
       }
+      detach_grasped_object_collision();
 
       rclcpp::sleep_for(std::chrono::milliseconds(300));
 
@@ -1777,6 +1826,8 @@ bool cw2::t3_pick_and_place(
     return false;
   }
 
+  detach_grasped_object_collision();
+
   if (!move_arm_to_named_target("ready")) {
     RCLCPP_WARN(node_->get_logger(), "T3: failed to reach ready pose before pick");
   }
@@ -1908,6 +1959,8 @@ bool cw2::t3_pick_and_place(
         continue;
       }
 
+      attach_grasped_object_collision(shape_type);
+
       const double carry_transit_z = std::max(
         lift_pose.position.z,
         basket_pos.z + kCarryTransitOffsetZ);
@@ -1921,6 +1974,7 @@ bool cw2::t3_pick_and_place(
       if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
         RCLCPP_WARN(node_->get_logger(), "T3: failed to carry object at safe transit height for %s",
           candidate.description.c_str());
+        detach_grasped_object_collision();
         set_gripper_width(kOpenWidth);
         move_arm_to_named_target("ready");
         continue;
@@ -1936,6 +1990,7 @@ bool cw2::t3_pick_and_place(
       arm_group_->setPoseReferenceFrame(frame_id);
       if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
         RCLCPP_WARN(node_->get_logger(), "T3: failed to descend to basket hover after grasp");
+        detach_grasped_object_collision();
         set_gripper_width(kOpenWidth);
         move_arm_to_named_target("ready");
         continue;
@@ -1950,6 +2005,7 @@ bool cw2::t3_pick_and_place(
       if (!set_gripper_width(kOpenWidth)) {
         RCLCPP_WARN(node_->get_logger(), "T3: failed to release object above basket");
       }
+      detach_grasped_object_collision();
       rclcpp::sleep_for(std::chrono::milliseconds(300));
 
       // ── Post-release retreat ─────────────────────────────────────────────────

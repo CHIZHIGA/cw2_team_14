@@ -107,6 +107,9 @@ private:
     const std::string &shape_type,
     double &yaw,
     double &confidence);
+  void attach_grasped_object_collision(
+    const std::string &shape_type);
+  void detach_grasped_object_collision();
   bool extract_task2_object_cloud(
     const geometry_msgs::msg::PointStamped &object_point,
     PointC &object_cloud);
