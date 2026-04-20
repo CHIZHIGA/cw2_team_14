@@ -93,13 +93,17 @@ std::string to_lower_copy(std::string_view text)
   return lowered;
 }
 
+bool is_nought_shape_type(std::string_view shape_type)
+{
+  return to_lower_copy(shape_type).find("nought") != std::string::npos;
+}
+
 std::vector<Task1Candidate> build_task1_candidates(
   const geometry_msgs::msg::Point &object_point,
   std::string_view shape_type,
   const double orientation_offset = 0.0)
 {
-  const std::string lowered_shape = to_lower_copy(shape_type);
-  const bool is_nought = lowered_shape.find("nought") != std::string::npos;
+  const bool is_nought = is_nought_shape_type(shape_type);
   std::vector<double> radial_angles;
   if (is_nought) {
     radial_angles = {0.0, 0.5 * kPi, kPi, 1.5 * kPi};
@@ -1034,11 +1038,12 @@ void cw2::t1_callback(
   }
 
   geometry_msgs::msg::Point current_object_point = request->object_point.point;
+  const bool is_nought = is_nought_shape_type(request->shape_type);
 
   bool task_completed = false;
-  constexpr int kMaxRescanRounds = 3;
+  const int max_scan_rounds = is_nought ? 1 : 3;
 
-  for (int scan_round = 0; scan_round < kMaxRescanRounds && !task_completed; ++scan_round) {
+  for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
     RCLCPP_INFO(
       node_->get_logger(),
       "Task 1 scan round %d using object point (%.3f, %.3f, %.3f)",
@@ -1049,24 +1054,28 @@ void cw2::t1_callback(
 
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
-    geometry_msgs::msg::PointStamped scan_target;
-    scan_target.header.frame_id = object_frame;
-    scan_target.point = current_object_point;
-    if (estimate_task1_object_yaw(
-        scan_target,
-        request->shape_type,
-        orientation_offset,
-        orientation_confidence) &&
-      orientation_confidence >= kTask1YawMinConfidence)
-    {
-      RCLCPP_INFO(
-        node_->get_logger(),
-        "Task 1 using yaw refinement %.1f deg (confidence %.3f)",
-        orientation_offset * 180.0 / kPi,
-        orientation_confidence);
+    if (is_nought) {
+      RCLCPP_INFO(node_->get_logger(), "Task 1 nought: skipping scan-based yaw refinement and rescans");
     } else {
-      orientation_offset = 0.0;
-      RCLCPP_INFO(node_->get_logger(), "Task 1 falling back to axis-aligned grasp candidates");
+      geometry_msgs::msg::PointStamped scan_target;
+      scan_target.header.frame_id = object_frame;
+      scan_target.point = current_object_point;
+      if (estimate_task1_object_yaw(
+          scan_target,
+          request->shape_type,
+          orientation_offset,
+          orientation_confidence) &&
+        orientation_confidence >= kTask1YawMinConfidence)
+      {
+        RCLCPP_INFO(
+          node_->get_logger(),
+          "Task 1 using yaw refinement %.1f deg (confidence %.3f)",
+          orientation_offset * 180.0 / kPi,
+          orientation_confidence);
+      } else {
+        orientation_offset = 0.0;
+        RCLCPP_INFO(node_->get_logger(), "Task 1 falling back to axis-aligned grasp candidates");
+      }
     }
 
     const std::vector<Task1Candidate> candidates =
@@ -1246,7 +1255,7 @@ void cw2::t1_callback(
       break;
     }
 
-    if (scan_round < kMaxRescanRounds - 1) {
+    if (scan_round < max_scan_rounds - 1) {
       if (!move_arm_to_named_target("ready")) {
         RCLCPP_WARN(node_->get_logger(), "Failed to move to ready before rescan");
       }
@@ -1830,11 +1839,12 @@ bool cw2::t3_pick_and_place(
   }
 
   geometry_msgs::msg::Point current_object_point = object_pos;
+  const bool is_nought = is_nought_shape_type(shape_type);
 
   bool task_completed = false;
-  constexpr int kMaxRescanRounds = 3;
+  const int max_scan_rounds = is_nought ? 1 : 3;
 
-  for (int scan_round = 0; scan_round < kMaxRescanRounds && !task_completed; ++scan_round) {
+  for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
     RCLCPP_INFO(node_->get_logger(),
       "T3 pick round %d: object=(%.3f, %.3f, %.3f) shape=%s",
       scan_round + 1,
@@ -1843,23 +1853,27 @@ bool cw2::t3_pick_and_place(
 
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
-    geometry_msgs::msg::PointStamped scan_target;
-    scan_target.header.frame_id = frame_id;
-    scan_target.point = current_object_point;
-    if (estimate_task1_object_yaw(
-        scan_target,
-        shape_type,
-        orientation_offset,
-        orientation_confidence) &&
-      orientation_confidence >= kTask1YawMinConfidence)
-    {
-      RCLCPP_INFO(node_->get_logger(),
-        "T3 using yaw refinement %.1f deg (confidence %.3f)",
-        orientation_offset * 180.0 / kPi,
-        orientation_confidence);
+    if (is_nought) {
+      RCLCPP_INFO(node_->get_logger(), "T3 nought: skipping scan-based yaw refinement and rescans");
     } else {
-      orientation_offset = 0.0;
-      RCLCPP_INFO(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
+      geometry_msgs::msg::PointStamped scan_target;
+      scan_target.header.frame_id = frame_id;
+      scan_target.point = current_object_point;
+      if (estimate_task1_object_yaw(
+          scan_target,
+          shape_type,
+          orientation_offset,
+          orientation_confidence) &&
+        orientation_confidence >= kTask1YawMinConfidence)
+      {
+        RCLCPP_INFO(node_->get_logger(),
+          "T3 using yaw refinement %.1f deg (confidence %.3f)",
+          orientation_offset * 180.0 / kPi,
+          orientation_confidence);
+      } else {
+        orientation_offset = 0.0;
+        RCLCPP_INFO(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
+      }
     }
 
     const std::vector<Task1Candidate> candidates =
@@ -2022,7 +2036,7 @@ bool cw2::t3_pick_and_place(
     // Preserve the corrected z (= spawner-equivalent z = z_min - link_offset).
     // The raw cloud centroid z returned by rescan is the shape centre (~0.065m),
     // NOT the model-origin z (~0.025m) that kGraspOffsetZ is calibrated for.
-    if (scan_round < kMaxRescanRounds - 1) {
+    if (scan_round < max_scan_rounds - 1) {
       move_arm_to_named_target("ready");
       const double corrected_z = current_object_point.z;
       if (!rescan_task1_object_point(current_object_point, frame_id)) {
