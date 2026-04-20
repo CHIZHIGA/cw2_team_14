@@ -42,6 +42,7 @@ constexpr double kPreGraspOffsetZ = 0.3;
 constexpr double kApproachHoverOffsetZ = 0.50;
 constexpr double kGraspOffsetZ = 0.15;
 constexpr double kLiftDistance = 0.4;
+constexpr double kCarryTransitOffsetZ = 0.60;
 constexpr double kPlaceHoverOffsetZ = 0.30;
 constexpr double kPlaceReleaseOffsetZ = 0.18;
 constexpr double kRetreatDistance = 0.08;
@@ -1136,16 +1137,42 @@ void cw2::t1_callback(
         continue;
       }
 
+      const double carry_transit_z = std::max(
+        lift_pose.position.z,
+        request->goal_point.point.z + kCarryTransitOffsetZ);
+      const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
+        request->goal_point.point.x + grasp_dx,
+        request->goal_point.point.y + grasp_dy,
+        carry_transit_z,
+        candidate.closing_axis_yaw);
+
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "Failed to carry object at safe transit height for %s",
+          candidate.description.c_str());
+        set_gripper_width(kOpenWidth);
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after carry transit failure");
+        }
+        continue;
+      }
+
       const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
         request->goal_point.point.x + grasp_dx,
         request->goal_point.point.y + grasp_dy,
         request->goal_point.point.z + kPlaceHoverOffsetZ,
         candidate.closing_axis_yaw);
 
-      if (!move_arm_to_pose(place_hover_pose, goal_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to move above basket after grasp");
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(), "Failed to descend to basket hover after grasp");
         set_gripper_width(kOpenWidth);
-        break;
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after basket-hover failure");
+        }
+        continue;
       }
 
       geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
@@ -1881,6 +1908,24 @@ bool cw2::t3_pick_and_place(
         continue;
       }
 
+      const double carry_transit_z = std::max(
+        lift_pose.position.z,
+        basket_pos.z + kCarryTransitOffsetZ);
+      const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
+        basket_pos.x + grasp_dx,
+        basket_pos.y + grasp_dy,
+        carry_transit_z,
+        candidate.closing_axis_yaw);
+
+      arm_group_->setPoseReferenceFrame(frame_id);
+      if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(), "T3: failed to carry object at safe transit height for %s",
+          candidate.description.c_str());
+        set_gripper_width(kOpenWidth);
+        move_arm_to_named_target("ready");
+        continue;
+      }
+
       // ── Move to basket hover ────────────────────────────────────────────────
       const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
         basket_pos.x + grasp_dx,
@@ -1888,10 +1933,12 @@ bool cw2::t3_pick_and_place(
         basket_pos.z + kPlaceHoverOffsetZ,
         candidate.closing_axis_yaw);
 
-      if (!move_arm_to_pose(place_hover_pose, frame_id)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to move above basket after grasp");
+      arm_group_->setPoseReferenceFrame(frame_id);
+      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(), "T3: failed to descend to basket hover after grasp");
         set_gripper_width(kOpenWidth);
-        break;
+        move_arm_to_named_target("ready");
+        continue;
       }
 
       // ── Lower and release ───────────────────────────────────────────────────
