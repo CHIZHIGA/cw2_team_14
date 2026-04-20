@@ -59,6 +59,7 @@ constexpr double kTask2ScanOffset = 0.03;
 constexpr std::size_t kTask2MinObjectPoints = 30;
 constexpr std::size_t kTask2HistogramBins = 8;
 constexpr int kTask2MaxObservationAttemptsPerPose = 4;
+constexpr double kTask1YawMinConfidence = 0.20;
 
 bool is_ground_coloured(const PointT &point)
 {
@@ -91,7 +92,8 @@ std::string to_lower_copy(std::string_view text)
 
 std::vector<Task1Candidate> build_task1_candidates(
   const geometry_msgs::msg::Point &object_point,
-  std::string_view shape_type)
+  std::string_view shape_type,
+  const double orientation_offset = 0.0)
 {
   const std::string lowered_shape = to_lower_copy(shape_type);
   const bool is_nought = lowered_shape.find("nought") != std::string::npos;
@@ -109,12 +111,14 @@ std::vector<Task1Candidate> build_task1_candidates(
   candidates.reserve(radial_angles.size());
 
   for (const double radial_angle : radial_angles) {
-    const double grasp_x = object_point.x + grasp_radius * std::cos(radial_angle);
-    const double grasp_y = object_point.y + grasp_radius * std::sin(radial_angle);
-    const double closing_axis_yaw = is_nought ? radial_angle : radial_angle + (0.5 * kPi);
+    const double candidate_angle = radial_angle + orientation_offset;
+    const double grasp_x = object_point.x + grasp_radius * std::cos(candidate_angle);
+    const double grasp_y = object_point.y + grasp_radius * std::sin(candidate_angle);
+    const double closing_axis_yaw =
+      is_nought ? candidate_angle : candidate_angle + (0.5 * kPi);
     candidates.push_back(
       {grasp_x, grasp_y, closing_axis_yaw, "candidate angle " +
-      std::to_string(static_cast<int>(std::round(radial_angle * 180.0 / kPi))) + " deg"});
+      std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
   }
 
   return candidates;
@@ -424,6 +428,148 @@ bool cw2::rescan_task1_object_point(
     count);
 
   return true;
+}
+
+bool cw2::estimate_task1_object_yaw(
+  const geometry_msgs::msg::PointStamped &object_point,
+  const std::string &shape_type,
+  double &yaw,
+  double &confidence)
+{
+  yaw = 0.0;
+  confidence = 1.0;
+
+  if (to_lower_copy(shape_type).find("cross") == std::string::npos) {
+    return true;
+  }
+
+  const std::array<std::pair<double, double>, 5> scan_offsets = {{
+      {0.0, 0.0},
+      {kTask2ScanOffset, 0.0},
+      {-kTask2ScanOffset, 0.0},
+      {0.0, kTask2ScanOffset},
+      {0.0, -kTask2ScanOffset},
+    }};
+
+  for (std::size_t pose_index = 0; pose_index < scan_offsets.size(); ++pose_index) {
+    geometry_msgs::msg::Pose scan_pose;
+    std::string frame_id;
+    if (!build_task2_scan_pose(object_point, scan_offsets[pose_index], scan_pose, frame_id)) {
+      continue;
+    }
+
+    if (!move_arm_to_pose(scan_pose, frame_id)) {
+      RCLCPP_WARN(
+        node_->get_logger(),
+        "Task 1 yaw scan could not reach scan pose %zu",
+        pose_index + 1);
+      continue;
+    }
+
+    std::uint64_t initial_sequence = 0;
+    {
+      std::lock_guard<std::mutex> lock(cloud_mutex_);
+      initial_sequence = g_cloud_sequence_;
+    }
+
+    for (int attempt = 0; attempt < kTask2MaxObservationAttemptsPerPose; ++attempt) {
+      if (attempt == 0) {
+        rclcpp::sleep_for(std::chrono::milliseconds(700));
+      } else {
+        rclcpp::sleep_for(std::chrono::milliseconds(350));
+      }
+
+      std::uint64_t current_sequence = 0;
+      {
+        std::lock_guard<std::mutex> lock(cloud_mutex_);
+        current_sequence = g_cloud_sequence_;
+      }
+
+      if (current_sequence <= initial_sequence &&
+        attempt < kTask2MaxObservationAttemptsPerPose - 1)
+      {
+        continue;
+      }
+
+      PointC object_cloud;
+      if (!extract_task2_object_cloud(object_point, object_cloud)) {
+        continue;
+      }
+
+      if (object_cloud.size() < kTask2MinObjectPoints) {
+        continue;
+      }
+
+      double centroid_x = 0.0;
+      double centroid_y = 0.0;
+      for (const auto &point : object_cloud.points) {
+        centroid_x += point.x;
+        centroid_y += point.y;
+      }
+
+      const double inverse_point_count = 1.0 / static_cast<double>(object_cloud.size());
+      centroid_x *= inverse_point_count;
+      centroid_y *= inverse_point_count;
+
+      std::vector<double> radii;
+      radii.reserve(object_cloud.size());
+      for (const auto &point : object_cloud.points) {
+        radii.push_back(std::hypot(point.x - centroid_x, point.y - centroid_y));
+      }
+
+      std::sort(radii.begin(), radii.end());
+      const std::size_t scale_index =
+        std::min(radii.size() - 1, (radii.size() * 90) / 100);
+      const double radius_scale = radii[scale_index];
+      if (radius_scale < 1e-4) {
+        continue;
+      }
+
+      double c4 = 0.0;
+      double s4 = 0.0;
+      double total_weight = 0.0;
+      for (const auto &point : object_cloud.points) {
+        const double dx = point.x - centroid_x;
+        const double dy = point.y - centroid_y;
+        const double radius = std::hypot(dx, dy);
+        const double normalised_radius = radius / radius_scale;
+        if (normalised_radius < 0.35) {
+          continue;
+        }
+
+        const double weight = std::clamp(normalised_radius, 0.0, 1.5);
+        const double theta = std::atan2(dy, dx);
+        c4 += weight * std::cos(4.0 * theta);
+        s4 += weight * std::sin(4.0 * theta);
+        total_weight += weight;
+      }
+
+      if (total_weight < 1e-4) {
+        continue;
+      }
+
+      yaw = 0.25 * std::atan2(s4, c4);
+      while (yaw > (0.25 * kPi)) {
+        yaw -= 0.5 * kPi;
+      }
+      while (yaw <= (-0.25 * kPi)) {
+        yaw += 0.5 * kPi;
+      }
+
+      confidence = std::hypot(c4, s4) / total_weight;
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "Task 1 yaw estimate from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
+        pose_index + 1,
+        attempt + 1,
+        yaw * 180.0 / kPi,
+        confidence);
+      return true;
+    }
+  }
+
+  RCLCPP_WARN(node_->get_logger(), "Task 1 yaw scan failed to estimate object orientation");
+  return false;
 }
 
 bool cw2::extract_task2_object_cloud(
@@ -854,8 +1000,30 @@ void cw2::t1_callback(
       current_object_point.y,
       current_object_point.z);
 
+    double orientation_offset = 0.0;
+    double orientation_confidence = 0.0;
+    geometry_msgs::msg::PointStamped scan_target;
+    scan_target.header.frame_id = object_frame;
+    scan_target.point = current_object_point;
+    if (estimate_task1_object_yaw(
+        scan_target,
+        request->shape_type,
+        orientation_offset,
+        orientation_confidence) &&
+      orientation_confidence >= kTask1YawMinConfidence)
+    {
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "Task 1 using yaw refinement %.1f deg (confidence %.3f)",
+        orientation_offset * 180.0 / kPi,
+        orientation_confidence);
+    } else {
+      orientation_offset = 0.0;
+      RCLCPP_INFO(node_->get_logger(), "Task 1 falling back to axis-aligned grasp candidates");
+    }
+
     const std::vector<Task1Candidate> candidates =
-      build_task1_candidates(current_object_point, request->shape_type);
+      build_task1_candidates(current_object_point, request->shape_type, orientation_offset);
 
     bool round_succeeded = false;
 
@@ -1571,8 +1739,29 @@ bool cw2::t3_pick_and_place(
       current_object_point.x, current_object_point.y, current_object_point.z,
       shape_type.c_str());
 
+    double orientation_offset = 0.0;
+    double orientation_confidence = 0.0;
+    geometry_msgs::msg::PointStamped scan_target;
+    scan_target.header.frame_id = frame_id;
+    scan_target.point = current_object_point;
+    if (estimate_task1_object_yaw(
+        scan_target,
+        shape_type,
+        orientation_offset,
+        orientation_confidence) &&
+      orientation_confidence >= kTask1YawMinConfidence)
+    {
+      RCLCPP_INFO(node_->get_logger(),
+        "T3 using yaw refinement %.1f deg (confidence %.3f)",
+        orientation_offset * 180.0 / kPi,
+        orientation_confidence);
+    } else {
+      orientation_offset = 0.0;
+      RCLCPP_INFO(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
+    }
+
     const std::vector<Task1Candidate> candidates =
-      build_task1_candidates(current_object_point, shape_type);
+      build_task1_candidates(current_object_point, shape_type, orientation_offset);
 
     bool round_succeeded = false;
 
