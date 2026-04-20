@@ -1035,9 +1035,6 @@ void cw2::t1_callback(
       const double grasp_dy = candidate.grasp_y - current_object_point.y;
       const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
 
-      geometry_msgs::msg::Pose safe_lift_pose = arm_group_->getCurrentPose().pose;
-      safe_lift_pose.position.z = std::max(safe_lift_pose.position.z, safe_approach_z);
-
       const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
         candidate.grasp_x,
         candidate.grasp_y,
@@ -1050,16 +1047,8 @@ void cw2::t1_callback(
         current_object_point.z + kPreGraspOffsetZ,
         candidate.closing_axis_yaw);
 
-      arm_group_->setPoseReferenceFrame(object_frame);
-      if (!execute_cartesian_path(*arm_group_, {safe_lift_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "Failed to lift vertically to safe approach height for %s",
-          candidate.description.c_str());
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after safe-lift failure");
-        }
-        continue;
+      if (!move_arm_to_named_target("ready")) {
+        RCLCPP_WARN(node_->get_logger(), "Failed to return to ready before high approach");
       }
 
       if (!move_arm_to_pose(approach_hover_pose, object_frame)) {
@@ -1810,9 +1799,6 @@ bool cw2::t3_pick_and_place(
       const double grasp_dy = candidate.grasp_y - current_object_point.y;
       const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
 
-      geometry_msgs::msg::Pose safe_lift_pose = arm_group_->getCurrentPose().pose;
-      safe_lift_pose.position.z = std::max(safe_lift_pose.position.z, safe_approach_z);
-
       const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
         candidate.grasp_x,
         candidate.grasp_y,
@@ -1825,12 +1811,8 @@ bool cw2::t3_pick_and_place(
         current_object_point.z + kPreGraspOffsetZ,
         candidate.closing_axis_yaw);
 
-      arm_group_->setPoseReferenceFrame(frame_id);
-      if (!execute_cartesian_path(*arm_group_, {safe_lift_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to lift vertically to safe approach height for %s", candidate.description.c_str());
-        move_arm_to_named_target("ready");
-        continue;
+      if (!move_arm_to_named_target("ready")) {
+        RCLCPP_WARN(node_->get_logger(), "T3: failed to return to ready before high approach");
       }
 
       if (!move_arm_to_pose(approach_hover_pose, frame_id)) {
