@@ -39,6 +39,7 @@ constexpr double kClosedWidth = 0.010;
 constexpr double kGraspDetectionMargin = 0.002;
 
 constexpr double kPreGraspOffsetZ = 0.3;
+constexpr double kApproachHoverOffsetZ = 0.50;
 constexpr double kGraspOffsetZ = 0.15;
 constexpr double kLiftDistance = 0.4;
 constexpr double kPlaceHoverOffsetZ = 0.30;
@@ -1032,6 +1033,16 @@ void cw2::t1_callback(
 
       const double grasp_dx = candidate.grasp_x - current_object_point.x;
       const double grasp_dy = candidate.grasp_y - current_object_point.y;
+      const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
+
+      geometry_msgs::msg::Pose safe_lift_pose = arm_group_->getCurrentPose().pose;
+      safe_lift_pose.position.z = std::max(safe_lift_pose.position.z, safe_approach_z);
+
+      const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
+        candidate.grasp_x,
+        candidate.grasp_y,
+        safe_approach_z,
+        candidate.closing_axis_yaw);
 
       const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
         candidate.grasp_x,
@@ -1039,8 +1050,35 @@ void cw2::t1_callback(
         current_object_point.z + kPreGraspOffsetZ,
         candidate.closing_axis_yaw);
 
-      if (!move_arm_to_pose(pre_grasp_pose, object_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to reach pre-grasp pose for %s", candidate.description.c_str());
+      arm_group_->setPoseReferenceFrame(object_frame);
+      if (!execute_cartesian_path(*arm_group_, {safe_lift_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "Failed to lift vertically to safe approach height for %s",
+          candidate.description.c_str());
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after safe-lift failure");
+        }
+        continue;
+      }
+
+      if (!move_arm_to_pose(approach_hover_pose, object_frame)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "Failed to reach high approach pose for %s",
+          candidate.description.c_str());
+        continue;
+      }
+
+      arm_group_->setPoseReferenceFrame(object_frame);
+      if (!execute_cartesian_path(*arm_group_, {pre_grasp_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "Failed to descend from approach hover to pre-grasp for %s",
+          candidate.description.c_str());
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after pre-grasp descend failure");
+        }
         continue;
       }
 
@@ -1770,17 +1808,42 @@ bool cw2::t3_pick_and_place(
 
       const double grasp_dx = candidate.grasp_x - current_object_point.x;
       const double grasp_dy = candidate.grasp_y - current_object_point.y;
+      const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
 
-      // ── Pre-grasp hover ──────────────────────────────────────────────────────
+      geometry_msgs::msg::Pose safe_lift_pose = arm_group_->getCurrentPose().pose;
+      safe_lift_pose.position.z = std::max(safe_lift_pose.position.z, safe_approach_z);
+
+      const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
+        candidate.grasp_x,
+        candidate.grasp_y,
+        safe_approach_z,
+        candidate.closing_axis_yaw);
+
       const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
         candidate.grasp_x,
         candidate.grasp_y,
         current_object_point.z + kPreGraspOffsetZ,
         candidate.closing_axis_yaw);
 
-      if (!move_arm_to_pose(pre_grasp_pose, frame_id)) {
+      arm_group_->setPoseReferenceFrame(frame_id);
+      if (!execute_cartesian_path(*arm_group_, {safe_lift_pose}, kCartesianMinFraction)) {
         RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to reach pre-grasp for %s", candidate.description.c_str());
+          "T3: failed to lift vertically to safe approach height for %s", candidate.description.c_str());
+        move_arm_to_named_target("ready");
+        continue;
+      }
+
+      if (!move_arm_to_pose(approach_hover_pose, frame_id)) {
+        RCLCPP_WARN(node_->get_logger(),
+          "T3: failed to reach high approach pose for %s", candidate.description.c_str());
+        continue;
+      }
+
+      arm_group_->setPoseReferenceFrame(frame_id);
+      if (!execute_cartesian_path(*arm_group_, {pre_grasp_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(),
+          "T3: failed to descend from approach hover to pre-grasp for %s", candidate.description.c_str());
+        move_arm_to_named_target("ready");
         continue;
       }
 
