@@ -117,11 +117,21 @@ std::vector<Task1Candidate> build_task1_candidates(
     const double candidate_angle = radial_angle + orientation_offset;
     const double grasp_x = object_point.x + grasp_radius * std::cos(candidate_angle);
     const double grasp_y = object_point.y + grasp_radius * std::sin(candidate_angle);
-    const double closing_axis_yaw =
-      is_nought ? candidate_angle : candidate_angle + (0.5 * kPi);
+
+    double closing_axis_yaw = 0.0;
+    if (is_nought) {
+      // make_top_down_pose() 里还会统一 +45°，
+      // 这里先减去 45°，让最终执行出来的是“沿边抓”而不是“抓角”
+      closing_axis_yaw = candidate_angle - (0.25 * kPi);
+    } else {
+      // cross 保持原有策略
+      closing_axis_yaw = candidate_angle + (0.5 * kPi);
+    }
+
     candidates.push_back(
-      {grasp_x, grasp_y, closing_axis_yaw, "candidate angle " +
-      std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
+      {grasp_x, grasp_y, closing_axis_yaw,
+       "candidate angle " +
+       std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
   }
 
   return candidates;
@@ -1092,10 +1102,6 @@ void cw2::t1_callback(
         candidate.grasp_y,
         current_object_point.z + kPreGraspOffsetZ,
         candidate.closing_axis_yaw);
-
-      if (!move_arm_to_named_target("ready")) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to return to ready before high approach");
-      }
 
       if (!move_arm_to_pose(approach_hover_pose, object_frame)) {
         RCLCPP_WARN(
