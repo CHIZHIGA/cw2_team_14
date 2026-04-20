@@ -392,7 +392,11 @@ void cw2::attach_grasped_object_collision(const std::string &shape_type)
 
 void cw2::detach_grasped_object_collision()
 {
-  planning_scene_interface_.removeAttachedCollisionObjects({kAttachedObjectId});
+  moveit_msgs::msg::AttachedCollisionObject attached_object;
+  attached_object.link_name = "panda_link8";
+  attached_object.object.id = kAttachedObjectId;
+  attached_object.object.operation = moveit_msgs::msg::CollisionObject::REMOVE;
+  planning_scene_interface_.applyAttachedCollisionObject(attached_object);
   planning_scene_interface_.removeCollisionObjects({kAttachedObjectId});
 }
 
