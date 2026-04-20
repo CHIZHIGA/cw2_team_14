@@ -487,10 +487,6 @@ bool cw2::estimate_task1_object_yaw(
   yaw = 0.0;
   confidence = 1.0;
 
-  if (to_lower_copy(shape_type).find("cross") == std::string::npos) {
-    return true;
-  }
-
   const std::array<std::pair<double, double>, 5> scan_offsets = {{
       {0.0, 0.0},
       {kTask2ScanOffset, 0.0},
@@ -619,6 +615,7 @@ bool cw2::estimate_task1_object_yaw(
   RCLCPP_WARN(node_->get_logger(), "Task 1 yaw scan failed to estimate object orientation");
   return false;
 }
+
 
 bool cw2::extract_task2_object_cloud(
   const geometry_msgs::msg::PointStamped &object_point,
