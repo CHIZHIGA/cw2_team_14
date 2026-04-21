@@ -107,6 +107,10 @@ private:
     const std::string &shape_type,
     double &yaw,
     double &confidence);
+  bool estimate_task1_nought_yaw(
+    const geometry_msgs::msg::PointStamped &object_point,
+    double &yaw,
+    double &confidence);
   void attach_grasped_object_collision(
     const std::string &shape_type);
   void detach_grasped_object_collision();

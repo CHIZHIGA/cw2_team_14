@@ -46,6 +46,7 @@ constexpr double kCarryTransitOffsetZ = 0.60;
 constexpr double kPlaceHoverOffsetZ = 0.30;
 constexpr double kPlaceReleaseOffsetZ = 0.18;
 constexpr double kRetreatDistance = 0.08;
+constexpr double kSafeCarryYaw = 0.0;
 constexpr char kAttachedObjectId[] = "grasped_shape";
 
 constexpr double kCartesianEefStep = 0.005;
@@ -184,6 +185,28 @@ std::vector<Task1Candidate> build_task1_candidates(
     candidates.push_back(
       {grasp_x, grasp_y, closing_axis_yaw, "candidate angle " +
       std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
+  }
+
+  return candidates;
+}
+
+std::vector<Task1Candidate> build_task1_nought_candidates(
+  const geometry_msgs::msg::Point &object_point,
+  const double orientation_offset = 0.0)
+{
+  const std::vector<double> radial_angles = {0.0, 0.5 * kPi, kPi, 1.5 * kPi};
+  std::vector<Task1Candidate> candidates;
+  candidates.reserve(radial_angles.size());
+
+  for (const double radial_angle : radial_angles) {
+    const double candidate_angle = radial_angle + orientation_offset;
+    candidates.push_back(
+      {
+        object_point.x + kNoughtRadialOffset * std::cos(candidate_angle),
+        object_point.y + kNoughtRadialOffset * std::sin(candidate_angle),
+        candidate_angle,
+        "nought candidate angle " +
+        std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
   }
 
   return candidates;
@@ -559,9 +582,9 @@ bool cw2::estimate_task1_object_yaw(
   double &yaw,
   double &confidence)
 {
+  (void)shape_type;
   yaw = 0.0;
   confidence = 1.0;
-  const bool is_nought = is_nought_shape_type(shape_type);
 
   const std::array<std::pair<double, double>, 5> scan_offsets = {{
       {0.0, 0.0},
@@ -645,44 +668,35 @@ bool cw2::estimate_task1_object_yaw(
         continue;
       }
 
-      if (is_nought) {
-        if (!estimate_nought_yaw_from_cloud(
-            object_cloud, centroid_x, centroid_y, radius_scale, yaw, confidence))
-        {
-          continue;
-        }
-      } else {
-        double harmonic_cos = 0.0;
-        double harmonic_sin = 0.0;
-        double total_weight = 0.0;
-        constexpr double harmonic_order = 4.0;
-        for (const auto &point : object_cloud.points) {
-          const double dx = point.x - centroid_x;
-          const double dy = point.y - centroid_y;
-          const double radius = std::hypot(dx, dy);
-          const double normalised_radius = radius / radius_scale;
-          if (normalised_radius < 0.35) {
-            continue;
-          }
-
-          const double weight = std::clamp(normalised_radius, 0.0, 1.5);
-          const double theta = std::atan2(dy, dx);
-          harmonic_cos += weight * std::cos(harmonic_order * theta);
-          harmonic_sin += weight * std::sin(harmonic_order * theta);
-          total_weight += weight;
-        }
-
-        if (total_weight < 1e-4) {
+      double harmonic_cos = 0.0;
+      double harmonic_sin = 0.0;
+      double total_weight = 0.0;
+      constexpr double harmonic_order = 4.0;
+      for (const auto &point : object_cloud.points) {
+        const double dx = point.x - centroid_x;
+        const double dy = point.y - centroid_y;
+        const double radius = std::hypot(dx, dy);
+        const double normalised_radius = radius / radius_scale;
+        if (normalised_radius < 0.35) {
           continue;
         }
 
-        yaw = wrap_angle_period(0.25 * std::atan2(harmonic_sin, harmonic_cos), 0.5 * kPi);
-        confidence = std::hypot(harmonic_cos, harmonic_sin) / total_weight;
+        const double weight = std::clamp(normalised_radius, 0.0, 1.5);
+        const double theta = std::atan2(dy, dx);
+        harmonic_cos += weight * std::cos(harmonic_order * theta);
+        harmonic_sin += weight * std::sin(harmonic_order * theta);
+        total_weight += weight;
       }
+
+      if (total_weight < 1e-4) {
+        continue;
+      }
+
+      yaw = wrap_angle_period(0.25 * std::atan2(harmonic_sin, harmonic_cos), 0.5 * kPi);
+      confidence = std::hypot(harmonic_cos, harmonic_sin) / total_weight;
       RCLCPP_INFO(
         node_->get_logger(),
-        "Task 1 yaw estimate for %s from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
-        shape_type.c_str(),
+        "Task 1 yaw estimate from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
         pose_index + 1,
         attempt + 1,
         yaw * 180.0 / kPi,
@@ -692,6 +706,117 @@ bool cw2::estimate_task1_object_yaw(
   }
 
   RCLCPP_WARN(node_->get_logger(), "Task 1 yaw scan failed to estimate object orientation");
+  return false;
+}
+
+bool cw2::estimate_task1_nought_yaw(
+  const geometry_msgs::msg::PointStamped &object_point,
+  double &yaw,
+  double &confidence)
+{
+  yaw = 0.0;
+  confidence = 1.0;
+
+  const std::array<std::pair<double, double>, 5> scan_offsets = {{
+      {0.0, 0.0},
+      {kTask2ScanOffset, 0.0},
+      {-kTask2ScanOffset, 0.0},
+      {0.0, kTask2ScanOffset},
+      {0.0, -kTask2ScanOffset},
+    }};
+
+  for (std::size_t pose_index = 0; pose_index < scan_offsets.size(); ++pose_index) {
+    geometry_msgs::msg::Pose scan_pose;
+    std::string frame_id;
+    if (!build_task2_scan_pose(object_point, scan_offsets[pose_index], scan_pose, frame_id)) {
+      continue;
+    }
+
+    if (!move_arm_to_pose(scan_pose, frame_id)) {
+      RCLCPP_WARN(
+        node_->get_logger(),
+        "Task 1 nought yaw scan could not reach scan pose %zu",
+        pose_index + 1);
+      continue;
+    }
+
+    std::uint64_t initial_sequence = 0;
+    {
+      std::lock_guard<std::mutex> lock(cloud_mutex_);
+      initial_sequence = g_cloud_sequence_;
+    }
+
+    for (int attempt = 0; attempt < kTask2MaxObservationAttemptsPerPose; ++attempt) {
+      if (attempt == 0) {
+        rclcpp::sleep_for(std::chrono::milliseconds(700));
+      } else {
+        rclcpp::sleep_for(std::chrono::milliseconds(350));
+      }
+
+      std::uint64_t current_sequence = 0;
+      {
+        std::lock_guard<std::mutex> lock(cloud_mutex_);
+        current_sequence = g_cloud_sequence_;
+      }
+
+      if (current_sequence <= initial_sequence &&
+        attempt < kTask2MaxObservationAttemptsPerPose - 1)
+      {
+        continue;
+      }
+
+      PointC object_cloud;
+      if (!extract_task2_object_cloud(object_point, object_cloud)) {
+        continue;
+      }
+
+      if (object_cloud.size() < kTask2MinObjectPoints) {
+        continue;
+      }
+
+      double centroid_x = 0.0;
+      double centroid_y = 0.0;
+      for (const auto &point : object_cloud.points) {
+        centroid_x += point.x;
+        centroid_y += point.y;
+      }
+
+      const double inverse_point_count = 1.0 / static_cast<double>(object_cloud.size());
+      centroid_x *= inverse_point_count;
+      centroid_y *= inverse_point_count;
+
+      std::vector<double> radii;
+      radii.reserve(object_cloud.size());
+      for (const auto &point : object_cloud.points) {
+        radii.push_back(std::hypot(point.x - centroid_x, point.y - centroid_y));
+      }
+
+      std::sort(radii.begin(), radii.end());
+      const std::size_t scale_index =
+        std::min(radii.size() - 1, (radii.size() * 90) / 100);
+      const double radius_scale = radii[scale_index];
+      if (radius_scale < 1e-4) {
+        continue;
+      }
+
+      if (!estimate_nought_yaw_from_cloud(
+          object_cloud, centroid_x, centroid_y, radius_scale, yaw, confidence))
+      {
+        continue;
+      }
+
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "Task 1 nought yaw estimate from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
+        pose_index + 1,
+        attempt + 1,
+        yaw * 180.0 / kPi,
+        confidence);
+      return true;
+    }
+  }
+
+  RCLCPP_WARN(node_->get_logger(), "Task 1 nought yaw scan failed to estimate object orientation");
   return false;
 }
 
@@ -1128,16 +1253,20 @@ void cw2::t1_callback(
 
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
+    const bool is_nought = is_nought_shape_type(request->shape_type);
     geometry_msgs::msg::PointStamped scan_target;
     scan_target.header.frame_id = object_frame;
     scan_target.point = current_object_point;
-    if (estimate_task1_object_yaw(
+    const bool got_orientation =
+      is_nought ?
+      estimate_task1_nought_yaw(scan_target, orientation_offset, orientation_confidence) :
+      estimate_task1_object_yaw(
         scan_target,
         request->shape_type,
         orientation_offset,
-        orientation_confidence) &&
-      orientation_confidence >= kTask1YawMinConfidence)
-    {
+        orientation_confidence);
+
+    if (got_orientation && orientation_confidence >= kTask1YawMinConfidence) {
       RCLCPP_INFO(
         node_->get_logger(),
         "Task 1 %s using yaw refinement %.1f deg (confidence %.3f)",
@@ -1153,6 +1282,8 @@ void cw2::t1_callback(
     }
 
     const std::vector<Task1Candidate> candidates =
+      is_nought ?
+      build_task1_nought_candidates(current_object_point, orientation_offset) :
       build_task1_candidates(current_object_point, request->shape_type, orientation_offset);
 
     bool round_succeeded = false;
@@ -1266,14 +1397,31 @@ void cw2::t1_callback(
       const double carry_transit_z = std::max(
         lift_pose.position.z,
         request->goal_point.point.z + kCarryTransitOffsetZ);
+      const geometry_msgs::msg::Pose post_lift_safe_pose = make_top_down_pose(
+        current_object_point.x,
+        current_object_point.y,
+        carry_transit_z,
+        kSafeCarryYaw);
+      if (!move_arm_to_pose(post_lift_safe_pose, object_frame)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "Failed to move to post-lift safe carry pose for %s",
+          candidate.description.c_str());
+        detach_grasped_object_collision();
+        set_gripper_width(kOpenWidth);
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after safe-carry failure");
+        }
+        continue;
+      }
+
       const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
         request->goal_point.point.x + grasp_dx,
         request->goal_point.point.y + grasp_dy,
         carry_transit_z,
-        candidate.closing_axis_yaw);
+        kSafeCarryYaw);
 
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
+      if (!move_arm_to_pose(carry_transit_pose, goal_frame)) {
         RCLCPP_WARN(
           node_->get_logger(),
           "Failed to carry object at safe transit height for %s",
@@ -1290,10 +1438,9 @@ void cw2::t1_callback(
         request->goal_point.point.x + grasp_dx,
         request->goal_point.point.y + grasp_dy,
         request->goal_point.point.z + kPlaceHoverOffsetZ,
-        candidate.closing_axis_yaw);
+        kSafeCarryYaw);
 
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
+      if (!move_arm_to_pose(place_hover_pose, goal_frame)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to descend to basket hover after grasp");
         detach_grasped_object_collision();
         set_gripper_width(kOpenWidth);
