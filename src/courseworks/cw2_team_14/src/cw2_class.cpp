@@ -47,7 +47,8 @@ constexpr double kPlaceHoverOffsetZ = 0.30;
 constexpr double kPlaceReleaseOffsetZ = 0.18;
 constexpr double kRetreatDistance = 0.08;
 constexpr double kSafeCarryYaw = 0.0;
-constexpr double kTask1NoughtRadialOffset = 0.074;
+constexpr double kTask1NoughtRadialOffset = 0.069;
+constexpr double kTask1CrossRadialOffset = 0.048;
 constexpr double kTask1CarryTransitExtraZ = 0.08;
 constexpr double kTask1PlaceHoverExtraZ = 0.08;
 constexpr char kAttachedObjectId[] = "grasped_shape";
@@ -188,6 +189,30 @@ std::vector<Task1Candidate> build_task1_candidates(
     candidates.push_back(
       {grasp_x, grasp_y, closing_axis_yaw, "candidate angle " +
       std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
+  }
+
+  return candidates;
+}
+
+std::vector<Task1Candidate> build_task1_cross_candidates(
+  const geometry_msgs::msg::Point &object_point,
+  const double orientation_offset = 0.0)
+{
+  const std::vector<double> radial_angles = {
+    0.0, 0.5 * kPi, kPi, 1.5 * kPi,
+    0.25 * kPi, 0.75 * kPi, 1.25 * kPi, 1.75 * kPi};
+  std::vector<Task1Candidate> candidates;
+  candidates.reserve(radial_angles.size());
+
+  for (const double radial_angle : radial_angles) {
+    const double candidate_angle = radial_angle + orientation_offset;
+    candidates.push_back(
+      {
+        object_point.x + kTask1CrossRadialOffset * std::cos(candidate_angle),
+        object_point.y + kTask1CrossRadialOffset * std::sin(candidate_angle),
+        candidate_angle + (0.5 * kPi),
+        "cross candidate angle " +
+        std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
   }
 
   return candidates;
@@ -1287,7 +1312,7 @@ void cw2::t1_callback(
     const std::vector<Task1Candidate> candidates =
       is_nought ?
       build_task1_nought_candidates(current_object_point, orientation_offset) :
-      build_task1_candidates(current_object_point, request->shape_type, orientation_offset);
+      build_task1_cross_candidates(current_object_point, orientation_offset);
 
     bool round_succeeded = false;
 
