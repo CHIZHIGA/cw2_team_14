@@ -98,6 +98,64 @@ bool is_nought_shape_type(std::string_view shape_type)
   return to_lower_copy(shape_type).find("nought") != std::string::npos;
 }
 
+double wrap_angle_period(double angle, const double period)
+{
+  const double half_period = 0.5 * period;
+  while (angle > half_period) {
+    angle -= period;
+  }
+  while (angle <= (-half_period)) {
+    angle += period;
+  }
+  return angle;
+}
+
+bool estimate_nought_yaw_from_cloud(
+  const PointC &object_cloud,
+  const double centroid_x,
+  const double centroid_y,
+  const double radius_scale,
+  double &yaw,
+  double &confidence)
+{
+  double covariance_xx = 0.0;
+  double covariance_xy = 0.0;
+  double covariance_yy = 0.0;
+  double total_weight = 0.0;
+
+  for (const auto &point : object_cloud.points) {
+    const double dx = point.x - centroid_x;
+    const double dy = point.y - centroid_y;
+    const double radius = std::hypot(dx, dy);
+    const double normalised_radius = radius / radius_scale;
+
+    // Focus on the outer rim; inner-hole points dilute the orientation signal.
+    if (normalised_radius < 0.68 || normalised_radius > 1.10) {
+      continue;
+    }
+
+    const double weight = std::clamp(normalised_radius * normalised_radius, 0.0, 1.5);
+    covariance_xx += weight * dx * dx;
+    covariance_xy += weight * dx * dy;
+    covariance_yy += weight * dy * dy;
+    total_weight += weight;
+  }
+
+  if (total_weight < 1e-4) {
+    return false;
+  }
+
+  yaw = 0.5 * std::atan2(2.0 * covariance_xy, covariance_xx - covariance_yy);
+  yaw = wrap_angle_period(yaw, kPi);
+
+  const double trace = covariance_xx + covariance_yy;
+  const double anisotropy =
+    std::hypot(covariance_xx - covariance_yy, 2.0 * covariance_xy) /
+    std::max(trace, 1e-6);
+  confidence = std::clamp(anisotropy, 0.0, 1.0);
+  return true;
+}
+
 std::vector<Task1Candidate> build_task1_candidates(
   const geometry_msgs::msg::Point &object_point,
   std::string_view shape_type,
@@ -587,41 +645,40 @@ bool cw2::estimate_task1_object_yaw(
         continue;
       }
 
-      double harmonic_cos = 0.0;
-      double harmonic_sin = 0.0;
-      double total_weight = 0.0;
-      const double harmonic_order = is_nought ? 2.0 : 4.0;
-      for (const auto &point : object_cloud.points) {
-        const double dx = point.x - centroid_x;
-        const double dy = point.y - centroid_y;
-        const double radius = std::hypot(dx, dy);
-        const double normalised_radius = radius / radius_scale;
-        if (normalised_radius < 0.35) {
+      if (is_nought) {
+        if (!estimate_nought_yaw_from_cloud(
+            object_cloud, centroid_x, centroid_y, radius_scale, yaw, confidence))
+        {
+          continue;
+        }
+      } else {
+        double harmonic_cos = 0.0;
+        double harmonic_sin = 0.0;
+        double total_weight = 0.0;
+        constexpr double harmonic_order = 4.0;
+        for (const auto &point : object_cloud.points) {
+          const double dx = point.x - centroid_x;
+          const double dy = point.y - centroid_y;
+          const double radius = std::hypot(dx, dy);
+          const double normalised_radius = radius / radius_scale;
+          if (normalised_radius < 0.35) {
+            continue;
+          }
+
+          const double weight = std::clamp(normalised_radius, 0.0, 1.5);
+          const double theta = std::atan2(dy, dx);
+          harmonic_cos += weight * std::cos(harmonic_order * theta);
+          harmonic_sin += weight * std::sin(harmonic_order * theta);
+          total_weight += weight;
+        }
+
+        if (total_weight < 1e-4) {
           continue;
         }
 
-        const double weight = std::clamp(normalised_radius, 0.0, 1.5);
-        const double theta = std::atan2(dy, dx);
-        harmonic_cos += weight * std::cos(harmonic_order * theta);
-        harmonic_sin += weight * std::sin(harmonic_order * theta);
-        total_weight += weight;
+        yaw = wrap_angle_period(0.25 * std::atan2(harmonic_sin, harmonic_cos), 0.5 * kPi);
+        confidence = std::hypot(harmonic_cos, harmonic_sin) / total_weight;
       }
-
-      if (total_weight < 1e-4) {
-        continue;
-      }
-
-      yaw = (1.0 / harmonic_order) * std::atan2(harmonic_sin, harmonic_cos);
-      const double yaw_period = is_nought ? kPi : (0.5 * kPi);
-      const double half_period = 0.5 * yaw_period;
-      while (yaw > half_period) {
-        yaw -= yaw_period;
-      }
-      while (yaw <= (-half_period)) {
-        yaw += yaw_period;
-      }
-
-      confidence = std::hypot(harmonic_cos, harmonic_sin) / total_weight;
       RCLCPP_INFO(
         node_->get_logger(),
         "Task 1 yaw estimate for %s from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
@@ -1056,7 +1113,6 @@ void cw2::t1_callback(
   }
 
   geometry_msgs::msg::Point current_object_point = request->object_point.point;
-  const bool is_nought = is_nought_shape_type(request->shape_type);
 
   bool task_completed = false;
   const int max_scan_rounds = 3;
@@ -1072,54 +1128,28 @@ void cw2::t1_callback(
 
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
-    if (is_nought) {
-      geometry_msgs::msg::PointStamped scan_target;
-      scan_target.header.frame_id = object_frame;
-      scan_target.point = current_object_point;
-      if (estimate_task1_object_yaw(
-          scan_target,
-          request->shape_type,
-          orientation_offset,
-          orientation_confidence) &&
-        orientation_confidence >= kTask1YawMinConfidence)
-      {
-        RCLCPP_INFO(
-          node_->get_logger(),
-          "Task 1 %s using yaw refinement %.1f deg (confidence %.3f)",
-          request->shape_type.c_str(),
-          orientation_offset * 180.0 / kPi,
-          orientation_confidence);
-      } else {
-        orientation_offset = 0.0;
-        RCLCPP_INFO(
-          node_->get_logger(),
-          "Task 1 %s falling back to axis-aligned grasp candidates",
-          request->shape_type.c_str());
-      }
+    geometry_msgs::msg::PointStamped scan_target;
+    scan_target.header.frame_id = object_frame;
+    scan_target.point = current_object_point;
+    if (estimate_task1_object_yaw(
+        scan_target,
+        request->shape_type,
+        orientation_offset,
+        orientation_confidence) &&
+      orientation_confidence >= kTask1YawMinConfidence)
+    {
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "Task 1 %s using yaw refinement %.1f deg (confidence %.3f)",
+        request->shape_type.c_str(),
+        orientation_offset * 180.0 / kPi,
+        orientation_confidence);
     } else {
-      geometry_msgs::msg::PointStamped scan_target;
-      scan_target.header.frame_id = object_frame;
-      scan_target.point = current_object_point;
-      if (estimate_task1_object_yaw(
-          scan_target,
-          request->shape_type,
-          orientation_offset,
-          orientation_confidence) &&
-        orientation_confidence >= kTask1YawMinConfidence)
-      {
-        RCLCPP_INFO(
-          node_->get_logger(),
-          "Task 1 %s using yaw refinement %.1f deg (confidence %.3f)",
-          request->shape_type.c_str(),
-          orientation_offset * 180.0 / kPi,
-          orientation_confidence);
-      } else {
-        orientation_offset = 0.0;
-        RCLCPP_INFO(
-          node_->get_logger(),
-          "Task 1 %s falling back to axis-aligned grasp candidates",
-          request->shape_type.c_str());
-      }
+      orientation_offset = 0.0;
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "Task 1 %s falling back to axis-aligned grasp candidates",
+        request->shape_type.c_str());
     }
 
     const std::vector<Task1Candidate> candidates =
