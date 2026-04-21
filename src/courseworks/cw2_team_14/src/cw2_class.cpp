@@ -1453,6 +1453,19 @@ void cw2::t1_callback(
         continue;
       }
 
+      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
+      place_release_pose.position.z = request->goal_point.point.z + kPlaceReleaseOffsetZ + 0.04;
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      if (!execute_cartesian_path(*arm_group_, {place_release_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(), "Failed to descend vertically to release pose after grasp");
+        detach_grasped_object_collision();
+        set_gripper_width(kOpenWidth);
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after release-descend failure");
+        }
+        continue;
+      }
+
       if (!set_gripper_width(kOpenWidth)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to release object above basket");
       }
@@ -1460,7 +1473,7 @@ void cw2::t1_callback(
 
       rclcpp::sleep_for(std::chrono::milliseconds(300));
 
-      geometry_msgs::msg::Pose post_release_pose = place_hover_pose;
+      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
       post_release_pose.position.z += kRetreatDistance;
       arm_group_->setPoseReferenceFrame(goal_frame);
       execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
