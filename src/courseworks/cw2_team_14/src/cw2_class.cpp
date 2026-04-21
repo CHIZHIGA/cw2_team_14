@@ -1464,8 +1464,9 @@ void cw2::t1_callback(
         request->goal_point.point.z + kPlaceHoverOffsetZ + kTask1PlaceHoverExtraZ,
         kSafeCarryYaw);
 
-      if (!move_arm_to_pose(place_hover_pose, goal_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to descend to basket hover after grasp");
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(), "Failed to descend vertically to basket hover after grasp");
         task_aborted_after_grasp = true;
         break;
       }
