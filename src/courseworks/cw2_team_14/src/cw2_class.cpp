@@ -131,6 +131,25 @@ std::vector<Task1Candidate> build_task1_candidates(
   return candidates;
 }
 
+std::vector<Task1Candidate> build_task1_nought_scan_candidates(
+  const geometry_msgs::msg::Point &object_point)
+{
+  std::vector<Task1Candidate> candidates;
+  const std::vector<double> radial_angles = {
+    0.0, 0.25 * kPi, 0.5 * kPi, 0.75 * kPi, kPi, 1.25 * kPi, 1.5 * kPi, 1.75 * kPi};
+  candidates.reserve(radial_angles.size());
+
+  for (const double radial_angle : radial_angles) {
+    const double grasp_x = object_point.x + kNoughtRadialOffset * std::cos(radial_angle);
+    const double grasp_y = object_point.y + kNoughtRadialOffset * std::sin(radial_angle);
+    candidates.push_back(
+      {grasp_x, grasp_y, radial_angle, "candidate angle " +
+      std::to_string(static_cast<int>(std::round(radial_angle * 180.0 / kPi))) + " deg"});
+  }
+
+  return candidates;
+}
+
 // ── Task 3 constants ──────────────────────────────────────────────────────────
 constexpr double kTask3ScanHeight = 0.66;
 constexpr double kTask3CloudZMin = 0.010;
@@ -1054,7 +1073,7 @@ void cw2::t1_callback(
   const bool is_nought = is_nought_shape_type(request->shape_type);
 
   bool task_completed = false;
-  const int max_scan_rounds = is_nought ? 1 : 3;
+  const int max_scan_rounds = is_nought ? 3 : 3;
 
   for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
     RCLCPP_INFO(
@@ -1068,7 +1087,10 @@ void cw2::t1_callback(
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
     if (is_nought) {
-      RCLCPP_INFO(node_->get_logger(), "Task 1 nought: skipping scan-based yaw refinement and rescans");
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "Task 1 %s: using dedicated scan-and-rescan grasp path",
+        request->shape_type.c_str());
     } else {
       geometry_msgs::msg::PointStamped scan_target;
       scan_target.header.frame_id = object_frame;
@@ -1092,6 +1114,8 @@ void cw2::t1_callback(
     }
 
     const std::vector<Task1Candidate> candidates =
+      is_nought ?
+      build_task1_nought_scan_candidates(current_object_point) :
       build_task1_candidates(current_object_point, request->shape_type, orientation_offset);
 
     bool round_succeeded = false;
@@ -1273,10 +1297,12 @@ void cw2::t1_callback(
         RCLCPP_WARN(node_->get_logger(), "Failed to move to ready before rescan");
       }
 
+      const double corrected_z = current_object_point.z;
       if (!rescan_task1_object_point(current_object_point, object_frame)) {
         RCLCPP_WARN(node_->get_logger(), "Rescan failed, stopping further retries");
         break;
       }
+      current_object_point.z = corrected_z;
     }
   }
 
