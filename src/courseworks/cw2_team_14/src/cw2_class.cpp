@@ -47,6 +47,9 @@ constexpr double kPlaceHoverOffsetZ = 0.30;
 constexpr double kPlaceReleaseOffsetZ = 0.18;
 constexpr double kRetreatDistance = 0.08;
 constexpr double kSafeCarryYaw = 0.0;
+constexpr double kTask1NoughtRadialOffset = 0.074;
+constexpr double kTask1CarryTransitExtraZ = 0.08;
+constexpr double kTask1PlaceHoverExtraZ = 0.08;
 constexpr char kAttachedObjectId[] = "grasped_shape";
 
 constexpr double kCartesianEefStep = 0.005;
@@ -202,8 +205,8 @@ std::vector<Task1Candidate> build_task1_nought_candidates(
     const double candidate_angle = radial_angle + orientation_offset;
     candidates.push_back(
       {
-        object_point.x + kNoughtRadialOffset * std::cos(candidate_angle),
-        object_point.y + kNoughtRadialOffset * std::sin(candidate_angle),
+        object_point.x + kTask1NoughtRadialOffset * std::cos(candidate_angle),
+        object_point.y + kTask1NoughtRadialOffset * std::sin(candidate_angle),
         candidate_angle,
         "nought candidate angle " +
         std::to_string(static_cast<int>(std::round(candidate_angle * 180.0 / kPi))) + " deg"});
@@ -1396,7 +1399,7 @@ void cw2::t1_callback(
 
       const double carry_transit_z = std::max(
         lift_pose.position.z,
-        request->goal_point.point.z + kCarryTransitOffsetZ);
+        request->goal_point.point.z + kCarryTransitOffsetZ + kTask1CarryTransitExtraZ);
       const geometry_msgs::msg::Pose post_lift_safe_pose = make_top_down_pose(
         current_object_point.x,
         current_object_point.y,
@@ -1437,7 +1440,7 @@ void cw2::t1_callback(
       const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
         request->goal_point.point.x + grasp_dx,
         request->goal_point.point.y + grasp_dy,
-        request->goal_point.point.z + kPlaceHoverOffsetZ,
+        request->goal_point.point.z + kPlaceHoverOffsetZ + kTask1PlaceHoverExtraZ,
         kSafeCarryYaw);
 
       if (!move_arm_to_pose(place_hover_pose, goal_frame)) {
@@ -1450,11 +1453,6 @@ void cw2::t1_callback(
         continue;
       }
 
-      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
-      place_release_pose.position.z = request->goal_point.point.z + kPlaceReleaseOffsetZ;
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      execute_cartesian_path(*arm_group_, {place_release_pose}, 0.8);
-
       if (!set_gripper_width(kOpenWidth)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to release object above basket");
       }
@@ -1462,8 +1460,8 @@ void cw2::t1_callback(
 
       rclcpp::sleep_for(std::chrono::milliseconds(300));
 
-      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
-      post_release_pose.position.z = request->goal_point.point.z + kPlaceHoverOffsetZ;
+      geometry_msgs::msg::Pose post_release_pose = place_hover_pose;
+      post_release_pose.position.z += kRetreatDistance;
       arm_group_->setPoseReferenceFrame(goal_frame);
       execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
 
