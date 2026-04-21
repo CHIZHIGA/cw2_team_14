@@ -131,25 +131,6 @@ std::vector<Task1Candidate> build_task1_candidates(
   return candidates;
 }
 
-std::vector<Task1Candidate> build_task1_nought_scan_candidates(
-  const geometry_msgs::msg::Point &object_point)
-{
-  std::vector<Task1Candidate> candidates;
-  const std::vector<double> radial_angles = {
-    0.0, 0.25 * kPi, 0.5 * kPi, 0.75 * kPi, kPi, 1.25 * kPi, 1.5 * kPi, 1.75 * kPi};
-  candidates.reserve(radial_angles.size());
-
-  for (const double radial_angle : radial_angles) {
-    const double grasp_x = object_point.x + kNoughtRadialOffset * std::cos(radial_angle);
-    const double grasp_y = object_point.y + kNoughtRadialOffset * std::sin(radial_angle);
-    candidates.push_back(
-      {grasp_x, grasp_y, radial_angle, "candidate angle " +
-      std::to_string(static_cast<int>(std::round(radial_angle * 180.0 / kPi))) + " deg"});
-  }
-
-  return candidates;
-}
-
 // ── Task 3 constants ──────────────────────────────────────────────────────────
 constexpr double kTask3ScanHeight = 0.66;
 constexpr double kTask3CloudZMin = 0.010;
@@ -520,9 +501,9 @@ bool cw2::estimate_task1_object_yaw(
   double &yaw,
   double &confidence)
 {
-  (void)shape_type;
   yaw = 0.0;
   confidence = 1.0;
+  const bool is_nought = is_nought_shape_type(shape_type);
 
   const std::array<std::pair<double, double>, 5> scan_offsets = {{
       {0.0, 0.0},
@@ -606,9 +587,10 @@ bool cw2::estimate_task1_object_yaw(
         continue;
       }
 
-      double c4 = 0.0;
-      double s4 = 0.0;
+      double harmonic_cos = 0.0;
+      double harmonic_sin = 0.0;
       double total_weight = 0.0;
+      const double harmonic_order = is_nought ? 2.0 : 4.0;
       for (const auto &point : object_cloud.points) {
         const double dx = point.x - centroid_x;
         const double dy = point.y - centroid_y;
@@ -620,8 +602,8 @@ bool cw2::estimate_task1_object_yaw(
 
         const double weight = std::clamp(normalised_radius, 0.0, 1.5);
         const double theta = std::atan2(dy, dx);
-        c4 += weight * std::cos(4.0 * theta);
-        s4 += weight * std::sin(4.0 * theta);
+        harmonic_cos += weight * std::cos(harmonic_order * theta);
+        harmonic_sin += weight * std::sin(harmonic_order * theta);
         total_weight += weight;
       }
 
@@ -629,18 +611,21 @@ bool cw2::estimate_task1_object_yaw(
         continue;
       }
 
-      yaw = 0.25 * std::atan2(s4, c4);
-      while (yaw > (0.25 * kPi)) {
-        yaw -= 0.5 * kPi;
+      yaw = (1.0 / harmonic_order) * std::atan2(harmonic_sin, harmonic_cos);
+      const double yaw_period = is_nought ? kPi : (0.5 * kPi);
+      const double half_period = 0.5 * yaw_period;
+      while (yaw > half_period) {
+        yaw -= yaw_period;
       }
-      while (yaw <= (-0.25 * kPi)) {
-        yaw += 0.5 * kPi;
+      while (yaw <= (-half_period)) {
+        yaw += yaw_period;
       }
 
-      confidence = std::hypot(c4, s4) / total_weight;
+      confidence = std::hypot(harmonic_cos, harmonic_sin) / total_weight;
       RCLCPP_INFO(
         node_->get_logger(),
-        "Task 1 yaw estimate from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
+        "Task 1 yaw estimate for %s from scan pose %zu attempt %d: yaw=%.1f deg confidence=%.3f",
+        shape_type.c_str(),
         pose_index + 1,
         attempt + 1,
         yaw * 180.0 / kPi,
@@ -1074,7 +1059,7 @@ void cw2::t1_callback(
   const bool is_nought = is_nought_shape_type(request->shape_type);
 
   bool task_completed = false;
-  const int max_scan_rounds = is_nought ? 3 : 3;
+  const int max_scan_rounds = 3;
 
   for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
     RCLCPP_INFO(
@@ -1088,10 +1073,29 @@ void cw2::t1_callback(
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
     if (is_nought) {
-      RCLCPP_INFO(
-        node_->get_logger(),
-        "Task 1 %s: using dedicated scan-and-rescan grasp path",
-        request->shape_type.c_str());
+      geometry_msgs::msg::PointStamped scan_target;
+      scan_target.header.frame_id = object_frame;
+      scan_target.point = current_object_point;
+      if (estimate_task1_object_yaw(
+          scan_target,
+          request->shape_type,
+          orientation_offset,
+          orientation_confidence) &&
+        orientation_confidence >= kTask1YawMinConfidence)
+      {
+        RCLCPP_INFO(
+          node_->get_logger(),
+          "Task 1 %s using yaw refinement %.1f deg (confidence %.3f)",
+          request->shape_type.c_str(),
+          orientation_offset * 180.0 / kPi,
+          orientation_confidence);
+      } else {
+        orientation_offset = 0.0;
+        RCLCPP_INFO(
+          node_->get_logger(),
+          "Task 1 %s falling back to axis-aligned grasp candidates",
+          request->shape_type.c_str());
+      }
     } else {
       geometry_msgs::msg::PointStamped scan_target;
       scan_target.header.frame_id = object_frame;
@@ -1105,18 +1109,20 @@ void cw2::t1_callback(
       {
         RCLCPP_INFO(
           node_->get_logger(),
-          "Task 1 using yaw refinement %.1f deg (confidence %.3f)",
+          "Task 1 %s using yaw refinement %.1f deg (confidence %.3f)",
+          request->shape_type.c_str(),
           orientation_offset * 180.0 / kPi,
           orientation_confidence);
       } else {
         orientation_offset = 0.0;
-        RCLCPP_INFO(node_->get_logger(), "Task 1 falling back to axis-aligned grasp candidates");
+        RCLCPP_INFO(
+          node_->get_logger(),
+          "Task 1 %s falling back to axis-aligned grasp candidates",
+          request->shape_type.c_str());
       }
     }
 
     const std::vector<Task1Candidate> candidates =
-      is_nought ?
-      build_task1_nought_scan_candidates(current_object_point) :
       build_task1_candidates(current_object_point, request->shape_type, orientation_offset);
 
     bool round_succeeded = false;
