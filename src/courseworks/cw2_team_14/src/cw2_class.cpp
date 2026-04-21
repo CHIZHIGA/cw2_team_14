@@ -1268,9 +1268,13 @@ void cw2::t1_callback(
   geometry_msgs::msg::Point current_object_point = request->object_point.point;
 
   bool task_completed = false;
+  bool task_aborted_after_grasp = false;
   const int max_scan_rounds = 3;
 
-  for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
+  for (int scan_round = 0;
+    scan_round < max_scan_rounds && !task_completed && !task_aborted_after_grasp;
+    ++scan_round)
+  {
     RCLCPP_INFO(
       node_->get_logger(),
       "Task 1 scan round %d using object point (%.3f, %.3f, %.3f)",
@@ -1435,12 +1439,8 @@ void cw2::t1_callback(
           node_->get_logger(),
           "Failed to move to post-lift safe carry pose for %s",
           candidate.description.c_str());
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after safe-carry failure");
-        }
-        continue;
+        task_aborted_after_grasp = true;
+        break;
       }
 
       const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
@@ -1454,12 +1454,8 @@ void cw2::t1_callback(
           node_->get_logger(),
           "Failed to carry object at safe transit height for %s",
           candidate.description.c_str());
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after carry transit failure");
-        }
-        continue;
+        task_aborted_after_grasp = true;
+        break;
       }
 
       const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
@@ -1470,12 +1466,8 @@ void cw2::t1_callback(
 
       if (!move_arm_to_pose(place_hover_pose, goal_frame)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to descend to basket hover after grasp");
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after basket-hover failure");
-        }
-        continue;
+        task_aborted_after_grasp = true;
+        break;
       }
 
       geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
@@ -1483,12 +1475,8 @@ void cw2::t1_callback(
       arm_group_->setPoseReferenceFrame(goal_frame);
       if (!execute_cartesian_path(*arm_group_, {place_release_pose}, kCartesianMinFraction)) {
         RCLCPP_WARN(node_->get_logger(), "Failed to descend vertically to release pose after grasp");
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after release-descend failure");
-        }
-        continue;
+        task_aborted_after_grasp = true;
+        break;
       }
 
       if (!set_gripper_width(kOpenWidth)) {
@@ -1511,6 +1499,9 @@ void cw2::t1_callback(
     if (task_completed || round_succeeded) {
       break;
     }
+    if (task_aborted_after_grasp) {
+      break;
+    }
 
     if (scan_round < max_scan_rounds - 1) {
       if (!move_arm_to_named_target("ready")) {
@@ -1526,8 +1517,15 @@ void cw2::t1_callback(
     }
   }
 
-  if (!move_arm_to_named_target("ready")) {
+  if (!task_aborted_after_grasp && !move_arm_to_named_target("ready")) {
     RCLCPP_WARN(node_->get_logger(), "Failed to return arm to ready pose after Task 1");
+  }
+
+  if (task_aborted_after_grasp) {
+    RCLCPP_ERROR(
+      node_->get_logger(),
+      "Task 1 aborted after a successful grasp because post-grasp transport planning failed; object remains held");
+    return;
   }
 
   if (!task_completed) {
