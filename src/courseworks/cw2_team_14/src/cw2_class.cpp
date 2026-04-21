@@ -520,6 +520,7 @@ bool cw2::estimate_task1_object_yaw(
   double &yaw,
   double &confidence)
 {
+  (void)shape_type;
   yaw = 0.0;
   confidence = 1.0;
 
@@ -1885,30 +1886,6 @@ bool cw2::t3_pick_and_place(
   const int max_scan_rounds = is_nought ? 1 : 2;
 
   for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
-
-    double orientation_offset = 0.0;
-    double orientation_confidence = 0.0;
-    if (is_nought) {
-      // Nought: use direct grasp candidates, no yaw refinement
-    } else {
-      geometry_msgs::msg::PointStamped scan_target;
-      scan_target.header.frame_id = frame_id;
-      scan_target.point = current_object_point;
-      if (estimate_task1_object_yaw(
-          scan_target,
-          shape_type,
-          orientation_offset,
-          orientation_confidence) &&
-        orientation_confidence >= kTask1YawMinConfidence)
-      {
-        RCLCPP_DEBUG(node_->get_logger(),
-          "T3 using yaw refinement %.1f deg (confidence %.3f)",
-          orientation_offset * 180.0 / kPi,
-          orientation_confidence);
-      } else {
-        orientation_offset = 0.0;
-      }
-    }
 
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
