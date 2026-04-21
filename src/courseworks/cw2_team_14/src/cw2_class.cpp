@@ -1884,6 +1884,31 @@ bool cw2::t3_pick_and_place(
       }
     }
 
+    double orientation_offset = 0.0;
+    double orientation_confidence = 0.0;
+    if (is_nought) {
+      RCLCPP_INFO(node_->get_logger(), "T3 nought: skipping scan-based yaw refinement and rescans");
+    } else {
+      geometry_msgs::msg::PointStamped scan_target;
+      scan_target.header.frame_id = frame_id;
+      scan_target.point = current_object_point;
+      if (estimate_task1_object_yaw(
+          scan_target,
+          shape_type,
+          orientation_offset,
+          orientation_confidence) &&
+        orientation_confidence >= kTask1YawMinConfidence)
+      {
+        RCLCPP_INFO(node_->get_logger(),
+          "T3 using yaw refinement %.1f deg (confidence %.3f)",
+          orientation_offset * 180.0 / kPi,
+          orientation_confidence);
+      } else {
+        orientation_offset = 0.0;
+        RCLCPP_INFO(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
+      }
+    }
+
     const std::vector<Task1Candidate> candidates =
       build_task1_candidates(current_object_point, shape_type, orientation_offset);
 
