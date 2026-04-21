@@ -1,0 +1,89 @@
+[0.015s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config
+[0.268s] -- The C compiler identification is GNU 11.4.0
+[0.433s] -- The CXX compiler identification is GNU 11.4.0
+[0.463s] -- Detecting C compiler ABI info
+[0.634s] -- Detecting C compiler ABI info - done
+[0.652s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.652s] -- Detecting C compile features
+[0.653s] -- Detecting C compile features - done
+[0.661s] -- Detecting CXX compiler ABI info
+[0.755s] -- Detecting CXX compiler ABI info - done
+[0.763s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.763s] -- Detecting CXX compile features
+[0.765s] -- Detecting CXX compile features - done
+[0.766s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.998s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.324s] -- Configuring done
+[1.325s] -- Generating done
+[1.329s] -- Build files have been written to: /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config
+[1.330s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/panda_moveit_config -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config
+[1.336s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config -- -j2 -l2
+[1.375s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config -- -j2 -l2
+[1.387s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config
+[1.395s] -- Install configuration: ""
+[1.398s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch
+[1.398s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/move_group.launch
+[1.398s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/moveit.rviz
+[1.400s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_moveit_controller_manager_simulation.launch.xml
+[1.400s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/chomp_planning_pipeline.launch.xml
+[1.400s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/sensor_manager.launch.xml
+[1.401s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/joystick_control.launch
+[1.403s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/moveit_empty.rviz
+[1.403s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/stomp_planning_pipeline.launch.xml
+[1.404s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/run_benchmark_ompl.launch
+[1.404s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/planning_pipeline.launch.xml
+[1.404s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/ompl_planning_pipeline.launch.xml
+[1.406s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_gripper_moveit_controller_manager.launch.xml
+[1.406s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/demo-project.launch
+[1.406s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/demo.launch
+[1.406s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_control_moveit_rviz.launch
+[1.408s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_moveit.launch
+[1.408s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_moveit_controller_manager.launch.xml
+[1.408s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/warehouse.launch
+[1.408s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/moveit_rviz_simulation.launch
+[1.408s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/project.rviz
+[1.408s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_moveit_sensor_manager.launch.xml
+[1.409s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/fake_moveit_controller_manager.launch.xml
+[1.409s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/panda_gripper_moveit_controller_manager_simulation.launch.xml
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/default_warehouse_db.launch
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/moveit_simulation.rviz
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/moveit_rviz.launch
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/demo_chomp.launch
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/warehouse_settings.launch.xml
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/trajectory_execution.launch.xml
+[1.412s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/launch/planning_context.launch
+[1.414s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_arm.xacro
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/sensors_kinect_depthmap.yaml
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_gripper_controllers_simulation.yaml
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/fake_controllers.yaml
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/hand.xacro
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_controllers_simulation.yaml
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/pilz_cartesian_limits.yaml
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_gripper_controllers.yaml
+[1.415s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/kinematics.yaml
+[1.417s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_arm.srdf.xacro
+[1.417s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_controllers.yaml
+[1.417s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_gripper_controllers (modified).yaml
+[1.417s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/chomp_planning.yaml
+[1.419s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/stomp_planning.yaml
+[1.419s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/panda_arm_hand.srdf.xacro
+[1.419s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/joint_limits.yaml
+[1.420s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/ompl_planning.yaml
+[1.420s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/config/sensors_kinect_pointcloud.yaml
+[1.421s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/ament_index/resource_index/package_run_dependencies/panda_moveit_config
+[1.421s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/ament_index/resource_index/parent_prefix_path/panda_moveit_config
+[1.428s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/environment/ament_prefix_path.sh
+[1.428s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/environment/ament_prefix_path.dsv
+[1.428s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/environment/path.sh
+[1.431s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/environment/path.dsv
+[1.431s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/local_setup.bash
+[1.432s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/local_setup.sh
+[1.432s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/local_setup.zsh
+[1.432s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/local_setup.dsv
+[1.432s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.dsv
+[1.432s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/ament_index/resource_index/packages/panda_moveit_config
+[1.432s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/cmake/panda_moveit_configConfig.cmake
+[1.434s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/cmake/panda_moveit_configConfig-version.cmake
+[1.437s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/panda_moveit_config/share/panda_moveit_config/package.xml
+[1.437s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/panda_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/panda_moveit_config

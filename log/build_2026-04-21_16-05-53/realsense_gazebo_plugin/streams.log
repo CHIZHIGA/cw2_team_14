@@ -1,0 +1,159 @@
+[0.015s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/realsense_gazebo_plugin -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin
+[0.137s] -- The C compiler identification is GNU 11.4.0
+[0.285s] -- The CXX compiler identification is GNU 11.4.0
+[0.307s] -- Detecting C compiler ABI info
+[0.512s] -- Detecting C compiler ABI info - done
+[0.521s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.521s] -- Detecting C compile features
+[0.521s] -- Detecting C compile features - done
+[0.527s] -- Detecting CXX compiler ABI info
+[0.692s] -- Detecting CXX compiler ABI info - done
+[0.711s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.711s] -- Detecting CXX compile features
+[0.711s] -- Detecting CXX compile features - done
+[0.718s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.003s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.179s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[1.227s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.234s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.241s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.255s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.270s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.330s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.336s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.457s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.518s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.570s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.587s] -- Looking for pthread.h
+[1.686s] -- Looking for pthread.h - found
+[1.687s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.800s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.800s] -- Found Threads: TRUE  
+[1.950s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[1.974s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[1.976s] -- Checking for module 'bullet>=2.82'
+[2.006s] --   Found bullet, version 3.05
+[2.174s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[2.255s] -- Found assimp: /usr/include (found version "5.2.0") 
+[2.330s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[2.362s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[2.400s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[2.413s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.426s] -- Searching for dependencies of ignition-math6
+[2.431s] -- Looking for OGRE...
+[2.433s] -- OGRE_PREFIX_WATCH changed.
+[2.444s] -- Checking for module 'OGRE'
+[2.481s] --   Found OGRE, version 1.9.0
+[2.628s] -- Found Ogre Ghadamon (1.9.0)
+[2.644s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[2.662s] -- Looking for OGRE_Paging...
+[2.679s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[2.679s] -- Looking for OGRE_Terrain...
+[2.705s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[2.705s] -- Looking for OGRE_Property...
+[2.726s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[2.727s] -- Looking for OGRE_RTShaderSystem...
+[2.754s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[2.754s] -- Looking for OGRE_Volume...
+[2.765s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[2.765s] -- Looking for OGRE_Overlay...
+[2.771s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[2.881s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.884s] -- Looking for ignition-transport8 -- found version 8.2.1
+[2.888s] -- Searching for dependencies of ignition-transport8
+[2.905s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[2.915s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.921s] -- Checking for module 'libzmq >= 4'
+[2.965s] --   Found libzmq , version 4.3.4
+[3.066s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[3.077s] -- Checking for module 'uuid'
+[3.117s] --   Found uuid, version 2.37.2
+[3.199s] -- Found UUID: TRUE  
+[3.209s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.209s] -- Searching for dependencies of ignition-msgs5
+[3.246s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.268s] -- Checking for module 'tinyxml2'
+[3.303s] --   Found tinyxml2, version 9.0.0
+[3.401s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.409s] -- Looking for ignition-common3 -- found version 3.14.0
+[3.409s] -- Searching for dependencies of ignition-common3
+[3.409s] -- Looking for dlfcn.h - found
+[3.417s] -- Looking for libdl - found
+[3.425s] -- Found DL: TRUE  
+[3.454s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[3.456s] -- Searching for <ignition-common3> component [graphics]
+[3.460s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[3.460s] -- Searching for dependencies of ignition-common3-graphics
+[3.460s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.468s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[3.469s] -- Searching for dependencies of ignition-fuel_tools4
+[3.609s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[3.618s] -- Checking for module 'jsoncpp'
+[3.632s] --   Found jsoncpp, version 1.9.5
+[3.671s] -- Found JSONCPP: TRUE  
+[3.681s] -- Checking for module 'libzip'
+[3.699s] --   Found libzip, version 1.7.3
+[3.766s] -- Found ZIP: TRUE  
+[3.766s] -- Looking for ignition-common3 -- found version 3.14.0
+[3.766s] -- Looking for ignition-math6 -- found version 6.15.1
+[3.771s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[3.778s] -- Gazebo version: 11.10
+[3.778s] -- Checking for module 'tbb'
+[3.803s] --   Found tbb, version 2021.5.0
+[3.870s] -- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+[3.999s] -- Found point_cloud_transport: 1.0.21 (/opt/ros/humble/share/point_cloud_transport/cmake)
+[4.014s] -- Found camera_info_manager: 3.1.12 (/opt/ros/humble/share/camera_info_manager/cmake)
+[4.065s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.297s] -- Configuring done
+[4.336s] -- Generating done
+[4.344s] -- Build files have been written to: /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin
+[4.359s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/realsense_gazebo_plugin -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin
+[4.363s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin -- -j2 -l2
+[4.485s] [ 33%] [32mBuilding CXX object CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o[0m
+[34.031s] [ 66%] [32mBuilding CXX object CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o[0m
+[65.288s] [100%] [32m[1mLinking CXX shared library librealsense_gazebo_plugin.so[0m
+[67.211s] [100%] Built target realsense_gazebo_plugin
+[67.314s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin -- -j2 -l2
+[67.354s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin
+[67.364s] -- Install configuration: ""
+[67.365s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so
+[67.374s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib/librealsense_gazebo_plugin.so" to ""
+[67.375s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/include/
+[67.376s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/include//realsense_gazebo_plugin
+[67.377s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/include//realsense_gazebo_plugin/gazebo_ros_realsense.hpp
+[67.378s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/include//realsense_gazebo_plugin/RealSensePlugin.hpp
+[67.378s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models
+[67.379s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera
+[67.379s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/model.config
+[67.380s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/model.sdf
+[67.381s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/meshes
+[67.381s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/meshes/realsense.dae
+[67.383s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/materials
+[67.384s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/materials/textures
+[67.384s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/models/realsense_camera/materials/textures/realsense_diffuse.png
+[67.384s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/urdf
+[67.385s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/urdf/realsense-D435.macro.xacro
+[67.385s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/urdf/d435_simulation.xacro
+[67.386s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/urdf/multi_d435_simulation.xacro
+[67.386s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/worlds
+[67.387s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/worlds/realsense.world
+[67.389s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/library_path.sh
+[67.390s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/library_path.dsv
+[67.391s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/ament_index/resource_index/package_run_dependencies/realsense_gazebo_plugin
+[67.391s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/ament_index/resource_index/parent_prefix_path/realsense_gazebo_plugin
+[67.393s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/ament_prefix_path.sh
+[67.394s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/ament_prefix_path.dsv
+[67.394s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/path.sh
+[67.395s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/environment/path.dsv
+[67.395s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.bash
+[67.396s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.sh
+[67.397s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.zsh
+[67.397s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/local_setup.dsv
+[67.398s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.dsv
+[67.399s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/ament_index/resource_index/packages/realsense_gazebo_plugin
+[67.399s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/ament_cmake_export_include_directories-extras.cmake
+[67.400s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/ament_cmake_export_libraries-extras.cmake
+[67.401s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig.cmake
+[67.401s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/cmake/realsense_gazebo_pluginConfig-version.cmake
+[67.402s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/share/realsense_gazebo_plugin/package.xml
+[67.409s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/realsense_gazebo_plugin

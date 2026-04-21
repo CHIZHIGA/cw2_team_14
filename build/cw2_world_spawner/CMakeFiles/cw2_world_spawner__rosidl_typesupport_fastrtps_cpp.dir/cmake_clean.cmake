@@ -1,0 +1,25 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task1_service__type_support.cpp.o"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task1_service__type_support.cpp.o.d"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task2_service__type_support.cpp.o"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task2_service__type_support.cpp.o.d"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task3_service__type_support.cpp.o"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task3_service__type_support.cpp.o.d"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task_setup__type_support.cpp.o"
+  "CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task_setup__type_support.cpp.o.d"
+  "libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libcw2_world_spawner__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task1_service__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task2_service__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task3_service__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/dds_fastrtps/task_setup__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/task1_service__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/task2_service__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/task3_service__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/cw2_world_spawner/srv/detail/task_setup__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/cw2_world_spawner__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

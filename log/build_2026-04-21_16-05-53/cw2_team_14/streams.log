@@ -1,0 +1,337 @@
+[0.009s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/cw2_team_14
+[0.069s] -- The C compiler identification is GNU 11.4.0
+[0.126s] -- The CXX compiler identification is GNU 11.4.0
+[0.132s] -- Detecting C compiler ABI info
+[0.229s] -- Detecting C compiler ABI info - done
+[0.239s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.239s] -- Detecting C compile features
+[0.239s] -- Detecting C compile features - done
+[0.247s] -- Detecting CXX compiler ABI info
+[0.457s] -- Detecting CXX compiler ABI info - done
+[0.469s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.470s] -- Detecting CXX compile features
+[0.471s] -- Detecting CXX compile features - done
+[0.476s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.692s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.791s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.801s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.811s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.852s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.896s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.973s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.980s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.141s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.168s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.205s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.216s] -- Looking for pthread.h
+[1.293s] -- Looking for pthread.h - found
+[1.293s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.442s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.442s] -- Found Threads: TRUE  
+[1.534s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.555s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.585s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.612s] -- Found moveit_core: 2.5.9 (/opt/ros/humble/share/moveit_core/cmake)
+[1.648s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.697s] -- Found parameter_traits: 0.6.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.716s] -- Found rclcpp_lifecycle: 16.0.17 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.754s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[1.910s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.974s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.974s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.560s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[2.570s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[2.594s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[2.626s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[2.650s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[2.689s] -- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)
+[2.736s] -- Checking for module 'eigen3'
+[2.746s] --   Found eigen3, version 3.4.0
+[2.773s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[2.774s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.792s] -- Checking for module 'flann'
+[2.808s] --   Found flann, version 1.9.1
+[2.839s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[2.840s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[4.075s] -- Checking for module 'libusb-1.0'
+[4.088s] --   Found libusb-1.0, version 1.0.25
+[4.118s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[4.120s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.166s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.452s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[4.461s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.466s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.713s] -- Found Qhull version 8.0.2
+[4.892s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.019s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[5.019s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[5.021s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[5.021s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[5.025s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[5.025s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[5.026s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[5.026s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[5.026s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[5.027s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[5.028s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[5.028s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[5.028s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[5.029s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[5.030s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[5.031s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[5.031s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[5.032s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[5.036s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[5.036s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[5.036s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[5.037s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[5.037s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[5.037s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[5.038s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[5.046s] [33mCMake Warning (dev) at CMakeLists.txt:23 (find_package):
+[5.046s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[5.046s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[5.046s]   command to set the policy and suppress this warning.
+[5.046s] 
+[5.047s]   CMake variable PCL_ROOT is set to:
+[5.047s] 
+[5.047s]     /usr
+[5.047s] 
+[5.047s]   For compatibility, CMake is ignoring the variable.
+[5.047s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[5.047s] [0m
+[5.057s] -- Found cw2_world_spawner: 0.1.0 (/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/share/cw2_world_spawner/cmake)
+[5.408s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[5.666s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.073s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.093s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[6.096s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[6.117s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[6.118s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.118s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[6.120s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[6.154s] -- Found PythonExtra: .so  
+[6.250s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.266s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.269s] -- Configured cppcheck include dirs: /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14/include
+[6.269s] -- Configured cppcheck exclude dirs and/or files: 
+[6.270s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.271s] -- Added test 'lint_cmake' to check CMake code style
+[6.272s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[6.273s] -- Added test 'uncrustify' to check C / C++ code style
+[6.273s] -- Configured uncrustify additional arguments: 
+[6.274s] -- Added test 'xmllint' to check XML markup files
+[6.281s] -- Configuring done
+[6.601s] -- Generating done
+[6.669s] -- Build files have been written to: /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+[6.690s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/bizare/Desktop/cw2_team_14/src/courseworks/cw2_team_14 -DCMAKE_INSTALL_PREFIX=/home/bizare/Desktop/cw2_team_14/install/cw2_team_14
+[6.691s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[6.742s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[7.200s] [  2%] Built target cw2_team_14__cpp
+[7.221s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.835s] [  8%] [32mBuilding C object CMakeFiles/cw2_team_14__rosidl_generator_c.dir/rosidl_generator_c/cw2_team_14/srv/detail/example__functions.c.o[0m
+[7.988s] [ 11%] [32m[1mLinking C shared library libcw2_team_14__rosidl_generator_c.so[0m
+[8.019s] [ 11%] Built target cw2_team_14__rosidl_generator_c
+[8.052s] [ 11%] Built target ament_cmake_python_copy_cw2_team_14
+[8.062s] [ 14%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[8.431s] [ 17%] [32mBuilding CXX object CMakeFiles/cw2_team_14__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cw2_team_14/srv/example__type_support.cpp.o[0m
+[8.693s] [ 20%] [32m[1mLinking CXX shared library libcw2_team_14__rosidl_typesupport_cpp.so[0m
+[8.737s] [ 20%] Built target cw2_team_14__rosidl_typesupport_cpp
+[8.753s] [ 22%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[9.131s] [ 25%] [32mBuilding CXX object CMakeFiles/cw2_team_14__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cw2_team_14/srv/detail/example__type_support_c.cpp.o[0m
+[9.558s] [ 28%] [32m[1mLinking CXX shared library libcw2_team_14__rosidl_typesupport_fastrtps_c.so[0m
+[9.702s] [ 28%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c
+[9.711s] [ 31%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.156s] [ 34%] [32mBuilding C object CMakeFiles/cw2_team_14__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cw2_team_14/srv/detail/example__type_support.c.o[0m
+[10.253s] [ 37%] [32m[1mLinking C shared library libcw2_team_14__rosidl_typesupport_introspection_c.so[0m
+[10.337s] [ 37%] Built target cw2_team_14__rosidl_typesupport_introspection_c
+[10.364s] [ 40%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[10.788s] [ 42%] [32mBuilding CXX object CMakeFiles/cw2_team_14__rosidl_typesupport_c.dir/rosidl_typesupport_c/cw2_team_14/srv/example__type_support.cpp.o[0m
+[10.818s] [ 45%] [32m[1mLinking CXX shared library libcw2_team_14__rosidl_typesupport_c.so[0m
+[10.866s] [ 45%] Built target cw2_team_14__rosidl_typesupport_c
+[10.878s] [ 48%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[11.305s] [ 51%] [32mBuilding CXX object CMakeFiles/cw2_team_14__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cw2_team_14/srv/detail/dds_fastrtps/example__type_support.cpp.o[0m
+[12.049s] [ 54%] [32m[1mLinking CXX shared library libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so[0m
+[12.184s] [ 54%] Built target cw2_team_14__rosidl_typesupport_fastrtps_cpp
+[12.208s] [ 57%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[12.670s] [ 60%] [32mBuilding CXX object CMakeFiles/cw2_team_14__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cw2_team_14/srv/detail/example__type_support.cpp.o[0m
+[13.231s] [ 62%] [32m[1mLinking CXX shared library libcw2_team_14__rosidl_typesupport_introspection_cpp.so[0m
+[13.338s] [ 62%] Built target cw2_team_14__rosidl_typesupport_introspection_cpp
+[13.671s] running egg_info
+[13.672s] creating cw2_team_14.egg-info
+[13.672s] writing cw2_team_14.egg-info/PKG-INFO
+[13.672s] writing dependency_links to cw2_team_14.egg-info/dependency_links.txt
+[13.673s] writing top-level names to cw2_team_14.egg-info/top_level.txt
+[13.673s] writing manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[13.675s] reading manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[13.676s] writing manifest file 'cw2_team_14.egg-info/SOURCES.txt'
+[13.701s] [ 62%] Built target ament_cmake_python_build_cw2_team_14_egg
+[13.726s] [ 65%] [32mBuilding CXX object CMakeFiles/cw2_team_14_cw2_class_lib.dir/src/cw2_class.cpp.o[0m
+[44.070s] [ 68%] [32m[1mLinking CXX shared library libcw2_team_14_cw2_class_lib.so[0m
+[48.936s] [ 68%] Built target cw2_team_14_cw2_class_lib
+[48.959s] [ 68%] Built target cw2_team_14
+[48.999s] [ 71%] [32mBuilding CXX object CMakeFiles/cw2_solution_node.dir/src/cw2_node.cpp.o[0m
+[58.638s] [ 74%] [32m[1mLinking CXX executable cw2_solution_node[0m
+[59.967s] [ 74%] Built target cw2_solution_node
+[59.988s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[60.386s] [ 77%] Built target cw2_team_14__py
+[60.405s] [ 80%] [32mBuilding C object CMakeFiles/cw2_team_14__rosidl_generator_py.dir/rosidl_generator_py/cw2_team_14/srv/_example_s.c.o[0m
+[60.544s] [ 82%] [32m[1mLinking C shared library rosidl_generator_py/cw2_team_14/libcw2_team_14__rosidl_generator_py.so[0m
+[60.598s] [ 82%] Built target cw2_team_14__rosidl_generator_py
+[60.634s] [ 85%] [32mBuilding C object CMakeFiles/cw2_team_14__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[60.745s] [ 88%] [32m[1mLinking C shared library rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[60.784s] [ 88%] Built target cw2_team_14__rosidl_typesupport_fastrtps_c__pyext
+[60.804s] [ 91%] [32mBuilding C object CMakeFiles/cw2_team_14__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[60.886s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[60.920s] [ 94%] Built target cw2_team_14__rosidl_typesupport_introspection_c__pyext
+[60.943s] [ 97%] [32mBuilding C object CMakeFiles/cw2_team_14__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_c.c.o[0m
+[61.053s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[61.106s] [100%] Built target cw2_team_14__rosidl_typesupport_c__pyext
+[61.136s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/bizare/Desktop/cw2_team_14/build/cw2_team_14 -- -j2 -l2
+[61.142s] Invoking command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_team_14
+[61.149s] -- Install configuration: ""
+[61.149s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/rosidl_interfaces/cw2_team_14
+[61.150s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[61.150s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[61.150s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_c__visibility_control.h
+[61.150s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[61.151s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[61.151s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.c
+[61.151s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.h
+[61.152s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__functions.h
+[61.152s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.h
+[61.153s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.h
+[61.153s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/library_path.sh
+[61.153s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/library_path.dsv
+[61.154s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_c.so
+[61.154s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_c.so" to ""
+[61.154s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[61.154s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[61.154s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[61.154s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[61.155s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[61.155s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_c.h
+[61.155s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so
+[61.156s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_c.so" to ""
+[61.156s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[61.156s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[61.156s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[61.156s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[61.156s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[61.156s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.c
+[61.157s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_c.h
+[61.157s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so
+[61.157s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_c.so" to ""
+[61.157s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_c.so
+[61.157s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_c.so" to ""
+[61.157s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[61.157s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[61.157s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_generator_cpp__visibility_control.hpp
+[61.157s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[61.157s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/example.hpp
+[61.158s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[61.158s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__builder.hpp
+[61.158s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.hpp
+[61.158s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__traits.hpp
+[61.158s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__struct.hpp
+[61.158s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[61.158s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg
+[61.159s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[61.159s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[61.159s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[61.159s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/dds_fastrtps
+[61.159s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_fastrtps_cpp.hpp
+[61.160s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so
+[61.160s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_fastrtps_cpp.so" to ""
+[61.160s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14
+[61.162s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv
+[61.162s] -- Up-to-date: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail
+[61.162s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__rosidl_typesupport_introspection_cpp.hpp
+[61.162s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/include/cw2_team_14/cw2_team_14/srv/detail/example__type_support.cpp
+[61.162s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so
+[61.162s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_introspection_cpp.so" to ""
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_cpp.so
+[61.163s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_typesupport_cpp.so" to ""
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.sh
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/pythonpath.dsv
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/SOURCES.txt
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/dependency_links.txt
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/PKG-INFO
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14-0.1.0-py3.10.egg-info/top_level.txt
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/libcw2_team_14__rosidl_generator_py.so
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/__init__.py
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_introspection_c.c
+[61.163s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_c.c
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/_cw2_team_14_s.ep.rosidl_typesupport_fastrtps_c.c
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example_s.c
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example.py
+[61.165s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/__init__.py
+[61.195s] Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14'...
+[61.195s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/__init__.py'...
+[61.195s] Listing '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv'...
+[61.195s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/__init__.py'...
+[61.195s] Compiling '/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/srv/_example.py'...
+[61.199s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[61.199s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[61.199s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[61.200s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[61.200s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[61.200s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/local/lib/python3.10/dist-packages/cw2_team_14/cw2_team_14_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[61.200s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_py.so
+[61.200s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14__rosidl_generator_py.so" to ""
+[61.200s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example.idl
+[61.201s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example.srv
+[61.202s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example_Request.msg
+[61.202s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/srv/Example_Response.msg
+[61.202s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so
+[61.213s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/libcw2_team_14_cw2_class_lib.so" to ""
+[61.213s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node
+[61.214s] -- Set runtime path of "/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib/cw2_team_14/cw2_solution_node" to ""
+[61.214s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/launch
+[61.215s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/launch/run_solution.launch.py
+[61.215s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/package_run_dependencies/cw2_team_14
+[61.215s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/parent_prefix_path/cw2_team_14
+[61.215s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.sh
+[61.215s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/ament_prefix_path.dsv
+[61.215s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/path.sh
+[61.216s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/environment/path.dsv
+[61.216s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.bash
+[61.216s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.sh
+[61.217s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.zsh
+[61.217s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/local_setup.dsv
+[61.217s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.dsv
+[61.218s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/ament_index/resource_index/packages/cw2_team_14
+[61.218s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport.cmake
+[61.218s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cExport-noconfig.cmake
+[61.218s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport.cmake
+[61.218s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[61.218s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport.cmake
+[61.220s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[61.220s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport.cmake
+[61.221s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cExport-noconfig.cmake
+[61.221s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_cppExport.cmake
+[61.221s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport.cmake
+[61.221s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[61.221s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport.cmake
+[61.222s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[61.222s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport.cmake
+[61.222s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14__rosidl_typesupport_cppExport-noconfig.cmake
+[61.222s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport.cmake
+[61.222s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/export_cw2_team_14__rosidl_generator_pyExport-noconfig.cmake
+[61.222s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake-extras.cmake
+[61.223s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_dependencies-extras.cmake
+[61.223s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_include_directories-extras.cmake
+[61.223s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_libraries-extras.cmake
+[61.224s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/ament_cmake_export_targets-extras.cmake
+[61.224s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[61.224s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[61.224s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config.cmake
+[61.224s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/cmake/cw2_team_14Config-version.cmake
+[61.224s] -- Installing: /home/bizare/Desktop/cw2_team_14/install/cw2_team_14/share/cw2_team_14/package.xml
+[61.229s] Invoked command in '/home/bizare/Desktop/cw2_team_14/build/cw2_team_14' returned '0': CMAKE_PREFIX_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner:/home/bizare/Desktop/cw2_team_14/install/rpl_panda_with_rs:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin:/home/bizare/Desktop/cw2_team_14/install/panda_moveit_config:/home/bizare/Desktop/cw2_team_14/install/panda_description:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14:/opt/ros/humble LD_LIBRARY_PATH=/home/bizare/Desktop/cw2_team_14/install/cw2_world_spawner/lib:/home/bizare/Desktop/cw2_team_14/install/realsense_gazebo_plugin/lib:/home/bizare/Desktop/cw2_team_14/install/cw2_team_14/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/bizare/Desktop/cw2_team_14/build/cw2_team_14

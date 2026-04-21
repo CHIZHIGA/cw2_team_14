@@ -1,0 +1,6 @@
+setup.py
+cw2_team_14/__init__.py
+cw2_team_14.egg-info/PKG-INFO
+cw2_team_14.egg-info/SOURCES.txt
+cw2_team_14.egg-info/dependency_links.txt
+cw2_team_14.egg-info/top_level.txt

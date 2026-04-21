@@ -1,0 +1,4 @@
+source;share/cw2_world_spawner/local_setup.bash
+source;share/cw2_world_spawner/local_setup.dsv
+source;share/cw2_world_spawner/local_setup.sh
+source;share/cw2_world_spawner/local_setup.zsh

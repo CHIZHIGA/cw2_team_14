@@ -1,0 +1,6 @@
+setup.py
+cw2_world_spawner/__init__.py
+cw2_world_spawner.egg-info/PKG-INFO
+cw2_world_spawner.egg-info/SOURCES.txt
+cw2_world_spawner.egg-info/dependency_links.txt
+cw2_world_spawner.egg-info/top_level.txt
