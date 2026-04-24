@@ -137,7 +137,7 @@ constexpr double kTask3CloudZMin = 0.010;
 constexpr double kTask3CloudZMax = 0.150;
 constexpr float  kTask3VoxelLeaf = 0.006f;
 constexpr double kTask3ClusterTol = 0.04;
-constexpr int    kTask3MinClusterPts = 20;
+constexpr int    kTask3MinClusterPts = 8;   // lowered to detect 20mm shapes
 constexpr int    kTask3MaxClusterPts = 60000;
 constexpr double kTask3CoreFracThreshold = 0.025;  // > this -> cross, <= -> nought
 constexpr double kTask3CoreRadius = 0.025;
@@ -181,6 +181,28 @@ bool is_task3_basket_coloured(const PointT &pt)
     && r > g + 20 && r > b + 20
     && (r - other_max) < 110
     && std::abs(g - b) < 35;
+}
+
+// Returns the dominant colour name of a shape cluster for logging.
+std::string detect_task3_colour(const PointCPtr &cluster)
+{
+  double sum_r = 0.0, sum_g = 0.0, sum_b = 0.0;
+  std::size_t count = 0;
+  for (const auto &pt : cluster->points) {
+    if (!is_task3_shape_coloured(pt)) { continue; }
+    sum_r += pt.r; sum_g += pt.g; sum_b += pt.b;
+    ++count;
+  }
+  if (count == 0) { return "unknown"; }
+  const double r = sum_r / static_cast<double>(count);
+  const double g = sum_g / static_cast<double>(count);
+  const double b = sum_b / static_cast<double>(count);
+
+  if (r > g + 40 && r > b + 40)              { return "red"; }
+  if (b > r + 40 && b > g + 40)              { return "blue"; }
+  if (r > g + 20 && b > g + 20)              { return "purple"; }
+  if (g > r + 20 && g > b + 20)              { return "green"; }
+  return "coloured";
 }
 
 }  // namespace
@@ -1382,7 +1404,7 @@ void cw2::t3_callback(
   response->num_most_common_shape = 0;
   response->most_common_shape_vector.clear();
 
-  RCLCPP_INFO(node_->get_logger(), "Task 3 started");
+  RCLCPP_DEBUG(node_->get_logger(), "Task 3 started");
 
   set_gripper_width(kOpenWidth);
   if (!move_arm_to_named_target("ready")) {
@@ -1457,33 +1479,118 @@ void cw2::t3_callback(
   // Return to ready before beginning classification arm moves
   move_arm_to_named_target("ready");
 
-  // ── 6. Classify each shape cluster ─────────────────────────────────────────
-  std::vector<Task3ShapeInfo> detected_shapes;
-  for (const auto &cluster : shape_clusters) {
+  // ── 6. Classify each shape cluster – same logic and output as Task 2 ────────
+  // Build Task2ShapeSignatures directly from the already-collected merged_cloud
+  // (world-frame, no arm movement needed).  Then classify pairwise exactly as
+  // Task 2 does with classify_task2_shape_pairwise().
+  struct T3Observation
+  {
+    geometry_msgs::msg::Point centroid;
+    Task2ShapeSignature        signature;
+    std::string                colour;
+  };
+
+  std::vector<T3Observation> observations;
+  observations.reserve(shape_clusters.size());
+
+  for (std::size_t ci = 0; ci < shape_clusters.size(); ++ci) {
+    const auto &cluster = shape_clusters[ci];
     if (!cluster || cluster->empty()) { continue; }
 
-    double cx = 0.0, cy = 0.0, cz = 0.0;
+    double cx = 0.0, cy = 0.0;
     double z_min = std::numeric_limits<double>::max();
     for (const auto &pt : cluster->points) {
-      cx += pt.x; cy += pt.y; cz += pt.z;
+      cx += pt.x; cy += pt.y;
       if (pt.z < z_min) { z_min = pt.z; }
     }
     const double inv = 1.0 / static_cast<double>(cluster->size());
+
     geometry_msgs::msg::Point centroid;
     centroid.x = cx * inv;
     centroid.y = cy * inv;
-    // All shape SDF models have: link pose z-offset = 20mm, mesh Y [0, 0.040].
-    // After the 90-deg x-rotation in the SDF, mesh-Y maps to link-Z, so:
-    //   shape_bottom_world_z = model_origin_z + link_offset_z = spawn_z + 0.020
-    // Therefore: spawn_z (what Task 1's spawner sends) = z_min - link_offset_z
-    //                                                   = z_min - kTask3ShapeHalfHeight
-    // Using this makes the centroid.z identical to the Task 1 spawner value, so the
-    // same kGraspOffsetZ calculation produces the correct gripper height.
-    centroid.z = z_min - kTask3ShapeHalfHeight;
+    centroid.z = z_min - kTask3ShapeHalfHeight;   // spawner-equivalent z (same as Task 1)
 
-    const std::string shape_type = t3_classify_cluster(cluster, centroid);
+    // Compute cluster bounding box to build an adaptive crop window.
+    // This correctly handles 20/30/40mm shapes without mixing neighbour points.
+    float xmin_c =  std::numeric_limits<float>::max();
+    float xmax_c = -std::numeric_limits<float>::max();
+    float ymin_c =  std::numeric_limits<float>::max();
+    float ymax_c = -std::numeric_limits<float>::max();
+    for (const auto &pt : cluster->points) {
+      xmin_c = std::min(xmin_c, pt.x); xmax_c = std::max(xmax_c, pt.x);
+      ymin_c = std::min(ymin_c, pt.y); ymax_c = std::max(ymax_c, pt.y);
+    }
+    const double half_x = static_cast<double>((xmax_c - xmin_c) / 2.0f) + 0.012;
+    const double half_y = static_cast<double>((ymax_c - ymin_c) / 2.0f) + 0.012;
 
-    detected_shapes.push_back({centroid, shape_type});
+    // Extract object cloud from merged_cloud (already in panda_link0 frame).
+    // Uses adaptive crop so small shapes are not polluted by neighbours.
+    PointC object_cloud;
+    object_cloud.reserve(cluster->size() * 3);
+    for (const auto &pt : merged_cloud->points) {
+      if (std::abs(static_cast<double>(pt.x) - centroid.x) > half_x) { continue; }
+      if (std::abs(static_cast<double>(pt.y) - centroid.y) > half_y) { continue; }
+      if (static_cast<double>(pt.z) < centroid.z - kTask2CropBelowCenterZ) { continue; }
+      if (static_cast<double>(pt.z) > centroid.z + kTask2CropAboveCenterZ) { continue; }
+      if (is_ground_coloured(pt))      { continue; }
+      if (is_desaturated_colour(pt))   { continue; }
+
+      PointT centred = pt;
+      centred.x = pt.x - static_cast<float>(centroid.x);
+      centred.y = pt.y - static_cast<float>(centroid.y);
+      centred.z = pt.z - static_cast<float>(centroid.z);
+      object_cloud.push_back(centred);
+    }
+
+    const std::string colour = detect_task3_colour(shape_clusters[ci]);
+
+    T3Observation obs;
+    obs.centroid  = centroid;
+    obs.colour    = colour;
+    if (build_task2_shape_signature(object_cloud, obs.signature)) {
+      RCLCPP_INFO(node_->get_logger(),
+        "T3 shape %zu: colour=%s pts=%zu core=%.3f inner=%.3f mean_r=%.3f",
+        ci + 1, colour.c_str(), obs.signature.point_count,
+        obs.signature.core_fraction,
+        obs.signature.inner_fraction,
+        obs.signature.mean_radius);
+      observations.push_back(obs);
+    } else {
+      RCLCPP_WARN(node_->get_logger(),
+        "T3: shape %zu (%s) signature failed (%zu pts), skipping",
+        ci + 1, colour.c_str(), object_cloud.size());
+    }
+  }
+
+  // Step 6b: classify using the same pairwise logic as Task 2.
+  // Each shape votes against every other; majority determines the label.
+  // Single shape falls back to core_fraction threshold.
+  std::vector<Task3ShapeInfo> detected_shapes;
+  detected_shapes.reserve(observations.size());
+
+  for (std::size_t i = 0; i < observations.size(); ++i) {
+    std::string shape_type;
+    if (observations.size() < 2) {
+      shape_type = (observations[i].signature.core_fraction > kTask3CoreFracThreshold)
+                   ? "cross" : "nought";
+    } else {
+      int cross_votes = 0;
+      int nought_votes = 0;
+      for (std::size_t j = 0; j < observations.size(); ++j) {
+        if (i == j) { continue; }
+        const std::string vote = classify_task2_shape_pairwise(
+          observations[i].signature, observations[j].signature);
+        if (vote == "Cross") { ++cross_votes; }
+        else                  { ++nought_votes; }
+      }
+      shape_type = (cross_votes >= nought_votes) ? "cross" : "nought";
+    }
+
+    RCLCPP_INFO(node_->get_logger(),
+      "T3 summary: Shape %zu = %s (%s) at (%.3f, %.3f)",
+      i + 1, shape_type.c_str(), observations[i].colour.c_str(),
+      observations[i].centroid.x, observations[i].centroid.y);
+    detected_shapes.push_back({observations[i].centroid, shape_type});
   }
 
   // ── 7. Count and determine most-common shape ────────────────────────────────
@@ -1845,7 +1952,7 @@ bool cw2::t3_pick_and_place(
   const int max_scan_rounds = is_nought ? 1 : 3;
 
   for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
-    RCLCPP_INFO(node_->get_logger(),
+    RCLCPP_DEBUG(node_->get_logger(),
       "T3 pick round %d: object=(%.3f, %.3f, %.3f) shape=%s",
       scan_round + 1,
       current_object_point.x, current_object_point.y, current_object_point.z,
@@ -1854,7 +1961,7 @@ bool cw2::t3_pick_and_place(
     double orientation_offset = 0.0;
     double orientation_confidence = 0.0;
     if (is_nought) {
-      RCLCPP_INFO(node_->get_logger(), "T3 nought: skipping scan-based yaw refinement and rescans");
+      RCLCPP_DEBUG(node_->get_logger(), "T3 nought: skipping scan-based yaw refinement and rescans");
     } else {
       geometry_msgs::msg::PointStamped scan_target;
       scan_target.header.frame_id = frame_id;
@@ -1866,13 +1973,13 @@ bool cw2::t3_pick_and_place(
           orientation_confidence) &&
         orientation_confidence >= kTask1YawMinConfidence)
       {
-        RCLCPP_INFO(node_->get_logger(),
+        RCLCPP_DEBUG(node_->get_logger(),
           "T3 using yaw refinement %.1f deg (confidence %.3f)",
           orientation_offset * 180.0 / kPi,
           orientation_confidence);
       } else {
         orientation_offset = 0.0;
-        RCLCPP_INFO(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
+        RCLCPP_DEBUG(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
       }
     }
 
@@ -1882,7 +1989,7 @@ bool cw2::t3_pick_and_place(
     bool round_succeeded = false;
 
     for (const Task1Candidate &candidate : candidates) {
-      RCLCPP_INFO(node_->get_logger(), "T3 trying %s", candidate.description.c_str());
+      RCLCPP_DEBUG(node_->get_logger(), "T3 trying %s", candidate.description.c_str());
 
       const double grasp_dx = candidate.grasp_x - current_object_point.x;
       const double grasp_dy = candidate.grasp_y - current_object_point.y;
@@ -1936,7 +2043,7 @@ bool cw2::t3_pick_and_place(
       const double achieved_width = get_gripper_width();
       const bool object_grasped = achieved_width > (2.0 * kClosedWidth + kGraspDetectionMargin);
 
-      RCLCPP_INFO(node_->get_logger(),
+      RCLCPP_DEBUG(node_->get_logger(),
         "T3 close result for %s: command=%s finger_width=%.3f m",
         candidate.description.c_str(),
         close_command_succeeded ? "success" : "blocked",
@@ -1947,6 +2054,11 @@ bool cw2::t3_pick_and_place(
           "T3: failed to close gripper for %s (finger width %.3f m)",
           candidate.description.c_str(), achieved_width);
         set_gripper_width(kOpenWidth);
+        // Cartesian vertical retreat before going to ready to avoid pushing the object
+        geometry_msgs::msg::Pose retreat_pose = grasp_pose;
+        retreat_pose.position.z += 0.25;
+        arm_group_->setPoseReferenceFrame(frame_id);
+        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.7);
         move_arm_to_named_target("ready");
         continue;
       }
@@ -1962,10 +2074,11 @@ bool cw2::t3_pick_and_place(
           "T3: no stable grasp for %s (finger width %.3f m)",
           candidate.description.c_str(), achieved_width);
         set_gripper_width(kOpenWidth);
+        // Use a larger vertical retreat (0.25m) to fully clear the object before replanning
         geometry_msgs::msg::Pose retreat_pose = grasp_pose;
-        retreat_pose.position.z += kRetreatDistance;
+        retreat_pose.position.z += 0.25;
         arm_group_->setPoseReferenceFrame(frame_id);
-        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.8);
+        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.7);
         move_arm_to_named_target("ready");
         continue;
       }
