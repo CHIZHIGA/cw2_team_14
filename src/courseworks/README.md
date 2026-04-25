@@ -8,10 +8,6 @@ The success rate of the Task2 is 100%.
 The success rate of the Task3 exceeded 90%.  
 Therefore, in such cases, we hope that the instructor and teaching assistants can run the code multiple times to observe the results and structure.
 
-## Pick and Place, Object Detection and Localisation  
-
----
-
 ## 📌 Authors  
 
 - Student A (Zhenggang Chen) Total time consume: 2+5+5+3
