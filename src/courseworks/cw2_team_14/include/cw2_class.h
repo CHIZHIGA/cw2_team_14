@@ -136,6 +136,14 @@ private:
     double y,
     double z,
     double closing_axis_yaw) const;
+  bool execute_pick_and_place_sequence(
+    const geometry_msgs::msg::Point &object_point,
+    const std::string &object_frame,
+    const geometry_msgs::msg::Point &goal_point,
+    const std::string &goal_frame,
+    const std::string &shape_type,
+    const std::string &log_prefix,
+    bool preserve_object_z_on_rescan);
 
   // ── Task 3 helpers ─────────────────────────────────────────────────────────
   struct Task3ShapeInfo
