@@ -315,20 +315,33 @@ bool cw2::execute_cartesian_path(
     trajectory,
     true);
 
-  if (fraction < min_fraction)
+  // Attempt execution even if fraction is slightly below min_fraction.
+  // Only reject if fraction is critically low.
+  const double critical_fraction = 0.5;
+  if (fraction < critical_fraction)
   {
     RCLCPP_WARN(
       node_->get_logger(),
-      "Cartesian path fraction %.3f below required minimum %.3f",
+      "Cartesian path fraction %.3f critically low (< %.1f), rejecting",
+      fraction,
+      critical_fraction);
+    return false;
+  }
+
+  // Warn if below target but still attempt
+  if (fraction < min_fraction)
+  {
+    RCLCPP_DEBUG(
+      node_->get_logger(),
+      "Cartesian fraction %.3f below target %.3f, attempting anyway",
       fraction,
       min_fraction);
-    return false;
   }
 
   const auto result = arm_group.execute(trajectory);
   if (result != moveit::core::MoveItErrorCode::SUCCESS)
   {
-    RCLCPP_WARN(node_->get_logger(), "Failed to execute Cartesian path");
+    RCLCPP_DEBUG(node_->get_logger(), "Failed to execute Cartesian path");
     return false;
   }
 
@@ -1004,6 +1017,274 @@ geometry_msgs::msg::Pose cw2::make_top_down_pose(
   return pose;
 }
 
+bool cw2::execute_pick_and_place_sequence(
+  const geometry_msgs::msg::Point &object_point,
+  const std::string &object_frame,
+  const geometry_msgs::msg::Point &goal_point,
+  const std::string &goal_frame,
+  const std::string &shape_type,
+  const std::string &log_prefix,
+  const bool preserve_object_z_on_rescan)
+{
+  detach_grasped_object_collision();
+
+  if (!set_gripper_width(kOpenWidth)) {
+    RCLCPP_ERROR(node_->get_logger(), "%s failed to open gripper before grasp", log_prefix.c_str());
+    return false;
+  }
+
+  if (!move_arm_to_named_target("ready")) {
+    RCLCPP_WARN(node_->get_logger(), "%s failed to move arm to ready pose before grasp", log_prefix.c_str());
+  }
+
+  geometry_msgs::msg::Point current_object_point = object_point;
+  const bool is_nought = is_nought_shape_type(shape_type);
+  const int max_scan_rounds = is_nought ? 1 : 3;
+  bool task_completed = false;
+
+  for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
+    RCLCPP_INFO(
+      node_->get_logger(),
+      "%s scan round %d using object point (%.3f, %.3f, %.3f)",
+      log_prefix.c_str(),
+      scan_round + 1,
+      current_object_point.x,
+      current_object_point.y,
+      current_object_point.z);
+
+    double orientation_offset = 0.0;
+    double orientation_confidence = 0.0;
+    if (is_nought) {
+      RCLCPP_INFO(node_->get_logger(), "%s nought: skipping scan-based yaw refinement and rescans", log_prefix.c_str());
+    } else {
+      geometry_msgs::msg::PointStamped scan_target;
+      scan_target.header.frame_id = object_frame;
+      scan_target.point = current_object_point;
+      if (estimate_task1_object_yaw(
+          scan_target,
+          shape_type,
+          orientation_offset,
+          orientation_confidence) &&
+        orientation_confidence >= kTask1YawMinConfidence)
+      {
+        RCLCPP_INFO(
+          node_->get_logger(),
+          "%s using yaw refinement %.1f deg (confidence %.3f)",
+          log_prefix.c_str(),
+          orientation_offset * 180.0 / kPi,
+          orientation_confidence);
+      } else {
+        orientation_offset = 0.0;
+        RCLCPP_INFO(node_->get_logger(), "%s falling back to axis-aligned grasp candidates", log_prefix.c_str());
+      }
+    }
+
+    const std::vector<Task1Candidate> candidates =
+      build_task1_candidates(current_object_point, shape_type, orientation_offset);
+
+    bool round_succeeded = false;
+
+    for (const Task1Candidate &candidate : candidates) {
+      RCLCPP_INFO(node_->get_logger(), "%s trying %s", log_prefix.c_str(), candidate.description.c_str());
+
+      const double grasp_dx = candidate.grasp_x - current_object_point.x;
+      const double grasp_dy = candidate.grasp_y - current_object_point.y;
+      const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
+
+      const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
+        candidate.grasp_x,
+        candidate.grasp_y,
+        safe_approach_z,
+        candidate.closing_axis_yaw);
+
+      const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
+        candidate.grasp_x,
+        candidate.grasp_y,
+        current_object_point.z + kPreGraspOffsetZ,
+        candidate.closing_axis_yaw);
+
+      if (!move_arm_to_pose(approach_hover_pose, object_frame)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "%s failed to reach high approach pose for %s",
+          log_prefix.c_str(),
+          candidate.description.c_str());
+        continue;
+      }
+
+      arm_group_->setPoseReferenceFrame(object_frame);
+      if (!execute_cartesian_path(*arm_group_, {pre_grasp_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "%s failed to descend from approach hover to pre-grasp for %s",
+          log_prefix.c_str(),
+          candidate.description.c_str());
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "%s failed to return to ready after pre-grasp descend failure", log_prefix.c_str());
+        }
+        continue;
+      }
+
+      geometry_msgs::msg::Pose grasp_pose = pre_grasp_pose;
+      grasp_pose.position.z = current_object_point.z + kGraspOffsetZ;
+
+      arm_group_->setPoseReferenceFrame(object_frame);
+      if (!execute_cartesian_path(*arm_group_, {grasp_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "%s failed to descend for %s",
+          log_prefix.c_str(),
+          candidate.description.c_str());
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "%s failed to return to ready after descend failure", log_prefix.c_str());
+        }
+        continue;
+      }
+
+      const bool close_command_succeeded = set_gripper_width(kClosedWidth);
+      rclcpp::sleep_for(std::chrono::milliseconds(400));
+      const double achieved_width = get_gripper_width();
+      const bool object_grasped = achieved_width > (2.0 * kClosedWidth + kGraspDetectionMargin);
+
+      RCLCPP_INFO(
+        node_->get_logger(),
+        "%s close result for %s: command=%s finger_width=%.3f m",
+        log_prefix.c_str(),
+        candidate.description.c_str(),
+        close_command_succeeded ? "success" : "blocked",
+        achieved_width);
+
+      if (!close_command_succeeded && !object_grasped) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "%s failed to close gripper for %s (finger width %.3f m)",
+          log_prefix.c_str(),
+          candidate.description.c_str(),
+          achieved_width);
+        set_gripper_width(kOpenWidth);
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "%s failed to return to ready after close failure", log_prefix.c_str());
+        }
+        continue;
+      }
+
+      geometry_msgs::msg::Pose lift_pose = grasp_pose;
+      lift_pose.position.z += kLiftDistance;
+      arm_group_->setPoseReferenceFrame(object_frame);
+      const bool lifted = execute_cartesian_path(*arm_group_, {lift_pose}, kCartesianMinFraction);
+
+      if (!object_grasped || !lifted) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "%s no stable grasp detected for %s (finger width %.3f m)",
+          log_prefix.c_str(),
+          candidate.description.c_str(),
+          achieved_width);
+        set_gripper_width(kOpenWidth);
+
+        geometry_msgs::msg::Pose retreat_pose = grasp_pose;
+        retreat_pose.position.z += kRetreatDistance;
+        arm_group_->setPoseReferenceFrame(object_frame);
+        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.8);
+
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "%s failed to return to ready after unstable grasp", log_prefix.c_str());
+        }
+        continue;
+      }
+
+      attach_grasped_object_collision(shape_type);
+
+      const double carry_transit_z = std::max(
+        lift_pose.position.z,
+        goal_point.z + kCarryTransitOffsetZ);
+      const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
+        goal_point.x + grasp_dx,
+        goal_point.y + grasp_dy,
+        carry_transit_z,
+        candidate.closing_axis_yaw);
+
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(
+          node_->get_logger(),
+          "%s failed to carry object at safe transit height for %s",
+          log_prefix.c_str(),
+          candidate.description.c_str());
+        detach_grasped_object_collision();
+        set_gripper_width(kOpenWidth);
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "%s failed to return to ready after carry transit failure", log_prefix.c_str());
+        }
+        continue;
+      }
+
+      const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
+        goal_point.x + grasp_dx,
+        goal_point.y + grasp_dy,
+        goal_point.z + kPlaceHoverOffsetZ,
+        candidate.closing_axis_yaw);
+
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
+        RCLCPP_WARN(node_->get_logger(), "%s failed to descend to basket hover after grasp", log_prefix.c_str());
+        detach_grasped_object_collision();
+        set_gripper_width(kOpenWidth);
+        if (!move_arm_to_named_target("ready")) {
+          RCLCPP_WARN(node_->get_logger(), "%s failed to return to ready after basket-hover failure", log_prefix.c_str());
+        }
+        continue;
+      }
+
+      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
+      place_release_pose.position.z = goal_point.z + kPlaceReleaseOffsetZ;
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      execute_cartesian_path(*arm_group_, {place_release_pose}, 0.8);
+
+      if (!set_gripper_width(kOpenWidth)) {
+        RCLCPP_WARN(node_->get_logger(), "%s failed to release object above basket", log_prefix.c_str());
+      }
+      detach_grasped_object_collision();
+
+      rclcpp::sleep_for(std::chrono::milliseconds(300));
+
+      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
+      post_release_pose.position.z = goal_point.z + kPlaceHoverOffsetZ;
+      arm_group_->setPoseReferenceFrame(goal_frame);
+      execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
+
+      task_completed = true;
+      round_succeeded = true;
+      break;
+    }
+
+    if (task_completed || round_succeeded) {
+      break;
+    }
+
+    if (scan_round < max_scan_rounds - 1) {
+      if (!move_arm_to_named_target("ready")) {
+        RCLCPP_WARN(node_->get_logger(), "%s failed to move to ready before rescan", log_prefix.c_str());
+      }
+
+      const double corrected_z = current_object_point.z;
+      if (!rescan_task1_object_point(current_object_point, object_frame)) {
+        RCLCPP_WARN(node_->get_logger(), "%s rescan failed, stopping further retries", log_prefix.c_str());
+        break;
+      }
+      if (preserve_object_z_on_rescan) {
+        current_object_point.z = corrected_z;
+      }
+    }
+  }
+
+  if (!move_arm_to_named_target("ready")) {
+    RCLCPP_WARN(node_->get_logger(), "%s failed to return arm to ready pose after grasp", log_prefix.c_str());
+  }
+
+  return task_completed;
+}
+
 void cw2::t1_callback(
   const std::shared_ptr<cw2_world_spawner::srv::Task1Service::Request> request,
   std::shared_ptr<cw2_world_spawner::srv::Task1Service::Response> response)
@@ -1026,252 +1307,15 @@ void cw2::t1_callback(
     request->goal_point.point.y,
     request->goal_point.point.z);
 
-  detach_grasped_object_collision();
-
-  if (!set_gripper_width(kOpenWidth)) {
-    RCLCPP_ERROR(node_->get_logger(), "Failed to open gripper before Task 1");
-    return;
-  }
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "Failed to move arm to ready pose before Task 1");
-  }
-
-  geometry_msgs::msg::Point current_object_point = request->object_point.point;
-  const bool is_nought = is_nought_shape_type(request->shape_type);
-
-  bool task_completed = false;
-  const int max_scan_rounds = is_nought ? 1 : 3;
-
-  for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
-    RCLCPP_INFO(
-      node_->get_logger(),
-      "Task 1 scan round %d using object point (%.3f, %.3f, %.3f)",
-      scan_round + 1,
-      current_object_point.x,
-      current_object_point.y,
-      current_object_point.z);
-
-    double orientation_offset = 0.0;
-    double orientation_confidence = 0.0;
-    if (is_nought) {
-      RCLCPP_INFO(node_->get_logger(), "Task 1 nought: skipping scan-based yaw refinement and rescans");
-    } else {
-      geometry_msgs::msg::PointStamped scan_target;
-      scan_target.header.frame_id = object_frame;
-      scan_target.point = current_object_point;
-      if (estimate_task1_object_yaw(
-          scan_target,
-          request->shape_type,
-          orientation_offset,
-          orientation_confidence) &&
-        orientation_confidence >= kTask1YawMinConfidence)
-      {
-        RCLCPP_INFO(
-          node_->get_logger(),
-          "Task 1 using yaw refinement %.1f deg (confidence %.3f)",
-          orientation_offset * 180.0 / kPi,
-          orientation_confidence);
-      } else {
-        orientation_offset = 0.0;
-        RCLCPP_INFO(node_->get_logger(), "Task 1 falling back to axis-aligned grasp candidates");
-      }
-    }
-
-    const std::vector<Task1Candidate> candidates =
-      build_task1_candidates(current_object_point, request->shape_type, orientation_offset);
-
-    bool round_succeeded = false;
-
-    for (const Task1Candidate &candidate : candidates) {
-      RCLCPP_INFO(node_->get_logger(), "Trying %s", candidate.description.c_str());
-
-      const double grasp_dx = candidate.grasp_x - current_object_point.x;
-      const double grasp_dy = candidate.grasp_y - current_object_point.y;
-      const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
-
-      const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
-        candidate.grasp_x,
-        candidate.grasp_y,
-        safe_approach_z,
-        candidate.closing_axis_yaw);
-
-      const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
-        candidate.grasp_x,
-        candidate.grasp_y,
-        current_object_point.z + kPreGraspOffsetZ,
-        candidate.closing_axis_yaw);
-
-      if (!move_arm_to_pose(approach_hover_pose, object_frame)) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "Failed to reach high approach pose for %s",
-          candidate.description.c_str());
-        continue;
-      }
-
-      arm_group_->setPoseReferenceFrame(object_frame);
-      if (!execute_cartesian_path(*arm_group_, {pre_grasp_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "Failed to descend from approach hover to pre-grasp for %s",
-          candidate.description.c_str());
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after pre-grasp descend failure");
-        }
-        continue;
-      }
-
-      geometry_msgs::msg::Pose grasp_pose = pre_grasp_pose;
-      grasp_pose.position.z = current_object_point.z + kGraspOffsetZ;
-
-      arm_group_->setPoseReferenceFrame(object_frame);
-      if (!execute_cartesian_path(*arm_group_, {grasp_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to descend for %s", candidate.description.c_str());
-
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after descend failure");
-        }
-        continue;
-      }
-
-      const bool close_command_succeeded = set_gripper_width(kClosedWidth);
-      rclcpp::sleep_for(std::chrono::milliseconds(400));
-      const double achieved_width = get_gripper_width();
-      const bool object_grasped = achieved_width > (2.0 * kClosedWidth + kGraspDetectionMargin);
-
-      RCLCPP_INFO(
-        node_->get_logger(),
-        "Close result for %s: command=%s finger_width=%.3f m",
-        candidate.description.c_str(),
-        close_command_succeeded ? "success" : "blocked",
-        achieved_width);
-
-      if (!close_command_succeeded && !object_grasped) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "Failed to close gripper for %s (finger width %.3f m)",
-          candidate.description.c_str(),
-          achieved_width);
-
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after close failure");
-        }
-        continue;
-      }
-
-      geometry_msgs::msg::Pose lift_pose = grasp_pose;
-      lift_pose.position.z += kLiftDistance;
-      arm_group_->setPoseReferenceFrame(object_frame);
-      const bool lifted = execute_cartesian_path(
-        *arm_group_, {lift_pose}, kCartesianMinFraction);
-
-      if (!object_grasped || !lifted) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "No stable grasp detected for %s (finger width %.3f m)",
-          candidate.description.c_str(),
-          achieved_width);
-
-        set_gripper_width(kOpenWidth);
-
-        geometry_msgs::msg::Pose retreat_pose = grasp_pose;
-        retreat_pose.position.z += kRetreatDistance;
-        arm_group_->setPoseReferenceFrame(object_frame);
-        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.8);
-
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after unstable grasp");
-        }
-        continue;
-      }
-
-      attach_grasped_object_collision(request->shape_type);
-
-      const double carry_transit_z = std::max(
-        lift_pose.position.z,
-        request->goal_point.point.z + kCarryTransitOffsetZ);
-      const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
-        request->goal_point.point.x + grasp_dx,
-        request->goal_point.point.y + grasp_dy,
-        carry_transit_z,
-        candidate.closing_axis_yaw);
-
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(
-          node_->get_logger(),
-          "Failed to carry object at safe transit height for %s",
-          candidate.description.c_str());
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after carry transit failure");
-        }
-        continue;
-      }
-
-      const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
-        request->goal_point.point.x + grasp_dx,
-        request->goal_point.point.y + grasp_dy,
-        request->goal_point.point.z + kPlaceHoverOffsetZ,
-        candidate.closing_axis_yaw);
-
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to descend to basket hover after grasp");
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        if (!move_arm_to_named_target("ready")) {
-          RCLCPP_WARN(node_->get_logger(), "Failed to return to ready after basket-hover failure");
-        }
-        continue;
-      }
-
-      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
-      place_release_pose.position.z = request->goal_point.point.z + kPlaceReleaseOffsetZ;
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      execute_cartesian_path(*arm_group_, {place_release_pose}, 0.8);
-
-      if (!set_gripper_width(kOpenWidth)) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to release object above basket");
-      }
-      detach_grasped_object_collision();
-
-      rclcpp::sleep_for(std::chrono::milliseconds(300));
-
-      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
-      post_release_pose.position.z = request->goal_point.point.z + kPlaceHoverOffsetZ;
-      arm_group_->setPoseReferenceFrame(goal_frame);
-      execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
-
-      task_completed = true;
-      round_succeeded = true;
-      break;
-    }
-
-    if (task_completed || round_succeeded) {
-      break;
-    }
-
-    if (scan_round < max_scan_rounds - 1) {
-      if (!move_arm_to_named_target("ready")) {
-        RCLCPP_WARN(node_->get_logger(), "Failed to move to ready before rescan");
-      }
-
-      if (!rescan_task1_object_point(current_object_point, object_frame)) {
-        RCLCPP_WARN(node_->get_logger(), "Rescan failed, stopping further retries");
-        break;
-      }
-    }
-  }
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "Failed to return arm to ready pose after Task 1");
-  }
-
-  if (!task_completed) {
+  if (!execute_pick_and_place_sequence(
+      request->object_point.point,
+      object_frame,
+      request->goal_point.point,
+      goal_frame,
+      request->shape_type,
+      "Task 1",
+      false))
+  {
     RCLCPP_ERROR(node_->get_logger(), "Task 1 failed: no successful grasp candidate completed the place action");
     return;
   }
@@ -1524,6 +1568,12 @@ void cw2::t3_callback(
   }
 
   // ── 9. Pick and place one of the most-common shape ──────────────────────────
+  if (!collision_ids.empty()) {
+    RCLCPP_INFO(node_->get_logger(), "T3: clearing obstacle collision objects before Task 1-style pick");
+    t3_clear_obstacles(collision_ids);
+    collision_ids.clear();
+  }
+
   for (const auto &s : detected_shapes) {
     if (!most_common.empty() && s.shape_type == most_common) {
       RCLCPP_INFO(node_->get_logger(),
@@ -1823,230 +1873,12 @@ bool cw2::t3_pick_and_place(
   const geometry_msgs::msg::Point &basket_pos,
   const std::string &shape_type)
 {
-  // object_pos.z has already been corrected to z_min + kTask3ShapeHalfHeight
-  // in t3_callback, so it is equivalent to the spawner-provided centroid used in Task 1.
-  const std::string frame_id = "panda_link0";
-
-  if (!set_gripper_width(kOpenWidth)) {
-    RCLCPP_ERROR(node_->get_logger(), "T3: failed to open gripper before pick");
-    return false;
-  }
-
-  detach_grasped_object_collision();
-
-  if (!move_arm_to_named_target("ready")) {
-    RCLCPP_WARN(node_->get_logger(), "T3: failed to reach ready pose before pick");
-  }
-
-  geometry_msgs::msg::Point current_object_point = object_pos;
-  const bool is_nought = is_nought_shape_type(shape_type);
-
-  bool task_completed = false;
-  const int max_scan_rounds = is_nought ? 1 : 3;
-
-  for (int scan_round = 0; scan_round < max_scan_rounds && !task_completed; ++scan_round) {
-    RCLCPP_INFO(node_->get_logger(),
-      "T3 pick round %d: object=(%.3f, %.3f, %.3f) shape=%s",
-      scan_round + 1,
-      current_object_point.x, current_object_point.y, current_object_point.z,
-      shape_type.c_str());
-
-    double orientation_offset = 0.0;
-    double orientation_confidence = 0.0;
-    if (is_nought) {
-      RCLCPP_INFO(node_->get_logger(), "T3 nought: skipping scan-based yaw refinement and rescans");
-    } else {
-      geometry_msgs::msg::PointStamped scan_target;
-      scan_target.header.frame_id = frame_id;
-      scan_target.point = current_object_point;
-      if (estimate_task1_object_yaw(
-          scan_target,
-          shape_type,
-          orientation_offset,
-          orientation_confidence) &&
-        orientation_confidence >= kTask1YawMinConfidence)
-      {
-        RCLCPP_INFO(node_->get_logger(),
-          "T3 using yaw refinement %.1f deg (confidence %.3f)",
-          orientation_offset * 180.0 / kPi,
-          orientation_confidence);
-      } else {
-        orientation_offset = 0.0;
-        RCLCPP_INFO(node_->get_logger(), "T3 falling back to axis-aligned grasp candidates");
-      }
-    }
-
-    const std::vector<Task1Candidate> candidates =
-      build_task1_candidates(current_object_point, shape_type, orientation_offset);
-
-    bool round_succeeded = false;
-
-    for (const Task1Candidate &candidate : candidates) {
-      RCLCPP_INFO(node_->get_logger(), "T3 trying %s", candidate.description.c_str());
-
-      const double grasp_dx = candidate.grasp_x - current_object_point.x;
-      const double grasp_dy = candidate.grasp_y - current_object_point.y;
-      const double safe_approach_z = current_object_point.z + kApproachHoverOffsetZ;
-
-      const geometry_msgs::msg::Pose approach_hover_pose = make_top_down_pose(
-        candidate.grasp_x,
-        candidate.grasp_y,
-        safe_approach_z,
-        candidate.closing_axis_yaw);
-
-      const geometry_msgs::msg::Pose pre_grasp_pose = make_top_down_pose(
-        candidate.grasp_x,
-        candidate.grasp_y,
-        current_object_point.z + kPreGraspOffsetZ,
-        candidate.closing_axis_yaw);
-
-      if (!move_arm_to_named_target("ready")) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to return to ready before high approach");
-      }
-
-      if (!move_arm_to_pose(approach_hover_pose, frame_id)) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to reach high approach pose for %s", candidate.description.c_str());
-        continue;
-      }
-
-      arm_group_->setPoseReferenceFrame(frame_id);
-      if (!execute_cartesian_path(*arm_group_, {pre_grasp_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to descend from approach hover to pre-grasp for %s", candidate.description.c_str());
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Cartesian descent to grasp height ────────────────────────────────────
-      geometry_msgs::msg::Pose grasp_pose = pre_grasp_pose;
-      grasp_pose.position.z = current_object_point.z + kGraspOffsetZ;
-
-      arm_group_->setPoseReferenceFrame(frame_id);
-      if (!execute_cartesian_path(*arm_group_, {grasp_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to descend for %s", candidate.description.c_str());
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Close gripper ────────────────────────────────────────────────────────
-      const bool close_command_succeeded = set_gripper_width(kClosedWidth);
-      rclcpp::sleep_for(std::chrono::milliseconds(400));
-      const double achieved_width = get_gripper_width();
-      const bool object_grasped = achieved_width > (2.0 * kClosedWidth + kGraspDetectionMargin);
-
-      RCLCPP_INFO(node_->get_logger(),
-        "T3 close result for %s: command=%s finger_width=%.3f m",
-        candidate.description.c_str(),
-        close_command_succeeded ? "success" : "blocked",
-        achieved_width);
-
-      if (!close_command_succeeded && !object_grasped) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: failed to close gripper for %s (finger width %.3f m)",
-          candidate.description.c_str(), achieved_width);
-        set_gripper_width(kOpenWidth);
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Lift ────────────────────────────────────────────────────────────────
-      geometry_msgs::msg::Pose lift_pose = grasp_pose;
-      lift_pose.position.z += kLiftDistance;
-      arm_group_->setPoseReferenceFrame(frame_id);
-      const bool lifted = execute_cartesian_path(*arm_group_, {lift_pose}, kCartesianMinFraction);
-
-      if (!object_grasped || !lifted) {
-        RCLCPP_WARN(node_->get_logger(),
-          "T3: no stable grasp for %s (finger width %.3f m)",
-          candidate.description.c_str(), achieved_width);
-        set_gripper_width(kOpenWidth);
-        geometry_msgs::msg::Pose retreat_pose = grasp_pose;
-        retreat_pose.position.z += kRetreatDistance;
-        arm_group_->setPoseReferenceFrame(frame_id);
-        execute_cartesian_path(*arm_group_, {retreat_pose}, 0.8);
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      attach_grasped_object_collision(shape_type);
-
-      const double carry_transit_z = std::max(
-        lift_pose.position.z,
-        basket_pos.z + kCarryTransitOffsetZ);
-      const geometry_msgs::msg::Pose carry_transit_pose = make_top_down_pose(
-        basket_pos.x + grasp_dx,
-        basket_pos.y + grasp_dy,
-        carry_transit_z,
-        candidate.closing_axis_yaw);
-
-      arm_group_->setPoseReferenceFrame(frame_id);
-      if (!execute_cartesian_path(*arm_group_, {carry_transit_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to carry object at safe transit height for %s",
-          candidate.description.c_str());
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Move to basket hover ────────────────────────────────────────────────
-      const geometry_msgs::msg::Pose place_hover_pose = make_top_down_pose(
-        basket_pos.x + grasp_dx,
-        basket_pos.y + grasp_dy,
-        basket_pos.z + kPlaceHoverOffsetZ,
-        candidate.closing_axis_yaw);
-
-      arm_group_->setPoseReferenceFrame(frame_id);
-      if (!execute_cartesian_path(*arm_group_, {place_hover_pose}, kCartesianMinFraction)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to descend to basket hover after grasp");
-        detach_grasped_object_collision();
-        set_gripper_width(kOpenWidth);
-        move_arm_to_named_target("ready");
-        continue;
-      }
-
-      // ── Lower and release ───────────────────────────────────────────────────
-      geometry_msgs::msg::Pose place_release_pose = place_hover_pose;
-      place_release_pose.position.z = basket_pos.z + kPlaceReleaseOffsetZ;
-      arm_group_->setPoseReferenceFrame(frame_id);
-      execute_cartesian_path(*arm_group_, {place_release_pose}, 0.8);
-
-      if (!set_gripper_width(kOpenWidth)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: failed to release object above basket");
-      }
-      detach_grasped_object_collision();
-      rclcpp::sleep_for(std::chrono::milliseconds(300));
-
-      // ── Post-release retreat ─────────────────────────────────────────────────
-      geometry_msgs::msg::Pose post_release_pose = place_release_pose;
-      post_release_pose.position.z = basket_pos.z + kPlaceHoverOffsetZ;
-      arm_group_->setPoseReferenceFrame(frame_id);
-      execute_cartesian_path(*arm_group_, {post_release_pose}, 0.8);
-
-      task_completed = true;
-      round_succeeded = true;
-      break;
-    }
-
-    if (task_completed || round_succeeded) { break; }
-
-    // Rescan to refine object XY from the live point cloud before next round.
-    // Preserve the corrected z (= spawner-equivalent z = z_min - link_offset).
-    // The raw cloud centroid z returned by rescan is the shape centre (~0.065m),
-    // NOT the model-origin z (~0.025m) that kGraspOffsetZ is calibrated for.
-    if (scan_round < max_scan_rounds - 1) {
-      move_arm_to_named_target("ready");
-      const double corrected_z = current_object_point.z;
-      if (!rescan_task1_object_point(current_object_point, frame_id)) {
-        RCLCPP_WARN(node_->get_logger(), "T3: rescan failed, stopping retries");
-        break;
-      }
-      current_object_point.z = corrected_z;  // restore: rescan z is cloud centroid, not model-origin z
-    }
-  }
-
-  move_arm_to_named_target("ready");
-  return task_completed;
+  return execute_pick_and_place_sequence(
+    object_pos,
+    "panda_link0",
+    basket_pos,
+    "panda_link0",
+    shape_type,
+    "T3",
+    true);
 }
