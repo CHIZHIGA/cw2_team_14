@@ -1,8 +1,8 @@
-# COMP0250 Coursework 1  
+# COMP0250 Coursework 2
 
 Github repo: https://github.com/CHIZHIGA/cw2_team_14
 
-This coursework has been run on both WSL and virtual machines. 
+This coursework has been run on both WSL and virtual machines.
 The success rate of the Task1 exceeded 90%.  
 The success rate of the Task2 is 100%.  
 The success rate of the Task3 exceeded 90%.  
