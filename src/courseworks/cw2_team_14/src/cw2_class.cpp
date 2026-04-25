@@ -1884,8 +1884,6 @@ bool cw2::t3_pick_and_place(
       }
     }
 
-    double orientation_offset = 0.0;
-    double orientation_confidence = 0.0;
     if (is_nought) {
       RCLCPP_INFO(node_->get_logger(), "T3 nought: skipping scan-based yaw refinement and rescans");
     } else {
